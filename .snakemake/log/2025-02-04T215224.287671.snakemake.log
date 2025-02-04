@@ -1,0 +1,30 @@
+host: codespaces-b3f22d
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+install_apache_jena_fuseki        1
+total                             1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Feb  4 21:52:24 2025]
+localrule install_apache_jena_fuseki:
+    output: /workspaces/P-TER/apache-jena-fuseki-4.9.0
+    jobid: 0
+    reason: Code has changed since last execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+RuleException in rule install_apache_jena_fuseki in file /workspaces/P-TER/Snakefile, line 45:
+AttributeError: module 'os' has no attribute 'getcwd()', when formatting the following:
+
+            echo "Downloading Apache Jena Fuseki..."
+            wget https://archive.apache.org/dist/jena/binaries/apache-jena-fuseki-4.9.0.tar.gz
+            echo "Extracting Apache Jena Fuseki..."
+            tar -zxf apache-jena-fuseki-4.9.0.tar.gz -C {os.getcwd()}
+            
