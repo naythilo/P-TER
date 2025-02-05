@@ -1,0 +1,7 @@
+rule all:
+    input:
+        expand("output/{workload}/{approach}/{query}.{run}.csv",
+            workload=WORKLOADS,
+            approach=["Fuseki"],
+            query=QUERIES,
+            run=RUNS)

@@ -25,13 +25,20 @@ def get_queries(workload):
     query_dir = f"queries/{workload}"
     return [os.path.splitext(q)[0] for q in os.listdir(query_dir) if q.endswith(".sparql")]
 
+
 rule all:
     input:
-        expand("output/{workload}/{approach}/{query}.{run}.csv",
+        bench = expand("output/{workload}/{approach}/{query}.{run}.csv",
             workload=WORKLOADS,
-            approach=["Virtuoso", "Fuseki"],
+            approach=["Fuseki"],
             query=QUERIES,
             run=RUNS)
+    output: "output/data.csv"
+    run:
+        data = [pandas.read_csv(file) for file in input.bench]
+        pandas.concat(data,axis=0).to_csv(str(output))
+
+
 
 # Exécuter une requête SPARQL et stocker les résultats
 rule run_sparql_query:
@@ -47,7 +54,7 @@ rule run_sparql_query:
         query_tmp = tempfile.NamedTemporaryFile(delete=False)
 
         # Définition du bon endpoint SPARQL
-        endpoint_url = f"http://localhost:{VIRTUOSO_PORT}/sparql" if wildcards.approach == "Virtuoso" else f"http://localhost:{FUSEKI_PORT}/sparql"
+        endpoint_url = f"http://localhost:{VIRTUOSO_PORT}/sparql" if wildcards.approach == "Virtuoso" else f"http://localhost:3030/rdfs/query"
 
         # Modification temporaire du fichier de requête pour utiliser le bon endpoint
         shell(f"sed -E 's@http://localhost:[0-9]+/sparql@{endpoint_url}@g' {input.query_file} > {query_tmp.name}")

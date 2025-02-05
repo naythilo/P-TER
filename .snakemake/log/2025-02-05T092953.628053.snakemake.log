@@ -1,0 +1,70 @@
+host: Air-de-Anthony.lan
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+all                     1
+run_sparql_query        3
+total                   4
+
+Select jobs to execute...
+Execute 3 jobs...
+
+[Wed Feb  5 09:29:53 2025]
+localrule run_sparql_query:
+    input: queries/rdfs/Fuseki/q05.sparql
+    output: output/rdfs/Fuseki/q05.1.csv, output/rdfs/Fuseki/q05.1.json
+    jobid: 1
+    reason: Missing output files: output/rdfs/Fuseki/q05.1.csv
+    wildcards: workload=rdfs, approach=Fuseki, query=q05, run=1
+    priority: 50
+    resources: tmpdir=/var/folders/00/05wy_tcj17z1wd7_gmtxy24h0000gn/T
+
+
+[Wed Feb  5 09:29:53 2025]
+localrule run_sparql_query:
+    input: queries/rdfs/Fuseki/q05.sparql
+    output: output/rdfs/Fuseki/q05.2.csv, output/rdfs/Fuseki/q05.2.json
+    jobid: 2
+    reason: Missing output files: output/rdfs/Fuseki/q05.2.csv
+    wildcards: workload=rdfs, approach=Fuseki, query=q05, run=2
+    priority: 50
+    resources: tmpdir=/var/folders/00/05wy_tcj17z1wd7_gmtxy24h0000gn/T
+
+
+[Wed Feb  5 09:29:53 2025]
+localrule run_sparql_query:
+    input: queries/rdfs/Fuseki/q05.sparql
+    output: output/rdfs/Fuseki/q05.3.csv, output/rdfs/Fuseki/q05.3.json
+    jobid: 3
+    reason: Missing output files: output/rdfs/Fuseki/q05.3.csv
+    wildcards: workload=rdfs, approach=Fuseki, query=q05, run=3
+    priority: 50
+    resources: tmpdir=/var/folders/00/05wy_tcj17z1wd7_gmtxy24h0000gn/T
+
+[Wed Feb  5 09:29:54 2025]
+[Wed Feb  5 09:29:54 2025]
+Error in rule run_sparql_query:
+    jobid: 1
+    input: queries/rdfs/Fuseki/q05.sparql
+    output: output/rdfs/Fuseki/q05.1.csv, output/rdfs/Fuseki/q05.1.json
+
+Error in rule run_sparql_query:
+    jobid: 2
+    input: queries/rdfs/Fuseki/q05.sparql
+    output: output/rdfs/Fuseki/q05.2.csv, output/rdfs/Fuseki/q05.2.json
+
+[Wed Feb  5 09:29:54 2025]
+Error in rule run_sparql_query:
+    jobid: 3
+    input: queries/rdfs/Fuseki/q05.sparql
+    output: output/rdfs/Fuseki/q05.3.csv, output/rdfs/Fuseki/q05.3.json
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-05T092953.628053.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

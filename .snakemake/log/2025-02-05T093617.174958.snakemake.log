@@ -1,0 +1,25 @@
+host: Air-de-Anthony.lan
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb  5 09:36:17 2025]
+localrule all:
+    input: output/rdfs/Fuseki/q05.1.csv, output/rdfs/Fuseki/q05.2.csv, output/rdfs/Fuseki/q05.3.csv
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/var/folders/00/05wy_tcj17z1wd7_gmtxy24h0000gn/T
+
+[Wed Feb  5 09:36:17 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-02-05T093617.174958.snakemake.log

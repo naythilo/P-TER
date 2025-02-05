@@ -35,7 +35,7 @@ def cli():
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 def run_rsa_query(query, port, metrics_output, solutions_output):
-    sparql = SPARQLWrapper.SPARQLWrapper(f"http://localhost:{port}/sparql")
+    sparql = SPARQLWrapper.SPARQLWrapper(f"http://localhost:{port}/rdfs/sparql")
 
     sparql.setReturnFormat(SPARQLWrapper.JSON)
     sparql.setQuery(load_query(query))
@@ -58,11 +58,11 @@ def run_rsa_query(query, port, metrics_output, solutions_output):
     except Exception as error:
         metrics = {"status": ["error"], "reason": [error]}
         solutions = []
-
+    print(f"Metrics: {solutions}")
     write_metrics(metrics, metrics_output)
     write_solutions(solutions, solutions_output)
+    sys.exit(0 if metrics["status"][0] == "ok" else 1)
 
-    sys.exit(0 if metrics["status"] == "ok" else 1)
 
 if __name__ == "__main__":
     cli()
