@@ -66,3 +66,48 @@ rule run_sparql_query:
         # Nettoyage du fichier temporaire
         query_tmp.close()
         os.unlink(query_tmp.name)
+
+
+
+
+
+-----------------
+
+
+
+
+rule run_RSA_query:
+    priority: 50
+    input:
+        virtuoso = VIRTUOSO_HOME,
+        virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
+        fuseki = FUSEKI_HOME,
+        query = "queries/{workload}-RSA/{query}.sparql",
+        endpoints = "config/{workload}/endpoints.txt"
+    output:
+        metrics = "output/{workload}/{approach}/{query}.{run}.csv",
+        solutions = "output/{workload}/{approach}/{query}.{run}.json"
+    params:
+        timeout = TIMEOUT
+    run:
+        query_file = tempfile.NamedTemporaryFile()
+        shell(f"sed -E 's@http://localhost:[0-9]+/sparql@http://localhost:{VIRTUOSO_PORT}/sparql@g' {input.query} > {query_file.name}")
+        shell(f"python commons.py start-virtuoso --home {input.virtuoso} --config {input.virtuoso_configfile} --restart")
+        shell(f"python commons.py start-fuseki --home {input.fuseki} --port {FUSEKI_PORT} --restart")
+        shell(f"timeout {params.timeout} python commons.py run-rsa-query {query_file.name} --metrics-output {output.metrics} --solutions-output {output.solutions}")
+        df = pandas.read_csv(str(output.metrics))
+        df["query"] = wildcards.query
+        df["workload"] = wildcards.workload
+        df["approach"] = wildcards.approach
+        df["run"] = wildcards.run
+        df.to_csv(str(output.metrics))
+        query_file.close()
+
+rule run_all_queries:
+    input:
+        expand("output/{workload}/{approach}/{query}.{run}.csv", workload=WORKLOADS, approach=APPROACHES, query=QUERIES, run=RUNS)
+    output: 
+        "output/data.csv"
+    run:
+        data = [pandas.read_csv(file) for file in input]
+        pandas.concat(data, axis=0).to_csv(str(output), index=False)

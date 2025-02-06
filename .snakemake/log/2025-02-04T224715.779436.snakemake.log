@@ -1,0 +1,27 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Feb  4 22:47:15 2025]
+localrule all:
+    input: output
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/tmp
+
+[Tue Feb  4 22:47:15 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-02-04T224715.779436.snakemake.log
+CalledProcessError in file /workspaces/P-TER/Snakefile, line 159:
+Command 'set -euo pipefail;  python commons.py stop-virtuoso --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini' returned non-zero exit status 2.

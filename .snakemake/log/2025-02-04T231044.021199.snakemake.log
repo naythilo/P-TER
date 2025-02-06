@@ -1,0 +1,68 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+all                               1
+install_apache_jena               1
+install_apache_jena_fuseki        1
+install_virtuoso                  1
+total                             4
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Feb  4 23:10:44 2025]
+localrule install_virtuoso:
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    jobid: 3
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+
+[Tue Feb  4 23:10:44 2025]
+localrule install_apache_jena:
+    output: /workspaces/P-TER/apache-jena-4.9.0, /workspaces/P-TER/apache-jena-4.9.0/bin/tdb2.xloader
+    jobid: 2
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Tue Feb  4 23:10:48 2025]
+Finished job 2.
+1 of 4 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Feb  4 23:10:48 2025]
+localrule install_apache_jena_fuseki:
+    output: /workspaces/P-TER/apache-jena-fuseki-4.9.0
+    jobid: 1
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Tue Feb  4 23:11:51 2025]
+Finished job 1.
+2 of 4 steps (50%) done
+[Tue Feb  4 23:20:04 2025]
+Finished job 3.
+3 of 4 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Feb  4 23:20:04 2025]
+localrule all:
+    input: /workspaces/P-TER/apache-jena-fuseki-4.9.0, /workspaces/P-TER/apache-jena-4.9.0, /workspaces/P-TER/virtuoso-opensource-7.2.7
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/tmp
+
+[Tue Feb  4 23:20:04 2025]
+Finished job 0.
+4 of 4 steps (100%) done
+Complete log: .snakemake/log/2025-02-04T231044.021199.snakemake.log

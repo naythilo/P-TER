@@ -1,0 +1,82 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                 count
+--------------------------------  -------
+all                                     1
+load_LargeRDFBench_into_Virtuoso        1
+setup_virtuoso                          1
+total                                   3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb  6 10:37:25 2025]
+localrule setup_virtuoso:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    jobid: 4
+    reason: Code has changed since last execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+
+            cp <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f401443420> <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f4014432e0>
+            sed -i -E 's@(^ServerPort.*?= [^(1111)].*?$)@ServerPort = 8890@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f401443420>
+            sed -i -E 's@(^DefaultHost.*$)@DefaultHost = localhost:8890@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f4014432e0>
+            sed -i -E 's@DirsAllowed(.*)$@DirsAllowed\1, /workspaces/P-TER@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f401443420>
+            sed -i -E 's@(^ResultSetMaxRows.*$)@;\1@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f4014432e0>
+            sed -i -E 's@(^MaxQueryCostEstimationTime.*$)@;\1@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f401443420>
+            sed -i -E 's@(^MaxQueryExecutionTime.*$)@;\1@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f4014432e0>
+            sed -i -E 's@(^NumberOfBuffers.*$)@;\1@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f401443420>
+            sed -i -E 's@(^MaxDirtyBuffers.*$)@;\1@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f4014432e0>
+            sed -i -E 's@^;(NumberOfBuffers.*?= 2720000.*$)@\1@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f401443420>
+            sed -i -E 's@^;(MaxDirtyBuffers.*?= 2000000.*$)@\1@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f4014432e0>
+            sed -i -E 's@(^MaxQueryMem.*)@MaxQueryMem = 8G@g' <function RuleItemProxy._deferred_get.<locals>.inner at 0x75f401443420>
+            
+[Thu Feb  6 10:37:25 2025]
+Finished job 4.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb  6 10:37:25 2025]
+localrule load_LargeRDFBench_into_Virtuoso:
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/largerdfbench/graphs.txt
+    jobid: 1
+    reason: Missing output files: config/largerdfbench/graphs.txt; Input files updated by another job: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    priority: 100
+    resources: tmpdir=/tmp
+
+
+            python commons.py start-virtuoso --home /workspaces/P-TER/virtuoso-opensource-7.2.7 --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=ld_dir('`pwd`/datasets', 'fedshop-virtuoso.db', 'NULL');"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=rdf_loader_run();"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=checkpoint;"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=SPARQL SELECT DISTINCT ?g WHERE { GRAPH ?g { ?s a ?c } };" | egrep "(example)" > config/largerdfbench/graphs.txt
+            # python commons.py stop-virtuoso --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            
+Terminating processes on user request, this might take some time.
+[Thu Feb  6 10:37:31 2025]
+Error in rule load_LargeRDFBench_into_Virtuoso:
+    jobid: 1
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/largerdfbench/graphs.txt
+    shell:
+        
+            python commons.py start-virtuoso --home /workspaces/P-TER/virtuoso-opensource-7.2.7 --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=ld_dir('`pwd`/datasets', 'fedshop-virtuoso.db', 'NULL');"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=rdf_loader_run();"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=checkpoint;"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=SPARQL SELECT DISTINCT ?g WHERE { GRAPH ?g { ?s a ?c } };" | egrep "(example)" > config/largerdfbench/graphs.txt
+            # python commons.py stop-virtuoso --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2025-02-06T103725.166869.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

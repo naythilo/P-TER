@@ -1,0 +1,41 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                 count
+--------------------------------  -------
+all                                     1
+load_LargeRDFBench_into_Virtuoso        1
+total                                   2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb  6 21:11:59 2025]
+localrule load_LargeRDFBench_into_Virtuoso:
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/largerdfbench/graphs.txt
+    jobid: 1
+    reason: Missing output files: config/largerdfbench/graphs.txt; Code has changed since last execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Thu Feb  6 21:12:00 2025]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb  6 21:12:00 2025]
+localrule all:
+    input: config/largerdfbench/graphs.txt
+    jobid: 0
+    reason: Input files updated by another job: config/largerdfbench/graphs.txt
+    resources: tmpdir=/tmp
+
+[Thu Feb  6 21:12:00 2025]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2025-02-06T211159.636397.snakemake.log

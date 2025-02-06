@@ -1,0 +1,73 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+all                               1
+load_FedShop_into_Virtuoso        1
+setup_virtuoso                    1
+total                             3
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Wed Feb  5 00:08:27 2025]
+localrule all:
+    jobid: 0
+    reason: Rules with neither input nor output files are always executed.
+    resources: tmpdir=/tmp
+
+[Wed Feb  5 00:08:27 2025]
+localrule setup_virtuoso:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    jobid: 4
+    reason: Code has changed since last execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Wed Feb  5 00:08:27 2025]
+Finished job 0.
+1 of 3 steps (33%) done
+[Wed Feb  5 00:08:27 2025]
+Finished job 4.
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb  5 00:08:27 2025]
+localrule load_FedShop_into_Virtuoso:
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/rdfs/graphs.txt
+    jobid: 1
+    reason: Input files updated by another job: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Wed Feb  5 00:09:27 2025]
+Error in rule load_FedShop_into_Virtuoso:
+    jobid: 1
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/rdfs/graphs.txt
+    shell:
+        
+            python commons.py start-virtuoso --home /workspaces/P-TER/virtuoso-opensource-7.2.7 --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            echo "load fedshop"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=ld_dir('`pwd`/datasets', 'fedshop-virtuoso.db', 'NULL');8890"
+            echo "load fedshop"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=rdf_loader_run();"
+            echo "load fedshop"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=checkpoint;"
+            echo "load fedshop"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=SPARQL SELECT DISTINCT ?g WHERE { GRAPH ?g { ?s a ?c } };" | egrep "(ratingsite|vendor)[0-9]*" > config/rdfs/graphs.txt
+            
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-05T000827.077555.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

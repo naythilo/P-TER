@@ -1,0 +1,42 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+all                               1
+generate_endpoints                1
+load_FedShop_into_Virtuoso        1
+setup_virtuoso                    1
+total                             4
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb  5 00:38:54 2025]
+localrule setup_virtuoso:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    jobid: 0
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+RuleException in rule setup_virtuoso in file /workspaces/P-TER/Snakefile, line 131:
+AttributeError: module 'os' has no attribute 'getcwd()', when formatting the following:
+
+            cp {input.virtuoso_configfile} {output.virtuoso_configfile}
+            sed -i -E 's@(^ServerPort.*?= [^(1111)].*?$)@ServerPort = {VIRTUOSO_PORT}@g' {output.virtuoso_configfile}
+            sed -i -E 's@(^DefaultHost.*$)@DefaultHost = localhost:{VIRTUOSO_PORT}@g' {output.virtuoso_configfile}
+            sed -i -E 's@DirsAllowed(.*)$@DirsAllowed\1, {os.getcwd()}@g' {output.virtuoso_configfile}
+            sed -i -E 's@(^ResultSetMaxRows.*$)@;\1@g' {output.virtuoso_configfile}
+            sed -i -E 's@(^MaxQueryCostEstimationTime.*$)@;\1@g' {output.virtuoso_configfile}
+            sed -i -E 's@(^MaxQueryExecutionTime.*$)@;\1@g' {output.virtuoso_configfile}
+            sed -i -E 's@(^NumberOfBuffers.*$)@;\1@g' {output.virtuoso_configfile}
+            sed -i -E 's@(^MaxDirtyBuffers.*$)@;\1@g' {output.virtuoso_configfile}
+            sed -i -E 's@^;(NumberOfBuffers.*?= 2720000.*$)@\1@g' {output.virtuoso_configfile}
+            sed -i -E 's@^;(MaxDirtyBuffers.*?= 2000000.*$)@\1@g' {output.virtuoso_configfile}
+            sed -i -E 's@(^MaxQueryMem.*)@MaxQueryMem = 8G@g' {output.virtuoso_configfile}
+            

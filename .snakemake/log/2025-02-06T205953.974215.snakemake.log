@@ -1,0 +1,53 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                 count
+--------------------------------  -------
+all                                     1
+load_LargeRDFBench_into_Virtuoso        1
+total                                   2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb  6 20:59:53 2025]
+localrule load_LargeRDFBench_into_Virtuoso:
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/largerdfbench/graphs.txt
+    jobid: 1
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+
+            python commons.py start-virtuoso --home /workspaces/P-TER/virtuoso-opensource-7.2.7 --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=ld_dir('`pwd`/datasets', 'fedshop-virtuoso.db', 'NULL');"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=rdf_loader_run();"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=checkpoint;"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=SPARQL SELECT DISTINCT ?g WHERE { GRAPH ?g { ?s a ?c } };" | egrep "(example)" > config/largerdfbench/graphs.txt
+            # python commons.py stop-virtuoso --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            
+[Thu Feb  6 21:00:14 2025]
+Error in rule load_LargeRDFBench_into_Virtuoso:
+    jobid: 1
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/largerdfbench/graphs.txt
+    shell:
+        
+            python commons.py start-virtuoso --home /workspaces/P-TER/virtuoso-opensource-7.2.7 --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=ld_dir('`pwd`/datasets', 'fedshop-virtuoso.db', 'NULL');"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=rdf_loader_run();"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=checkpoint;"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=SPARQL SELECT DISTINCT ?g WHERE { GRAPH ?g { ?s a ?c } };" | egrep "(example)" > config/largerdfbench/graphs.txt
+            # python commons.py stop-virtuoso --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-06T205953.974215.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

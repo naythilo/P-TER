@@ -1,0 +1,8 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+MissingInputException in rule generate_endpoints in file /workspaces/P-TER/Snakefile, line 153:
+Missing input files for rule generate_endpoints:
+    output: config/rdfs/endpoints.txt
+    wildcards: workload=rdfs
+    affected files:
+        config/rdfs/graphs.txt

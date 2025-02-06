@@ -1,0 +1,47 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                 count
+--------------------------------  -------
+all                                     1
+load_LargeRDFBench_into_Virtuoso        1
+total                                   2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb  6 21:07:21 2025]
+localrule load_LargeRDFBench_into_Virtuoso:
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/largerdfbench/graphs.txt
+    jobid: 1
+    reason: Missing output files: config/largerdfbench/graphs.txt
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Thu Feb  6 21:07:42 2025]
+Error in rule load_LargeRDFBench_into_Virtuoso:
+    jobid: 1
+    input: datasets/fedshop-virtuoso.db, /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    output: config/largerdfbench/graphs.txt
+    shell:
+        
+            python commons.py start-virtuoso --home /workspaces/P-TER/virtuoso-opensource-7.2.7 --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=ld_dir('`pwd`/datasets', 'fedshop-virtuoso.db', 'NULL');"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=rdf_loader_run();"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=checkpoint;"
+            /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql "EXEC=SPARQL SELECT DISTINCT ?g WHERE { GRAPH ?g { ?s a ?c } };" | egrep "(example)" > config/largerdfbench/graphs.txt
+            # python commons.py stop-virtuoso --config /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+            
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job load_LargeRDFBench_into_Virtuoso since they might be corrupted:
+config/largerdfbench/graphs.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-06T210721.651939.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

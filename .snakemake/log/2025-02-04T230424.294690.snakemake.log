@@ -1,0 +1,32 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+all                        1
+install_apache_jena        1
+total                      2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Feb  4 23:04:24 2025]
+localrule install_apache_jena:
+    output: /workspaces/P-TER/apache-jena-4.9.0
+    jobid: 1
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule install_apache_jena in file /workspaces/P-TER/Snakefile, line 62:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/workspaces/P-TER/apache-jena-4.9.0 (missing locally, parent dir contents: apache-jena-fuseki-4.9.0, .snakemake, .git, rdf4j-getting-started.iml, output, datasets, queries, input.txt, Snakefile, src, ancien-snakemake.txt, output.txt, commons.py, pom.xml, target, config, .DS_Store, README.md, apache-jena-fuseki-4.9.0.tar.gz)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-04T230424.294690.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

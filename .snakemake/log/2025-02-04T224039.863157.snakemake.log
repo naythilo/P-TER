@@ -1,0 +1,47 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+all                               1
+install_apache_jena               1
+install_apache_jena_fuseki        1
+total                             3
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Feb  4 22:40:39 2025]
+localrule install_apache_jena:
+    output: /workspaces/P-TER/apache-jena-4.9.0, /workspaces/P-TER/apache-jena-4.9.0/bin/tdb2.xloader
+    jobid: 2
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+
+[Tue Feb  4 22:40:39 2025]
+localrule install_apache_jena_fuseki:
+    output: /workspaces/P-TER/apache-jena-fuseki-4.9.0
+    jobid: 1
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule install_apache_jena in file /workspaces/P-TER/Snakefile, line 62:
+Job 2  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/workspaces/P-TER/apache-jena-4.9.0/bin/tdb2.xloader (missing locally, parent dir contents: )
+Removing output files of failed job install_apache_jena since they might be corrupted:
+/workspaces/P-TER/apache-jena-4.9.0
+[Tue Feb  4 22:40:44 2025]
+Finished job 1.
+1 of 3 steps (33%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-04T224039.863157.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

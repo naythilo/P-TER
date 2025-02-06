@@ -1,0 +1,11 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+MissingInputException in rule all in file /workspaces/P-TER/Snakefile, line 43:
+Missing input files for rule all:
+    affected files:
+        output/rdfs/RSA/q05.1.json
+        output/rdfs/RSA/q05.3.json
+        output/rdfs/RSA/q05.2.json
+        output/rdfs/RSA/q05.3.csv
+        output/rdfs/RSA/q05.1.csv
+        output/rdfs/RSA/q05.2.csv

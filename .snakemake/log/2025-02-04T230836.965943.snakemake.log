@@ -1,0 +1,77 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+all                               1
+install_apache_jena               1
+install_apache_jena_fuseki        1
+install_virtuoso                  1
+total                             4
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Feb  4 23:08:36 2025]
+localrule install_virtuoso:
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    jobid: 3
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+
+[Tue Feb  4 23:08:36 2025]
+localrule install_apache_jena:
+    output: /workspaces/P-TER/apache-jena-4.9.0, /workspaces/P-TER/apache-jena-4.9.0/bin/tdb2.xloader
+    jobid: 2
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Tue Feb  4 23:08:40 2025]
+Finished job 2.
+1 of 4 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Feb  4 23:08:40 2025]
+localrule install_apache_jena_fuseki:
+    output: /workspaces/P-TER/apache-jena-fuseki-4.9.0
+    jobid: 1
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Tue Feb  4 23:08:42 2025]
+Error in rule install_virtuoso:
+    jobid: 3
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/bin/isql, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    shell:
+        
+            echo "Downloading Virtuoso..."
+            wget https://github.com/openlink/virtuoso-opensource/releases/download/v7.2.7/virtuoso-opensource-7.2.7.tar.gz
+            echo "Extracting Virtuoso..."
+            tar -zxf virtuoso-opensource-7.2.7.tar.gz
+            echo "Configuring Virtuoso..."
+            cd virtuoso-opensource-7.2.7
+            ./autogen.sh
+            ./configure --prefix=/workspaces/P-TER/virtuoso-opensource-7.2.7
+            echo "Building and installing Virtuoso..."
+            make && make install && make clean && make distclean
+            
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job install_virtuoso since they might be corrupted:
+/workspaces/P-TER/virtuoso-opensource-7.2.7
+[Tue Feb  4 23:08:43 2025]
+Finished job 1.
+2 of 4 steps (50%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-04T230836.965943.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

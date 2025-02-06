@@ -1,0 +1,38 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+setup_virtuoso        1
+total                 2
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Feb  4 23:55:18 2025]
+localrule setup_virtuoso:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    jobid: 1
+    reason: Forced execution
+    priority: 100
+    resources: tmpdir=/tmp
+
+
+[Tue Feb  4 23:55:18 2025]
+localrule all:
+    jobid: 0
+    reason: Rules with neither input nor output files are always executed.
+    resources: tmpdir=/tmp
+
+[Tue Feb  4 23:55:18 2025]
+Finished job 0.
+1 of 2 steps (50%) done
+[Tue Feb  4 23:55:18 2025]
+Finished job 1.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2025-02-04T235518.748421.snakemake.log

@@ -63,9 +63,9 @@ def stop_process(port, soft):
 
 
 @cli.command()
-@click.option("--config", type=click.Path(exists=True, dir_okay=False), default="virtuoso-opensource-7.2.11/var/lib/virtuoso/db/fedup.ini")
+@click.option("--config", type=click.Path(exists=True, dir_okay=False), default="virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini")
 @click.option("--restart", type=click.BOOL, default=False)
-@click.option("--home", type=click.Path(exists=True, file_okay=False), default="virtuoso-opensource-7.2.11")
+@click.option("--home", type=click.Path(exists=True, file_okay=False), default="virtuoso-opensource-7.2.7")
 def start_virtuoso(config, restart, home):
     with open(config, "r") as file:
         s = file.read().split("[HTTPServer]")[1]
@@ -173,11 +173,12 @@ def run_rsa_query(query, port, metrics_output, solutions_output):
     except Exception as error:
         metrics = {"status": ["error"], "reason": [error]}
         solutions = []
+    print(f"Metrics: {metrics}")
 
     write_metrics(metrics, metrics_output)
     write_solutions(solutions, solutions_output)
 
-    sys.exit(0 if metrics["status"] == "ok" else 1)
+    sys.exit(0 if metrics["status"][0] == "ok" else 1)
 
 
 @cli.command()

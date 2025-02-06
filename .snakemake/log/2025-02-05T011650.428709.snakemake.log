@@ -1,0 +1,27 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+setup_virtuoso        1
+total                 1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb  5 01:16:50 2025]
+localrule setup_virtuoso:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    output: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini
+    jobid: 5
+    reason: Updated input files: /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/virtuoso.ini
+    priority: 100
+    resources: tmpdir=/tmp
+
+[Wed Feb  5 01:16:50 2025]
+Finished job 5.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-02-05T011650.428709.snakemake.log

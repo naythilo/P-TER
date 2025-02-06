@@ -1,0 +1,8 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+MissingInputException in rule run_RSA_query in file /workspaces/P-TER/Snakefile, line 152:
+Missing input files for rule run_RSA_query:
+    output: output/rdfs/fuseki/q05.1.csv, output/rdfs/fuseki/q05.1.json
+    wildcards: workload=rdfs, approach=fuseki, query=q05, run=1
+    affected files:
+        queries/rdfs-RSA/q05.sparql

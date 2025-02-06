@@ -1,0 +1,25 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb  6 21:15:54 2025]
+localrule all:
+    input: /workspaces/P-TER/apache-jena-fuseki-4.9.0, /workspaces/P-TER/apache-jena-4.9.0, config/largerdfbench/graphs.txt, config/rdfs/endpoints.txt
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/tmp
+
+[Thu Feb  6 21:15:54 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-02-06T211554.005637.snakemake.log
