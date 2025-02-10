@@ -49,15 +49,16 @@ rule all:
         directory(JENA_HOME),     
         "config/largerdfbench/graphs.txt",
         "config/rdfs/endpoints.txt",
-        bench = expand("output/{workload}/{approach}/{query}.{run}.csv",
-            workload=WORKLOADS,
-            approach=APPROACHES,
-            query=QUERIES,
-            run=RUNS),
-    output: "output/data.csv"
-    run:
-        data = [pandas.read_csv(file) for file in input.bench]
-        pandas.concat(data,axis=0).to_csv(str(output))
+        "hello.txt",
+        #bench = expand("output/{workload}/{approach}/{query}.{run}.csv",
+        #    workload=WORKLOADS,
+        #    approach=APPROACHES,
+         #   query=QUERIES,
+         #   run=RUNS),
+    #output: "output/data.csv"
+    #run:
+        #data = [pandas.read_csv(file) for file in input.bench]
+        #pandas.concat(data,axis=0).to_csv(str(output))
         #expand(
         #    "config/{workload}/endpoints.txt",
         #    workload=["rdfs"]  # Ajoutez d'autres workloads si nécessaire
@@ -212,6 +213,29 @@ if RUN_QUERY:
             # Nettoyage du fichier temporaire
             query_tmp.close()
             os.unlink(query_tmp.name)
+
+    rule run_fedX_query:
+        priority: 50
+        input:
+            virtuoso = VIRTUOSO_HOME,
+            virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
+            fuseki = FUSEKI_HOME,
+           # query_file = "queries/{workload}/Fuseki/{query}.sparql",
+            endpoints = "config/rdfs/endpoints.txt",
+        output: "hello.txt"
+        params:
+            timeout = TIMEOUT
+        run:
+            query_tmp = tempfile.NamedTemporaryFile(delete=False)
+
+            # Définition du bon endpoint SPARQL
+            shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
+
+            # Exécuter la requête avec un timeout
+            shell(f" /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05.sparql")
+
+            shell(f"echo 'hello' > {output}")
+
 
 
 #/usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05.sparql

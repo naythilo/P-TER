@@ -49,5 +49,9 @@ SELECT DISTINCT ?graph WHERE {
 
 
 ### executer le snakemake
-- configuer vos options dans `Snakefile`
+- configuer vos options dans `Snakefile` (installer tout les outils avant en mettant DO_INSTALL A TRUE)
 - faire ```snakemake``` dans le terminal
+(pour config FedX, démarrer avec vscode le fichier Virtuoso.java avec le bouton run en haut a droite et en bas a droite accepter le message, ensuite lancer le snakefile)
+
+pour démarrer le snakemake si il démarre rien, supprimer le fichier hello.txt et/ou le fichier output
+
