@@ -222,7 +222,10 @@ if RUN_QUERY:
             fuseki = FUSEKI_HOME,
            # query_file = "queries/{workload}/Fuseki/{query}.sparql",
             endpoints = "config/rdfs/endpoints.txt",
-        output: "hello.txt"
+        output: 
+            "hello.txt",
+            json_file = "output/query_results.json",
+            csv_file = "output/metrics.csv"
         params:
             timeout = TIMEOUT
         run:
@@ -232,9 +235,11 @@ if RUN_QUERY:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
             # Exécuter la requête avec un timeout
-            shell(f" /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05.sparql")
+            shell(f" /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05-copy.sparql --outputJson {output.json_file} --outputCsv {output.csv_file}")
 
             shell(f"echo 'hello' > {output}")
+            shell(f"echo 'Query results saved as {output.json_file} and metrics saved as '")
+
 
 
 
