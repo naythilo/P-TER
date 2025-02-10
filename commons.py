@@ -158,6 +158,9 @@ def run_rsa_query(query, port, metrics_output, solutions_output):
     try:
         start_time = time.time()
         solutions = sparql.queryAndConvert()
+        #print(sparql.query.encode("utf-8"))
+
+
         end_time = time.time()
         metrics = {
             "status": ["ok"],
@@ -173,7 +176,7 @@ def run_rsa_query(query, port, metrics_output, solutions_output):
     except Exception as error:
         metrics = {"status": ["error"], "reason": [error]}
         solutions = []
-    print(f"Metrics: {metrics}")
+    print(f"Metrics: {solutions}")
 
     write_metrics(metrics, metrics_output)
     write_solutions(solutions, solutions_output)

@@ -30,13 +30,13 @@ RUNS = [1, 2, 3]
 RESTART = False
 WORKLOADS = ["rdfs"]
 APPROACHES = ["Fuseki"]
-QUERIES = ["q05"]
+QUERIES = ["q05-copy"]
 
 # VARS DE CONFIG DU SNAKEFILE
 DO_INSTALL = False
 KEEP_ALIVE = False
 RUN_QUERY = True
-SETUP_VIRTU = False #il faudra changer la valeur de G et décommenter la bonne parti sinon crash
+SETUP_VIRTU = False 
 
 # Fonction pour récupérer les requêtes SPARQL
 def get_queries(workload):
@@ -213,6 +213,8 @@ if RUN_QUERY:
             query_tmp.close()
             os.unlink(query_tmp.name)
 
+
+#/usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05.sparql
 
 
 

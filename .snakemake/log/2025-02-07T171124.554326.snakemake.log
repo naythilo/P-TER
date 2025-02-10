@@ -1,0 +1,53 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+all                     1
+run_sparql_query        3
+total                   4
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Fri Feb  7 17:11:24 2025]
+localrule run_sparql_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/rdfs/Fuseki/q05.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q05.2.csv, output/rdfs/Fuseki/q05.2.json
+    jobid: 2
+    reason: Missing output files: output/rdfs/Fuseki/q05.2.csv
+    wildcards: workload=rdfs, query=q05, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Fri Feb  7 17:11:24 2025]
+localrule run_sparql_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/rdfs/Fuseki/q05.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q05.3.csv, output/rdfs/Fuseki/q05.3.json
+    jobid: 3
+    reason: Missing output files: output/rdfs/Fuseki/q05.3.csv
+    wildcards: workload=rdfs, query=q05, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Fri Feb  7 17:11:29 2025]
+Error in rule run_sparql_query:
+    jobid: 2
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/rdfs/Fuseki/q05.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q05.2.csv, output/rdfs/Fuseki/q05.2.json
+
+[Fri Feb  7 17:11:29 2025]
+Error in rule run_sparql_query:
+    jobid: 3
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/rdfs/Fuseki/q05.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q05.3.csv, output/rdfs/Fuseki/q05.3.json
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-07T171124.554326.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
