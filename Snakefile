@@ -29,7 +29,7 @@ RUNS = [1, 2, 3]
 # Liste des workloads
 RESTART = False
 WORKLOADS = ["rdfs"]
-APPROACHES = ["Fuseki"]
+APPROACHES = ["Fuseki","FedX"]
 QUERIES = ["q05-copy"]
 
 # VARS DE CONFIG DU SNAKEFILE
@@ -49,16 +49,15 @@ rule all:
         directory(JENA_HOME),     
         "config/largerdfbench/graphs.txt",
         "config/rdfs/endpoints.txt",
-        "hello.txt",
-        #bench = expand("output/{workload}/{approach}/{query}.{run}.csv",
-        #    workload=WORKLOADS,
-        #    approach=APPROACHES,
-         #   query=QUERIES,
-         #   run=RUNS),
-    #output: "output/data.csv"
-    #run:
-        #data = [pandas.read_csv(file) for file in input.bench]
-        #pandas.concat(data,axis=0).to_csv(str(output))
+        bench = expand("output/{workload}/{approach}/{query}.{run}.csv",
+            workload=WORKLOADS,
+            approach=APPROACHES,
+           query=QUERIES,
+           run=RUNS),
+    output: "output/data.csv"
+    run:
+        data = [pandas.read_csv(file) for file in input.bench]
+        pandas.concat(data,axis=0).to_csv(str(output))
         #expand(
         #    "config/{workload}/endpoints.txt",
         #    workload=["rdfs"]  # Ajoutez d'autres workloads si nécessaire
@@ -188,7 +187,7 @@ if RUN_QUERY:
             metrics = "output/{workload}/Fuseki/{query}.{run}.csv",
             solutions = "output/{workload}/Fuseki/{query}.{run}.json"
         params:
-            timeout = TIMEOUT
+            timeout = TIMEOUT,
         run:
             query_tmp = tempfile.NamedTemporaryFile(delete=False)
 
@@ -206,7 +205,7 @@ if RUN_QUERY:
             df = pandas.read_csv(output.metrics)
             df["query"] = wildcards.query
             df["workload"] = wildcards.workload
-            #df["approach"] = wildcards.approach
+            df["approach"] = "Fuseki"
             df["run"] = wildcards.run
             df.to_csv(output.metrics, index=False)
 
@@ -220,14 +219,14 @@ if RUN_QUERY:
             virtuoso = VIRTUOSO_HOME,
             virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
             fuseki = FUSEKI_HOME,
-           # query_file = "queries/{workload}/Fuseki/{query}.sparql",
+            query_file = "queries/{workload}/Fuseki/{query}.sparql",
             endpoints = "config/rdfs/endpoints.txt",
         output: 
-            "hello.txt",
-            json_file = "output/query_results.json",
-            csv_file = "output/metrics.csv"
+            csv_file = "output/{workload}/FedX/{query}.{run}.csv",
+            json_file = "output/{workload}/FedX/{query}.{run}.json"
         params:
-            timeout = TIMEOUT
+            timeout = TIMEOUT,
+
         run:
             query_tmp = tempfile.NamedTemporaryFile(delete=False)
 
@@ -235,10 +234,17 @@ if RUN_QUERY:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
             # Exécuter la requête avec un timeout
-            shell(f" /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05-copy.sparql --outputJson {output.json_file} --outputCsv {output.csv_file}")
+            shell(f" /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input {input.query_file} --outputJson {output.json_file} --outputCsv {output.csv_file}")
 
-            shell(f"echo 'hello' > {output}")
+            #hell(f"echo 'hello' > {output}")
             shell(f"echo 'Query results saved as {output.json_file} and metrics saved as '")
+
+            df = pandas.read_csv(output.csv_file)
+            df["query"] = wildcards.query
+            df["workload"] = wildcards.workload
+            df["approach"] = "FedX"
+            df["run"] = wildcards.run
+            df.to_csv(output.csv_file, index=False)
 
 
 

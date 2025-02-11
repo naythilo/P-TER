@@ -116,10 +116,10 @@ public class Virtuoso {
     }
 
     // Générer le fichier CSV avec les métriques
-    private static void generateCsv(String jsonPath, long executionTime, int numSolutions) {
-        try (FileWriter writer = new FileWriter(jsonPath, true)) {
+    private static void generateCsv(String csvPath, long executionTime, int numSolutions) {
+        try (FileWriter writer = new FileWriter(csvPath, true)) {
             // Écrire les métriques dans le fichier CSV
-            writer.append("status,reason,sourceSelectionTime,executionTime,runtime,numASKQueries,numSolutions,numAssignments,tpwss\n");
+            writer.append("status,reason,sourceSelectionTime,executionTime,runtime,numASKQueries,numSolutions,numAssignments,tpwss,query,workload,approach,run\n");
             writer.append("ok,,0," + executionTime + "," + executionTime + ",0," + numSolutions + ",0,0\n");
         } catch (IOException e) {
             System.err.println("Error writing CSV file: " + e.getMessage());
