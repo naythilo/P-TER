@@ -23,7 +23,7 @@ def get_pid(port):
 
 def load_query(query_file):
     with open(query_file, "r") as file:
-        return str(file.read())
+        return file.read()
 
 
 def load_endpoints(endpoints_file):
@@ -101,6 +101,7 @@ def start_fuseki(port, restart, home):
     if restart:
         send_signal(port, signal.SIGTERM)
     if get_pid(port) is not None:
+
         print("Apache Fuseki is running")
         return
     print("running Apache Fuseki")
@@ -150,14 +151,16 @@ def stop_fedup(port, soft):
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 def run_rsa_query(query, port, metrics_output, solutions_output):
-    sparql = SPARQLWrapper.SPARQLWrapper(f"http://localhost:{port}/sparql")
-
+    print(port)
+    sparql = SPARQLWrapper.SPARQLWrapper(f"http://localhost:{port}/sparql/")
     sparql.setReturnFormat(SPARQLWrapper.JSON)
     sparql.setQuery(load_query(query))
 
     try:
         start_time = time.time()
         solutions = sparql.queryAndConvert()
+        print("hey")
+        print(solutions)
         #print(sparql.query.encode("utf-8"))
 
 
@@ -176,7 +179,7 @@ def run_rsa_query(query, port, metrics_output, solutions_output):
     except Exception as error:
         metrics = {"status": ["error"], "reason": [error]}
         solutions = []
-    print(f"Metrics: {solutions}")
+    print(f"solutions: {solutions}")
 
     write_metrics(metrics, metrics_output)
     write_solutions(solutions, solutions_output)

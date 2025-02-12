@@ -24,27 +24,33 @@ VIRTUOSO_HOME = f"{os.getcwd()}/virtuoso-opensource-7.2.7"
 TIMEOUT = 1200  # 20 minutes
 
 # Nombre d'exécutions par requête
-RUNS = [1, 2, 3]
+RUNS = [1]
 
 # Liste des workloads
 RESTART = False
 WORKLOADS = ["rdfs"]
 APPROACHES = ["Fuseki","FedX"]
-#QUERIES = ["q05-copy"]
+#QUERIES = ["q01a-copy"]
+
+#QUERIES = []"]
+APPROACHES = ["Fuseki","FedX"]
+#QUERIES = ["q01a-copy"]
+
 QUERIES = [
-    "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
-    "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
-    "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
-    "q04a", "q04b", "q04c", "q04d", "q04e", "q04f", "q04g", "q04h", "q04i", "q04j",
-    "q05a", "q05b", "q05c", "q05d", "q05e", "q05f", "q05g", "q05h", "q05i", "q05j",
-    "q06a", "q06b", "q06c", "q06d", "q06e", "q06f", "q06g", "q06h", "q06i", "q06j",
-    "q07a", "q07b", "q07c", "q07d", "q07e", "q07f", "q07g", "q07h", "q07i", "q07j",
-    "q08a", "q08b", "q08c", "q08d", "q08e", "q08f", "q08g", "q08h", "q08i", "q08j",
-    "q09a", "q09b", "q09c", "q09d", "q09e", "q09f", "q09g", "q09h", "q09i", "q09j",
-    "q10a", "q10b", "q10c", "q10d", "q10e", "q10f", "q10g", "q10h", "q10i", "q10j",
-    "q11a", "q11b", "q11c", "q11d", "q11e", "q11f", "q11g", "q11h", "q11i", "q11j",
-    "q12a", "q12b", "q12c", "q12d", "q12e", "q12f", "q12g", "q12h", "q12i", "q12j"
-]
+    "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j"]
+#    "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
+#    "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
+#    "q04a", "q04b", "q04c", "q04d", "q04e", "q04f", "q04g", "q04h", "q04i", "q04j",
+#    "q05a", "q05b", "q05c", "q05d", "q05e", "q05f", "q05g", "q05h", "q05i", "q05j",
+#    "q06a", "q06b", "q06c", "q06d", "q06e", "q06f", "q06g", "q06h", "q06i", "q06j",
+#    "q07a", "q07b", "q07c", "q07d", "q07e", "q07f", "q07g", "q07h", "q07i", "q07j",
+#    "q08a", "q08b", "q08c", "q08d", "q08e", "q08f", "q08g", "q08h", "q08i", "q08j",
+#    "q09a", "q09b", "q09c", "q09d", "q09e", "q09f", "q09g", "q09h", "q09i", "q09j",
+#    "q10a", "q10b", "q10c", "q10d", "q10e", "q10f", "q10g", "q10h", "q10i", "q10j",
+#    "q11a", "q11b", "q11c", "q11d", "q11e", "q11f", "q11g", "q11h", "q11i", "q11j",
+#    "q12a", "q12b", "q12c", "q12d", "q12e", "q12f", "q12g", "q12h", "q12i", "q12j"
+#]
+
 
 # VARS DE CONFIG DU SNAKEFILE
 DO_INSTALL = False
@@ -213,7 +219,7 @@ if RUN_QUERY:
             shell(f"sed -E 's@http://localhost:[0-9]+/sparql@{endpoint_url}@g' {input.query_file} > {query_tmp.name}")
 
             # Exécuter la requête avec un timeout
-            shell(f"timeout {params.timeout} python commons.py run-rsa-query {query_tmp.name} --metrics-output {output.metrics} --solutions-output {output.solutions}")
+            shell(f"timeout {params.timeout} python commons.py run-rsa-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.solutions}")
 
             # Post-traitement des résultats avec Pandas
             df = pandas.read_csv(output.metrics)
@@ -264,6 +270,6 @@ if RUN_QUERY:
 
 
 #/usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05.sparql
-
+#./fuseki-server --mem --port 3030 /sparql
 
 

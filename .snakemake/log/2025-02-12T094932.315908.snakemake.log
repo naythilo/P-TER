@@ -1,0 +1,51 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+all                     1
+run_fedX_query          3
+run_sparql_query        3
+total                   7
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Wed Feb 12 09:49:32 2025]
+localrule run_fedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q01a-copy.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/FedX/q01a-copy.2.csv, output/rdfs/FedX/q01a-copy.2.json
+    jobid: 5
+    reason: Missing output files: output/rdfs/FedX/q01a-copy.2.csv
+    wildcards: workload=rdfs, query=q01a-copy, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Wed Feb 12 09:49:32 2025]
+localrule run_sparql_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q01a-copy.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q01a-copy.3.csv, output/rdfs/Fuseki/q01a-copy.3.json
+    jobid: 3
+    reason: Missing output files: output/rdfs/Fuseki/q01a-copy.3.csv
+    wildcards: workload=rdfs, query=q01a-copy, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Feb 12 09:49:37 2025]
+Error in rule run_sparql_query:
+    jobid: 3
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q01a-copy.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q01a-copy.3.csv, output/rdfs/Fuseki/q01a-copy.3.json
+
+[Wed Feb 12 09:49:37 2025]
+Finished job 5.
+1 of 7 steps (14%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-12T094932.315908.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
