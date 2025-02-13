@@ -1,0 +1,54 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+run_fedX_query         120
+run_hefquin_query      120
+run_sparql_query       120
+total                  361
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Thu Feb 13 17:45:58 2025]
+localrule run_fedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q05f.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/FedX/q05f.1.csv, output/rdfs/FedX/q05f.1.json
+    jobid: 166
+    reason: Missing output files: output/rdfs/FedX/q05f.1.csv; Params have changed since last execution: Union of exclusive params before and now across all output: before: 1200 now: <nothing exclusive> 
+    wildcards: workload=rdfs, query=q05f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Thu Feb 13 17:45:58 2025]
+localrule run_fedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q07j.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/FedX/q07j.1.csv, output/rdfs/FedX/q07j.1.json
+    jobid: 190
+    reason: Missing output files: output/rdfs/FedX/q07j.1.csv; Params have changed since last execution: Union of exclusive params before and now across all output: before: 1200 now: <nothing exclusive> 
+    wildcards: workload=rdfs, query=q07j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Thu Feb 13 17:46:02 2025]
+Error in rule run_fedX_query:
+    jobid: 166
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q05f.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/FedX/q05f.1.csv, output/rdfs/FedX/q05f.1.json
+
+[Thu Feb 13 17:46:02 2025]
+Error in rule run_fedX_query:
+    jobid: 190
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q07j.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/FedX/q07j.1.csv, output/rdfs/FedX/q07j.1.json
+
+Complete log: .snakemake/log/2025-02-13T174558.050109.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -24,7 +24,7 @@ VIRTUOSO_HOME = f"{os.getcwd()}/virtuoso-opensource-7.2.7"
 TIMEOUT = 1200  # 20 minutes
 
 # Nombre d'exécutions par requête
-RUNS = [1]
+RUNS = [1,2,3]
 
 # Liste des workloads
 RESTART = False
