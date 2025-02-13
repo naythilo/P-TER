@@ -4,8 +4,8 @@ PREFIX rev: <http://purl.org/stuff/rev#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT ?title ?text ?reviewDate ?reviewer ?reviewerName ?rating1 ?rating2 ?rating3 ?rating4  WHERE { 
-    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite3.fr/> ) }
+SELECT ?title ?text ?reviewDate ?reviewer ?reviewerName ?rating1 ?rating2 ?rating3 ?rating4  WHERE { 
+    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite3.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite69.fr/> ) }
     SERVICE ?bgp1 {
         # const bsbm:Product125657
         ?review bsbm:reviewFor ?localProductXYZ .

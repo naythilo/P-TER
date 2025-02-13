@@ -6,7 +6,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT DISTINCT ?product ?label WHERE {
-    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/> ) }
+    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite10.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite40.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite72.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite80.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite25.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite42.fr/> ) }
     SERVICE ?bgp1 {   
         ?product rdfs:label ?label .
       

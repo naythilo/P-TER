@@ -4,8 +4,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT ?product ?label WHERE {
-    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/> ) }
+SELECT ?product ?label WHERE {
+    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite48.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite62.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite78.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.vendor87.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite93.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite40.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite65.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite54.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite72.fr/> ) }
     SERVICE ?bgp1 {
         ?localProduct owl:sameAs ?product .
         ?localProduct rdfs:label ?label .
@@ -29,6 +29,8 @@ SELECT DISTINCT ?product ?label WHERE {
             ?localProductFeature2 owl:sameAs bsbm:ProductFeature33853 .
             ?localProduct rdfs:label ?testVar 
         }
+
+        # @skip
         FILTER (!bound(?testVar)) 
     }
 }

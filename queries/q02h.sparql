@@ -4,8 +4,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT DISTINCT ?label ?comment ?producer ?ProductFeatureLabel ?propertyTextual1 ?propertyTextual2 ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?propertyTextual5 ?propertyNumeric4  WHERE {
-    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/> ) }
+SELECT ?label ?comment ?producer ?ProductFeatureLabel ?propertyTextual1 ?propertyTextual2 ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?propertyTextual5 ?propertyNumeric4  WHERE {
+    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/> ) ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/> ) }
     SERVICE ?bgp1 {
         # const bsbm:Product79796
         ?localProduct owl:sameAs bsbm:Product79796 .
