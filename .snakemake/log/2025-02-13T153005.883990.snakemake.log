@@ -1,0 +1,36 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+all                     1
+run_sparql_query        1
+total                   2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Feb 13 15:30:05 2025]
+localrule run_sparql_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q01a.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q01a.1.csv, output/rdfs/Fuseki/q01a.1.json
+    jobid: 1
+    reason: Missing output files: output/rdfs/Fuseki/q01a.1.csv
+    wildcards: workload=rdfs, query=q01a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Thu Feb 13 15:30:08 2025]
+Error in rule run_sparql_query:
+    jobid: 1
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/apache-jena-fuseki-4.9.0, queries/q01a.sparql, config/rdfs/endpoints.txt
+    output: output/rdfs/Fuseki/q01a.1.csv, output/rdfs/Fuseki/q01a.1.json
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-02-13T153005.883990.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -6,7 +6,18 @@ PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT DISTINCT ?product ?localProductLabel WHERE { 
-    VALUES ( ?bgp1 ?bgp2 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite6.fr/> ) }
+    VALUES ( ?bgp1 ?bgp2 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite92.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/> ) 
+    ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite92.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite6.fr/> ) 
+    ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite65.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite6.fr/> )
+     ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite65.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/> )
+      ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite82.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite6.fr/> )
+       ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite82.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/> )
+        ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite6.fr/> )
+         ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/> )
+          ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite26.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite6.fr/> ) 
+          ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite6.fr/> )
+           ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite26.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/> )
+            ( <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/> <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/> ) }
 
     SERVICE ?bgp2 {
         # const bsbm:Product32571

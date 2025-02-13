@@ -1,0 +1,14 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules run_sparql_query and run_hefquin_query are ambiguous for the file output/rdfs/Jena/q01a.1.csv.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	run_sparql_query: query=q01a,run=1,workload=rdfs
+	run_hefquin_query: query=q01a,run=1,workload=rdfs
+Expected input files:
+	run_sparql_query: /workspaces/P-TER/virtuoso-opensource-7.2.7 /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini /workspaces/P-TER/apache-jena-fuseki-4.9.0 queries/q01a.sparql config/rdfs/endpoints.txt
+	run_hefquin_query: /workspaces/P-TER/virtuoso-opensource-7.2.7 /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini /workspaces/P-TER/apache-jena-fuseki-4.9.0 queries/q01a.sparql config/rdfs/endpoints.txt
+Expected output files:
+	run_sparql_query: output/rdfs/Jena/q01a.1.csv
+	run_hefquin_query: output/rdfs/Jena/q01a.1.csv

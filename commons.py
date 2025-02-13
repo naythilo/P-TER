@@ -9,6 +9,8 @@ import pandas
 import requests
 import subprocess
 import SPARQLWrapper
+import subprocess
+import pandas as pd
 
 
 def get_pid(port):
@@ -180,7 +182,7 @@ def run_rsa_query(query, port, metrics_output, solutions_output):
         metrics = {"status": ["error"], "reason": [error]}
         solutions = []
     print(f"solutions: {solutions}")
-
+    print((end_time - start_time) * 1000)
     write_metrics(metrics, metrics_output)
     write_solutions(solutions, solutions_output)
 
@@ -229,6 +231,47 @@ def run_query(query, endpoints, config, port, metrics_output, solutions_output):
     write_solutions(solutions, solutions_output)
 
     sys.exit(0 if metrics["status"] == "ok" else 1)
+
+
+@cli.command()
+@click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
+@click.option("--metrics-output", type=click.Path())
+def run_jena_query(query_file,metrics_output):
+    command = ["./apache-jena-4.9.0/bin/sparql", "--query", query_file, "--time"]
+    result = subprocess.run(command, capture_output=True, text=True)
+    print(result)
+    time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
+
+    execution_time = time_match.group(1) if time_match else "N/A"
+
+    results = result.stdout
+    print(results)
+
+    df = pd.DataFrame([{"status": "ok", "executionTime": execution_time}])
+
+    df.to_csv(metrics_output, index=False)
+
+    print(f"Jena Results saved to {metrics_output} with execution time: {execution_time} sec")
+
+@cli.command()
+@click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
+@click.option("--metrics-output", type=click.Path())
+def run_hefquin_query(query_file,metrics_output):
+    command = ["../HeFQUIN/bin/hefquin", "--federationDescription /workspaces/HeFQUIN/fedeation.ttl", "--file", query_file, "--time"]
+    result = subprocess.run(command, capture_output=True, text=True)
+    time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
+
+    execution_time = time_match.group(1) if time_match else "N/A"
+
+    results = result.stdout
+    print(results)
+
+    df = pd.DataFrame([{"status": "ok", "executionTime": execution_time}])
+
+    df.to_csv(metrics_output, index=False)
+
+    print(f"Hefquin Results saved to {metrics_output} with execution time: {execution_time} sec")
+
 
 
 if __name__ == "__main__":

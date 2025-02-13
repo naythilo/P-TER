@@ -44,7 +44,7 @@ public class Virtuoso {
         Repository repository = FedXFactory.newFederation()
                 .withConfig(config)
                 .create();
-        long startTime = System.nanoTime();
+        
         List<Map<String, String>> solutions = new ArrayList<>();
 
         try (RepositoryConnection conn = repository.getConnection()) {
@@ -63,6 +63,7 @@ public class Virtuoso {
 
 
             TupleQuery tq = conn.prepareTupleQuery(query);
+            long startTime = System.currentTimeMillis();
             try (TupleQueryResult tqRes = tq.evaluate()) {
                 int count = 0;
 
@@ -82,13 +83,14 @@ public class Virtuoso {
                 System.out.println("Results: " + count);
 
                 // Enregistrement du temps de fin de la requête
-                long endTime = System.nanoTime();
-
+                long endTime = System.currentTimeMillis();
+                
                 // Calcul du temps écoulé en secondes
-                long duration = (endTime - startTime) / 1000000; // En millisecondes
-
+                float duration = endTime - startTime; // En millisecondes
+                System.out.println("before"+duration);
+                duration =  duration / 1000;
                 // Affichage du temps d'exécution
-                System.out.println("Execution Time: " + duration + " ms");
+                System.out.println("Execution Time: " + duration + " sec");
 
                 generateJson(solutions, jsonPath);
 
@@ -116,11 +118,11 @@ public class Virtuoso {
     }
 
     // Générer le fichier CSV avec les métriques
-    private static void generateCsv(String csvPath, long executionTime, int numSolutions) {
+    private static void generateCsv(String csvPath, float executionTime, int numSolutions) {
         try (FileWriter writer = new FileWriter(csvPath, true)) {
             // Écrire les métriques dans le fichier CSV
-            writer.append("status,reason,sourceSelectionTime,executionTime,runtime,numASKQueries,numSolutions,numAssignments,tpwss,query,workload,approach,run\n");
-            writer.append("ok,,0," + executionTime + "," + executionTime + ",0," + numSolutions + ",0,0\n");
+            writer.append("status,executionTime\n");
+            writer.append("ok,"+executionTime);
         } catch (IOException e) {
             System.err.println("Error writing CSV file: " + e.getMessage());
         }
