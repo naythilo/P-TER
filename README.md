@@ -81,3 +81,13 @@ go bin
 
 fedx
 /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input /workspaces/P-TER/queries/q05d.sparql
+
+
+fedup w fedx
+git clone https://github.com/GDD-Nantes/fedup.git
+cd fedup
+mvn clean install -Dmaven.test.skip=true
+sdk default java 21.0.5-ms  
+min java 21
+dans le target 
+java -jar fedup.jar -e FedX -f /workspaces/P-TER/queries/qex.sparql -s /workspaces/P-TER/fedshop200-h0 -x -m='(e) -> "http://localhost:8890/sparql?default-graph-uri="+(e.substring(0, e.length() ))'
