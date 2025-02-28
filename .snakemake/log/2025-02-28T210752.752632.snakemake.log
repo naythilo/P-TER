@@ -1,0 +1,73 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+run_hefquin_query        3
+total                    4
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Fri Feb 28 21:07:52 2025]
+localrule run_hefquin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q01a.sparql
+    output: output/rdfs/HefQuin/q01a.2.csv, output/rdfs/HefQuin/q01a.2.json
+    jobid: 2
+    reason: Missing output files: output/rdfs/HefQuin/q01a.2.csv
+    wildcards: workload=rdfs, query=q01a, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Fri Feb 28 21:07:52 2025]
+localrule run_hefquin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q01a.sparql
+    output: output/rdfs/HefQuin/q01a.3.csv, output/rdfs/HefQuin/q01a.3.json
+    jobid: 3
+    reason: Missing output files: output/rdfs/HefQuin/q01a.3.csv
+    wildcards: workload=rdfs, query=q01a, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Fri Feb 28 21:07:59 2025]
+Finished job 3.
+1 of 4 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 28 21:07:59 2025]
+localrule run_hefquin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q01a.sparql
+    output: output/rdfs/HefQuin/q01a.1.csv, output/rdfs/HefQuin/q01a.1.json
+    jobid: 1
+    reason: Missing output files: output/rdfs/HefQuin/q01a.1.csv
+    wildcards: workload=rdfs, query=q01a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Fri Feb 28 21:07:59 2025]
+Finished job 2.
+2 of 4 steps (50%) done
+[Fri Feb 28 21:08:03 2025]
+Finished job 1.
+3 of 4 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Feb 28 21:08:03 2025]
+localrule all:
+    input: /workspaces/P-TER/apache-jena-fuseki-4.9.0, /workspaces/P-TER/apache-jena-4.9.0, config/largerdfbench/graphs.txt, config/rdfs/endpoints.txt, output/rdfs/HefQuin/q01a.1.csv, output/rdfs/HefQuin/q01a.2.csv, output/rdfs/HefQuin/q01a.3.csv
+    output: output/data.csv
+    jobid: 0
+    reason: Missing output files: output/data.csv; Input files updated by another job: output/rdfs/HefQuin/q01a.2.csv, output/rdfs/HefQuin/q01a.3.csv, output/rdfs/HefQuin/q01a.1.csv
+    resources: tmpdir=/tmp
+
+[Fri Feb 28 21:08:04 2025]
+Finished job 0.
+4 of 4 steps (100%) done
+Complete log: .snakemake/log/2025-02-28T210752.752632.snakemake.log

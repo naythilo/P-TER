@@ -30,9 +30,10 @@ RUNS = [1,2,3]
 RESTART = False
 WORKLOADS = ["rdfs"]
 APPROACHES = ["Jena","FedX","HefQuin"]
-#QUERIES = ["q01a"]
+#APPROACHES = ["Jena"]
+QUERIES = ["q01a"]
 
-QUERIES = [
+QUERIESS = [
     "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
     "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
     "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
@@ -52,6 +53,7 @@ QUERIES = [
 DO_INSTALL = False
 KEEP_ALIVE = False
 RUN_QUERY = True
+RUN_QUERY_FEDUP = False
 SETUP_VIRTU = False 
 
 # Fonction pour récupérer les requêtes SPARQL
@@ -199,11 +201,12 @@ if RUN_QUERY:
 
         output:
             metrics = "output/{workload}/Jena/{query}.{run}.csv",
+            json_file = "output/{workload}/Jena/{query}.{run}.json"
 
         run:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
-            shell(f"python commons.py run-jena-query {input.query_file} --metrics-output {output.metrics}")
+            shell(f"python commons.py run-jena-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file}")
 
             # Post-traitement des résultats avec Pandas
             df = pandas.read_csv(output.metrics)
@@ -254,6 +257,31 @@ if RUN_QUERY:
             query_file = "queries/{query}.sparql",
         output:
             metrics = "output/{workload}/HefQuin/{query}.{run}.csv",
+            json_file = "output/{workload}/HefQuin/{query}.{run}.json"
+
+        run:
+            shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
+
+            shell(f"python commons.py run-hefquin-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file}")
+
+            # Post-traitement des résultats avec Pandas
+            df = pandas.read_csv(output.metrics)
+            df["query"] = wildcards.query
+            df["workload"] = wildcards.workload
+            df["approach"] = "Hefquin"
+            df["run"] = wildcards.run
+            df.to_csv(output.metrics, index=False)
+
+if RUN_QUERY_FEDUP:
+
+    rule run_hefquin_query:
+        priority: 50
+        input:
+            virtuoso = VIRTUOSO_HOME,
+            virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
+            query_file = "queries/{query}.sparql",
+        output:
+            metrics = "output/{workload}/HefQuin2/{query}.{run}.csv",
         run:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
@@ -266,8 +294,6 @@ if RUN_QUERY:
             df["approach"] = "Hefquin"
             df["run"] = wildcards.run
             df.to_csv(output.metrics, index=False)
-
-
 
 
 #/usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05.sparql

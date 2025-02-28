@@ -40,7 +40,7 @@ public class Virtuoso {
             }
         }
 
-        FedXConfig config = new FedXConfig().withLogQueries(true);
+        FedXConfig config = new FedXConfig().withLogQueries(true).withEnforceMaxQueryTime(60000);;
         Repository repository = FedXFactory.newFederation()
                 .withConfig(config)
                 .create();
@@ -121,8 +121,8 @@ public class Virtuoso {
     private static void generateCsv(String csvPath, float executionTime, int numSolutions) {
         try (FileWriter writer = new FileWriter(csvPath, true)) {
             // Écrire les métriques dans le fichier CSV
-            writer.append("status,executionTime\n");
-            writer.append("ok,"+executionTime);
+            writer.append("status,executionTime,nbResult\n");
+            writer.append("ok,"+executionTime+","+numSolutions);
         } catch (IOException e) {
             System.err.println("Error writing CSV file: " + e.getMessage());
         }
