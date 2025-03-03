@@ -30,8 +30,8 @@ RUNS = [1,2,3]
 RESTART = False
 WORKLOADS = ["rdfs"]
 #APPROACHES = ["Jena","FedX","HefQuin"]
-APPROACHES = ["FedUp-FedX"]
-QUERIES = ["q01a"]
+APPROACHES = ["FedUp-FedX","FedUp-Jena"]
+QUERIES = ["q05d"]
 
 QUERIESS = [
     "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
@@ -286,13 +286,35 @@ if RUN_QUERY_FEDUP:
         run:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
-            shell(f"python commons.py run-fedup-fedx-query {input.query_file} --metrics-output {output.metrics}")
+            shell(f"python commons.py run-fedup-fedx-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file} ")
 
             # Post-traitement des résultats avec Pandas
             df = pandas.read_csv(output.metrics)
             df["query"] = wildcards.query
             df["workload"] = wildcards.workload
             df["approach"] = "FedUp-FedX"
+            df["run"] = wildcards.run
+            df.to_csv(output.metrics, index=False)
+
+    rule run_Fedup_Jena_query:
+        priority: 50
+        input:
+            virtuoso = VIRTUOSO_HOME,
+            virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
+            query_file = "fedup-queries/{query}.sparql",
+        output:
+            metrics = "output/{workload}/FedUp-Jena/{query}.{run}.csv",
+            json_file = "output/{workload}/FedUp-Jena/{query}.{run}.json"
+        run:
+            shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
+
+            shell(f"python commons.py run-fedup-jena-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file} ")
+
+            # Post-traitement des résultats avec Pandas
+            df = pandas.read_csv(output.metrics)
+            df["query"] = wildcards.query
+            df["workload"] = wildcards.workload
+            df["approach"] = "FedUp-Jena"
             df["run"] = wildcards.run
             df.to_csv(output.metrics, index=False)
 

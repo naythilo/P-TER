@@ -295,27 +295,97 @@ def run_hefquin_query(query_file,metrics_output,solutions_output):
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
-    print("hey")
     command = [
         "java", "-jar", "../fedup/target/fedup.jar", 
         "-e", "FedX", 
-        "-f", "/workspaces/P-TER/queries/qex.sparql", 
+        "-f", query_file, 
         "-s", "/workspaces/P-TER/fedshop200-h0", 
         "-x",
         "-m", "(e) -> \"http://localhost:8890/sparql?default-graph-uri=\" + e.substring(0, e.length())"
     ]
 
-    #"-m=\"(e) -> \\\"http://localhost:8890/sparql?default-graph-uri=\\\"+(e.substring(0, e.length()))\"\""
-    #"-m='(e) -> \"http://localhost:8890/sparql?default-graph-uri=\"+(e.substring(0, e.length() ))'"
-    #"-m=\"(e) -> 'http://localhost:8890/sparql?default-graph-uri='+(e.substring(0, e.length() ))\""
-    commande = "java -jar ../fedup/target/fedup.jar -e FedX -f /workspaces/P-TER/queries/qex.sparql -s fedshop200-h0 -x -m='(e) -> \"http://localhost:8890/sparql?default-graph-uri=\"+(e.substring(0, e.length() ))'"
-    commandee = "java -jar ../fedup/target/fedup.jar -e FedX -f /workspaces/P-TER/queries/qex.sparql -s /workspaces/P-TER/fedshop200-h0fedshop200-h0 -x"
-
-    print("yiivf")
     result = subprocess.run(command, capture_output=True, text=True)
-    print("chacal")
-    results = result.stderr
-    print(results)
+
+    time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
+    if time_match:
+        retrieval_time = int(time_match.group(1))
+        retrieval_time = retrieval_time / 1000
+        nbResult = time_match.group(2)   
+    else:
+        retrieval_time = "N/A"
+        nbResult = "N/A"
+
+    print(f"Time to retrieve mappings: {retrieval_time} ms")
+    print(f"Number of mappings: {nbResult}")
+
+    df = pd.DataFrame([{
+        "status": "ok", 
+        "executionTime": retrieval_time, 
+        "nbResult": nbResult,
+    }])
+
+    df.to_csv(metrics_output, index=False)
+
+    print(f"Fedup-FedX Results saved to {metrics_output} with execution time: {retrieval_time} ms")
+
+    pattern = r'\( \?product = <([^>]+)> \) \( \?label = "([^"]+)" \)'
+
+    matches = re.findall(pattern, result.stdout)
+
+    data = [{"product": product, "label": label} for product, label in matches]
+
+    json_data = json.dumps(data, indent=4)
+    write_solutions(json_data, solutions_output)
+
+
+
+@cli.command()
+@click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
+@click.option("--metrics-output", type=click.Path())
+@click.option("--solutions-output", type=click.Path())
+def run_fedup_jena_query(query_file,metrics_output,solutions_output):
+    command = [
+        "java", "-jar", "../fedup/target/fedup.jar", 
+        "-e", "FedX", 
+        "-f", query_file, 
+        "-s", "/workspaces/P-TER/fedshop200-h0", 
+        "-x",
+        "-m", "(e) -> \"http://localhost:8890/sparql?default-graph-uri=\" + e.substring(0, e.length())"
+    ]
+
+    result = subprocess.run(command, capture_output=True, text=True)
+
+    time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
+    if time_match:
+        retrieval_time = int(time_match.group(1))
+        retrieval_time = retrieval_time / 1000
+        nbResult = time_match.group(2)   
+    else:
+        retrieval_time = "N/A"
+        nbResult = "N/A"
+
+    print(f"Time to retrieve mappings: {retrieval_time} ms")
+    print(f"Number of mappings: {nbResult}")
+
+
+    df = pd.DataFrame([{
+        "status": "ok", 
+        "executionTime": retrieval_time, 
+        "nbResult": nbResult,
+    }])
+
+    df.to_csv(metrics_output, index=False)
+
+    print(f"Fedup-FedX Results saved to {metrics_output} with execution time: {retrieval_time} ms")
+
+    pattern = r'\( \?product = <([^>]+)> \) \( \?label = "([^"]+)" \)'
+
+    matches = re.findall(pattern, result.stdout)
+
+    data = [{"product": product, "label": label} for product, label in matches]
+
+    json_data = json.dumps(data, indent=4)
+    write_solutions(json_data, solutions_output)
 
 
 

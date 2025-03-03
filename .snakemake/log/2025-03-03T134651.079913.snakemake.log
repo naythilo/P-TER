@@ -1,0 +1,100 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+run_Fedup_FedX_query        3
+run_Fedup_Jena_query        3
+total                       7
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar  3 13:46:51 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q05d.sparql
+    output: output/rdfs/FedUp-FedX/q05d.2.csv, output/rdfs/FedUp-FedX/q05d.2.json
+    jobid: 2
+    reason: Missing output files: output/rdfs/FedUp-FedX/q05d.2.csv
+    wildcards: workload=rdfs, query=q05d, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar  3 13:47:33 2025]
+Finished job 2.
+1 of 7 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar  3 13:47:33 2025]
+localrule run_Fedup_Jena_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q05d.sparql
+    output: output/rdfs/FedUp-Jena/q05d.2.csv, output/rdfs/FedUp-Jena/q05d.2.json
+    jobid: 5
+    reason: Missing output files: output/rdfs/FedUp-Jena/q05d.2.csv
+    wildcards: workload=rdfs, query=q05d, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar  3 13:48:19 2025]
+Finished job 5.
+2 of 7 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar  3 13:48:19 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q05d.sparql
+    output: output/rdfs/FedUp-FedX/q05d.3.csv, output/rdfs/FedUp-FedX/q05d.3.json
+    jobid: 3
+    reason: Missing output files: output/rdfs/FedUp-FedX/q05d.3.csv
+    wildcards: workload=rdfs, query=q05d, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar  3 13:49:01 2025]
+Finished job 3.
+3 of 7 steps (43%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar  3 13:49:01 2025]
+localrule run_Fedup_Jena_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q05d.sparql
+    output: output/rdfs/FedUp-Jena/q05d.3.csv, output/rdfs/FedUp-Jena/q05d.3.json
+    jobid: 6
+    reason: Missing output files: output/rdfs/FedUp-Jena/q05d.3.csv
+    wildcards: workload=rdfs, query=q05d, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar  3 13:49:42 2025]
+Finished job 6.
+4 of 7 steps (57%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar  3 13:49:42 2025]
+localrule run_Fedup_Jena_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q05d.sparql
+    output: output/rdfs/FedUp-Jena/q05d.1.csv, output/rdfs/FedUp-Jena/q05d.1.json
+    jobid: 4
+    reason: Missing output files: output/rdfs/FedUp-Jena/q05d.1.csv
+    wildcards: workload=rdfs, query=q05d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Mon Mar  3 13:50:18 2025]
+Error in rule run_Fedup_Jena_query:
+    jobid: 4
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q05d.sparql
+    output: output/rdfs/FedUp-Jena/q05d.1.csv, output/rdfs/FedUp-Jena/q05d.1.json
+
+Complete log: .snakemake/log/2025-03-03T134651.079913.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
