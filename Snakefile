@@ -29,8 +29,8 @@ RUNS = [1,2,3]
 # Liste des workloads
 RESTART = False
 WORKLOADS = ["rdfs"]
-APPROACHES = ["Jena","FedX","HefQuin"]
-#APPROACHES = ["Jena"]
+#APPROACHES = ["Jena","FedX","HefQuin"]
+APPROACHES = ["FedUp-FedX"]
 QUERIES = ["q01a"]
 
 QUERIESS = [
@@ -52,8 +52,8 @@ QUERIESS = [
 # VARS DE CONFIG DU SNAKEFILE
 DO_INSTALL = False
 KEEP_ALIVE = False
-RUN_QUERY = True
-RUN_QUERY_FEDUP = False
+RUN_QUERY = False
+RUN_QUERY_FEDUP = True
 SETUP_VIRTU = False 
 
 # Fonction pour récupérer les requêtes SPARQL
@@ -274,24 +274,25 @@ if RUN_QUERY:
 
 if RUN_QUERY_FEDUP:
 
-    rule run_hefquin_query:
+    rule run_Fedup_FedX_query:
         priority: 50
         input:
             virtuoso = VIRTUOSO_HOME,
             virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
-            query_file = "queries/{query}.sparql",
+            query_file = "fedup-queries/{query}.sparql",
         output:
-            metrics = "output/{workload}/HefQuin2/{query}.{run}.csv",
+            metrics = "output/{workload}/FedUp-FedX/{query}.{run}.csv",
+            json_file = "output/{workload}/FedUp-FedX/{query}.{run}.json"
         run:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
-            shell(f"python commons.py run-hefquin-query {input.query_file} --metrics-output {output.metrics}")
+            shell(f"python commons.py run-fedup-fedx-query {input.query_file} --metrics-output {output.metrics}")
 
             # Post-traitement des résultats avec Pandas
             df = pandas.read_csv(output.metrics)
             df["query"] = wildcards.query
             df["workload"] = wildcards.workload
-            df["approach"] = "Hefquin"
+            df["approach"] = "FedUp-FedX"
             df["run"] = wildcards.run
             df.to_csv(output.metrics, index=False)
 

@@ -90,4 +90,4 @@ mvn clean install -Dmaven.test.skip=true
 sdk default java 21.0.5-ms  
 min java 21
 dans le target 
-java -jar fedup.jar -e FedX -f /workspaces/P-TER/queries/qex.sparql -s /workspaces/P-TER/fedshop200-h0 -x -m='(e) -> "http://localhost:8890/sparql?default-graph-uri="+(e.substring(0, e.length() ))'
+java -jar ../fedup/target/fedup.jar -e FedX -f /workspaces/P-TER/queries/qex.sparql -s fedshop200-h0 -x -m='(e) -> "http://localhost:8890/sparql?default-graph-uri="+(e.substring(0, e.length() ))'

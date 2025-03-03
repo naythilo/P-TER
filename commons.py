@@ -10,6 +10,7 @@ import requests
 import subprocess
 import SPARQLWrapper
 import subprocess
+import shlex
 import pandas as pd
 
 
@@ -287,6 +288,34 @@ def run_hefquin_query(query_file,metrics_output,solutions_output):
 
     print(f"Hefquin Results saved to {metrics_output} with execution time: {execution_time} sec")
     write_solutions(results, solutions_output)
+
+
+@cli.command()
+@click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
+@click.option("--metrics-output", type=click.Path())
+@click.option("--solutions-output", type=click.Path())
+def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
+    print("hey")
+    command = [
+        "java", "-jar", "../fedup/target/fedup.jar", 
+        "-e", "FedX", 
+        "-f", "/workspaces/P-TER/queries/qex.sparql", 
+        "-s", "/workspaces/P-TER/fedshop200-h0", 
+        "-x",
+        "-m", "(e) -> \"http://localhost:8890/sparql?default-graph-uri=\" + e.substring(0, e.length())"
+    ]
+
+    #"-m=\"(e) -> \\\"http://localhost:8890/sparql?default-graph-uri=\\\"+(e.substring(0, e.length()))\"\""
+    #"-m='(e) -> \"http://localhost:8890/sparql?default-graph-uri=\"+(e.substring(0, e.length() ))'"
+    #"-m=\"(e) -> 'http://localhost:8890/sparql?default-graph-uri='+(e.substring(0, e.length() ))\""
+    commande = "java -jar ../fedup/target/fedup.jar -e FedX -f /workspaces/P-TER/queries/qex.sparql -s fedshop200-h0 -x -m='(e) -> \"http://localhost:8890/sparql?default-graph-uri=\"+(e.substring(0, e.length() ))'"
+    commandee = "java -jar ../fedup/target/fedup.jar -e FedX -f /workspaces/P-TER/queries/qex.sparql -s /workspaces/P-TER/fedshop200-h0fedshop200-h0 -x"
+
+    print("yiivf")
+    result = subprocess.run(command, capture_output=True, text=True)
+    print("chacal")
+    results = result.stderr
+    print(results)
 
 
 
