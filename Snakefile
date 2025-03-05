@@ -31,31 +31,31 @@ RUNS = [1,2,3]
 RESTART = False
 WORKLOADS = ["rdfs"]
 #APPROACHES = ["Jena","FedX","HefQuin"]
-#APPROACHES = ["Jena","FedX","HefQuin","FedUp-FedX","FedUp-Jena"]
-APPROACHES = ["FedUp-FedX","FedUp-Jena"]
-QUERIESS = ["q05d"]
+APPROACHES = ["Jena","FedX","HefQuin","FedUp-FedX","FedUp-HefQuin","FedUp-Jena"]
+#APPROACHES = ["FedUp-HefQuin"]
+QUERIES = ["q07b"]
 
-QUERIES = [
-    "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
-    "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
-    "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
-    "q04a", "q04b", "q04c", "q04d", "q04e", "q04f", "q04g", "q04h", "q04i", "q04j",
-    "q05a", "q05b", "q05c", "q05d", "q05e", "q05f", "q05g", "q05h", "q05i", "q05j",
-    "q06a", "q06b", "q06c", "q06d", "q06e", "q06f", "q06g", "q06h", "q06i", "q06j",
+QUERIESS = [
+#    "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
+#    "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
+#    "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
+#    "q04a", "q04b", "q04c", "q04d", "q04e", "q04f", "q04g", "q04h", "q04i", "q04j",
+#    "q05a", "q05b", "q05c", "q05d", "q05e", "q05f", "q05g", "q05h", "q05i", "q05j",
+#    "q06a", "q06b", "q06c", "q06d", "q06e", "q06f", "q06g", "q06h", "q06i", "q06j",
     "q07a", "q07b", "q07c", "q07d", "q07e", "q07f", "q07g", "q07h", "q07i", "q07j",
-    "q08a", "q08b", "q08c", "q08d", "q08e", "q08f", "q08g", "q08h", "q08i", "q08j",
-    "q09a", "q09b", "q09c", "q09d", "q09e", "q09f", "q09g", "q09h", "q09i", "q09j",
-    "q10a", "q10b", "q10c", "q10d", "q10e", "q10f", "q10g", "q10h", "q10i", "q10j",
-    "q11a", "q11b", "q11c", "q11d", "q11e", "q11f", "q11g", "q11h", "q11i", "q11j",
-    "q12a", "q12b", "q12c", "q12d", "q12e", "q12f", "q12g", "q12h", "q12i", "q12j"
+#   "q08a", "q08b", "q08c", "q08d", "q08e", "q08f", "q08g", "q08h", "q08i", "q08j",
+#    "q09a", "q09b", "q09c", "q09d", "q09e", "q09f", "q09g", "q09h", "q09i", "q09j",
+#    "q10a", "q10b", "q10c", "q10d", "q10e", "q10f", "q10g", "q10h", "q10i", "q10j",
+#    "q11a", "q11b", "q11c", "q11d", "q11e", "q11f", "q11g", "q11h", "q11i", "q11j",
+#    "q12a", "q12b", "q12c", "q12d", "q12e", "q12f", "q12g", "q12h", "q12i", "q12j"
 ]
 
 
 # VARS DE CONFIG DU SNAKEFILE
 DO_INSTALL = False
 KEEP_ALIVE = False
-RUN_QUERY = False
-RUN_QUERY_FEDUP = False
+RUN_QUERY = True
+RUN_QUERY_FEDUP = True
 SETUP_VIRTU = False 
 
 # Fonction pour récupérer les requêtes SPARQL
@@ -299,7 +299,7 @@ if RUN_QUERY_FEDUP:
             df.to_csv(output.metrics, index=False)
 
     rule run_Fedup_Jena_query:
-        priority: 50
+        priority: 20
         input:
             virtuoso = VIRTUOSO_HOME,
             virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
@@ -317,6 +317,28 @@ if RUN_QUERY_FEDUP:
             df["query"] = wildcards.query
             df["workload"] = wildcards.workload
             df["approach"] = "FedUp-Jena"
+            df["run"] = wildcards.run
+            df.to_csv(output.metrics, index=False)
+
+    rule run_Fedup_HefQuin_query:
+        priority: 50
+        input:
+            virtuoso = VIRTUOSO_HOME,
+            virtuoso_configfile = f"{VIRTUOSO_HOME}/var/lib/virtuoso/db/fedup.ini",
+            query_file = "/workspaces/P-TER/fedup-queries/{query}.sparql",
+        output:
+            metrics = "output/{workload}/FedUp-HefQuin/{query}.{run}.csv",
+            json_file = "output/{workload}/FedUp-HefQuin/{query}.{run}.json"
+        run:
+            shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
+
+            shell(f"python commons.py run-fedup-hefquin-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file} ")
+
+            # Post-traitement des résultats avec Pandas
+            df = pandas.read_csv(output.metrics)
+            df["query"] = wildcards.query
+            df["workload"] = wildcards.workload
+            df["approach"] = "FedUp-HefQuin"
             df["run"] = wildcards.run
             df.to_csv(output.metrics, index=False)
 

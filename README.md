@@ -91,3 +91,24 @@ sdk default java 21.0.5-ms
 min java 21
 dans le target 
 java -jar ../fedup/target/fedup.jar -e FedX -f /workspaces/P-TER/fedup-queries/q01a.sparql -s fedshop200-h0 -x -m='(e) -> "http://localhost:8890/sparql?default-graph-uri="+(e.substring(0, e.length() ))'
+
+
+Requete avec erreur op : 
+java -jar ../fedup/target/fedup.jar -e Jena -f /workspaces/P-TER/fedup-queries/q12a.sparql -s fedshop200-h0 -x -m='(e) -> "http://localhost:8890/sparql?default-graph-uri="+(e.substring(0, e.length() ))'
+
+
+git clone https://<token>@github.com/GDD-Nantes/HeFQUIN-FRAW.git 
+
+
+./bin/hefquin --federationDescription fedshop200.ttl --confDescr DefaultEngineWithFedupConfForFedshop200.ttl --file /workspaces/P-TER/fedup-queries/q10a.sparql --time --results=JSON
+
+../HeFQUIN-FRAW/bin/hefquin --federationDescription ../HeFQUIN-FRAW/fedshop200.ttl --confDescr ../HeFQUIN-FRAW/DefaultEngineWithFedupConfForFedshop200.ttl --file /workspaces/P-TER/fedup-queries/q05i.sparql --time --results=JSON
+
+
+
+/workspaces/HeFQUIN-FRAW/bin/hefquin --federationDescription /workspaces/HeFQUIN-FRAW/fedshop200.ttl --confDescr /workspaces/HeFQUIN-FRAW/DefaultEngineWithFedupConfForFedshop200.ttl --file /workspaces/P-TER/fedup-queries/q05i.sparql --time --results=JSON
+
+ps -edf | grep virtuoso
+
+pour faire graphique : 
+planningTime : 1656+executionTime : 37
