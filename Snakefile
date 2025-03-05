@@ -24,16 +24,18 @@ VIRTUOSO_HOME = f"{os.getcwd()}/virtuoso-opensource-7.2.7"
 TIMEOUT = 1200  # 20 minutes
 
 # Nombre d'exécutions par requête
+#RUNS = [1,2,3]
 RUNS = [1,2,3]
 
 # Liste des workloads
 RESTART = False
 WORKLOADS = ["rdfs"]
 #APPROACHES = ["Jena","FedX","HefQuin"]
+#APPROACHES = ["Jena","FedX","HefQuin","FedUp-FedX","FedUp-Jena"]
 APPROACHES = ["FedUp-FedX","FedUp-Jena"]
-QUERIES = ["q05d"]
+QUERIESS = ["q05d"]
 
-QUERIESS = [
+QUERIES = [
     "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
     "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
     "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
@@ -53,7 +55,7 @@ QUERIESS = [
 DO_INSTALL = False
 KEEP_ALIVE = False
 RUN_QUERY = False
-RUN_QUERY_FEDUP = True
+RUN_QUERY_FEDUP = False
 SETUP_VIRTU = False 
 
 # Fonction pour récupérer les requêtes SPARQL

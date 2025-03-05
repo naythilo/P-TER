@@ -336,6 +336,7 @@ def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
 
     json_data = json.dumps(data, indent=4)
     write_solutions(json_data, solutions_output)
+    
 
 
 
@@ -346,7 +347,7 @@ def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
 def run_fedup_jena_query(query_file,metrics_output,solutions_output):
     command = [
         "java", "-jar", "../fedup/target/fedup.jar", 
-        "-e", "FedX", 
+        "-e", "Jena", 
         "-f", query_file, 
         "-s", "/workspaces/P-TER/fedshop200-h0", 
         "-x",
@@ -364,6 +365,7 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
         retrieval_time = "N/A"
         nbResult = "N/A"
 
+
     print(f"Time to retrieve mappings: {retrieval_time} ms")
     print(f"Number of mappings: {nbResult}")
 
@@ -376,7 +378,7 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
 
     df.to_csv(metrics_output, index=False)
 
-    print(f"Fedup-FedX Results saved to {metrics_output} with execution time: {retrieval_time} ms")
+    print(f"Fedup-FedX Results saved to {metrics_output} with execution time: {retrieval_time} s")
 
     pattern = r'\( \?product = <([^>]+)> \) \( \?label = "([^"]+)" \)'
 
@@ -386,6 +388,7 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
 
     json_data = json.dumps(data, indent=4)
     write_solutions(json_data, solutions_output)
+    
 
 
 

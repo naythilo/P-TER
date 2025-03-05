@@ -1,0 +1,11 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+MissingInputException in rule all in file /workspaces/P-TER/Snakefile, line 66:
+Missing input files for rule all:
+    output: output/data.csv
+    affected files:
+        output/rdfs/FedUp-Jena/q05b.3.csv
+        output/rdfs/FedUp-FedX/q05c.3.csv
+        output/rdfs/FedUp-FedX/q05h.2.csv
+        output/rdfs/FedUp-Jena/q05b.2.csv
+        output/rdfs/FedUp-FedX/q05h.3.csv
