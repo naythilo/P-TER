@@ -25,7 +25,7 @@ TIMEOUT = 1200  # 20 minutes
 
 # Nombre d'exécutions par requête
 #RUNS = [1,2,3]
-RUNS = [1,2,3]
+RUNS = [1]
 
 # Liste des workloads
 RESTART = False
@@ -33,14 +33,16 @@ WORKLOADS = ["rdfs"]
 #APPROACHES = ["Jena","FedX","HefQuin"]
 APPROACHES = ["Jena","FedX","HefQuin","FedUp-FedX","FedUp-HefQuin"]
 #APPROACHES = ["FedUp-HefQuin","FedUp-Jena"]
-QUERIESs = ["q07b"]
+#APPROACHES = ["FedUp-FedX"]
+QUERIESx = ["q01a"]
 
 QUERIES = [
-#    "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
+    "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
 #    "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
 #    "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
 #    "q04a", "q04b", "q04c", "q04d", "q04e", "q04f", "q04g", "q04h", "q04i", "q04j",
 #    "q05a", "q05b", "q05c", "q05d", "q05e", "q05f", "q05g", "q05h", "q05i", "q05j",
+    "q05b", "q05d",  "q05j",
 #    "q06a", "q06b", "q06c", "q06d", "q06e", "q06f", "q06g", "q06h", "q06i", "q06j",
     "q07a", "q07b", "q07c", "q07d", "q07e", "q07f", "q07g", "q07h", "q07i", "q07j",
 #   "q08a", "q08b", "q08c", "q08d", "q08e", "q08f", "q08g", "q08h", "q08i", "q08j",

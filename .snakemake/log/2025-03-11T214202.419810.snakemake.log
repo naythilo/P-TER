@@ -1,0 +1,26 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 11 21:42:02 2025]
+localrule all:
+    input: /workspaces/P-TER/apache-jena-fuseki-4.9.0, /workspaces/P-TER/apache-jena-4.9.0, config/largerdfbench/graphs.txt, config/rdfs/endpoints.txt, output/rdfs/Jena/q01a.1.csv, output/rdfs/Jena/q01b.1.csv, output/rdfs/Jena/q01c.1.csv, output/rdfs/Jena/q01d.1.csv, output/rdfs/Jena/q01e.1.csv, output/rdfs/Jena/q01f.1.csv, output/rdfs/Jena/q01g.1.csv, output/rdfs/Jena/q01h.1.csv, output/rdfs/Jena/q01i.1.csv, output/rdfs/Jena/q01j.1.csv, output/rdfs/Jena/q05b.1.csv, output/rdfs/Jena/q05d.1.csv, output/rdfs/Jena/q05j.1.csv, output/rdfs/Jena/q07a.1.csv, output/rdfs/Jena/q07b.1.csv, output/rdfs/Jena/q07c.1.csv, output/rdfs/Jena/q07d.1.csv, output/rdfs/Jena/q07e.1.csv, output/rdfs/Jena/q07f.1.csv, output/rdfs/Jena/q07g.1.csv, output/rdfs/Jena/q07h.1.csv, output/rdfs/Jena/q07i.1.csv, output/rdfs/Jena/q07j.1.csv, output/rdfs/FedX/q01a.1.csv, output/rdfs/FedX/q01b.1.csv, output/rdfs/FedX/q01c.1.csv, output/rdfs/FedX/q01d.1.csv, output/rdfs/FedX/q01e.1.csv, output/rdfs/FedX/q01f.1.csv, output/rdfs/FedX/q01g.1.csv, output/rdfs/FedX/q01h.1.csv, output/rdfs/FedX/q01i.1.csv, output/rdfs/FedX/q01j.1.csv, output/rdfs/FedX/q05b.1.csv, output/rdfs/FedX/q05d.1.csv, output/rdfs/FedX/q05j.1.csv, output/rdfs/FedX/q07a.1.csv, output/rdfs/FedX/q07b.1.csv, output/rdfs/FedX/q07c.1.csv, output/rdfs/FedX/q07d.1.csv, output/rdfs/FedX/q07e.1.csv, output/rdfs/FedX/q07f.1.csv, output/rdfs/FedX/q07g.1.csv, output/rdfs/FedX/q07h.1.csv, output/rdfs/FedX/q07i.1.csv, output/rdfs/FedX/q07j.1.csv, output/rdfs/HefQuin/q01a.1.csv, output/rdfs/HefQuin/q01b.1.csv, output/rdfs/HefQuin/q01c.1.csv, output/rdfs/HefQuin/q01d.1.csv, output/rdfs/HefQuin/q01e.1.csv, output/rdfs/HefQuin/q01f.1.csv, output/rdfs/HefQuin/q01g.1.csv, output/rdfs/HefQuin/q01h.1.csv, output/rdfs/HefQuin/q01i.1.csv, output/rdfs/HefQuin/q01j.1.csv, output/rdfs/HefQuin/q05b.1.csv, output/rdfs/HefQuin/q05d.1.csv, output/rdfs/HefQuin/q05j.1.csv, output/rdfs/HefQuin/q07a.1.csv, output/rdfs/HefQuin/q07b.1.csv, output/rdfs/HefQuin/q07c.1.csv, output/rdfs/HefQuin/q07d.1.csv, output/rdfs/HefQuin/q07e.1.csv, output/rdfs/HefQuin/q07f.1.csv, output/rdfs/HefQuin/q07g.1.csv, output/rdfs/HefQuin/q07h.1.csv, output/rdfs/HefQuin/q07i.1.csv, output/rdfs/HefQuin/q07j.1.csv, output/rdfs/FedUp-FedX/q01a.1.csv, output/rdfs/FedUp-FedX/q01b.1.csv, output/rdfs/FedUp-FedX/q01c.1.csv, output/rdfs/FedUp-FedX/q01d.1.csv, output/rdfs/FedUp-FedX/q01e.1.csv, output/rdfs/FedUp-FedX/q01f.1.csv, output/rdfs/FedUp-FedX/q01g.1.csv, output/rdfs/FedUp-FedX/q01h.1.csv, output/rdfs/FedUp-FedX/q01i.1.csv, output/rdfs/FedUp-FedX/q01j.1.csv, output/rdfs/FedUp-FedX/q05b.1.csv, output/rdfs/FedUp-FedX/q05d.1.csv, output/rdfs/FedUp-FedX/q05j.1.csv, output/rdfs/FedUp-FedX/q07a.1.csv, output/rdfs/FedUp-FedX/q07b.1.csv, output/rdfs/FedUp-FedX/q07c.1.csv, output/rdfs/FedUp-FedX/q07d.1.csv, output/rdfs/FedUp-FedX/q07e.1.csv, output/rdfs/FedUp-FedX/q07f.1.csv, output/rdfs/FedUp-FedX/q07g.1.csv, output/rdfs/FedUp-FedX/q07h.1.csv, output/rdfs/FedUp-FedX/q07i.1.csv, output/rdfs/FedUp-FedX/q07j.1.csv, output/rdfs/FedUp-HefQuin/q01a.1.csv, output/rdfs/FedUp-HefQuin/q01b.1.csv, output/rdfs/FedUp-HefQuin/q01c.1.csv, output/rdfs/FedUp-HefQuin/q01d.1.csv, output/rdfs/FedUp-HefQuin/q01e.1.csv, output/rdfs/FedUp-HefQuin/q01f.1.csv, output/rdfs/FedUp-HefQuin/q01g.1.csv, output/rdfs/FedUp-HefQuin/q01h.1.csv, output/rdfs/FedUp-HefQuin/q01i.1.csv, output/rdfs/FedUp-HefQuin/q01j.1.csv, output/rdfs/FedUp-HefQuin/q05b.1.csv, output/rdfs/FedUp-HefQuin/q05d.1.csv, output/rdfs/FedUp-HefQuin/q05j.1.csv, output/rdfs/FedUp-HefQuin/q07a.1.csv, output/rdfs/FedUp-HefQuin/q07b.1.csv, output/rdfs/FedUp-HefQuin/q07c.1.csv, output/rdfs/FedUp-HefQuin/q07d.1.csv, output/rdfs/FedUp-HefQuin/q07e.1.csv, output/rdfs/FedUp-HefQuin/q07f.1.csv, output/rdfs/FedUp-HefQuin/q07g.1.csv, output/rdfs/FedUp-HefQuin/q07h.1.csv, output/rdfs/FedUp-HefQuin/q07i.1.csv, output/rdfs/FedUp-HefQuin/q07j.1.csv
+    output: output/data.csv
+    jobid: 0
+    reason: Missing output files: output/data.csv
+    resources: tmpdir=/tmp
+
+[Tue Mar 11 21:42:03 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-03-11T214202.419810.snakemake.log

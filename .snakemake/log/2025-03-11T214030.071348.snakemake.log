@@ -1,0 +1,26 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+all          1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 11 21:40:30 2025]
+localrule all:
+    input: /workspaces/P-TER/apache-jena-fuseki-4.9.0, /workspaces/P-TER/apache-jena-4.9.0, config/largerdfbench/graphs.txt, config/rdfs/endpoints.txt, output/rdfs/Jena/q05b.1.csv, output/rdfs/Jena/q05d.1.csv, output/rdfs/Jena/q05j.1.csv, output/rdfs/FedX/q05b.1.csv, output/rdfs/FedX/q05d.1.csv, output/rdfs/FedX/q05j.1.csv, output/rdfs/HefQuin/q05b.1.csv, output/rdfs/HefQuin/q05d.1.csv, output/rdfs/HefQuin/q05j.1.csv, output/rdfs/FedUp-FedX/q05b.1.csv, output/rdfs/FedUp-FedX/q05d.1.csv, output/rdfs/FedUp-FedX/q05j.1.csv, output/rdfs/FedUp-HefQuin/q05b.1.csv, output/rdfs/FedUp-HefQuin/q05d.1.csv, output/rdfs/FedUp-HefQuin/q05j.1.csv
+    output: output/data.csv
+    jobid: 0
+    reason: Missing output files: output/data.csv
+    resources: tmpdir=/tmp
+
+[Tue Mar 11 21:40:31 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-03-11T214030.071348.snakemake.log

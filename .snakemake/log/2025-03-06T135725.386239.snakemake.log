@@ -1,0 +1,37 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+run_Fedup_FedX_query          27
+run_Fedup_HefQuin_query       27
+total                         55
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Mar  6 13:57:25 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q05j.sparql
+    output: output/rdfs/FedUp-HefQuin/q05j.2.csv, output/rdfs/FedUp-HefQuin/q05j.2.json
+    jobid: 254
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q05j.2.csv
+    wildcards: workload=rdfs, query=q05j, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Thu Mar  6 13:59:23 2025]
+Error in rule run_Fedup_HefQuin_query:
+    jobid: 254
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q05j.sparql
+    output: output/rdfs/FedUp-HefQuin/q05j.2.csv, output/rdfs/FedUp-HefQuin/q05j.2.json
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-03-06T135725.386239.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

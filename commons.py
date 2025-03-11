@@ -305,7 +305,7 @@ def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
     ]
 
     result = subprocess.run(command, capture_output=True, text=True)
-
+    print(result.stderr)
     time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
     time_match_source_assignment = re.search(r"Took (\d+) to perform the source assignment", result.stderr)
 
@@ -314,7 +314,6 @@ def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
         retrieval_time = retrieval_time / 1000
         retrieval_time_source_assignment = int(time_match_source_assignment.group(1))
         retrieval_time_source_assignment = retrieval_time_source_assignment/1000
-
         nbResult = time_match.group(2)   
     else:
         retrieval_time = "N/A"
@@ -325,7 +324,7 @@ def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
 
     df = pd.DataFrame([{
         "status": "ok", 
-        "TotalExecutionTime": retrieval_time+retrieval_time_source_assignment, 
+        "TotalExecutionTime":  str(retrieval_time) + str(retrieval_time_source_assignment),
         "nbResult": nbResult,
         "planningTime":retrieval_time_source_assignment,
         "executionTime":retrieval_time,
@@ -375,18 +374,21 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
     #print(result.stderr)
     time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
     time_match_source_assignment = re.search(r"Took (\d+) to perform the source assignment", result.stderr)
-
+    
     if time_match:
         retrieval_time = int(time_match.group(1))
         retrieval_time = retrieval_time / 1000
-        retrieval_time_source_assignment = int(time_match_source_assignment.group(1))
-        retrieval_time_source_assignment = retrieval_time_source_assignment/1000
-
+        
         nbResult = time_match.group(2)   
     else:
         retrieval_time = "N/A"
         nbResult = "N/A"
 
+    if time_match_source_assignment : 
+        retrieval_time_source_assignment = int(time_match_source_assignment.group(1))
+        retrieval_time_source_assignment = retrieval_time_source_assignment/1000
+    else : 
+        retrieval_time_source_assignment = "N/A"
 
     print(f"Time to retrieve mappings: {retrieval_time} ms")
     print(f"Number of mappings: {nbResult}")
@@ -394,7 +396,7 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
 
     df = pd.DataFrame([{
         "status": "ok", 
-        "TotalExecutionTime": retrieval_time+retrieval_time_source_assignment, 
+        "TotalExecutionTime": str(retrieval_time) + str(retrieval_time_source_assignment), 
         "nbResult": nbResult,
         "planningTime":retrieval_time_source_assignment,
         "executionTime":retrieval_time,
@@ -437,20 +439,28 @@ def run_fedup_hefquin_query(query_file,metrics_output,solutions_output):
     command = ["./bin/hefquin", "--federationDescription fedshop200.ttl","--confDescr DefaultEngineWithFedupConfForFedshop200.ttl", "--file", query_file, "--time", "--results=JSON","--printQueryProcStats"]
     result = subprocess.run(command, capture_output=True, text=True)
     os.chdir("../P-TER")
-    print(result.stderr)
+    #print(result.stderr)
     time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
     time_match_planningTime = re.search(r"planningTime\s*:\s*(\d+)", result.stderr)
     time_match_executionTime = re.search(r"executionTime\s*:\s*(\d+)", result.stderr)
 
 
     execution_time = time_match.group(1) if time_match else "N/A"
-
-    if time_match:
-        retrieval_time = int(time_match_executionTime.group(1))
-        retrieval_time = retrieval_time / 1000
-        retrieval_time_source_assignment = int(time_match_planningTime.group(1))
-        retrieval_time_source_assignment = retrieval_time_source_assignment/1000 
+    
+    # Check if the executionTime was found and proceed
+    if time_match_executionTime:
+        retrieval_time = int(time_match_executionTime.group(1)) / 1000
     else:
+        retrieval_time = "N/A"
+    
+    # Check if planningTime was found
+    if time_match_planningTime:
+        retrieval_time_source_assignment = int(time_match_planningTime.group(1)) / 1000
+    else:
+        retrieval_time_source_assignment = "N/A"
+
+    # Handle case where no execution time was found
+    if time_match is None:
         retrieval_time = "N/A"
         nbResult = "N/A"
 
@@ -463,7 +473,7 @@ def run_fedup_hefquin_query(query_file,metrics_output,solutions_output):
         num_results = len(bindings)  # Nombre de résultats dans "bindings"
     except json.JSONDecodeError:
         num_results = 0
-    print(num_results)
+    #print(num_results)
 
     df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":retrieval_time_source_assignment,"executionTime":retrieval_time}])
 

@@ -1,0 +1,51 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+run_Fedup_FedX_query       30
+total                      31
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 11 20:36:19 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01b.sparql
+    output: output/rdfs/FedUp-FedX/q01b.3.csv, output/rdfs/FedUp-FedX/q01b.3.json
+    jobid: 6
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01b.3.csv
+    wildcards: workload=rdfs, query=q01b, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 11 20:36:30 2025]
+Finished job 6.
+1 of 31 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 11 20:36:30 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01c.sparql
+    output: output/rdfs/FedUp-FedX/q01c.3.csv, output/rdfs/FedUp-FedX/q01c.3.json
+    jobid: 9
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01c.3.csv
+    wildcards: workload=rdfs, query=q01c, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Tue Mar 11 20:36:39 2025]
+Error in rule run_Fedup_FedX_query:
+    jobid: 9
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01c.sparql
+    output: output/rdfs/FedUp-FedX/q01c.3.csv, output/rdfs/FedUp-FedX/q01c.3.json
+
+Complete log: .snakemake/log/2025-03-11T203619.220187.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

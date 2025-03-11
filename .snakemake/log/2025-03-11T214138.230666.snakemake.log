@@ -1,0 +1,8 @@
+host: codespaces-dfd9c6
+Building DAG of jobs...
+MissingInputException in rule run_sparql_query in file /workspaces/P-TER/Snakefile, line 199:
+Missing input files for rule run_sparql_query:
+    output: output/rdfs/Jena/q05jq07a.1.csv, output/rdfs/Jena/q05jq07a.1.json
+    wildcards: workload=rdfs, query=q05jq07a, run=1
+    affected files:
+        queries/q05jq07a.sparql
