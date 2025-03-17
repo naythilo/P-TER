@@ -1,0 +1,421 @@
+host: codespaces-c89ec1
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+run_Fedup_HefQuin_query       20
+total                         21
+
+Select jobs to execute...
+Execute 4 jobs...
+
+[Mon Mar 17 21:25:53 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04h.sparql
+    output: output/rdfs/FedUp-HefQuin/q04h.1.csv, output/rdfs/FedUp-HefQuin/q04h.1.json, output/rdfs/FedUp-HefQuin/q04h.1.txt
+    jobid: 18
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04h.1.csv
+    wildcards: workload=rdfs, query=q04h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 17 21:25:53 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04e.sparql
+    output: output/rdfs/FedUp-HefQuin/q04e.1.csv, output/rdfs/FedUp-HefQuin/q04e.1.json, output/rdfs/FedUp-HefQuin/q04e.1.txt
+    jobid: 15
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04e.1.csv
+    wildcards: workload=rdfs, query=q04e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 17 21:25:53 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04f.sparql
+    output: output/rdfs/FedUp-HefQuin/q04f.1.csv, output/rdfs/FedUp-HefQuin/q04f.1.json, output/rdfs/FedUp-HefQuin/q04f.1.txt
+    jobid: 16
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04f.1.csv
+    wildcards: workload=rdfs, query=q04f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Mon Mar 17 21:25:53 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04i.sparql
+    output: output/rdfs/FedUp-HefQuin/q04i.1.csv, output/rdfs/FedUp-HefQuin/q04i.1.json, output/rdfs/FedUp-HefQuin/q04i.1.txt
+    jobid: 19
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04i.1.csv
+    wildcards: workload=rdfs, query=q04i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:25:59 2025]
+Finished job 16.
+1 of 21 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:25:59 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04d.sparql
+    output: output/rdfs/FedUp-HefQuin/q04d.1.csv, output/rdfs/FedUp-HefQuin/q04d.1.json, output/rdfs/FedUp-HefQuin/q04d.1.txt
+    jobid: 14
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04d.1.csv
+    wildcards: workload=rdfs, query=q04d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:25:59 2025]
+Finished job 19.
+2 of 21 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:25:59 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04b.sparql
+    output: output/rdfs/FedUp-HefQuin/q04b.1.csv, output/rdfs/FedUp-HefQuin/q04b.1.json, output/rdfs/FedUp-HefQuin/q04b.1.txt
+    jobid: 12
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04b.1.csv
+    wildcards: workload=rdfs, query=q04b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:25:59 2025]
+Finished job 18.
+3 of 21 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:25:59 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04g.sparql
+    output: output/rdfs/FedUp-HefQuin/q04g.1.csv, output/rdfs/FedUp-HefQuin/q04g.1.json, output/rdfs/FedUp-HefQuin/q04g.1.txt
+    jobid: 17
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04g.1.csv
+    wildcards: workload=rdfs, query=q04g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:06 2025]
+Finished job 14.
+4 of 21 steps (19%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:06 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04c.sparql
+    output: output/rdfs/FedUp-HefQuin/q04c.1.csv, output/rdfs/FedUp-HefQuin/q04c.1.json, output/rdfs/FedUp-HefQuin/q04c.1.txt
+    jobid: 13
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04c.1.csv
+    wildcards: workload=rdfs, query=q04c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:07 2025]
+Finished job 12.
+5 of 21 steps (24%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:07 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04j.sparql
+    output: output/rdfs/FedUp-HefQuin/q04j.1.csv, output/rdfs/FedUp-HefQuin/q04j.1.json, output/rdfs/FedUp-HefQuin/q04j.1.txt
+    jobid: 20
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04j.1.csv
+    wildcards: workload=rdfs, query=q04j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:07 2025]
+Finished job 17.
+6 of 21 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:07 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q04a.sparql
+    output: output/rdfs/FedUp-HefQuin/q04a.1.csv, output/rdfs/FedUp-HefQuin/q04a.1.json, output/rdfs/FedUp-HefQuin/q04a.1.txt
+    jobid: 11
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q04a.1.csv
+    wildcards: workload=rdfs, query=q04a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:12 2025]
+Finished job 13.
+7 of 21 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:12 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10f.sparql
+    output: output/rdfs/FedUp-HefQuin/q10f.1.csv, output/rdfs/FedUp-HefQuin/q10f.1.json, output/rdfs/FedUp-HefQuin/q10f.1.txt
+    jobid: 6
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10f.1.csv
+    wildcards: workload=rdfs, query=q10f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:13 2025]
+Finished job 20.
+8 of 21 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:13 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10d.sparql
+    output: output/rdfs/FedUp-HefQuin/q10d.1.csv, output/rdfs/FedUp-HefQuin/q10d.1.json, output/rdfs/FedUp-HefQuin/q10d.1.txt
+    jobid: 4
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10d.1.csv
+    wildcards: workload=rdfs, query=q10d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:13 2025]
+Finished job 11.
+9 of 21 steps (43%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:13 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10c.sparql
+    output: output/rdfs/FedUp-HefQuin/q10c.1.csv, output/rdfs/FedUp-HefQuin/q10c.1.json, output/rdfs/FedUp-HefQuin/q10c.1.txt
+    jobid: 3
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10c.1.csv
+    wildcards: workload=rdfs, query=q10c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:25 2025]
+Finished job 6.
+10 of 21 steps (48%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:25 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10j.sparql
+    output: output/rdfs/FedUp-HefQuin/q10j.1.csv, output/rdfs/FedUp-HefQuin/q10j.1.json, output/rdfs/FedUp-HefQuin/q10j.1.txt
+    jobid: 10
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10j.1.csv
+    wildcards: workload=rdfs, query=q10j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:25 2025]
+Finished job 3.
+11 of 21 steps (52%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:25 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10i.sparql
+    output: output/rdfs/FedUp-HefQuin/q10i.1.csv, output/rdfs/FedUp-HefQuin/q10i.1.json, output/rdfs/FedUp-HefQuin/q10i.1.txt
+    jobid: 9
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10i.1.csv
+    wildcards: workload=rdfs, query=q10i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:25 2025]
+Finished job 15.
+12 of 21 steps (57%) done
+[Mon Mar 17 21:26:25 2025]
+Finished job 4.
+13 of 21 steps (62%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Mon Mar 17 21:26:25 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10h.sparql
+    output: output/rdfs/FedUp-HefQuin/q10h.1.csv, output/rdfs/FedUp-HefQuin/q10h.1.json, output/rdfs/FedUp-HefQuin/q10h.1.txt
+    jobid: 8
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10h.1.csv
+    wildcards: workload=rdfs, query=q10h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:25 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10g.sparql
+    output: output/rdfs/FedUp-HefQuin/q10g.1.csv, output/rdfs/FedUp-HefQuin/q10g.1.json, output/rdfs/FedUp-HefQuin/q10g.1.txt
+    jobid: 7
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10g.1.csv
+    wildcards: workload=rdfs, query=q10g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+Waiting for more resources.
+[Mon Mar 17 21:26:31 2025]
+Finished job 8.
+14 of 21 steps (67%) done
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:31 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10b.sparql
+    output: output/rdfs/FedUp-HefQuin/q10b.1.csv, output/rdfs/FedUp-HefQuin/q10b.1.json, output/rdfs/FedUp-HefQuin/q10b.1.txt
+    jobid: 2
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10b.1.csv
+    wildcards: workload=rdfs, query=q10b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:31 2025]
+Finished job 9.
+15 of 21 steps (71%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:31 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10e.sparql
+    output: output/rdfs/FedUp-HefQuin/q10e.1.csv, output/rdfs/FedUp-HefQuin/q10e.1.json, output/rdfs/FedUp-HefQuin/q10e.1.txt
+    jobid: 5
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10e.1.csv
+    wildcards: workload=rdfs, query=q10e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:31 2025]
+Finished job 7.
+16 of 21 steps (76%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Mar 17 21:26:31 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10a.sparql
+    output: output/rdfs/FedUp-HefQuin/q10a.1.csv, output/rdfs/FedUp-HefQuin/q10a.1.json, output/rdfs/FedUp-HefQuin/q10a.1.txt
+    jobid: 1
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q10a.1.csv
+    wildcards: workload=rdfs, query=q10a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Mon Mar 17 21:26:35 2025]
+Finished job 10.
+17 of 21 steps (81%) done
+Terminating processes on user request, this might take some time.
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /workspaces/P-TER && /usr/local/python/3.12.1/bin/python3 -m snakemake --snakefile '/workspaces/P-TER/Snakefile' --target-jobs 'run_Fedup_HefQuin_query:workload=rdfs,query=q10e,run=1' --allowed-rules run_Fedup_HefQuin_query --cores 4 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --keep-storage-local-copies --max-inventory-time 0 --nocolor --notemp --no-hooks --nolock --ignore-incomplete --rerun-triggers params mtime code input software-env --conda-frontend 'conda' --shared-fs-usage software-deployment source-cache input-output storage-local-copies persistence sources --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --latency-wait 5 --scheduler 'greedy' --local-storage-prefix .snakemake/storage --scheduler-solver-path '/usr/local/python/3.12.1/bin' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules --mode 'subprocess' --local-groupid 'local'' died with <Signals.SIGINT: 2>.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /workspaces/P-TER && /usr/local/python/3.12.1/bin/python3 -m snakemake --snakefile '/workspaces/P-TER/Snakefile' --target-jobs 'run_Fedup_HefQuin_query:workload=rdfs,query=q10a,run=1' --allowed-rules run_Fedup_HefQuin_query --cores 4 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --keep-storage-local-copies --max-inventory-time 0 --nocolor --notemp --no-hooks --nolock --ignore-incomplete --rerun-triggers params mtime code input software-env --conda-frontend 'conda' --shared-fs-usage software-deployment source-cache input-output storage-local-copies persistence sources --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --latency-wait 5 --scheduler 'greedy' --local-storage-prefix .snakemake/storage --scheduler-solver-path '/usr/local/python/3.12.1/bin' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules --mode 'subprocess' --local-groupid 'local'' died with <Signals.SIGINT: 2>.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+[Mon Mar 17 21:26:38 2025]
+[Mon Mar 17 21:26:38 2025]
+Error in rule run_Fedup_HefQuin_query:
+    jobid: 5
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10e.sparql
+    output: output/rdfs/FedUp-HefQuin/q10e.1.csv, output/rdfs/FedUp-HefQuin/q10e.1.json, output/rdfs/FedUp-HefQuin/q10e.1.txt
+
+Error in rule run_Fedup_HefQuin_query:
+    jobid: 1
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10a.sparql
+    output: output/rdfs/FedUp-HefQuin/q10a.1.csv, output/rdfs/FedUp-HefQuin/q10a.1.json, output/rdfs/FedUp-HefQuin/q10a.1.txt
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /workspaces/P-TER && /usr/local/python/3.12.1/bin/python3 -m snakemake --snakefile '/workspaces/P-TER/Snakefile' --target-jobs 'run_Fedup_HefQuin_query:workload=rdfs,query=q10b,run=1' --allowed-rules run_Fedup_HefQuin_query --cores 4 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --keep-storage-local-copies --max-inventory-time 0 --nocolor --notemp --no-hooks --nolock --ignore-incomplete --rerun-triggers params mtime code input software-env --conda-frontend 'conda' --shared-fs-usage software-deployment source-cache input-output storage-local-copies persistence sources --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --latency-wait 5 --scheduler 'greedy' --local-storage-prefix .snakemake/storage --scheduler-solver-path '/usr/local/python/3.12.1/bin' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules --mode 'subprocess' --local-groupid 'local'' died with <Signals.SIGINT: 2>.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+[Mon Mar 17 21:26:38 2025]
+Error in rule run_Fedup_HefQuin_query:
+    jobid: 2
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q10b.sparql
+    output: output/rdfs/FedUp-HefQuin/q10b.1.csv, output/rdfs/FedUp-HefQuin/q10b.1.json, output/rdfs/FedUp-HefQuin/q10b.1.txt
+
+Complete log: .snakemake/log/2025-03-17T212553.915153.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,39 @@
+anthonyadamec@MacBook-Air-de-Anthony HeFQUIN-FRAW % ./bin/hefquin --federationDescription fedshop200.ttl --confDescr DefaultEngineWithFedupConfForFedshop200.ttl --file ./query.sparql
+[main] INFO Summary - Took 55 ms to open the summary.
+[main] INFO Summary - Took 128 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.Optional.of(Optional.java:113)
+        at java.base/java.util.stream.FindOps$FindSink$OfRef.get(FindOps.java:194)
+        at java.base/java.util.stream.FindOps$FindSink$OfRef.get(FindOps.java:191)
+        at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+        at fr.gdd.fedup.transforms.ToQuadsTransform.findVar(ToQuadsTransform.java:49)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:35)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:20)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:60)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:18)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:91)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:17)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:73)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:16)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:101)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:27)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:89)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:17)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:73)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:16)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:101)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:25)
+        at fr.gdd.fedqpl.visitors.ReturningOpVisitorRouter.visit(ReturningOpVisitorRouter.java:27)
+        at fr.gdd.fedqpl.Op2SAChecker.visit(Op2SAChecker.java:89)

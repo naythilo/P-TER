@@ -10,15 +10,15 @@ SELECT DISTINCT * WHERE {
     VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.vendor6.fr/> ) }
     SERVICE ?bgp1 {
         # const <http://www.vendor6.fr//Offer846>
-        <http://www.vendor6.fr//Offer846> bsbm:product ?productURI .
+        <http://www.vendor6.fr/Offer846> bsbm:product ?productURI .
         ?productURI owl:sameAs ?ProductXYZ . 
         ?productURI rdfs:label ?productlabel .
-        <http://www.vendor6.fr//Offer846> bsbm:vendor ?vendorURI .
+        <http://www.vendor6.fr/Offer846> bsbm:vendor ?vendorURI .
         ?vendorURI rdfs:label ?vendorname .
         ?vendorURI foaf:homepage ?vendorhomepage .
-        <http://www.vendor6.fr//Offer846> bsbm:offerWebpage ?offerURL .
-        <http://www.vendor6.fr//Offer846> bsbm:price ?price .
-        <http://www.vendor6.fr//Offer846> bsbm:deliveryDays ?deliveryDays .
-        <http://www.vendor6.fr//Offer846> bsbm:validTo ?validTo
+        <http://www.vendor6.fr/Offer846> bsbm:offerWebpage ?offerURL .
+        <http://www.vendor6.fr/Offer846> bsbm:price ?price .
+        <http://www.vendor6.fr/Offer846> bsbm:deliveryDays ?deliveryDays .
+        <http://www.vendor6.fr/Offer846> bsbm:validTo ?validTo
     }
 }

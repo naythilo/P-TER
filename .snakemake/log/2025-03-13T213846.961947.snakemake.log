@@ -1,0 +1,8 @@
+host: codespaces-c89ec1
+Building DAG of jobs...
+MissingInputException in rule run_hefquin_query in file /workspaces/P-TER/Snakefile, line 256:
+Missing input files for rule run_hefquin_query:
+    output: output/rdfs/HefQuin/q04B.1.csv, output/rdfs/HefQuin/q04B.1.json
+    wildcards: workload=rdfs, query=q04B, run=1
+    affected files:
+        queries/q04B.sparql

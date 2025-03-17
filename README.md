@@ -100,7 +100,7 @@ java -jar ../fedup/target/fedup.jar -e Jena -f /workspaces/P-TER/fedup-queries/q
 git clone https://<token>@github.com/GDD-Nantes/HeFQUIN-FRAW.git 
 
 
-./bin/hefquin --federationDescription fedshop200.ttl --confDescr DefaultEngineWithFedupConfForFedshop200.ttl --file /workspaces/P-TER/fedup-queries/q10a.sparql --time --results=JSON
+./bin/hefquin --federationDescription fedshop200.ttl --confDescr DefaultEngineWithFedupConfForFedshop200.ttl --file /workspaces/P-TER/fedup-queries/q10a.sparql --time --results=JSON --printQueryProcStats
 
 ../HeFQUIN-FRAW/bin/hefquin --federationDescription ../HeFQUIN-FRAW/fedshop200.ttl --confDescr ../HeFQUIN-FRAW/DefaultEngineWithFedupConfForFedshop200.ttl --file /workspaces/P-TER/fedup-queries/q05i.sparql --time --results=JSON
 

@@ -266,8 +266,9 @@ def run_jena_query(query_file,metrics_output,solutions_output):
 @click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
-def run_hefquin_query(query_file,metrics_output,solutions_output):
-    command = ["../HeFQUIN/bin/hefquin", "--federationDescription /workspaces/HeFQUIN/fedeation.ttl", "--file", query_file, "--time", " --results=JSON"]
+@click.option("--err-output", type=click.Path())
+def run_hefquin_query(query_file,metrics_output,solutions_output,err_output):
+    command = ["../HeFQUIN/bin/hefquin", "--federationDescription ./federation.ttl", "--file", query_file, "--time", " --results=JSON"]
     result = subprocess.run(command, capture_output=True, text=True)
     time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
 
@@ -280,7 +281,10 @@ def run_hefquin_query(query_file,metrics_output,solutions_output):
         num_results = len(bindings)  # Nombre de résultats dans "bindings"
     except json.JSONDecodeError:
         num_results = 0
-    print(num_results)
+    print(result.stdout)
+    print(result.stderr)
+    with open(err_output, "w") as file:
+        file.write(result.stderr)
 
     df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":None,"executionTime":None}])
 
@@ -432,14 +436,17 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
 @click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
-def run_fedup_hefquin_query(query_file,metrics_output,solutions_output):
+@click.option("--err-output", type=click.Path())
+def run_fedup_hefquin_query(query_file,metrics_output,solutions_output,err_output):
     hefquin_directory = "../HeFQUIN-FRAW"
     os.chdir(hefquin_directory)
     
     command = ["./bin/hefquin", "--federationDescription fedshop200.ttl","--confDescr DefaultEngineWithFedupConfForFedshop200.ttl", "--file", query_file, "--time", "--results=JSON","--printQueryProcStats"]
     result = subprocess.run(command, capture_output=True, text=True)
     os.chdir("../P-TER")
-    #print(result.stderr)
+    print(result.stdout)
+    with open('er.txt', 'w') as file:
+        file.write(result.stdout)
     time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
     time_match_planningTime = re.search(r"planningTime\s*:\s*(\d+)", result.stderr)
     time_match_executionTime = re.search(r"executionTime\s*:\s*(\d+)", result.stderr)
@@ -466,7 +473,10 @@ def run_fedup_hefquin_query(query_file,metrics_output,solutions_output):
 
     results = result.stdout
     #print(result.stdout)
-    #print(result.stderr)
+    print(result.stderr)
+    with open(err_output, "w") as file:
+        file.write(result.stderr)
+
     try:
         results_json = json.loads(results)
         bindings = results_json.get("results", {}).get("bindings", [])
