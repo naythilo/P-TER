@@ -1,0 +1,1034 @@
+host: codespaces-c89ec1
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+run_Fedup_FedX_query          77
+run_Fedup_HefQuin_query       77
+total                        155
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:15:05 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q03e.sparql
+    output: output/rdfs/FedUp-FedX/q03e.1.csv, output/rdfs/FedUp-FedX/q03e.1.json
+    jobid: 355
+    reason: Missing output files: output/rdfs/FedUp-FedX/q03e.1.csv
+    wildcards: workload=rdfs, query=q03e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:16:42 2025]
+Finished job 355.
+1 of 155 steps (1%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:16:42 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q03g.sparql
+    output: output/rdfs/FedUp-HefQuin/q03g.1.csv, output/rdfs/FedUp-HefQuin/q03g.1.json, output/rdfs/FedUp-HefQuin/q03g.1.txt
+    jobid: 467
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q03g.1.csv
+    wildcards: workload=rdfs, query=q03g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:18:00 2025]
+Finished job 467.
+2 of 155 steps (1%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:18:00 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q03h.sparql
+    output: output/rdfs/FedUp-HefQuin/q03h.1.csv, output/rdfs/FedUp-HefQuin/q03h.1.json, output/rdfs/FedUp-HefQuin/q03h.1.txt
+    jobid: 468
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q03h.1.csv
+    wildcards: workload=rdfs, query=q03h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:18:49 2025]
+Finished job 468.
+3 of 155 steps (2%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:18:49 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q03d.sparql
+    output: output/rdfs/FedUp-FedX/q03d.1.csv, output/rdfs/FedUp-FedX/q03d.1.json
+    jobid: 354
+    reason: Missing output files: output/rdfs/FedUp-FedX/q03d.1.csv
+    wildcards: workload=rdfs, query=q03d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:23:10 2025]
+Finished job 354.
+4 of 155 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:23:10 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q03f.sparql
+    output: output/rdfs/FedUp-HefQuin/q03f.1.csv, output/rdfs/FedUp-HefQuin/q03f.1.json, output/rdfs/FedUp-HefQuin/q03f.1.txt
+    jobid: 466
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q03f.1.csv
+    wildcards: workload=rdfs, query=q03f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:24:16 2025]
+Finished job 466.
+5 of 155 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:24:16 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q03h.sparql
+    output: output/rdfs/FedUp-FedX/q03h.1.csv, output/rdfs/FedUp-FedX/q03h.1.json
+    jobid: 358
+    reason: Missing output files: output/rdfs/FedUp-FedX/q03h.1.csv
+    wildcards: workload=rdfs, query=q03h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:26:15 2025]
+Finished job 358.
+6 of 155 steps (4%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:26:15 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q03d.sparql
+    output: output/rdfs/FedUp-HefQuin/q03d.1.csv, output/rdfs/FedUp-HefQuin/q03d.1.json, output/rdfs/FedUp-HefQuin/q03d.1.txt
+    jobid: 464
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q03d.1.csv
+    wildcards: workload=rdfs, query=q03d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:27:54 2025]
+Finished job 464.
+7 of 155 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:27:54 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q03j.sparql
+    output: output/rdfs/FedUp-FedX/q03j.1.csv, output/rdfs/FedUp-FedX/q03j.1.json
+    jobid: 360
+    reason: Missing output files: output/rdfs/FedUp-FedX/q03j.1.csv
+    wildcards: workload=rdfs, query=q03j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:28:19 2025]
+Finished job 360.
+8 of 155 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:28:19 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q03j.sparql
+    output: output/rdfs/FedUp-HefQuin/q03j.1.csv, output/rdfs/FedUp-HefQuin/q03j.1.json, output/rdfs/FedUp-HefQuin/q03j.1.txt
+    jobid: 470
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q03j.1.csv
+    wildcards: workload=rdfs, query=q03j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:28:40 2025]
+Finished job 470.
+9 of 155 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:28:40 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q03f.sparql
+    output: output/rdfs/FedUp-FedX/q03f.1.csv, output/rdfs/FedUp-FedX/q03f.1.json
+    jobid: 356
+    reason: Missing output files: output/rdfs/FedUp-FedX/q03f.1.csv
+    wildcards: workload=rdfs, query=q03f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:29:55 2025]
+Finished job 356.
+10 of 155 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:29:55 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q03b.sparql
+    output: output/rdfs/FedUp-HefQuin/q03b.1.csv, output/rdfs/FedUp-HefQuin/q03b.1.json, output/rdfs/FedUp-HefQuin/q03b.1.txt
+    jobid: 462
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q03b.1.csv
+    wildcards: workload=rdfs, query=q03b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:30:56 2025]
+Finished job 462.
+11 of 155 steps (7%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:30:56 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q03b.sparql
+    output: output/rdfs/FedUp-FedX/q03b.1.csv, output/rdfs/FedUp-FedX/q03b.1.json
+    jobid: 352
+    reason: Missing output files: output/rdfs/FedUp-FedX/q03b.1.csv
+    wildcards: workload=rdfs, query=q03b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:41:46 2025]
+Finished job 352.
+12 of 155 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:41:46 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q03c.sparql
+    output: output/rdfs/FedUp-HefQuin/q03c.1.csv, output/rdfs/FedUp-HefQuin/q03c.1.json, output/rdfs/FedUp-HefQuin/q03c.1.txt
+    jobid: 463
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q03c.1.csv
+    wildcards: workload=rdfs, query=q03c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:42:41 2025]
+Finished job 463.
+13 of 155 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:42:41 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q03c.sparql
+    output: output/rdfs/FedUp-FedX/q03c.1.csv, output/rdfs/FedUp-FedX/q03c.1.json
+    jobid: 353
+    reason: Missing output files: output/rdfs/FedUp-FedX/q03c.1.csv
+    wildcards: workload=rdfs, query=q03c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:43:26 2025]
+Finished job 353.
+14 of 155 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:43:26 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01b.sparql
+    output: output/rdfs/FedUp-HefQuin/q01b.1.csv, output/rdfs/FedUp-HefQuin/q01b.1.json, output/rdfs/FedUp-HefQuin/q01b.1.txt
+    jobid: 442
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01b.1.csv
+    wildcards: workload=rdfs, query=q01b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:43:35 2025]
+Finished job 442.
+15 of 155 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:43:35 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01c.sparql
+    output: output/rdfs/FedUp-FedX/q01c.1.csv, output/rdfs/FedUp-FedX/q01c.1.json
+    jobid: 333
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01c.1.csv
+    wildcards: workload=rdfs, query=q01c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:43:47 2025]
+Finished job 333.
+16 of 155 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:43:47 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01c.sparql
+    output: output/rdfs/FedUp-HefQuin/q01c.1.csv, output/rdfs/FedUp-HefQuin/q01c.1.json, output/rdfs/FedUp-HefQuin/q01c.1.txt
+    jobid: 443
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01c.1.csv
+    wildcards: workload=rdfs, query=q01c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:43:56 2025]
+Finished job 443.
+17 of 155 steps (11%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:43:56 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01b.sparql
+    output: output/rdfs/FedUp-FedX/q01b.1.csv, output/rdfs/FedUp-FedX/q01b.1.json
+    jobid: 332
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01b.1.csv
+    wildcards: workload=rdfs, query=q01b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:44:07 2025]
+Finished job 332.
+18 of 155 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:44:07 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01i.sparql
+    output: output/rdfs/FedUp-HefQuin/q01i.1.csv, output/rdfs/FedUp-HefQuin/q01i.1.json, output/rdfs/FedUp-HefQuin/q01i.1.txt
+    jobid: 449
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01i.1.csv
+    wildcards: workload=rdfs, query=q01i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:44:17 2025]
+Finished job 449.
+19 of 155 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:44:17 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01d.sparql
+    output: output/rdfs/FedUp-HefQuin/q01d.1.csv, output/rdfs/FedUp-HefQuin/q01d.1.json, output/rdfs/FedUp-HefQuin/q01d.1.txt
+    jobid: 444
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01d.1.csv
+    wildcards: workload=rdfs, query=q01d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:44:26 2025]
+Finished job 444.
+20 of 155 steps (13%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:44:26 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01g.sparql
+    output: output/rdfs/FedUp-HefQuin/q01g.1.csv, output/rdfs/FedUp-HefQuin/q01g.1.json, output/rdfs/FedUp-HefQuin/q01g.1.txt
+    jobid: 447
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01g.1.csv
+    wildcards: workload=rdfs, query=q01g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:44:34 2025]
+Finished job 447.
+21 of 155 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:44:34 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01g.sparql
+    output: output/rdfs/FedUp-FedX/q01g.1.csv, output/rdfs/FedUp-FedX/q01g.1.json
+    jobid: 337
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01g.1.csv
+    wildcards: workload=rdfs, query=q01g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:44:41 2025]
+Finished job 337.
+22 of 155 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:44:41 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01j.sparql
+    output: output/rdfs/FedUp-HefQuin/q01j.1.csv, output/rdfs/FedUp-HefQuin/q01j.1.json, output/rdfs/FedUp-HefQuin/q01j.1.txt
+    jobid: 450
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01j.1.csv
+    wildcards: workload=rdfs, query=q01j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 13:44:50 2025]
+Finished job 450.
+23 of 155 steps (15%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 13:44:50 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01j.sparql
+    output: output/rdfs/FedUp-FedX/q01j.1.csv, output/rdfs/FedUp-FedX/q01j.1.json
+    jobid: 340
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01j.1.csv
+    wildcards: workload=rdfs, query=q01j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:01:29 2025]
+Finished job 340.
+24 of 155 steps (15%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:01:29 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01d.sparql
+    output: output/rdfs/FedUp-FedX/q01d.1.csv, output/rdfs/FedUp-FedX/q01d.1.json
+    jobid: 334
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01d.1.csv
+    wildcards: workload=rdfs, query=q01d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:01:38 2025]
+Finished job 334.
+25 of 155 steps (16%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:01:38 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01e.sparql
+    output: output/rdfs/FedUp-HefQuin/q01e.1.csv, output/rdfs/FedUp-HefQuin/q01e.1.json, output/rdfs/FedUp-HefQuin/q01e.1.txt
+    jobid: 445
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01e.1.csv
+    wildcards: workload=rdfs, query=q01e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:01:47 2025]
+Finished job 445.
+26 of 155 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:01:47 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01h.sparql
+    output: output/rdfs/FedUp-HefQuin/q01h.1.csv, output/rdfs/FedUp-HefQuin/q01h.1.json, output/rdfs/FedUp-HefQuin/q01h.1.txt
+    jobid: 448
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01h.1.csv
+    wildcards: workload=rdfs, query=q01h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:01:57 2025]
+Finished job 448.
+27 of 155 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:01:57 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01i.sparql
+    output: output/rdfs/FedUp-FedX/q01i.1.csv, output/rdfs/FedUp-FedX/q01i.1.json
+    jobid: 339
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01i.1.csv
+    wildcards: workload=rdfs, query=q01i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:02:07 2025]
+Finished job 339.
+28 of 155 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:02:07 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01h.sparql
+    output: output/rdfs/FedUp-FedX/q01h.1.csv, output/rdfs/FedUp-FedX/q01h.1.json
+    jobid: 338
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01h.1.csv
+    wildcards: workload=rdfs, query=q01h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:02:16 2025]
+Finished job 338.
+29 of 155 steps (19%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:02:16 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01e.sparql
+    output: output/rdfs/FedUp-FedX/q01e.1.csv, output/rdfs/FedUp-FedX/q01e.1.json
+    jobid: 335
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01e.1.csv
+    wildcards: workload=rdfs, query=q01e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:02:26 2025]
+Finished job 335.
+30 of 155 steps (19%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:02:26 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q01f.sparql
+    output: output/rdfs/FedUp-HefQuin/q01f.1.csv, output/rdfs/FedUp-HefQuin/q01f.1.json, output/rdfs/FedUp-HefQuin/q01f.1.txt
+    jobid: 446
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q01f.1.csv
+    wildcards: workload=rdfs, query=q01f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:02:34 2025]
+Finished job 446.
+31 of 155 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:02:34 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q01f.sparql
+    output: output/rdfs/FedUp-FedX/q01f.1.csv, output/rdfs/FedUp-FedX/q01f.1.json
+    jobid: 336
+    reason: Missing output files: output/rdfs/FedUp-FedX/q01f.1.csv
+    wildcards: workload=rdfs, query=q01f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:02:43 2025]
+Finished job 336.
+32 of 155 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:02:43 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12g.sparql
+    output: output/rdfs/FedUp-HefQuin/q12g.1.csv, output/rdfs/FedUp-HefQuin/q12g.1.json, output/rdfs/FedUp-HefQuin/q12g.1.txt
+    jobid: 547
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12g.1.csv
+    wildcards: workload=rdfs, query=q12g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:02:49 2025]
+Finished job 547.
+33 of 155 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:02:49 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12e.sparql
+    output: output/rdfs/FedUp-FedX/q12e.1.csv, output/rdfs/FedUp-FedX/q12e.1.json
+    jobid: 435
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12e.1.csv
+    wildcards: workload=rdfs, query=q12e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:02:55 2025]
+Finished job 435.
+34 of 155 steps (22%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:02:55 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12e.sparql
+    output: output/rdfs/FedUp-HefQuin/q12e.1.csv, output/rdfs/FedUp-HefQuin/q12e.1.json, output/rdfs/FedUp-HefQuin/q12e.1.txt
+    jobid: 545
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12e.1.csv
+    wildcards: workload=rdfs, query=q12e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:02 2025]
+Finished job 545.
+35 of 155 steps (23%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:02 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12h.sparql
+    output: output/rdfs/FedUp-HefQuin/q12h.1.csv, output/rdfs/FedUp-HefQuin/q12h.1.json, output/rdfs/FedUp-HefQuin/q12h.1.txt
+    jobid: 548
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12h.1.csv
+    wildcards: workload=rdfs, query=q12h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:08 2025]
+Finished job 548.
+36 of 155 steps (23%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:08 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12i.sparql
+    output: output/rdfs/FedUp-FedX/q12i.1.csv, output/rdfs/FedUp-FedX/q12i.1.json
+    jobid: 439
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12i.1.csv
+    wildcards: workload=rdfs, query=q12i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:14 2025]
+Finished job 439.
+37 of 155 steps (24%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:14 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12f.sparql
+    output: output/rdfs/FedUp-FedX/q12f.1.csv, output/rdfs/FedUp-FedX/q12f.1.json
+    jobid: 436
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12f.1.csv
+    wildcards: workload=rdfs, query=q12f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:21 2025]
+Finished job 436.
+38 of 155 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:21 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12c.sparql
+    output: output/rdfs/FedUp-FedX/q12c.1.csv, output/rdfs/FedUp-FedX/q12c.1.json
+    jobid: 433
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12c.1.csv
+    wildcards: workload=rdfs, query=q12c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:27 2025]
+Finished job 433.
+39 of 155 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:27 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12c.sparql
+    output: output/rdfs/FedUp-HefQuin/q12c.1.csv, output/rdfs/FedUp-HefQuin/q12c.1.json, output/rdfs/FedUp-HefQuin/q12c.1.txt
+    jobid: 543
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12c.1.csv
+    wildcards: workload=rdfs, query=q12c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:33 2025]
+Finished job 543.
+40 of 155 steps (26%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:33 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12f.sparql
+    output: output/rdfs/FedUp-HefQuin/q12f.1.csv, output/rdfs/FedUp-HefQuin/q12f.1.json, output/rdfs/FedUp-HefQuin/q12f.1.txt
+    jobid: 546
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12f.1.csv
+    wildcards: workload=rdfs, query=q12f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:39 2025]
+Finished job 546.
+41 of 155 steps (26%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:39 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12h.sparql
+    output: output/rdfs/FedUp-FedX/q12h.1.csv, output/rdfs/FedUp-FedX/q12h.1.json
+    jobid: 438
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12h.1.csv
+    wildcards: workload=rdfs, query=q12h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:46 2025]
+Finished job 438.
+42 of 155 steps (27%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:46 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12i.sparql
+    output: output/rdfs/FedUp-HefQuin/q12i.1.csv, output/rdfs/FedUp-HefQuin/q12i.1.json, output/rdfs/FedUp-HefQuin/q12i.1.txt
+    jobid: 549
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12i.1.csv
+    wildcards: workload=rdfs, query=q12i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:52 2025]
+Finished job 549.
+43 of 155 steps (28%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:52 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12g.sparql
+    output: output/rdfs/FedUp-FedX/q12g.1.csv, output/rdfs/FedUp-FedX/q12g.1.json
+    jobid: 437
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12g.1.csv
+    wildcards: workload=rdfs, query=q12g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:03:58 2025]
+Finished job 437.
+44 of 155 steps (28%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:03:58 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12j.sparql
+    output: output/rdfs/FedUp-HefQuin/q12j.1.csv, output/rdfs/FedUp-HefQuin/q12j.1.json, output/rdfs/FedUp-HefQuin/q12j.1.txt
+    jobid: 550
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12j.1.csv
+    wildcards: workload=rdfs, query=q12j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:05 2025]
+Finished job 550.
+45 of 155 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:05 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12b.sparql
+    output: output/rdfs/FedUp-HefQuin/q12b.1.csv, output/rdfs/FedUp-HefQuin/q12b.1.json, output/rdfs/FedUp-HefQuin/q12b.1.txt
+    jobid: 542
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12b.1.csv
+    wildcards: workload=rdfs, query=q12b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:11 2025]
+Finished job 542.
+46 of 155 steps (30%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:11 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12a.sparql
+    output: output/rdfs/FedUp-HefQuin/q12a.1.csv, output/rdfs/FedUp-HefQuin/q12a.1.json, output/rdfs/FedUp-HefQuin/q12a.1.txt
+    jobid: 541
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12a.1.csv
+    wildcards: workload=rdfs, query=q12a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:17 2025]
+Finished job 541.
+47 of 155 steps (30%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:17 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12b.sparql
+    output: output/rdfs/FedUp-FedX/q12b.1.csv, output/rdfs/FedUp-FedX/q12b.1.json
+    jobid: 432
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12b.1.csv
+    wildcards: workload=rdfs, query=q12b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:24 2025]
+Finished job 432.
+48 of 155 steps (31%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:24 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12a.sparql
+    output: output/rdfs/FedUp-FedX/q12a.1.csv, output/rdfs/FedUp-FedX/q12a.1.json
+    jobid: 431
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12a.1.csv
+    wildcards: workload=rdfs, query=q12a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:30 2025]
+Finished job 431.
+49 of 155 steps (32%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:30 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12j.sparql
+    output: output/rdfs/FedUp-FedX/q12j.1.csv, output/rdfs/FedUp-FedX/q12j.1.json
+    jobid: 440
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12j.1.csv
+    wildcards: workload=rdfs, query=q12j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:37 2025]
+Finished job 440.
+50 of 155 steps (32%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:37 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12d.sparql
+    output: output/rdfs/FedUp-FedX/q12d.1.csv, output/rdfs/FedUp-FedX/q12d.1.json
+    jobid: 434
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12d.1.csv
+    wildcards: workload=rdfs, query=q12d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:43 2025]
+Finished job 434.
+51 of 155 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:43 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12d.sparql
+    output: output/rdfs/FedUp-HefQuin/q12d.1.csv, output/rdfs/FedUp-HefQuin/q12d.1.json, output/rdfs/FedUp-HefQuin/q12d.1.txt
+    jobid: 544
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12d.1.csv
+    wildcards: workload=rdfs, query=q12d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:49 2025]
+Finished job 544.
+52 of 155 steps (34%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:49 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q08i.sparql
+    output: output/rdfs/FedUp-HefQuin/q08i.1.csv, output/rdfs/FedUp-HefQuin/q08i.1.json, output/rdfs/FedUp-HefQuin/q08i.1.txt
+    jobid: 509
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q08i.1.csv
+    wildcards: workload=rdfs, query=q08i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:04:56 2025]
+Finished job 509.
+53 of 155 steps (34%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:04:56 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q08i.sparql
+    output: output/rdfs/FedUp-FedX/q08i.1.csv, output/rdfs/FedUp-FedX/q08i.1.json
+    jobid: 399
+    reason: Missing output files: output/rdfs/FedUp-FedX/q08i.1.csv
+    wildcards: workload=rdfs, query=q08i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:01 2025]
+Finished job 399.
+54 of 155 steps (35%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:01 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q08d.sparql
+    output: output/rdfs/FedUp-HefQuin/q08d.1.csv, output/rdfs/FedUp-HefQuin/q08d.1.json, output/rdfs/FedUp-HefQuin/q08d.1.txt
+    jobid: 504
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q08d.1.csv
+    wildcards: workload=rdfs, query=q08d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:08 2025]
+Finished job 504.
+55 of 155 steps (35%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:08 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q08j.sparql
+    output: output/rdfs/FedUp-HefQuin/q08j.1.csv, output/rdfs/FedUp-HefQuin/q08j.1.json, output/rdfs/FedUp-HefQuin/q08j.1.txt
+    jobid: 510
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q08j.1.csv
+    wildcards: workload=rdfs, query=q08j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:14 2025]
+Finished job 510.
+56 of 155 steps (36%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:14 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q08d.sparql
+    output: output/rdfs/FedUp-FedX/q08d.1.csv, output/rdfs/FedUp-FedX/q08d.1.json
+    jobid: 394
+    reason: Missing output files: output/rdfs/FedUp-FedX/q08d.1.csv
+    wildcards: workload=rdfs, query=q08d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:19 2025]
+Finished job 394.
+57 of 155 steps (37%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:19 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q08j.sparql
+    output: output/rdfs/FedUp-FedX/q08j.1.csv, output/rdfs/FedUp-FedX/q08j.1.json
+    jobid: 400
+    reason: Missing output files: output/rdfs/FedUp-FedX/q08j.1.csv
+    wildcards: workload=rdfs, query=q08j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:24 2025]
+Finished job 400.
+58 of 155 steps (37%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:24 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q08f.sparql
+    output: output/rdfs/FedUp-HefQuin/q08f.1.csv, output/rdfs/FedUp-HefQuin/q08f.1.json, output/rdfs/FedUp-HefQuin/q08f.1.txt
+    jobid: 506
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q08f.1.csv
+    wildcards: workload=rdfs, query=q08f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:32 2025]
+Finished job 506.
+59 of 155 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:32 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q08a.sparql
+    output: output/rdfs/FedUp-HefQuin/q08a.1.csv, output/rdfs/FedUp-HefQuin/q08a.1.json, output/rdfs/FedUp-HefQuin/q08a.1.txt
+    jobid: 501
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q08a.1.csv
+    wildcards: workload=rdfs, query=q08a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:39 2025]
+Finished job 501.
+60 of 155 steps (39%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:39 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q08f.sparql
+    output: output/rdfs/FedUp-FedX/q08f.1.csv, output/rdfs/FedUp-FedX/q08f.1.json
+    jobid: 396
+    reason: Missing output files: output/rdfs/FedUp-FedX/q08f.1.csv
+    wildcards: workload=rdfs, query=q08f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:46 2025]
+Finished job 396.
+61 of 155 steps (39%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:46 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q08e.sparql
+    output: output/rdfs/FedUp-FedX/q08e.1.csv, output/rdfs/FedUp-FedX/q08e.1.json
+    jobid: 395
+    reason: Missing output files: output/rdfs/FedUp-FedX/q08e.1.csv
+    wildcards: workload=rdfs, query=q08e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:51 2025]
+Finished job 395.
+62 of 155 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:51 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q08g.sparql
+    output: output/rdfs/FedUp-HefQuin/q08g.1.csv, output/rdfs/FedUp-HefQuin/q08g.1.json, output/rdfs/FedUp-HefQuin/q08g.1.txt
+    jobid: 507
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q08g.1.csv
+    wildcards: workload=rdfs, query=q08g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Tue Mar 18 14:05:58 2025]
+Finished job 507.
+63 of 155 steps (41%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Mar 18 14:05:58 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q08a.sparql
+    output: output/rdfs/FedUp-FedX/q08a.1.csv, output/rdfs/FedUp-FedX/q08a.1.json
+    jobid: 391
+    reason: Missing output files: output/rdfs/FedUp-FedX/q08a.1.csv
+    wildcards: workload=rdfs, query=q08a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+

@@ -1,0 +1,28 @@
+{ "head": {
+    "vars": [ "product" , "localProductLabel" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product122361" } ,
+        "localProductLabel": { "type": "literal" , "value": "eighth's" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product144924" } ,
+        "localProductLabel": { "type": "literal" , "value": "ebullient" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product165161" } ,
+        "localProductLabel": { "type": "literal" , "value": "theocratic" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product6575" } ,
+        "localProductLabel": { "type": "literal" , "value": "Byers's" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product68863" } ,
+        "localProductLabel": { "type": "literal" , "value": "Cote" }
+      }
+    ]
+  }
+}

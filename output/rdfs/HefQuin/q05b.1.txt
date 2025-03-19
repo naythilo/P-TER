@@ -1,0 +1,28 @@
+{ "head": {
+    "vars": [ "product" , "localProductLabel" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product103523" } ,
+        "localProductLabel": { "type": "literal" , "value": "Lancaster's" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product115562" } ,
+        "localProductLabel": { "type": "literal" , "value": "scanting" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product66614" } ,
+        "localProductLabel": { "type": "literal" , "value": "mononucleosis's" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product77299" } ,
+        "localProductLabel": { "type": "literal" , "value": "incriminate" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product86986" } ,
+        "localProductLabel": { "type": "literal" , "value": "hope" }
+      }
+    ]
+  }
+}

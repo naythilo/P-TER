@@ -112,3 +112,6 @@ ps -edf | grep virtuoso
 
 pour faire graphique : 
 planningTime : 1656+executionTime : 37
+
+
+./bin/hefquin --federationDescription fedshop200.ttl --confDescr  DefaultEngineConfForRSA.ttl --file /workspaces/P-TER/queries/q07a.sparql

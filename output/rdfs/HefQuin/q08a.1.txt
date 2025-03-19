@@ -1,0 +1,19 @@
+{ "head": {
+    "vars": [ "title" , "text" , "reviewDate" , "reviewer" , "reviewerName" , "rating1" , "rating2" , "rating3" , "rating4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "title": { "type": "literal" , "xml:lang": "es" , "value": "spadework's lasses devilling" } ,
+        "text": { "type": "literal" , "xml:lang": "en" , "value": "sluiced fume kibitzing champs fer breathe lump Spock yeast's Kaohsiung's glove averted subsumes arabesque sicknesses snapdragons boneyest sumo's harlequins dissatisfaction grafter encroach" } ,
+        "reviewDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2007-03-22T00:00:00" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite6.fr/Person249" } ,
+        "reviewerName": { "type": "literal" , "value": "SEAN" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating3": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" } ,
+        "rating4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      }
+    ]
+  }
+}

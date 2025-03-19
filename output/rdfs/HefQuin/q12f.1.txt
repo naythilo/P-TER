@@ -1,0 +1,20 @@
+{ "head": {
+    "vars": [ "bgp1" , "productURI" , "ProductXYZ" , "productlabel" , "vendorURI" , "vendorname" , "vendorhomepage" , "offerURL" , "price" , "deliveryDays" , "validTo" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "productURI": { "type": "uri" , "value": "http://www.vendor3.fr/Product127212" } ,
+        "ProductXYZ": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product127212" } ,
+        "productlabel": { "type": "literal" , "value": "quail" } ,
+        "vendorURI": { "type": "uri" , "value": "http://www.vendor3.fr/Vendor0" } ,
+        "vendorname": { "type": "literal" , "value": "restocks" } ,
+        "vendorhomepage": { "type": "literal" , "value": "buckling salivated siege's scampi concert's astride" } ,
+        "offerURL": { "type": "literal" , "value": "learners caraway's Moho persistence loss's insulator's warpath's authorizing percussionist" } ,
+        "price": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "3163.46" } ,
+        "deliveryDays": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" } ,
+        "validTo": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-08-07T00:00:00" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{ "head": {
+    "vars": [ "product" , "localProductLabel" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product107307" } ,
+        "localProductLabel": { "type": "literal" , "value": "ulcer" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product96145" } ,
+        "localProductLabel": { "type": "literal" , "value": "gigabyte's" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{ "head": {
+    "vars": [ "product" , "localProductLabel" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product10075" } ,
+        "localProductLabel": { "type": "literal" , "value": "digressed" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product135597" } ,
+        "localProductLabel": { "type": "literal" , "value": "junket" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product142256" } ,
+        "localProductLabel": { "type": "literal" , "value": "compost" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product30631" } ,
+        "localProductLabel": { "type": "literal" , "value": "radiotherapy's" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product34249" } ,
+        "localProductLabel": { "type": "literal" , "value": "Leda's" }
+      }
+    ]
+  }
+}

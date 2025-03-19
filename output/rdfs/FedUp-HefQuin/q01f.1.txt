@@ -1,0 +1,20 @@
+{ "head": {
+    "vars": [ "product" , "label" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www.ratingsite1.fr/Product74674" } ,
+        "label": { "type": "literal" , "value": "gastronomical" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www.ratingsite65.fr/Product74674" } ,
+        "label": { "type": "literal" , "value": "gastronomical" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www.ratingsite98.fr/Product74674" } ,
+        "label": { "type": "literal" , "value": "gastronomical" }
+      }
+    ]
+  }
+}

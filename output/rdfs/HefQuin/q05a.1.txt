@@ -1,0 +1,16 @@
+{ "head": {
+    "vars": [ "product" , "localProductLabel" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product109782" } ,
+        "localProductLabel": { "type": "literal" , "value": "consisted" }
+      } ,
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product50599" } ,
+        "localProductLabel": { "type": "literal" , "value": "Suzanne" }
+      }
+    ]
+  }
+}
