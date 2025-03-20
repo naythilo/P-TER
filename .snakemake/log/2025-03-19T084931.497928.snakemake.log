@@ -1,0 +1,187 @@
+host: codespaces-c89ec1
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+run_Fedup_FedX_query       10
+total                      11
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:49:32 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12f.sparql
+    output: output/rdfs/FedUp-FedX/q12f.1.csv, output/rdfs/FedUp-FedX/q12f.1.json
+    jobid: 436
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12f.1.csv
+    wildcards: workload=rdfs, query=q12f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:06 2025]
+Finished job 436.
+1 of 11 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:06 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12i.sparql
+    output: output/rdfs/FedUp-FedX/q12i.1.csv, output/rdfs/FedUp-FedX/q12i.1.json
+    jobid: 439
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12i.1.csv
+    wildcards: workload=rdfs, query=q12i, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:14 2025]
+Finished job 439.
+2 of 11 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:14 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12c.sparql
+    output: output/rdfs/FedUp-FedX/q12c.1.csv, output/rdfs/FedUp-FedX/q12c.1.json
+    jobid: 433
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12c.1.csv
+    wildcards: workload=rdfs, query=q12c, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:21 2025]
+Finished job 433.
+3 of 11 steps (27%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:21 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12h.sparql
+    output: output/rdfs/FedUp-FedX/q12h.1.csv, output/rdfs/FedUp-FedX/q12h.1.json
+    jobid: 438
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12h.1.csv
+    wildcards: workload=rdfs, query=q12h, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:28 2025]
+Finished job 438.
+4 of 11 steps (36%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:28 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12g.sparql
+    output: output/rdfs/FedUp-FedX/q12g.1.csv, output/rdfs/FedUp-FedX/q12g.1.json
+    jobid: 437
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12g.1.csv
+    wildcards: workload=rdfs, query=q12g, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:36 2025]
+Finished job 437.
+5 of 11 steps (45%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:36 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12e.sparql
+    output: output/rdfs/FedUp-FedX/q12e.1.csv, output/rdfs/FedUp-FedX/q12e.1.json
+    jobid: 435
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12e.1.csv
+    wildcards: workload=rdfs, query=q12e, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:43 2025]
+Finished job 435.
+6 of 11 steps (55%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:43 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12d.sparql
+    output: output/rdfs/FedUp-FedX/q12d.1.csv, output/rdfs/FedUp-FedX/q12d.1.json
+    jobid: 434
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12d.1.csv
+    wildcards: workload=rdfs, query=q12d, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:50 2025]
+Finished job 434.
+7 of 11 steps (64%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:50 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12j.sparql
+    output: output/rdfs/FedUp-FedX/q12j.1.csv, output/rdfs/FedUp-FedX/q12j.1.json
+    jobid: 440
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12j.1.csv
+    wildcards: workload=rdfs, query=q12j, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:50:57 2025]
+Finished job 440.
+8 of 11 steps (73%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:50:57 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12a.sparql
+    output: output/rdfs/FedUp-FedX/q12a.1.csv, output/rdfs/FedUp-FedX/q12a.1.json
+    jobid: 431
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12a.1.csv
+    wildcards: workload=rdfs, query=q12a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:51:04 2025]
+Finished job 431.
+9 of 11 steps (82%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:51:04 2025]
+localrule run_Fedup_FedX_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, fedup-queries/q12b.sparql
+    output: output/rdfs/FedUp-FedX/q12b.1.csv, output/rdfs/FedUp-FedX/q12b.1.json
+    jobid: 432
+    reason: Missing output files: output/rdfs/FedUp-FedX/q12b.1.csv
+    wildcards: workload=rdfs, query=q12b, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:51:12 2025]
+Finished job 432.
+10 of 11 steps (91%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 19 08:51:12 2025]
+localrule all:
+    input: config/largerdfbench/graphs.txt, config/rdfs/endpoints.txt, output/rdfs/Jena/q01a.1.csv, output/rdfs/Jena/q01b.1.csv, output/rdfs/Jena/q01c.1.csv, output/rdfs/Jena/q01d.1.csv, output/rdfs/Jena/q01e.1.csv, output/rdfs/Jena/q01f.1.csv, output/rdfs/Jena/q01g.1.csv, output/rdfs/Jena/q01h.1.csv, output/rdfs/Jena/q01i.1.csv, output/rdfs/Jena/q01j.1.csv, output/rdfs/Jena/q02a.1.csv, output/rdfs/Jena/q02b.1.csv, output/rdfs/Jena/q02c.1.csv, output/rdfs/Jena/q02d.1.csv, output/rdfs/Jena/q02e.1.csv, output/rdfs/Jena/q02f.1.csv, output/rdfs/Jena/q02g.1.csv, output/rdfs/Jena/q02h.1.csv, output/rdfs/Jena/q02i.1.csv, output/rdfs/Jena/q02j.1.csv, output/rdfs/Jena/q03a.1.csv, output/rdfs/Jena/q03b.1.csv, output/rdfs/Jena/q03c.1.csv, output/rdfs/Jena/q03d.1.csv, output/rdfs/Jena/q03e.1.csv, output/rdfs/Jena/q03f.1.csv, output/rdfs/Jena/q03g.1.csv, output/rdfs/Jena/q03h.1.csv, output/rdfs/Jena/q03i.1.csv, output/rdfs/Jena/q03j.1.csv, output/rdfs/Jena/q04a.1.csv, output/rdfs/Jena/q04b.1.csv, output/rdfs/Jena/q04c.1.csv, output/rdfs/Jena/q04d.1.csv, output/rdfs/Jena/q04e.1.csv, output/rdfs/Jena/q04f.1.csv, output/rdfs/Jena/q04g.1.csv, output/rdfs/Jena/q04h.1.csv, output/rdfs/Jena/q04i.1.csv, output/rdfs/Jena/q04j.1.csv, output/rdfs/Jena/q06a.1.csv, output/rdfs/Jena/q06b.1.csv, output/rdfs/Jena/q06c.1.csv, output/rdfs/Jena/q06d.1.csv, output/rdfs/Jena/q06e.1.csv, output/rdfs/Jena/q06f.1.csv, output/rdfs/Jena/q06g.1.csv, output/rdfs/Jena/q06h.1.csv, output/rdfs/Jena/q06i.1.csv, output/rdfs/Jena/q06j.1.csv, output/rdfs/Jena/q07a.1.csv, output/rdfs/Jena/q07b.1.csv, output/rdfs/Jena/q07c.1.csv, output/rdfs/Jena/q07d.1.csv, output/rdfs/Jena/q07e.1.csv, output/rdfs/Jena/q07f.1.csv, output/rdfs/Jena/q07g.1.csv, output/rdfs/Jena/q07h.1.csv, output/rdfs/Jena/q07i.1.csv, output/rdfs/Jena/q07j.1.csv, output/rdfs/Jena/q08a.1.csv, output/rdfs/Jena/q08b.1.csv, output/rdfs/Jena/q08c.1.csv, output/rdfs/Jena/q08d.1.csv, output/rdfs/Jena/q08e.1.csv, output/rdfs/Jena/q08f.1.csv, output/rdfs/Jena/q08g.1.csv, output/rdfs/Jena/q08h.1.csv, output/rdfs/Jena/q08i.1.csv, output/rdfs/Jena/q08j.1.csv, output/rdfs/Jena/q09a.1.csv, output/rdfs/Jena/q09b.1.csv, output/rdfs/Jena/q09c.1.csv, output/rdfs/Jena/q09d.1.csv, output/rdfs/Jena/q09e.1.csv, output/rdfs/Jena/q09f.1.csv, output/rdfs/Jena/q09g.1.csv, output/rdfs/Jena/q09h.1.csv, output/rdfs/Jena/q09i.1.csv, output/rdfs/Jena/q09j.1.csv, output/rdfs/Jena/q10a.1.csv, output/rdfs/Jena/q10b.1.csv, output/rdfs/Jena/q10c.1.csv, output/rdfs/Jena/q10d.1.csv, output/rdfs/Jena/q10e.1.csv, output/rdfs/Jena/q10f.1.csv, output/rdfs/Jena/q10g.1.csv, output/rdfs/Jena/q10h.1.csv, output/rdfs/Jena/q10i.1.csv, output/rdfs/Jena/q10j.1.csv, output/rdfs/Jena/q11a.1.csv, output/rdfs/Jena/q11b.1.csv, output/rdfs/Jena/q11c.1.csv, output/rdfs/Jena/q11d.1.csv, output/rdfs/Jena/q11e.1.csv, output/rdfs/Jena/q11f.1.csv, output/rdfs/Jena/q11g.1.csv, output/rdfs/Jena/q11h.1.csv, output/rdfs/Jena/q11i.1.csv, output/rdfs/Jena/q11j.1.csv, output/rdfs/Jena/q12a.1.csv, output/rdfs/Jena/q12b.1.csv, output/rdfs/Jena/q12c.1.csv, output/rdfs/Jena/q12d.1.csv, output/rdfs/Jena/q12e.1.csv, output/rdfs/Jena/q12f.1.csv, output/rdfs/Jena/q12g.1.csv, output/rdfs/Jena/q12h.1.csv, output/rdfs/Jena/q12i.1.csv, output/rdfs/Jena/q12j.1.csv, output/rdfs/FedX/q01a.1.csv, output/rdfs/FedX/q01b.1.csv, output/rdfs/FedX/q01c.1.csv, output/rdfs/FedX/q01d.1.csv, output/rdfs/FedX/q01e.1.csv, output/rdfs/FedX/q01f.1.csv, output/rdfs/FedX/q01g.1.csv, output/rdfs/FedX/q01h.1.csv, output/rdfs/FedX/q01i.1.csv, output/rdfs/FedX/q01j.1.csv, output/rdfs/FedX/q02a.1.csv, output/rdfs/FedX/q02b.1.csv, output/rdfs/FedX/q02c.1.csv, output/rdfs/FedX/q02d.1.csv, output/rdfs/FedX/q02e.1.csv, output/rdfs/FedX/q02f.1.csv, output/rdfs/FedX/q02g.1.csv, output/rdfs/FedX/q02h.1.csv, output/rdfs/FedX/q02i.1.csv, output/rdfs/FedX/q02j.1.csv, output/rdfs/FedX/q03a.1.csv, output/rdfs/FedX/q03b.1.csv, output/rdfs/FedX/q03c.1.csv, output/rdfs/FedX/q03d.1.csv, output/rdfs/FedX/q03e.1.csv, output/rdfs/FedX/q03f.1.csv, output/rdfs/FedX/q03g.1.csv, output/rdfs/FedX/q03h.1.csv, output/rdfs/FedX/q03i.1.csv, output/rdfs/FedX/q03j.1.csv, output/rdfs/FedX/q04a.1.csv, output/rdfs/FedX/q04b.1.csv, output/rdfs/FedX/q04c.1.csv, output/rdfs/FedX/q04d.1.csv, output/rdfs/FedX/q04e.1.csv, output/rdfs/FedX/q04f.1.csv, output/rdfs/FedX/q04g.1.csv, output/rdfs/FedX/q04h.1.csv, output/rdfs/FedX/q04i.1.csv, output/rdfs/FedX/q04j.1.csv, output/rdfs/FedX/q06a.1.csv, output/rdfs/FedX/q06b.1.csv, output/rdfs/FedX/q06c.1.csv, output/rdfs/FedX/q06d.1.csv, output/rdfs/FedX/q06e.1.csv, output/rdfs/FedX/q06f.1.csv, output/rdfs/FedX/q06g.1.csv, output/rdfs/FedX/q06h.1.csv, output/rdfs/FedX/q06i.1.csv, output/rdfs/FedX/q06j.1.csv, output/rdfs/FedX/q07a.1.csv, output/rdfs/FedX/q07b.1.csv, output/rdfs/FedX/q07c.1.csv, output/rdfs/FedX/q07d.1.csv, output/rdfs/FedX/q07e.1.csv, output/rdfs/FedX/q07f.1.csv, output/rdfs/FedX/q07g.1.csv, output/rdfs/FedX/q07h.1.csv, output/rdfs/FedX/q07i.1.csv, output/rdfs/FedX/q07j.1.csv, output/rdfs/FedX/q08a.1.csv, output/rdfs/FedX/q08b.1.csv, output/rdfs/FedX/q08c.1.csv, output/rdfs/FedX/q08d.1.csv, output/rdfs/FedX/q08e.1.csv, output/rdfs/FedX/q08f.1.csv, output/rdfs/FedX/q08g.1.csv, output/rdfs/FedX/q08h.1.csv, output/rdfs/FedX/q08i.1.csv, output/rdfs/FedX/q08j.1.csv, output/rdfs/FedX/q09a.1.csv, output/rdfs/FedX/q09b.1.csv, output/rdfs/FedX/q09c.1.csv, output/rdfs/FedX/q09d.1.csv, output/rdfs/FedX/q09e.1.csv, output/rdfs/FedX/q09f.1.csv, output/rdfs/FedX/q09g.1.csv, output/rdfs/FedX/q09h.1.csv, output/rdfs/FedX/q09i.1.csv, output/rdfs/FedX/q09j.1.csv, output/rdfs/FedX/q10a.1.csv, output/rdfs/FedX/q10b.1.csv, output/rdfs/FedX/q10c.1.csv, output/rdfs/FedX/q10d.1.csv, output/rdfs/FedX/q10e.1.csv, output/rdfs/FedX/q10f.1.csv, output/rdfs/FedX/q10g.1.csv, output/rdfs/FedX/q10h.1.csv, output/rdfs/FedX/q10i.1.csv, output/rdfs/FedX/q10j.1.csv, output/rdfs/FedX/q11a.1.csv, output/rdfs/FedX/q11b.1.csv, output/rdfs/FedX/q11c.1.csv, output/rdfs/FedX/q11d.1.csv, output/rdfs/FedX/q11e.1.csv, output/rdfs/FedX/q11f.1.csv, output/rdfs/FedX/q11g.1.csv, output/rdfs/FedX/q11h.1.csv, output/rdfs/FedX/q11i.1.csv, output/rdfs/FedX/q11j.1.csv, output/rdfs/FedX/q12a.1.csv, output/rdfs/FedX/q12b.1.csv, output/rdfs/FedX/q12c.1.csv, output/rdfs/FedX/q12d.1.csv, output/rdfs/FedX/q12e.1.csv, output/rdfs/FedX/q12f.1.csv, output/rdfs/FedX/q12g.1.csv, output/rdfs/FedX/q12h.1.csv, output/rdfs/FedX/q12i.1.csv, output/rdfs/FedX/q12j.1.csv, output/rdfs/HefQuin/q01a.1.csv, output/rdfs/HefQuin/q01b.1.csv, output/rdfs/HefQuin/q01c.1.csv, output/rdfs/HefQuin/q01d.1.csv, output/rdfs/HefQuin/q01e.1.csv, output/rdfs/HefQuin/q01f.1.csv, output/rdfs/HefQuin/q01g.1.csv, output/rdfs/HefQuin/q01h.1.csv, output/rdfs/HefQuin/q01i.1.csv, output/rdfs/HefQuin/q01j.1.csv, output/rdfs/HefQuin/q02a.1.csv, output/rdfs/HefQuin/q02b.1.csv, output/rdfs/HefQuin/q02c.1.csv, output/rdfs/HefQuin/q02d.1.csv, output/rdfs/HefQuin/q02e.1.csv, output/rdfs/HefQuin/q02f.1.csv, output/rdfs/HefQuin/q02g.1.csv, output/rdfs/HefQuin/q02h.1.csv, output/rdfs/HefQuin/q02i.1.csv, output/rdfs/HefQuin/q02j.1.csv, output/rdfs/HefQuin/q03a.1.csv, output/rdfs/HefQuin/q03b.1.csv, output/rdfs/HefQuin/q03c.1.csv, output/rdfs/HefQuin/q03d.1.csv, output/rdfs/HefQuin/q03e.1.csv, output/rdfs/HefQuin/q03f.1.csv, output/rdfs/HefQuin/q03g.1.csv, output/rdfs/HefQuin/q03h.1.csv, output/rdfs/HefQuin/q03i.1.csv, output/rdfs/HefQuin/q03j.1.csv, output/rdfs/HefQuin/q04a.1.csv, output/rdfs/HefQuin/q04b.1.csv, output/rdfs/HefQuin/q04c.1.csv, output/rdfs/HefQuin/q04d.1.csv, output/rdfs/HefQuin/q04e.1.csv, output/rdfs/HefQuin/q04f.1.csv, output/rdfs/HefQuin/q04g.1.csv, output/rdfs/HefQuin/q04h.1.csv, output/rdfs/HefQuin/q04i.1.csv, output/rdfs/HefQuin/q04j.1.csv, output/rdfs/HefQuin/q06a.1.csv, output/rdfs/HefQuin/q06b.1.csv, output/rdfs/HefQuin/q06c.1.csv, output/rdfs/HefQuin/q06d.1.csv, output/rdfs/HefQuin/q06e.1.csv, output/rdfs/HefQuin/q06f.1.csv, output/rdfs/HefQuin/q06g.1.csv, output/rdfs/HefQuin/q06h.1.csv, output/rdfs/HefQuin/q06i.1.csv, output/rdfs/HefQuin/q06j.1.csv, output/rdfs/HefQuin/q07a.1.csv, output/rdfs/HefQuin/q07b.1.csv, output/rdfs/HefQuin/q07c.1.csv, output/rdfs/HefQuin/q07d.1.csv, output/rdfs/HefQuin/q07e.1.csv, output/rdfs/HefQuin/q07f.1.csv, output/rdfs/HefQuin/q07g.1.csv, output/rdfs/HefQuin/q07h.1.csv, output/rdfs/HefQuin/q07i.1.csv, output/rdfs/HefQuin/q07j.1.csv, output/rdfs/HefQuin/q08a.1.csv, output/rdfs/HefQuin/q08b.1.csv, output/rdfs/HefQuin/q08c.1.csv, output/rdfs/HefQuin/q08d.1.csv, output/rdfs/HefQuin/q08e.1.csv, output/rdfs/HefQuin/q08f.1.csv, output/rdfs/HefQuin/q08g.1.csv, output/rdfs/HefQuin/q08h.1.csv, output/rdfs/HefQuin/q08i.1.csv, output/rdfs/HefQuin/q08j.1.csv, output/rdfs/HefQuin/q09a.1.csv, output/rdfs/HefQuin/q09b.1.csv, output/rdfs/HefQuin/q09c.1.csv, output/rdfs/HefQuin/q09d.1.csv, output/rdfs/HefQuin/q09e.1.csv, output/rdfs/HefQuin/q09f.1.csv, output/rdfs/HefQuin/q09g.1.csv, output/rdfs/HefQuin/q09h.1.csv, output/rdfs/HefQuin/q09i.1.csv, output/rdfs/HefQuin/q09j.1.csv, output/rdfs/HefQuin/q10a.1.csv, output/rdfs/HefQuin/q10b.1.csv, output/rdfs/HefQuin/q10c.1.csv, output/rdfs/HefQuin/q10d.1.csv, output/rdfs/HefQuin/q10e.1.csv, output/rdfs/HefQuin/q10f.1.csv, output/rdfs/HefQuin/q10g.1.csv, output/rdfs/HefQuin/q10h.1.csv, output/rdfs/HefQuin/q10i.1.csv, output/rdfs/HefQuin/q10j.1.csv, output/rdfs/HefQuin/q11a.1.csv, output/rdfs/HefQuin/q11b.1.csv, output/rdfs/HefQuin/q11c.1.csv, output/rdfs/HefQuin/q11d.1.csv, output/rdfs/HefQuin/q11e.1.csv, output/rdfs/HefQuin/q11f.1.csv, output/rdfs/HefQuin/q11g.1.csv, output/rdfs/HefQuin/q11h.1.csv, output/rdfs/HefQuin/q11i.1.csv, output/rdfs/HefQuin/q11j.1.csv, output/rdfs/HefQuin/q12a.1.csv, output/rdfs/HefQuin/q12b.1.csv, output/rdfs/HefQuin/q12c.1.csv, output/rdfs/HefQuin/q12d.1.csv, output/rdfs/HefQuin/q12e.1.csv, output/rdfs/HefQuin/q12f.1.csv, output/rdfs/HefQuin/q12g.1.csv, output/rdfs/HefQuin/q12h.1.csv, output/rdfs/HefQuin/q12i.1.csv, output/rdfs/HefQuin/q12j.1.csv, output/rdfs/FedUp-FedX/q01a.1.csv, output/rdfs/FedUp-FedX/q01b.1.csv, output/rdfs/FedUp-FedX/q01c.1.csv, output/rdfs/FedUp-FedX/q01d.1.csv, output/rdfs/FedUp-FedX/q01e.1.csv, output/rdfs/FedUp-FedX/q01f.1.csv, output/rdfs/FedUp-FedX/q01g.1.csv, output/rdfs/FedUp-FedX/q01h.1.csv, output/rdfs/FedUp-FedX/q01i.1.csv, output/rdfs/FedUp-FedX/q01j.1.csv, output/rdfs/FedUp-FedX/q02a.1.csv, output/rdfs/FedUp-FedX/q02b.1.csv, output/rdfs/FedUp-FedX/q02c.1.csv, output/rdfs/FedUp-FedX/q02d.1.csv, output/rdfs/FedUp-FedX/q02e.1.csv, output/rdfs/FedUp-FedX/q02f.1.csv, output/rdfs/FedUp-FedX/q02g.1.csv, output/rdfs/FedUp-FedX/q02h.1.csv, output/rdfs/FedUp-FedX/q02i.1.csv, output/rdfs/FedUp-FedX/q02j.1.csv, output/rdfs/FedUp-FedX/q03a.1.csv, output/rdfs/FedUp-FedX/q03b.1.csv, output/rdfs/FedUp-FedX/q03c.1.csv, output/rdfs/FedUp-FedX/q03d.1.csv, output/rdfs/FedUp-FedX/q03e.1.csv, output/rdfs/FedUp-FedX/q03f.1.csv, output/rdfs/FedUp-FedX/q03g.1.csv, output/rdfs/FedUp-FedX/q03h.1.csv, output/rdfs/FedUp-FedX/q03i.1.csv, output/rdfs/FedUp-FedX/q03j.1.csv, output/rdfs/FedUp-FedX/q04a.1.csv, output/rdfs/FedUp-FedX/q04b.1.csv, output/rdfs/FedUp-FedX/q04c.1.csv, output/rdfs/FedUp-FedX/q04d.1.csv, output/rdfs/FedUp-FedX/q04e.1.csv, output/rdfs/FedUp-FedX/q04f.1.csv, output/rdfs/FedUp-FedX/q04g.1.csv, output/rdfs/FedUp-FedX/q04h.1.csv, output/rdfs/FedUp-FedX/q04i.1.csv, output/rdfs/FedUp-FedX/q04j.1.csv, output/rdfs/FedUp-FedX/q06a.1.csv, output/rdfs/FedUp-FedX/q06b.1.csv, output/rdfs/FedUp-FedX/q06c.1.csv, output/rdfs/FedUp-FedX/q06d.1.csv, output/rdfs/FedUp-FedX/q06e.1.csv, output/rdfs/FedUp-FedX/q06f.1.csv, output/rdfs/FedUp-FedX/q06g.1.csv, output/rdfs/FedUp-FedX/q06h.1.csv, output/rdfs/FedUp-FedX/q06i.1.csv, output/rdfs/FedUp-FedX/q06j.1.csv, output/rdfs/FedUp-FedX/q07a.1.csv, output/rdfs/FedUp-FedX/q07b.1.csv, output/rdfs/FedUp-FedX/q07c.1.csv, output/rdfs/FedUp-FedX/q07d.1.csv, output/rdfs/FedUp-FedX/q07e.1.csv, output/rdfs/FedUp-FedX/q07f.1.csv, output/rdfs/FedUp-FedX/q07g.1.csv, output/rdfs/FedUp-FedX/q07h.1.csv, output/rdfs/FedUp-FedX/q07i.1.csv, output/rdfs/FedUp-FedX/q07j.1.csv, output/rdfs/FedUp-FedX/q08a.1.csv, output/rdfs/FedUp-FedX/q08b.1.csv, output/rdfs/FedUp-FedX/q08c.1.csv, output/rdfs/FedUp-FedX/q08d.1.csv, output/rdfs/FedUp-FedX/q08e.1.csv, output/rdfs/FedUp-FedX/q08f.1.csv, output/rdfs/FedUp-FedX/q08g.1.csv, output/rdfs/FedUp-FedX/q08h.1.csv, output/rdfs/FedUp-FedX/q08i.1.csv, output/rdfs/FedUp-FedX/q08j.1.csv, output/rdfs/FedUp-FedX/q09a.1.csv, output/rdfs/FedUp-FedX/q09b.1.csv, output/rdfs/FedUp-FedX/q09c.1.csv, output/rdfs/FedUp-FedX/q09d.1.csv, output/rdfs/FedUp-FedX/q09e.1.csv, output/rdfs/FedUp-FedX/q09f.1.csv, output/rdfs/FedUp-FedX/q09g.1.csv, output/rdfs/FedUp-FedX/q09h.1.csv, output/rdfs/FedUp-FedX/q09i.1.csv, output/rdfs/FedUp-FedX/q09j.1.csv, output/rdfs/FedUp-FedX/q10a.1.csv, output/rdfs/FedUp-FedX/q10b.1.csv, output/rdfs/FedUp-FedX/q10c.1.csv, output/rdfs/FedUp-FedX/q10d.1.csv, output/rdfs/FedUp-FedX/q10e.1.csv, output/rdfs/FedUp-FedX/q10f.1.csv, output/rdfs/FedUp-FedX/q10g.1.csv, output/rdfs/FedUp-FedX/q10h.1.csv, output/rdfs/FedUp-FedX/q10i.1.csv, output/rdfs/FedUp-FedX/q10j.1.csv, output/rdfs/FedUp-FedX/q11a.1.csv, output/rdfs/FedUp-FedX/q11b.1.csv, output/rdfs/FedUp-FedX/q11c.1.csv, output/rdfs/FedUp-FedX/q11d.1.csv, output/rdfs/FedUp-FedX/q11e.1.csv, output/rdfs/FedUp-FedX/q11f.1.csv, output/rdfs/FedUp-FedX/q11g.1.csv, output/rdfs/FedUp-FedX/q11h.1.csv, output/rdfs/FedUp-FedX/q11i.1.csv, output/rdfs/FedUp-FedX/q11j.1.csv, output/rdfs/FedUp-FedX/q12a.1.csv, output/rdfs/FedUp-FedX/q12b.1.csv, output/rdfs/FedUp-FedX/q12c.1.csv, output/rdfs/FedUp-FedX/q12d.1.csv, output/rdfs/FedUp-FedX/q12e.1.csv, output/rdfs/FedUp-FedX/q12f.1.csv, output/rdfs/FedUp-FedX/q12g.1.csv, output/rdfs/FedUp-FedX/q12h.1.csv, output/rdfs/FedUp-FedX/q12i.1.csv, output/rdfs/FedUp-FedX/q12j.1.csv, output/rdfs/FedUp-HefQuin/q01a.1.csv, output/rdfs/FedUp-HefQuin/q01b.1.csv, output/rdfs/FedUp-HefQuin/q01c.1.csv, output/rdfs/FedUp-HefQuin/q01d.1.csv, output/rdfs/FedUp-HefQuin/q01e.1.csv, output/rdfs/FedUp-HefQuin/q01f.1.csv, output/rdfs/FedUp-HefQuin/q01g.1.csv, output/rdfs/FedUp-HefQuin/q01h.1.csv, output/rdfs/FedUp-HefQuin/q01i.1.csv, output/rdfs/FedUp-HefQuin/q01j.1.csv, output/rdfs/FedUp-HefQuin/q02a.1.csv, output/rdfs/FedUp-HefQuin/q02b.1.csv, output/rdfs/FedUp-HefQuin/q02c.1.csv, output/rdfs/FedUp-HefQuin/q02d.1.csv, output/rdfs/FedUp-HefQuin/q02e.1.csv, output/rdfs/FedUp-HefQuin/q02f.1.csv, output/rdfs/FedUp-HefQuin/q02g.1.csv, output/rdfs/FedUp-HefQuin/q02h.1.csv, output/rdfs/FedUp-HefQuin/q02i.1.csv, output/rdfs/FedUp-HefQuin/q02j.1.csv, output/rdfs/FedUp-HefQuin/q03a.1.csv, output/rdfs/FedUp-HefQuin/q03b.1.csv, output/rdfs/FedUp-HefQuin/q03c.1.csv, output/rdfs/FedUp-HefQuin/q03d.1.csv, output/rdfs/FedUp-HefQuin/q03e.1.csv, output/rdfs/FedUp-HefQuin/q03f.1.csv, output/rdfs/FedUp-HefQuin/q03g.1.csv, output/rdfs/FedUp-HefQuin/q03h.1.csv, output/rdfs/FedUp-HefQuin/q03i.1.csv, output/rdfs/FedUp-HefQuin/q03j.1.csv, output/rdfs/FedUp-HefQuin/q04a.1.csv, output/rdfs/FedUp-HefQuin/q04b.1.csv, output/rdfs/FedUp-HefQuin/q04c.1.csv, output/rdfs/FedUp-HefQuin/q04d.1.csv, output/rdfs/FedUp-HefQuin/q04e.1.csv, output/rdfs/FedUp-HefQuin/q04f.1.csv, output/rdfs/FedUp-HefQuin/q04g.1.csv, output/rdfs/FedUp-HefQuin/q04h.1.csv, output/rdfs/FedUp-HefQuin/q04i.1.csv, output/rdfs/FedUp-HefQuin/q04j.1.csv, output/rdfs/FedUp-HefQuin/q06a.1.csv, output/rdfs/FedUp-HefQuin/q06b.1.csv, output/rdfs/FedUp-HefQuin/q06c.1.csv, output/rdfs/FedUp-HefQuin/q06d.1.csv, output/rdfs/FedUp-HefQuin/q06e.1.csv, output/rdfs/FedUp-HefQuin/q06f.1.csv, output/rdfs/FedUp-HefQuin/q06g.1.csv, output/rdfs/FedUp-HefQuin/q06h.1.csv, output/rdfs/FedUp-HefQuin/q06i.1.csv, output/rdfs/FedUp-HefQuin/q06j.1.csv, output/rdfs/FedUp-HefQuin/q07a.1.csv, output/rdfs/FedUp-HefQuin/q07b.1.csv, output/rdfs/FedUp-HefQuin/q07c.1.csv, output/rdfs/FedUp-HefQuin/q07d.1.csv, output/rdfs/FedUp-HefQuin/q07e.1.csv, output/rdfs/FedUp-HefQuin/q07f.1.csv, output/rdfs/FedUp-HefQuin/q07g.1.csv, output/rdfs/FedUp-HefQuin/q07h.1.csv, output/rdfs/FedUp-HefQuin/q07i.1.csv, output/rdfs/FedUp-HefQuin/q07j.1.csv, output/rdfs/FedUp-HefQuin/q08a.1.csv, output/rdfs/FedUp-HefQuin/q08b.1.csv, output/rdfs/FedUp-HefQuin/q08c.1.csv, output/rdfs/FedUp-HefQuin/q08d.1.csv, output/rdfs/FedUp-HefQuin/q08e.1.csv, output/rdfs/FedUp-HefQuin/q08f.1.csv, output/rdfs/FedUp-HefQuin/q08g.1.csv, output/rdfs/FedUp-HefQuin/q08h.1.csv, output/rdfs/FedUp-HefQuin/q08i.1.csv, output/rdfs/FedUp-HefQuin/q08j.1.csv, output/rdfs/FedUp-HefQuin/q09a.1.csv, output/rdfs/FedUp-HefQuin/q09b.1.csv, output/rdfs/FedUp-HefQuin/q09c.1.csv, output/rdfs/FedUp-HefQuin/q09d.1.csv, output/rdfs/FedUp-HefQuin/q09e.1.csv, output/rdfs/FedUp-HefQuin/q09f.1.csv, output/rdfs/FedUp-HefQuin/q09g.1.csv, output/rdfs/FedUp-HefQuin/q09h.1.csv, output/rdfs/FedUp-HefQuin/q09i.1.csv, output/rdfs/FedUp-HefQuin/q09j.1.csv, output/rdfs/FedUp-HefQuin/q10a.1.csv, output/rdfs/FedUp-HefQuin/q10b.1.csv, output/rdfs/FedUp-HefQuin/q10c.1.csv, output/rdfs/FedUp-HefQuin/q10d.1.csv, output/rdfs/FedUp-HefQuin/q10e.1.csv, output/rdfs/FedUp-HefQuin/q10f.1.csv, output/rdfs/FedUp-HefQuin/q10g.1.csv, output/rdfs/FedUp-HefQuin/q10h.1.csv, output/rdfs/FedUp-HefQuin/q10i.1.csv, output/rdfs/FedUp-HefQuin/q10j.1.csv, output/rdfs/FedUp-HefQuin/q11a.1.csv, output/rdfs/FedUp-HefQuin/q11b.1.csv, output/rdfs/FedUp-HefQuin/q11c.1.csv, output/rdfs/FedUp-HefQuin/q11d.1.csv, output/rdfs/FedUp-HefQuin/q11e.1.csv, output/rdfs/FedUp-HefQuin/q11f.1.csv, output/rdfs/FedUp-HefQuin/q11g.1.csv, output/rdfs/FedUp-HefQuin/q11h.1.csv, output/rdfs/FedUp-HefQuin/q11i.1.csv, output/rdfs/FedUp-HefQuin/q11j.1.csv, output/rdfs/FedUp-HefQuin/q12a.1.csv, output/rdfs/FedUp-HefQuin/q12b.1.csv, output/rdfs/FedUp-HefQuin/q12c.1.csv, output/rdfs/FedUp-HefQuin/q12d.1.csv, output/rdfs/FedUp-HefQuin/q12e.1.csv, output/rdfs/FedUp-HefQuin/q12f.1.csv, output/rdfs/FedUp-HefQuin/q12g.1.csv, output/rdfs/FedUp-HefQuin/q12h.1.csv, output/rdfs/FedUp-HefQuin/q12i.1.csv, output/rdfs/FedUp-HefQuin/q12j.1.csv, output/rdfs/FedUp-Jena/q01a.1.csv, output/rdfs/FedUp-Jena/q01b.1.csv, output/rdfs/FedUp-Jena/q01c.1.csv, output/rdfs/FedUp-Jena/q01d.1.csv, output/rdfs/FedUp-Jena/q01e.1.csv, output/rdfs/FedUp-Jena/q01f.1.csv, output/rdfs/FedUp-Jena/q01g.1.csv, output/rdfs/FedUp-Jena/q01h.1.csv, output/rdfs/FedUp-Jena/q01i.1.csv, output/rdfs/FedUp-Jena/q01j.1.csv, output/rdfs/FedUp-Jena/q02a.1.csv, output/rdfs/FedUp-Jena/q02b.1.csv, output/rdfs/FedUp-Jena/q02c.1.csv, output/rdfs/FedUp-Jena/q02d.1.csv, output/rdfs/FedUp-Jena/q02e.1.csv, output/rdfs/FedUp-Jena/q02f.1.csv, output/rdfs/FedUp-Jena/q02g.1.csv, output/rdfs/FedUp-Jena/q02h.1.csv, output/rdfs/FedUp-Jena/q02i.1.csv, output/rdfs/FedUp-Jena/q02j.1.csv, output/rdfs/FedUp-Jena/q03a.1.csv, output/rdfs/FedUp-Jena/q03b.1.csv, output/rdfs/FedUp-Jena/q03c.1.csv, output/rdfs/FedUp-Jena/q03d.1.csv, output/rdfs/FedUp-Jena/q03e.1.csv, output/rdfs/FedUp-Jena/q03f.1.csv, output/rdfs/FedUp-Jena/q03g.1.csv, output/rdfs/FedUp-Jena/q03h.1.csv, output/rdfs/FedUp-Jena/q03i.1.csv, output/rdfs/FedUp-Jena/q03j.1.csv, output/rdfs/FedUp-Jena/q04a.1.csv, output/rdfs/FedUp-Jena/q04b.1.csv, output/rdfs/FedUp-Jena/q04c.1.csv, output/rdfs/FedUp-Jena/q04d.1.csv, output/rdfs/FedUp-Jena/q04e.1.csv, output/rdfs/FedUp-Jena/q04f.1.csv, output/rdfs/FedUp-Jena/q04g.1.csv, output/rdfs/FedUp-Jena/q04h.1.csv, output/rdfs/FedUp-Jena/q04i.1.csv, output/rdfs/FedUp-Jena/q04j.1.csv, output/rdfs/FedUp-Jena/q06a.1.csv, output/rdfs/FedUp-Jena/q06b.1.csv, output/rdfs/FedUp-Jena/q06c.1.csv, output/rdfs/FedUp-Jena/q06d.1.csv, output/rdfs/FedUp-Jena/q06e.1.csv, output/rdfs/FedUp-Jena/q06f.1.csv, output/rdfs/FedUp-Jena/q06g.1.csv, output/rdfs/FedUp-Jena/q06h.1.csv, output/rdfs/FedUp-Jena/q06i.1.csv, output/rdfs/FedUp-Jena/q06j.1.csv, output/rdfs/FedUp-Jena/q07a.1.csv, output/rdfs/FedUp-Jena/q07b.1.csv, output/rdfs/FedUp-Jena/q07c.1.csv, output/rdfs/FedUp-Jena/q07d.1.csv, output/rdfs/FedUp-Jena/q07e.1.csv, output/rdfs/FedUp-Jena/q07f.1.csv, output/rdfs/FedUp-Jena/q07g.1.csv, output/rdfs/FedUp-Jena/q07h.1.csv, output/rdfs/FedUp-Jena/q07i.1.csv, output/rdfs/FedUp-Jena/q07j.1.csv, output/rdfs/FedUp-Jena/q08a.1.csv, output/rdfs/FedUp-Jena/q08b.1.csv, output/rdfs/FedUp-Jena/q08c.1.csv, output/rdfs/FedUp-Jena/q08d.1.csv, output/rdfs/FedUp-Jena/q08e.1.csv, output/rdfs/FedUp-Jena/q08f.1.csv, output/rdfs/FedUp-Jena/q08g.1.csv, output/rdfs/FedUp-Jena/q08h.1.csv, output/rdfs/FedUp-Jena/q08i.1.csv, output/rdfs/FedUp-Jena/q08j.1.csv, output/rdfs/FedUp-Jena/q09a.1.csv, output/rdfs/FedUp-Jena/q09b.1.csv, output/rdfs/FedUp-Jena/q09c.1.csv, output/rdfs/FedUp-Jena/q09d.1.csv, output/rdfs/FedUp-Jena/q09e.1.csv, output/rdfs/FedUp-Jena/q09f.1.csv, output/rdfs/FedUp-Jena/q09g.1.csv, output/rdfs/FedUp-Jena/q09h.1.csv, output/rdfs/FedUp-Jena/q09i.1.csv, output/rdfs/FedUp-Jena/q09j.1.csv, output/rdfs/FedUp-Jena/q10a.1.csv, output/rdfs/FedUp-Jena/q10b.1.csv, output/rdfs/FedUp-Jena/q10c.1.csv, output/rdfs/FedUp-Jena/q10d.1.csv, output/rdfs/FedUp-Jena/q10e.1.csv, output/rdfs/FedUp-Jena/q10f.1.csv, output/rdfs/FedUp-Jena/q10g.1.csv, output/rdfs/FedUp-Jena/q10h.1.csv, output/rdfs/FedUp-Jena/q10i.1.csv, output/rdfs/FedUp-Jena/q10j.1.csv, output/rdfs/FedUp-Jena/q11a.1.csv, output/rdfs/FedUp-Jena/q11b.1.csv, output/rdfs/FedUp-Jena/q11c.1.csv, output/rdfs/FedUp-Jena/q11d.1.csv, output/rdfs/FedUp-Jena/q11e.1.csv, output/rdfs/FedUp-Jena/q11f.1.csv, output/rdfs/FedUp-Jena/q11g.1.csv, output/rdfs/FedUp-Jena/q11h.1.csv, output/rdfs/FedUp-Jena/q11i.1.csv, output/rdfs/FedUp-Jena/q11j.1.csv, output/rdfs/FedUp-Jena/q12a.1.csv, output/rdfs/FedUp-Jena/q12b.1.csv, output/rdfs/FedUp-Jena/q12c.1.csv, output/rdfs/FedUp-Jena/q12d.1.csv, output/rdfs/FedUp-Jena/q12e.1.csv, output/rdfs/FedUp-Jena/q12f.1.csv, output/rdfs/FedUp-Jena/q12g.1.csv, output/rdfs/FedUp-Jena/q12h.1.csv, output/rdfs/FedUp-Jena/q12i.1.csv, output/rdfs/FedUp-Jena/q12j.1.csv
+    output: output/data.csv
+    jobid: 0
+    reason: Missing output files: output/data.csv; Input files updated by another job: output/rdfs/FedUp-FedX/q12a.1.csv, output/rdfs/FedUp-FedX/q12f.1.csv, output/rdfs/FedUp-FedX/q12g.1.csv, output/rdfs/FedUp-FedX/q12j.1.csv, output/rdfs/FedUp-FedX/q12c.1.csv, output/rdfs/FedUp-FedX/q12h.1.csv, output/rdfs/FedUp-FedX/q12b.1.csv, output/rdfs/FedUp-FedX/q12d.1.csv, output/rdfs/FedUp-FedX/q12i.1.csv, output/rdfs/FedUp-FedX/q12e.1.csv
+    resources: tmpdir=/tmp
+
+[Wed Mar 19 08:51:14 2025]
+Finished job 0.
+11 of 11 steps (100%) done
+Complete log: .snakemake/log/2025-03-19T084931.497928.snakemake.log

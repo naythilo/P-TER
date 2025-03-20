@@ -122,7 +122,7 @@ public class Virtuoso {
         try (FileWriter writer = new FileWriter(csvPath, true)) {
             // Écrire les métriques dans le fichier CSV
             writer.append("status,TotalExecutionTime,nbResult,planningTime,executionTime\n");
-            writer.append("ok,"+executionTime+","+numSolutions+",None,None");
+            writer.append("ok,"+executionTime+","+numSolutions+",0,"+executionTime);
         } catch (IOException e) {
             System.err.println("Error writing CSV file: " + e.getMessage());
         }

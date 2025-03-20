@@ -27,16 +27,17 @@ TIMEOUT = 1200  # 20 minutes
 #RUNS = [1,2,3]
 RUNS = [1]
 
-# Liste des workloads
 RESTART = False
+
+# Liste des workloads
 WORKLOADS = ["rdfs"]
 #APPROACHES = ["Jena","FedX","HefQuin"]
-APPROACHES = ["Jena","FedX","HefQuin","FedUp-FedX","FedUp-HefQuin","FedUp-Jena"]
-#APPROACHES = ["FedUp-HefQuin"]
-#APPROACHES = ["FedX"]
-QUERIESs = ["q05b"]
+#APPROACHES = ["FedUp-FedX","FedUp-HefQuin","FedUp-Jena"]
+#APPROACHES = ["Jena","FedX","HefQuin","FedUp-FedX","FedUp-HefQuin","FedUp-Jena"]
+APPROACHES = ["FedUp-Jena"]
+QUERIES = ["q01a", "q02b", "q03a", "q04d", "q06e", "q07f", "q08g", "q09h", "q10i", "q11j", "q12a"]
 
-QUERIES = [
+QUERIESdf= [
     "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",
     "q02a", "q02b", "q02c", "q02d", "q02e", "q02f", "q02g", "q02h", "q02i", "q02j",
     "q03a", "q03b", "q03c", "q03d", "q03e", "q03f", "q03g", "q03h", "q03i", "q03j",
@@ -66,7 +67,6 @@ def get_queries(workload):
 
 rule all:
     input:
-        #directory(FUSEKI_HOME),
         #directory(JENA_HOME),     
         "config/largerdfbench/graphs.txt",
         "config/rdfs/endpoints.txt",
@@ -79,10 +79,7 @@ rule all:
     run:
         data = [pandas.read_csv(file) for file in input.bench]
         pandas.concat(data,axis=0).to_csv(str(output))
-        #expand(
-        #    "config/{workload}/endpoints.txt",
-        #    workload=["rdfs"]  # Ajoutez d'autres workloads si nécessaire
-        #),
+       
 
 
          
@@ -195,7 +192,7 @@ if DO_INSTALL:
 if RUN_QUERY:
     
 
-    rule run_sparql_query:
+    rule run_jena_query:
         priority: 50
         input:
             virtuoso = VIRTUOSO_HOME,
@@ -232,7 +229,6 @@ if RUN_QUERY:
             csv_file = "output/{workload}/FedX/{query}.{run}.csv",
             json_file = "output/{workload}/FedX/{query}.{run}.json"
 
-
         run:
             query_tmp = tempfile.NamedTemporaryFile(delete=False)
 
@@ -241,9 +237,6 @@ if RUN_QUERY:
 
             # Exécuter la requête avec un timeout
             shell(f" /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input {input.query_file} --outputJson {output.json_file} --outputCsv {output.csv_file}")
-
-            #hell(f"echo 'hello' > {output}")
-            shell(f"echo 'Query results saved as {output.json_file} and metrics saved as '")
 
             df = pandas.read_csv(output.csv_file)
             df["query"] = wildcards.query
@@ -286,11 +279,12 @@ if RUN_QUERY_FEDUP:
             query_file = "fedup-queries/{query}.sparql",
         output:
             metrics = "output/{workload}/FedUp-FedX/{query}.{run}.csv",
-            json_file = "output/{workload}/FedUp-FedX/{query}.{run}.json"
+            json_file = "output/{workload}/FedUp-FedX/{query}.{run}.json",
+            err_file="output/{workload}/FedUp-FedX/{query}.{run}.txt"
         run:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
-            shell(f"python commons.py run-fedup-fedx-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file} ")
+            shell(f"python commons.py run-fedup-fedx-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file} --err-output {output.err_file} ")
 
             # Post-traitement des résultats avec Pandas
             df = pandas.read_csv(output.metrics)
@@ -308,11 +302,12 @@ if RUN_QUERY_FEDUP:
             query_file = "fedup-queries/{query}.sparql",
         output:
             metrics = "output/{workload}/FedUp-Jena/{query}.{run}.csv",
-            json_file = "output/{workload}/FedUp-Jena/{query}.{run}.json"
+            json_file = "output/{workload}/FedUp-Jena/{query}.{run}.json",
+            err_file="output/{workload}/FedUp-Jena/{query}.{run}.txt"
         run:
             shell(f"python commons.py start-virtuoso --home {{input.virtuoso}} --config {{input.virtuoso_configfile}} --restart {RESTART}")
 
-            shell(f"python commons.py run-fedup-jena-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file} ")
+            shell(f"python commons.py run-fedup-jena-query {input.query_file} --metrics-output {output.metrics} --solutions-output {output.json_file} --err-output {output.err_file} ")
 
             # Post-traitement des résultats avec Pandas
             df = pandas.read_csv(output.metrics)
@@ -344,14 +339,6 @@ if RUN_QUERY_FEDUP:
             df["approach"] = "FedUp-HefQuin"
             df["run"] = wildcards.run
             df.to_csv(output.metrics, index=False)
-
-
-#/usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_epia4f4tkru96q17baqr1dz53.argfile org.example.Virtuoso --input queries/rdfs/Fuseki/q05.sparql
-#./fuseki-server --mem --port 3030 /sparql
-
-
-#changer snakemake : aller dans apache jena 4... > bin
-#./sparql --query /workspaces/P-TER/queries/q01d.sparql --time
 
 
 

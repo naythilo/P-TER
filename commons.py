@@ -198,7 +198,7 @@ def run_rsa_query(query, port, metrics_output, solutions_output):
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 def run_query(query, endpoints, config, port, metrics_output, solutions_output):
-
+    
     def signal_handler(signal, frame):  # used to handle the signal sent by the timeout command
         write_metrics({"status": ["timeout"], "reason": [None]}, metrics_output)
         write_solutions([], solutions_output)
@@ -239,27 +239,28 @@ def run_query(query, endpoints, config, port, metrics_output, solutions_output):
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 def run_jena_query(query_file,metrics_output,solutions_output):
+    #Execute Query
     command = ["./apache-jena-4.9.0/bin/sparql", "--query", query_file, "--time", "--results=JSON"]
     result = subprocess.run(command, capture_output=True, text=True)
+
+    #CSV Data
     time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
-
     execution_time = time_match.group(1) if time_match else "N/A"
-
     results = result.stdout
+
     try:
-        results_json = json.loads(results)
+        results_json = json.loads(result.stdout)
         bindings = results_json.get("results", {}).get("bindings", [])
         num_results = len(bindings)  # Nombre de résultats dans "bindings"
     except json.JSONDecodeError:
         num_results = 0
-    print(num_results)
 
-    df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":None,"executionTime":None}])
+    df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":0,"executionTime":execution_time}])
 
     df.to_csv(metrics_output, index=False)
 
-    print(f"Jena Results saved to {metrics_output} with execution time: {execution_time} sec")
-    write_solutions(results, solutions_output)
+    #Json Data
+    write_solutions(result.stdout, solutions_output)
 
 
 @cli.command()
@@ -268,12 +269,17 @@ def run_jena_query(query_file,metrics_output,solutions_output):
 @click.option("--solutions-output", type=click.Path())
 @click.option("--err-output", type=click.Path())
 def run_hefquin_query(query_file,metrics_output,solutions_output,err_output):
-    hefquin_directory = "../HeFQUIN-FRAW"
-    os.chdir(hefquin_directory)
-    
+    #Execute Query
+    os.chdir("../HeFQUIN-FRAW")
     command = ["./bin/hefquin", "--federationDescription fedshop200.ttl","--confDescr DefaultEngineConfForRSA.ttl", "--file", query_file, "--time", "--results=JSON","--printQueryProcStats"]
     result = subprocess.run(command, capture_output=True, text=True)
     os.chdir("../P-TER")
+
+    with open(err_output, "w") as file:
+        file.write(result.stdout + result.stderr)
+
+    #CSV & Json data
+
     time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
 
     execution_time = time_match.group(1) if time_match else "N/A"
@@ -282,19 +288,14 @@ def run_hefquin_query(query_file,metrics_output,solutions_output,err_output):
     try:
         results_json = json.loads(results)
         bindings = results_json.get("results", {}).get("bindings", [])
-        num_results = len(bindings)  # Nombre de résultats dans "bindings"
+        num_results = len(bindings)  
     except json.JSONDecodeError:
         num_results = 0
-    print(result.stdout)
-    print(result.stderr)
-    with open(err_output, "w") as file:
-        file.write(result.stdout)
 
-    df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":None,"executionTime":None}])
+    df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":0,"executionTime":execution_time}])
 
     df.to_csv(metrics_output, index=False)
 
-    print(f"Hefquin Results saved to {metrics_output} with execution time: {execution_time} sec")
     write_solutions(results, solutions_output)
 
 
@@ -302,60 +303,61 @@ def run_hefquin_query(query_file,metrics_output,solutions_output,err_output):
 @click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
-def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
+@click.option("--err-output", type=click.Path())
+def run_fedup_fedx_query(query_file,metrics_output,solutions_output,err_output):
+    #Execute Query
     command = [
         "java", "-jar", "../fedup/target/fedup.jar", 
         "-e", "FedX", 
         "-f", query_file, 
-        "-s", "/workspaces/P-TER/fedshop200-h0", 
+        "-s", "/workspaces/HeFQUIN-FRAW/summaries/fedshop200-h0", 
         "-x",
         "-m", "(e) -> \"http://localhost:8890/sparql?default-graph-uri=\" + e.substring(0, e.length())"
     ]
 
     result = subprocess.run(command, capture_output=True, text=True)
-    print(result.stderr)
+
+    with open(err_output, "w") as file:
+        file.write(result.stderr+result.stdout)
+    
+    #CSV Data
     time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
     time_match_source_assignment = re.search(r"Took (\d+) to perform the source assignment", result.stderr)
 
     if time_match:
         retrieval_time = int(time_match.group(1))
         retrieval_time = retrieval_time / 1000
-        retrieval_time_source_assignment = int(time_match_source_assignment.group(1))
-        retrieval_time_source_assignment = retrieval_time_source_assignment/1000
+        
         nbResult = time_match.group(2)   
     else:
         retrieval_time = "N/A"
         nbResult = "N/A"
 
-    print(f"Time to retrieve mappings: {retrieval_time} ms")
-    print(f"Number of mappings: {nbResult}")
+    if time_match_source_assignment : 
+        retrieval_time_source_assignment = int(time_match_source_assignment.group(1))
+        retrieval_time_source_assignment = retrieval_time_source_assignment/1000
+    else :
+        retrieval_time_source_assignment = "N/A"
 
     df = pd.DataFrame([{
         "status": "ok", 
-        "TotalExecutionTime":  str(retrieval_time) + str(retrieval_time_source_assignment),
+        "TotalExecutionTime":  str(float(retrieval_time) + float(retrieval_time_source_assignment)),
         "nbResult": nbResult,
         "planningTime":retrieval_time_source_assignment,
         "executionTime":retrieval_time,
     }])
 
     df.to_csv(metrics_output, index=False)
-    
-    print(f"Fedup-FedX Results saved to {metrics_output} with execution time: {retrieval_time} ms")
 
+    #Json Data
     pattern = r'\( \?([^=]+) = <([^>]+)> \) \( \?([^=]+) = "([^"]+)"(\^\^[a-zA-Z0-9:]+)? \)'
     matches = re.findall(pattern, result.stdout)
 
-    # Transformer les résultats en une liste de dictionnaires dynamiques
     data = []
     for match in matches:
-        # match contient quatre groupes : clé1, valeur1, clé2, valeur2, et éventuellement le type RDF (comme xsd:double)
-        value = match[3]  # Valeur entre guillemets
-
-        # Si un type RDF est présent, on le concatène à la valeur
+        value = match[3] 
         if match[4]:  
-            value += match[4]  # Ajoute le type RDF à la valeur
-
-        # Ajouter le couple clé-valeur dans la liste de données
+            value += match[4]  
         data.append({match[0]: match[1], match[2]: value})
 
     json_data = json.dumps(data, indent=4)
@@ -368,9 +370,11 @@ def run_fedup_fedx_query(query_file,metrics_output,solutions_output):
 @click.argument("query_file", type=click.Path(exists=True, dir_okay=False))
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
-def run_fedup_jena_query(query_file,metrics_output,solutions_output):
+@click.option("--err-output", type=click.Path())
+def run_fedup_jena_query(query_file,metrics_output,solutions_output,err_output):
+    #Execute Query
     command = [
-        "java", "-jar", "../fedup/target/fedup.jar", 
+        "java", "-Xmx12g", "-jar", "../fedup/target/fedup.jar", 
         "-e", "Jena", 
         "-f", query_file, 
         "-s", "/workspaces/P-TER/fedshop200-h0", 
@@ -379,7 +383,11 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
     ]
 
     result = subprocess.run(command, capture_output=True, text=True)
-    #print(result.stderr)
+
+    with open(err_output, "w") as file:
+        file.write(result.stderr+result.stdout)
+    
+    #CSV Data
     time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
     time_match_source_assignment = re.search(r"Took (\d+) to perform the source assignment", result.stderr)
     
@@ -398,13 +406,14 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
     else : 
         retrieval_time_source_assignment = "N/A"
 
-    print(f"Time to retrieve mappings: {retrieval_time} ms")
-    print(f"Number of mappings: {nbResult}")
-
+    if retrieval_time == "N/A" or retrieval_time_source_assignment == "N/A" :
+        totalexectime = None
+    else :
+        totalexectime = str(float(retrieval_time) + float(retrieval_time_source_assignment))
 
     df = pd.DataFrame([{
         "status": "ok", 
-        "TotalExecutionTime": str(retrieval_time) + str(retrieval_time_source_assignment), 
+        "TotalExecutionTime": totalexectime,
         "nbResult": nbResult,
         "planningTime":retrieval_time_source_assignment,
         "executionTime":retrieval_time,
@@ -412,26 +421,27 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
 
     df.to_csv(metrics_output, index=False)
 
-    print(f"Fedup-Jena Results saved to {metrics_output} with execution time: {retrieval_time} s")
+    #Json Data
+    pattern = r'\( \?([^=]+) = (?:<([^>]+)>)?\s*(?:"([^"]+)"(\^\^[a-zA-Z0-9:]+)?)? \)'
 
-
-
-    pattern = r'\( \?([^=]+) = <([^>]+)> \) \( \?([^=]+) = "([^"]+)"(\^\^[a-zA-Z0-9:]+)? \)'
     matches = re.findall(pattern, result.stdout)
 
-    # Transformer les résultats en une liste de dictionnaires dynamiques
     data = []
     for match in matches:
-        # match contient quatre groupes : clé1, valeur1, clé2, valeur2, et éventuellement le type RDF (comme xsd:double)
-        value = match[3]  # Valeur entre guillemets
+        # Si la valeur entre guillemets existe, utilisez-la, sinon utilisez une chaîne vide
+        value = match[2] if match[2] else ''
+        
+        # Si le type de données (^^) existe, ajoutez-le à la valeur
+        if match[3]:  
+            value += match[3]
+        
+        # Si une URL existe, associez-la avec la clé correspondante
+        if match[1]:
+            data.append({match[0]: match[1], 'value': value})
+        else:
+            data.append({match[0]: value})
 
-        # Si un type RDF est présent, on le concatène à la valeur
-        if match[4]:  
-            value += match[4]  # Ajoute le type RDF à la valeur
-
-        # Ajouter le couple clé-valeur dans la liste de données
-        data.append({match[0]: match[1], match[2]: value})
-
+    # Conversion en JSON
     json_data = json.dumps(data, indent=4)
     write_solutions(json_data, solutions_output)
     
@@ -442,59 +452,51 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output):
 @click.option("--solutions-output", type=click.Path())
 @click.option("--err-output", type=click.Path())
 def run_fedup_hefquin_query(query_file,metrics_output,solutions_output,err_output):
+    #Execute Query
     hefquin_directory = "../HeFQUIN-FRAW"
     os.chdir(hefquin_directory)
     
     command = ["./bin/hefquin", "--federationDescription fedshop200.ttl","--confDescr DefaultEngineWithFedupConfForFedshop200.ttl", "--file", query_file, "--time", "--results=JSON","--printQueryProcStats"]
     result = subprocess.run(command, capture_output=True, text=True)
     os.chdir("../P-TER")
-    #print(result.stdout)
-    with open(err_output, 'w') as file:
+
+    with open(err_output, "w") as file:
         file.write(result.stderr+result.stdout)
+
+    #CSV data
+
     time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
     time_match_planningTime = re.search(r"planningTime\s*:\s*(\d+)", result.stderr)
-    time_match_executionTime = re.search(r"executionTime\s*:\s*(\d+)", result.stderr)
-
+    time_match_executionTime = re.search(r"executionTime\s*:\s*(\d+)", result.stderr)   
 
     execution_time = time_match.group(1) if time_match else "N/A"
-    
-    # Check if the executionTime was found and proceed
+
     if time_match_executionTime:
         retrieval_time = int(time_match_executionTime.group(1)) / 1000
     else:
         retrieval_time = "N/A"
-    
-    # Check if planningTime was found
     if time_match_planningTime:
         retrieval_time_source_assignment = int(time_match_planningTime.group(1)) / 1000
     else:
         retrieval_time_source_assignment = "N/A"
-
-    # Handle case where no execution time was found
     if time_match is None:
         retrieval_time = "N/A"
         nbResult = "N/A"
 
-    results = result.stdout
-    #print(result.stdout)
-    #print(result.stderr)
-    with open(err_output, "w") as file:
-        file.write(result.stdout)
-
+    
     try:
-        results_json = json.loads(results)
+        results_json = json.loads(result.stdout)
         bindings = results_json.get("results", {}).get("bindings", [])
         num_results = len(bindings)  # Nombre de résultats dans "bindings"
     except json.JSONDecodeError:
         num_results = 0
-    #print(num_results)
 
     df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":retrieval_time_source_assignment,"executionTime":retrieval_time}])
 
     df.to_csv(metrics_output, index=False)
 
-    print(f"Hefquin fedup Results saved to {metrics_output} with execution time: {execution_time} sec")
-    write_solutions(results, solutions_output)
+    #Json data
+    write_solutions(result.stdout, solutions_output)
 
 
 
