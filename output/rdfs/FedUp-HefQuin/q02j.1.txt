@@ -1,0 +1,678 @@
+[main] INFO Summary - Took 89 ms to open the summary.
+[main] INFO Summary - Took 342 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?producer ?localProduct ?p ?propertyTextual1 ?ProductFeatureLabel ?propertyTextual2 ?localProductFeature1 ?propertyTextual5 ?propertyNumeric4 ?comment ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?ProductFeature1 ?label)
+  (union
+    (leftjoin
+      (leftjoin
+        (leftjoin
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/>
+            (sequence
+              (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+              (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+              (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+              (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product150726>)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+          (union
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+        (union
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+      (union
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/>
+          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/>
+          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))
+    (leftjoin
+      (leftjoin
+        (leftjoin
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/>
+            (sequence
+              (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+              (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+              (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+              (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product150726>)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+          (union
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+        (union
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+      (union
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/>
+          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/>
+          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))))
+
+Time: 3.243 sec
+overallQueryProcessingTime : 3214
+planningTime : 773
+compilationTime : 7
+executionTime : 2434
+queryPlanningStats : {
+  overallQueryPlanningTime : 773
+  sourcePlanningTime : 766
+  logicalOptimizationTime : 2
+  physicalOptimizationTime : 5
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@898ea692
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@898ea692
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@898ea692
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 18
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@acf859d
+          xthInputConsumed : [ {true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {9,9} ]
+          numberOfOutputMappingsProduced : 18
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@6df3e44c
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 134
+          numberOfLeftInputMappingsProcessed : 6651
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 9
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7ce7e83c
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 152
+          numberOfLeftInputMappingsProcessed : 7576
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4a05d8ae
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 132
+          numberOfLeftInputMappingsProcessed : 6592
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3c904f1e
+          numberOfInvocations : 1
+          overallExecTime : 2388
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product150726> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/)
+          requestExecTime : 0
+          responseProcTime : 2388
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@460510aa
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 134
+          numberOfLeftInputMappingsProcessed : 6651
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 14
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@351e414e
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 152
+          numberOfLeftInputMappingsProcessed : 7576
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@6fd77352
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 132
+          numberOfLeftInputMappingsProcessed : 6592
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 12
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5109e8cf
+          numberOfInvocations : 1
+          overallExecTime : 2151
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product150726> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/)
+          requestExecTime : 0
+          responseProcTime : 2151
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@3f672204
+          xthInputConsumed : [ {true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {66,67} ]
+          numberOfMappingsFromXthInputProcessed : [ {3289,3303} ]
+          numberOfOutputMappingsProduced : 6592
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@78b41097
+          numberOfInvocations : 1
+          overallExecTime : 507
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/)
+          requestExecTime : 1
+          responseProcTime : 506
+          solMapsRetrieved : 3303
+          numberOfOutputMappingsProduced : 3303
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2c2db130
+          numberOfInvocations : 1
+          overallExecTime : 490
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/)
+          requestExecTime : 1
+          responseProcTime : 489
+          solMapsRetrieved : 3289
+          numberOfOutputMappingsProduced : 3289
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@327c7bea
+          xthInputConsumed : [ {true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {76,77} ]
+          numberOfMappingsFromXthInputProcessed : [ {3767,3809} ]
+          numberOfOutputMappingsProduced : 7576
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@348d18a3
+          numberOfInvocations : 1
+          overallExecTime : 519
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/)
+          requestExecTime : 1
+          responseProcTime : 518
+          solMapsRetrieved : 3809
+          numberOfOutputMappingsProduced : 3809
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6c65860d
+          numberOfInvocations : 1
+          overallExecTime : 547
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/)
+          requestExecTime : 1
+          responseProcTime : 546
+          solMapsRetrieved : 3767
+          numberOfOutputMappingsProduced : 3767
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@2d000e80
+          xthInputConsumed : [ {true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {66,68} ]
+          numberOfMappingsFromXthInputProcessed : [ {3299,3352} ]
+          numberOfOutputMappingsProduced : 6651
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7cf283e1
+          numberOfInvocations : 1
+          overallExecTime : 328
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite4.fr/)
+          requestExecTime : 2
+          responseProcTime : 326
+          solMapsRetrieved : 3352
+          numberOfOutputMappingsProduced : 3352
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@20e6c4dc
+          numberOfInvocations : 1
+          overallExecTime : 508
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite94.fr/)
+          requestExecTime : 1
+          responseProcTime : 507
+          solMapsRetrieved : 3299
+          numberOfOutputMappingsProduced : 3299
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "label" , "comment" , "producer" , "ProductFeatureLabel" , "propertyTextual1" , "propertyTextual2" , "propertyTextual3" , "propertyNumeric1" , "propertyNumeric2" , "propertyTextual4" , "propertyTextual5" , "propertyNumeric4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "nonbreakable" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "latecomer's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Xenophon" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "acknowledgment's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "capsizing" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "militaries" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hopi" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Virgil" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Excalibur's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "nonbreakable" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Virgil" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "latecomer's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "militaries" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Xenophon" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Excalibur's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hopi" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "acknowledgment's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "lens's" } ,
+        "comment": { "type": "literal" , "value": "jabot verdure's butterfly's representational appellate Bizet Johns Loyang's rebuilding aggrandize Eurodollar squall wingers scabby Tuamotu's blowtorch's vectored recovery endorsement energy's Husserl's" } ,
+        "producer": { "type": "literal" , "value": "rends" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "capsizing" } ,
+        "propertyTextual1": { "type": "literal" , "value": "needing" } ,
+        "propertyTextual2": { "type": "literal" , "value": "notches predestined debarment's exhibition blasphemous queened" } ,
+        "propertyTextual3": { "type": "literal" , "value": "Bradshaw" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "711" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1408" } ,
+        "propertyTextual5": { "type": "literal" , "value": "benevolent quack's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "474" }
+      }
+    ]
+  }
+}

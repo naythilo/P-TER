@@ -304,65 +304,99 @@ def run_hefquin_query(query_file,metrics_output,solutions_output,err_output):
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 @click.option("--err-output", type=click.Path())
-def run_fedup_fedx_query(query_file,metrics_output,solutions_output,err_output):
-    #Execute Query
+def run_fedup_fedx_query(query_file, metrics_output, solutions_output, err_output):
+    # Execute Query with a timeout of 30 seconds
     command = [
-        "java", "-jar", "../fedup/target/fedup.jar", 
+        "java", "-Xmx12g", "-jar", "../fedup/target/fedup.jar", 
         "-e", "FedX", 
         "-f", query_file, 
-        "-s", "/workspaces/HeFQUIN-FRAW/summaries/fedshop200-h0", 
+        "-s", "/workspaces/P-TER/fedshop200-h0", 
         "-x",
         "-m", "(e) -> \"http://localhost:8890/sparql?default-graph-uri=\" + e.substring(0, e.length())"
     ]
-
-    result = subprocess.run(command, capture_output=True, text=True)
-
-    with open(err_output, "w") as file:
-        file.write(result.stderr+result.stdout)
     
-    #CSV Data
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, timeout=180)  
+    except subprocess.TimeoutExpired:
+        # Timeout occurred, return null data
+        with open(err_output, "w") as file:
+            file.write("Timeout exceeded 180 seconds.\n")
+        
+        # Write null values to CSV and JSON
+        df = pd.DataFrame([{
+            "status": "timeout", 
+            "TotalExecutionTime": None,
+            "nbResult": None,
+            "planningTime": None,
+            "executionTime": None,
+        }])
+        df.to_csv(metrics_output, index=False)
+
+        json_data = json.dumps([], indent=4)
+        write_solutions(json_data, solutions_output)
+
+        return  # Exit the function after handling timeout
+
+    # If no timeout occurred, proceed as usual
+    with open(err_output, "w") as file:
+        file.write(result.stderr + result.stdout)
+
+    # CSV Data
     time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
     time_match_source_assignment = re.search(r"Took (\d+) to perform the source assignment", result.stderr)
 
     if time_match:
         retrieval_time = int(time_match.group(1))
         retrieval_time = retrieval_time / 1000
-        
         nbResult = time_match.group(2)   
     else:
         retrieval_time = "N/A"
         nbResult = "N/A"
 
-    if time_match_source_assignment : 
+    if time_match_source_assignment: 
         retrieval_time_source_assignment = int(time_match_source_assignment.group(1))
-        retrieval_time_source_assignment = retrieval_time_source_assignment/1000
-    else :
+        retrieval_time_source_assignment = retrieval_time_source_assignment / 1000
+    else: 
         retrieval_time_source_assignment = "N/A"
+
+    if retrieval_time == "N/A" or retrieval_time_source_assignment == "N/A":
+        totalexectime = None
+    else:
+        totalexectime = str(float(retrieval_time) + float(retrieval_time_source_assignment))
 
     df = pd.DataFrame([{
         "status": "ok", 
-        "TotalExecutionTime":  str(float(retrieval_time) + float(retrieval_time_source_assignment)),
+        "TotalExecutionTime": totalexectime,
         "nbResult": nbResult,
-        "planningTime":retrieval_time_source_assignment,
-        "executionTime":retrieval_time,
+        "planningTime": retrieval_time_source_assignment,
+        "executionTime": retrieval_time,
     }])
 
     df.to_csv(metrics_output, index=False)
 
-    #Json Data
-    pattern = r'\( \?([^=]+) = <([^>]+)> \) \( \?([^=]+) = "([^"]+)"(\^\^[a-zA-Z0-9:]+)? \)'
+    # JSON Data
+    pattern = r'\( \?([^=]+) = (?:<([^>]+)>)?\s*(?:"([^"]+)"(\^\^[a-zA-Z0-9:]+)?)? \)'
+
     matches = re.findall(pattern, result.stdout)
 
     data = []
     for match in matches:
-        value = match[3] 
-        if match[4]:  
-            value += match[4]  
-        data.append({match[0]: match[1], match[2]: value})
+        value = match[2] if match[2] else ''
+        
+        # Si le type de données (^^) existe, ajoute-le à la valeur
+        if match[3]:  
+            value += match[3]
+        
+        # Si une URL existe, associe-la avec la clé correspondante
+        if match[1]:
+            data.append({match[0]: match[1], 'value': value})
+        else:
+            data.append({match[0]: value})
 
+    # Conversion en JSON
     json_data = json.dumps(data, indent=4)
     write_solutions(json_data, solutions_output)
-    
+
 
 
 
@@ -371,8 +405,8 @@ def run_fedup_fedx_query(query_file,metrics_output,solutions_output,err_output):
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 @click.option("--err-output", type=click.Path())
-def run_fedup_jena_query(query_file,metrics_output,solutions_output,err_output):
-    #Execute Query
+def run_fedup_jena_query(query_file, metrics_output, solutions_output, err_output):
+    # Execute Query with a timeout of 30 seconds
     command = [
         "java", "-Xmx12g", "-jar", "../fedup/target/fedup.jar", 
         "-e", "Jena", 
@@ -381,61 +415,80 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output,err_output):
         "-x",
         "-m", "(e) -> \"http://localhost:8890/sparql?default-graph-uri=\" + e.substring(0, e.length())"
     ]
-
-    result = subprocess.run(command, capture_output=True, text=True)
-
-    with open(err_output, "w") as file:
-        file.write(result.stderr+result.stdout)
     
-    #CSV Data
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, timeout=180)  
+    except subprocess.TimeoutExpired:
+        # Timeout occurred, return null data
+        with open(err_output, "w") as file:
+            file.write("Timeout exceeded 180 seconds.\n")
+        
+        # Write null values to CSV and JSON
+        df = pd.DataFrame([{
+            "status": "timeout", 
+            "TotalExecutionTime": None,
+            "nbResult": None,
+            "planningTime": None,
+            "executionTime": None,
+        }])
+        df.to_csv(metrics_output, index=False)
+
+        json_data = json.dumps([], indent=4)
+        write_solutions(json_data, solutions_output)
+
+        return  # Exit the function after handling timeout
+
+    # If no timeout occurred, proceed as usual
+    with open(err_output, "w") as file:
+        file.write(result.stderr + result.stdout)
+
+    # CSV Data
     time_match = re.search(r"Took (\d+) ms to retrieve (\d+) mappings", result.stderr)
     time_match_source_assignment = re.search(r"Took (\d+) to perform the source assignment", result.stderr)
-    
+
     if time_match:
         retrieval_time = int(time_match.group(1))
         retrieval_time = retrieval_time / 1000
-        
         nbResult = time_match.group(2)   
     else:
         retrieval_time = "N/A"
         nbResult = "N/A"
 
-    if time_match_source_assignment : 
+    if time_match_source_assignment: 
         retrieval_time_source_assignment = int(time_match_source_assignment.group(1))
-        retrieval_time_source_assignment = retrieval_time_source_assignment/1000
-    else : 
+        retrieval_time_source_assignment = retrieval_time_source_assignment / 1000
+    else: 
         retrieval_time_source_assignment = "N/A"
 
-    if retrieval_time == "N/A" or retrieval_time_source_assignment == "N/A" :
+    if retrieval_time == "N/A" or retrieval_time_source_assignment == "N/A":
         totalexectime = None
-    else :
+    else:
         totalexectime = str(float(retrieval_time) + float(retrieval_time_source_assignment))
 
     df = pd.DataFrame([{
         "status": "ok", 
         "TotalExecutionTime": totalexectime,
         "nbResult": nbResult,
-        "planningTime":retrieval_time_source_assignment,
-        "executionTime":retrieval_time,
+        "planningTime": retrieval_time_source_assignment,
+        "executionTime": retrieval_time,
     }])
 
     df.to_csv(metrics_output, index=False)
 
-    #Json Data
+    # JSON Data
     pattern = r'\( \?([^=]+) = (?:<([^>]+)>)?\s*(?:"([^"]+)"(\^\^[a-zA-Z0-9:]+)?)? \)'
 
     matches = re.findall(pattern, result.stdout)
 
     data = []
     for match in matches:
-        # Si la valeur entre guillemets existe, utilisez-la, sinon utilisez une chaîne vide
         value = match[2] if match[2] else ''
         
-        # Si le type de données (^^) existe, ajoutez-le à la valeur
+        # Si le type de données (^^) existe, ajoute-le à la valeur
         if match[3]:  
             value += match[3]
         
-        # Si une URL existe, associez-la avec la clé correspondante
+        # Si une URL existe, associe-la avec la clé correspondante
         if match[1]:
             data.append({match[0]: match[1], 'value': value})
         else:
@@ -451,23 +504,63 @@ def run_fedup_jena_query(query_file,metrics_output,solutions_output,err_output):
 @click.option("--metrics-output", type=click.Path())
 @click.option("--solutions-output", type=click.Path())
 @click.option("--err-output", type=click.Path())
-def run_fedup_hefquin_query(query_file,metrics_output,solutions_output,err_output):
-    #Execute Query
+def run_fedup_hefquin_query(query_file, metrics_output, solutions_output, err_output):
     hefquin_directory = "../HeFQUIN-FRAW"
+    
+    # Change directory to HeFQUIN folder
     os.chdir(hefquin_directory)
     
-    command = ["./bin/hefquin", "--federationDescription fedshop200.ttl","--confDescr DefaultEngineWithFedupConfForFedshop200.ttl", "--file", query_file, "--time", "--results=JSON","--printQueryProcStats"]
-    result = subprocess.run(command, capture_output=True, text=True)
+    # Command to execute
+    command = [
+        "./bin/hefquin", "--federationDescription", "fedshop200.ttl",
+        "--confDescr", "DefaultEngineWithFedupConfForFedshop200.ttl", 
+        "--file", query_file, "--time", "--results=JSON", "--printQueryProcStats"
+    ]
+    
+    try:
+        #result = subprocess.run(command, capture_output=True, text=True) 
+        #print("youhou")
+        #time.sleep(5) 
+        result = subprocess.run(command, capture_output=True, text=True, timeout=180)  
+    except subprocess.TimeoutExpired:
+        
+        os.chdir("../P-TER")
+        # Timeout occurred, return null data
+        with open(err_output, "w") as file:
+            file.write("Timeout exceeded 180 seconds.\n")
+        
+        # Write null values to CSV and JSON
+        df = pd.DataFrame([{
+            "status": "timeout", 
+            "TotalExecutionTime": None,
+            "nbResult": None,
+            "planningTime": None,
+            "executionTime": None,
+        }])
+        df.to_csv(metrics_output, index=False)
+
+        json_data = json.dumps([], indent=4)
+        write_solutions(json_data, solutions_output)
+        
+        command2 = [
+        "killall", "-9", "java"
+    ]
+        resultda = subprocess.run(command2, capture_output=True, text=True)
+        
+        
+        return  # Exit the function after handling timeout
+
+    # Change back to the original directory (P-TER)
     os.chdir("../P-TER")
-
+    
+    # Write stderr and stdout to the error output file
     with open(err_output, "w") as file:
-        file.write(result.stderr+result.stdout)
-
-    #CSV data
-
+        file.write(result.stderr + result.stdout)
+    
+    # CSV data extraction
     time_match = re.search(r"Time: (\d+\.\d+) sec", result.stderr)
     time_match_planningTime = re.search(r"planningTime\s*:\s*(\d+)", result.stderr)
-    time_match_executionTime = re.search(r"executionTime\s*:\s*(\d+)", result.stderr)   
+    time_match_executionTime = re.search(r"executionTime\s*:\s*(\d+)", result.stderr)
 
     execution_time = time_match.group(1) if time_match else "N/A"
 
@@ -475,14 +568,15 @@ def run_fedup_hefquin_query(query_file,metrics_output,solutions_output,err_outpu
         retrieval_time = int(time_match_executionTime.group(1)) / 1000
     else:
         retrieval_time = "N/A"
+
     if time_match_planningTime:
         retrieval_time_source_assignment = int(time_match_planningTime.group(1)) / 1000
     else:
         retrieval_time_source_assignment = "N/A"
+
     if time_match is None:
         retrieval_time = "N/A"
         nbResult = "N/A"
-
     
     try:
         results_json = json.loads(result.stdout)
@@ -491,13 +585,19 @@ def run_fedup_hefquin_query(query_file,metrics_output,solutions_output,err_outpu
     except json.JSONDecodeError:
         num_results = 0
 
-    df = pd.DataFrame([{"status": "ok", "TotalExecutionTime": execution_time,"nbResult":num_results,"planningTime":retrieval_time_source_assignment,"executionTime":retrieval_time}])
+    # Write the metrics to the CSV file
+    df = pd.DataFrame([{
+        "status": "ok", 
+        "TotalExecutionTime": execution_time,
+        "nbResult": num_results,
+        "planningTime": retrieval_time_source_assignment,
+        "executionTime": retrieval_time,
+    }])
 
     df.to_csv(metrics_output, index=False)
 
-    #Json data
+    # Write the JSON data to the solutions output file
     write_solutions(result.stdout, solutions_output)
-
 
 
 if __name__ == "__main__":

@@ -1,0 +1,2359 @@
+{ "head": {
+    "vars": [ "product" , "localProductLabel" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116694" } ,
+        "localProductLabel": { "type": "literal" , "value": "Klingon's" }
+      }
+    ]
+  }
+}
+Task #8 does not seem to be done.
+Time: 0.637 sec
+overallQueryProcessingTime : 543
+planningTime : 378
+compilationTime : 17
+executionTime : 148
+queryPlanningStats : {
+  overallQueryPlanningTime : 378
+  sourcePlanningTime : 6
+  logicalOptimizationTime : 362
+  physicalOptimizationTime : 10
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@931ccc8e
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@4dcfe206
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@82a457cf
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 55
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@32057e6
+          xthInputConsumed : [ {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1} ]
+          numberOfOutputMappingsProduced : 25
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@26be6ca7
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 4
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@6ea1bcdc
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 44
+          averageProcTimePerInputBlock : 44.0
+          minimumProcTimePerInputBlock : 44
+          maximumProcTimePerInputBlock : 44
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+          numberOfOutputMappingsProduced : 4
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@60d92a74
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 42
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@60d92a74
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 42
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@759fad4
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 4
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@64712be
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 42
+          averageProcTimePerInputBlock : 42.0
+          minimumProcTimePerInputBlock : 42
+          maximumProcTimePerInputBlock : 42
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+          numberOfOutputMappingsProduced : 4
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1b88b894
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 42
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1b88b894
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 42
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@53499d85
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 4
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@30ed9c6c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 40
+          averageProcTimePerInputBlock : 40.0
+          minimumProcTimePerInputBlock : 40
+          maximumProcTimePerInputBlock : 40
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+          numberOfOutputMappingsProduced : 4
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@71972beb
+            numberOfInvocations : 1
+            overallExecTime : 40
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 40
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@71972beb
+            numberOfInvocations : 1
+            overallExecTime : 40
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 40
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@782a4fff
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 4
+          totalProcTimeForAllInputBlocks : 3
+          averageProcTimePerInputBlock : 3.0
+          minimumProcTimePerInputBlock : 3
+          maximumProcTimePerInputBlock : 3
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@46c670a6
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 51
+          averageProcTimePerInputBlock : 51.0
+          minimumProcTimePerInputBlock : 51
+          maximumProcTimePerInputBlock : 51
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+          numberOfOutputMappingsProduced : 4
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@a07912a
+            numberOfInvocations : 1
+            overallExecTime : 50
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 50
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@a07912a
+            numberOfInvocations : 1
+            overallExecTime : 50
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 50
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@59fc684e
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 4
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@5ae81e1
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 42
+          averageProcTimePerInputBlock : 42.0
+          minimumProcTimePerInputBlock : 42
+          maximumProcTimePerInputBlock : 42
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+          numberOfOutputMappingsProduced : 4
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@37d0546e
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 42
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@37d0546e
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+            requestExecTime : 0
+            responseProcTime : 42
+            solMapsRetrieved : 4
+            numberOfOutputMappingsProduced : 4
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@2fd1731c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 0
+          averageProcTimePerInputBlock : 0.0
+          minimumProcTimePerInputBlock : 0
+          maximumProcTimePerInputBlock : 0
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@5ae76500
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 40
+          averageProcTimePerInputBlock : 40.0
+          minimumProcTimePerInputBlock : 40
+          maximumProcTimePerInputBlock : 40
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@41bf42b9
+            numberOfInvocations : 1
+            overallExecTime : 39
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 39
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@41bf42b9
+            numberOfInvocations : 1
+            overallExecTime : 39
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 39
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@6063d80a
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 0
+          averageProcTimePerInputBlock : 0.0
+          minimumProcTimePerInputBlock : 0
+          maximumProcTimePerInputBlock : 0
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@1133ec6e
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 28
+          averageProcTimePerInputBlock : 28.0
+          minimumProcTimePerInputBlock : 28
+          maximumProcTimePerInputBlock : 28
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1543cd0f
+            numberOfInvocations : 1
+            overallExecTime : 27
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 27
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1543cd0f
+            numberOfInvocations : 1
+            overallExecTime : 27
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 27
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@355e34c7
+          numberOfInvocations : 1
+          overallExecTime : 47
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2 .
+  ?localProductXYZ
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?origProperty1 .
+  ?localProdFeatureXYZ
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProductXYZ
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?origProperty2 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeatureXYZ
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  FILTER ( ( ?simProperty1 < ( ?origProperty1 + 20 ) ) && ( ?simProperty1 > ( ?origProperty1 - 20 ) ) )
+  FILTER ( ( ?simProperty2 < ( ?origProperty2 + 70 ) ) && ( ?simProperty2 > ( ?origProperty2 - 70 ) ) )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+          requestExecTime : 0
+          responseProcTime : 47
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@54709809
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@2a2da905
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 48
+          averageProcTimePerInputBlock : 48.0
+          minimumProcTimePerInputBlock : 48
+          maximumProcTimePerInputBlock : 48
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6c591a97
+            numberOfInvocations : 1
+            overallExecTime : 35
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 35
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6c591a97
+            numberOfInvocations : 1
+            overallExecTime : 35
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 35
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@24f360b2
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@60cf80e7
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 47
+          averageProcTimePerInputBlock : 47.0
+          minimumProcTimePerInputBlock : 47
+          maximumProcTimePerInputBlock : 47
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4d679a0d
+            numberOfInvocations : 1
+            overallExecTime : 46
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 46
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4d679a0d
+            numberOfInvocations : 1
+            overallExecTime : 46
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+            requestExecTime : 0
+            responseProcTime : 46
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@302fec27
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@770d0ea6
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 38
+          averageProcTimePerInputBlock : 38.0
+          minimumProcTimePerInputBlock : 38
+          maximumProcTimePerInputBlock : 38
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@51f7e48c
+            numberOfInvocations : 1
+            overallExecTime : 36
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 36
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@51f7e48c
+            numberOfInvocations : 1
+            overallExecTime : 36
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 36
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@48c40605
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@54107f42
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 29
+          averageProcTimePerInputBlock : 29.0
+          minimumProcTimePerInputBlock : 29
+          maximumProcTimePerInputBlock : 29
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@72b0ff3d
+            numberOfInvocations : 1
+            overallExecTime : 29
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 29
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@72b0ff3d
+            numberOfInvocations : 1
+            overallExecTime : 29
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 29
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@1b11ef33
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 1
+          averageProcTimePerInputBlock : 1.0
+          minimumProcTimePerInputBlock : 1
+          maximumProcTimePerInputBlock : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@476aac9
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 56
+          averageProcTimePerInputBlock : 56.0
+          minimumProcTimePerInputBlock : 56
+          maximumProcTimePerInputBlock : 56
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1a8210ca
+            numberOfInvocations : 1
+            overallExecTime : 56
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 56
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1a8210ca
+            numberOfInvocations : 1
+            overallExecTime : 56
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 56
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@6cea706c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 2
+          averageProcTimePerInputBlock : 2.0
+          minimumProcTimePerInputBlock : 2
+          maximumProcTimePerInputBlock : 2
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@3bd7f8dc
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 44
+          averageProcTimePerInputBlock : 44.0
+          minimumProcTimePerInputBlock : 44
+          maximumProcTimePerInputBlock : 44
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@67decd7
+            numberOfInvocations : 1
+            overallExecTime : 43
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 43
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@67decd7
+            numberOfInvocations : 1
+            overallExecTime : 43
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 43
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@2f2bf0e2
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 3
+          totalProcTimeForAllInputBlocks : 16
+          averageProcTimePerInputBlock : 16.0
+          minimumProcTimePerInputBlock : 16
+          maximumProcTimePerInputBlock : 16
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@1eba372c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 26
+          averageProcTimePerInputBlock : 26.0
+          minimumProcTimePerInputBlock : 26
+          maximumProcTimePerInputBlock : 26
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+          numberOfOutputMappingsProduced : 3
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5388636a
+            numberOfInvocations : 1
+            overallExecTime : 25
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 25
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5388636a
+            numberOfInvocations : 1
+            overallExecTime : 25
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor16.fr/)
+            requestExecTime : 0
+            responseProcTime : 25
+            solMapsRetrieved : 3
+            numberOfOutputMappingsProduced : 3
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@21ec5d87
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 22
+          totalProcTimeForAllInputBlocks : 19
+          averageProcTimePerInputBlock : 19.0
+          minimumProcTimePerInputBlock : 19
+          maximumProcTimePerInputBlock : 19
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@25f9407e
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 70
+          averageProcTimePerInputBlock : 70.0
+          minimumProcTimePerInputBlock : 70
+          maximumProcTimePerInputBlock : 70
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+          numberOfOutputMappingsProduced : 22
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@db5fdd7
+            numberOfInvocations : 1
+            overallExecTime : 69
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 1
+            responseProcTime : 68
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@db5fdd7
+            numberOfInvocations : 1
+            overallExecTime : 69
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 1
+            responseProcTime : 68
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@552518c3
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 22
+          totalProcTimeForAllInputBlocks : 18
+          averageProcTimePerInputBlock : 18.0
+          minimumProcTimePerInputBlock : 18
+          maximumProcTimePerInputBlock : 18
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@1a69561c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 47
+          averageProcTimePerInputBlock : 47.0
+          minimumProcTimePerInputBlock : 47
+          maximumProcTimePerInputBlock : 47
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+          numberOfOutputMappingsProduced : 22
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@30aa21d0
+            numberOfInvocations : 1
+            overallExecTime : 46
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 16
+            responseProcTime : 30
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@30aa21d0
+            numberOfInvocations : 1
+            overallExecTime : 46
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 16
+            responseProcTime : 30
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@59aa20b3
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 22
+          totalProcTimeForAllInputBlocks : 9
+          averageProcTimePerInputBlock : 9.0
+          minimumProcTimePerInputBlock : 9
+          maximumProcTimePerInputBlock : 9
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@363f6148
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 74
+          averageProcTimePerInputBlock : 74.0
+          minimumProcTimePerInputBlock : 74
+          maximumProcTimePerInputBlock : 74
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+          numberOfOutputMappingsProduced : 22
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@889eeeb
+            numberOfInvocations : 1
+            overallExecTime : 74
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 0
+            responseProcTime : 74
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@889eeeb
+            numberOfInvocations : 1
+            overallExecTime : 74
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 0
+            responseProcTime : 74
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@4b21844c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 22
+          totalProcTimeForAllInputBlocks : 16
+          averageProcTimePerInputBlock : 16.0
+          minimumProcTimePerInputBlock : 16
+          maximumProcTimePerInputBlock : 16
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@1b28f282
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 65
+          averageProcTimePerInputBlock : 65.0
+          minimumProcTimePerInputBlock : 65
+          maximumProcTimePerInputBlock : 65
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+          numberOfOutputMappingsProduced : 22
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7f0d9348
+            numberOfInvocations : 1
+            overallExecTime : 65
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 1
+            responseProcTime : 64
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7f0d9348
+            numberOfInvocations : 1
+            overallExecTime : 65
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 1
+            responseProcTime : 64
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@138fe6ec
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 22
+          totalProcTimeForAllInputBlocks : 16
+          averageProcTimePerInputBlock : 16.0
+          minimumProcTimePerInputBlock : 16
+          maximumProcTimePerInputBlock : 16
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@5e77f0f4
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 68
+          averageProcTimePerInputBlock : 68.0
+          minimumProcTimePerInputBlock : 68
+          maximumProcTimePerInputBlock : 68
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+          numberOfOutputMappingsProduced : 22
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4d3eb122
+            numberOfInvocations : 1
+            overallExecTime : 67
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 0
+            responseProcTime : 67
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4d3eb122
+            numberOfInvocations : 1
+            overallExecTime : 67
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite20.fr/)
+            requestExecTime : 0
+            responseProcTime : 67
+            solMapsRetrieved : 22
+            numberOfOutputMappingsProduced : 22
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@19b30c92
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 15
+          totalProcTimeForAllInputBlocks : 15
+          averageProcTimePerInputBlock : 15.0
+          minimumProcTimePerInputBlock : 15
+          maximumProcTimePerInputBlock : 15
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@455351c4
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 56
+          averageProcTimePerInputBlock : 56.0
+          minimumProcTimePerInputBlock : 56
+          maximumProcTimePerInputBlock : 56
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+          numberOfOutputMappingsProduced : 15
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@49a0d526
+            numberOfInvocations : 1
+            overallExecTime : 55
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 1
+            responseProcTime : 54
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@49a0d526
+            numberOfInvocations : 1
+            overallExecTime : 55
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 1
+            responseProcTime : 54
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@29876704
+          numberOfInvocations : 1
+          overallExecTime : 12
+          requestAsString : (bgp ?localProductXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?origProperty1 .?localProdFeatureXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?origProperty2 .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeatureXYZ . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+          requestExecTime : 0
+          responseProcTime : 12
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@4816c290
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 15
+          totalProcTimeForAllInputBlocks : 18
+          averageProcTimePerInputBlock : 18.0
+          minimumProcTimePerInputBlock : 18
+          maximumProcTimePerInputBlock : 18
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@4940809c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 60
+          averageProcTimePerInputBlock : 60.0
+          minimumProcTimePerInputBlock : 60
+          maximumProcTimePerInputBlock : 60
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+          numberOfOutputMappingsProduced : 15
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@714875ab
+            numberOfInvocations : 1
+            overallExecTime : 60
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 0
+            responseProcTime : 60
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@714875ab
+            numberOfInvocations : 1
+            overallExecTime : 60
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 0
+            responseProcTime : 60
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@16423501
+          numberOfInvocations : 1
+          overallExecTime : 12
+          requestAsString : (bgp ?localProductXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?origProperty1 .?localProdFeatureXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?origProperty2 .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeatureXYZ . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/)
+          requestExecTime : 0
+          responseProcTime : 12
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@4efcf8a
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 15
+          totalProcTimeForAllInputBlocks : 15
+          averageProcTimePerInputBlock : 15.0
+          minimumProcTimePerInputBlock : 15
+          maximumProcTimePerInputBlock : 15
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@7a138fc5
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 47
+          averageProcTimePerInputBlock : 47.0
+          minimumProcTimePerInputBlock : 47
+          maximumProcTimePerInputBlock : 47
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+          numberOfOutputMappingsProduced : 15
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@34cb0377
+            numberOfInvocations : 1
+            overallExecTime : 46
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 13
+            responseProcTime : 33
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@34cb0377
+            numberOfInvocations : 1
+            overallExecTime : 46
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 13
+            responseProcTime : 33
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@379ab47b
+          numberOfInvocations : 1
+          overallExecTime : 20
+          requestAsString : (bgp ?localProductXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?origProperty1 .?localProdFeatureXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?origProperty2 .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeatureXYZ . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor13.fr/)
+          requestExecTime : 0
+          responseProcTime : 20
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@307765b4
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 15
+          totalProcTimeForAllInputBlocks : 12
+          averageProcTimePerInputBlock : 12.0
+          minimumProcTimePerInputBlock : 12
+          maximumProcTimePerInputBlock : 12
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@4a9e6faf
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 42
+          averageProcTimePerInputBlock : 42.0
+          minimumProcTimePerInputBlock : 42
+          maximumProcTimePerInputBlock : 42
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+          numberOfOutputMappingsProduced : 15
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@76ed5e55
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 1
+            responseProcTime : 41
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@76ed5e55
+            numberOfInvocations : 1
+            overallExecTime : 42
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 1
+            responseProcTime : 41
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2c95ac9e
+          numberOfInvocations : 1
+          overallExecTime : 20
+          requestAsString : (bgp ?localProductXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?origProperty1 .?localProdFeatureXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?origProperty2 .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeatureXYZ . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor15.fr/)
+          requestExecTime : 0
+          responseProcTime : 20
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFilter
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFilter@4e4efc1b
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 15
+          totalProcTimeForAllInputBlocks : 51
+          averageProcTimePerInputBlock : 51.0
+          minimumProcTimePerInputBlock : 51
+          maximumProcTimePerInputBlock : 51
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@459f7aa3
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 9
+          totalProcTimeForAllInputBlocks : 22
+          averageProcTimePerInputBlock : 22.0
+          minimumProcTimePerInputBlock : 22
+          maximumProcTimePerInputBlock : 22
+          queryAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+  ?localProdFeature
+            <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+  FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+          numberOfOutputMappingsProduced : 15
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6fa9fe63
+            numberOfInvocations : 1
+            overallExecTime : 18
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 1
+            responseProcTime : 17
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6fa9fe63
+            numberOfInvocations : 1
+            overallExecTime : 18
+            requestAsString : { VALUES ?prodFeature { <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature9652> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature15393> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14639> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature14590> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature16920> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19978> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature24093> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature12177> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature22504> }
+  { ?localProduct
+              <http://www.w3.org/2002/07/owl#sameAs>  ?product ;
+              <http://www.w3.org/2000/01/rdf-schema#label>  ?localProductLabel ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeature .
+    ?localProdFeature
+              <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .
+    ?localProduct
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?simProperty1 ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?simProperty2
+    FILTER ( <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> != ?product )
+  }
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+            requestExecTime : 1
+            responseProcTime : 17
+            solMapsRetrieved : 15
+            numberOfOutputMappingsProduced : 15
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7cc586a8
+          numberOfInvocations : 1
+          overallExecTime : 19
+          requestAsString : (bgp ?localProductXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product64534> .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?origProperty1 .?localProdFeatureXYZ
+          <http://www.w3.org/2002/07/owl#sameAs>  ?prodFeature .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?origProperty2 .?localProductXYZ
+          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProdFeatureXYZ . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/)
+          requestExecTime : 0
+          responseProcTime : 19
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+    ]
+  }
+}

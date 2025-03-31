@@ -1,0 +1,88 @@
+{ "head": {
+    "vars": [ "property" , "hasValue" , "isValueOf" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "4065.84" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-05-31T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/publishDate" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-02-24T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "hasValue": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-02-20T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage" } ,
+        "hasValue": { "type": "literal" , "value": "entomology Heliopolis comportment's rosebushes twentieth's Reba Americanization's poetesses Shintos" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor6.fr/Vendor0" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor6.fr/Product55489" }
+      }
+    ]
+  }
+}
+Time: 0.208 sec
+overallQueryProcessingTime : 121
+planningTime : 9
+compilationTime : 3
+executionTime : 109
+queryPlanningStats : {
+  overallQueryPlanningTime : 8
+  sourcePlanningTime : 5
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 3
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@fd94935e
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@fd94935e
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@47e312b2
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6bb75258
+          numberOfInvocations : 1
+          overallExecTime : 105
+          requestAsString : { <http://www.vendor6.fr/Offer886>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?product
+    { <http://www.vendor6.fr/Offer886>
+                ?property  ?hasValue
+    }
+  UNION
+    { ?isValueOf  ?property  <http://www.vendor6.fr/Offer886> }
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor6.fr/)
+          requestExecTime : 0
+          responseProcTime : 105
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,2171 @@
+[main] INFO Summary - Took 75 ms to open the summary.
+[main] INFO Summary - Took 362 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?price ?revName ?rating1 ?rating2 ?review ?localProduct ?vendor ?revTitle ?productLabel ?offer ?vendorTitle ?reviewer ?date ?offerProduct ?reviewProduct)
+  (union
+    (union
+      (union
+        (union
+          (leftjoin
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+              (sequence
+                (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?productLabel)
+                (triple ?localProduct <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>)))
+            (union
+              (union
+                (union
+                  (union
+                    (leftjoin
+                      (leftjoin
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (sequence
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                            (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                            (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                            (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                            (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                        (union
+                          (union
+                            (union
+                              (union
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))
+                    (leftjoin
+                      (leftjoin
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (sequence
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                            (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                            (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                            (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                            (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                        (union
+                          (union
+                            (union
+                              (union
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+                  (leftjoin
+                    (leftjoin
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (sequence
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                          (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                          (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                          (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                          (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+                (leftjoin
+                  (leftjoin
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                      (sequence
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                        (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                        (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                        (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                        (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                    (sequence
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                      (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                      (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                      (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                      (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))))
+          (leftjoin
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+              (sequence
+                (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?productLabel)
+                (triple ?localProduct <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>)))
+            (union
+              (union
+                (union
+                  (union
+                    (leftjoin
+                      (leftjoin
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (sequence
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                            (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                            (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                            (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                            (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                        (union
+                          (union
+                            (union
+                              (union
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))
+                    (leftjoin
+                      (leftjoin
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (sequence
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                            (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                            (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                            (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                            (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                        (union
+                          (union
+                            (union
+                              (union
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                                (service silent 
+                                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+                  (leftjoin
+                    (leftjoin
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (sequence
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                          (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                          (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                          (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                          (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+                (leftjoin
+                  (leftjoin
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                      (sequence
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                        (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                        (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                        (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                        (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                    (sequence
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                      (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                      (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                      (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                      (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))))
+        (leftjoin
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+            (sequence
+              (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?productLabel)
+              (triple ?localProduct <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>)))
+          (union
+            (union
+              (union
+                (union
+                  (leftjoin
+                    (leftjoin
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (sequence
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                          (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                          (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                          (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                          (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))
+                  (leftjoin
+                    (leftjoin
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (sequence
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                          (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                          (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                          (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                          (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                      (union
+                        (union
+                          (union
+                            (union
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                              (service silent 
+                                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+                (leftjoin
+                  (leftjoin
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (sequence
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                        (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                        (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                        (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                        (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                    (sequence
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                      (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                      (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                      (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                      (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+            (leftjoin
+              (leftjoin
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                  (sequence
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                    (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                    (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                    (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                    (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))))
+      (leftjoin
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+          (sequence
+            (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+            (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?productLabel)
+            (triple ?localProduct <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>)))
+        (union
+          (union
+            (union
+              (union
+                (leftjoin
+                  (leftjoin
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (sequence
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                        (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                        (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                        (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                        (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))
+                (leftjoin
+                  (leftjoin
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                      (sequence
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                        (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                        (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                        (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                        (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (sequence
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                      (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                      (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                      (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                      (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+            (leftjoin
+              (leftjoin
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                  (sequence
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                    (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                    (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                    (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                    (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+          (leftjoin
+            (leftjoin
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                (sequence
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                  (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                  (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                  (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                  (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))))
+    (leftjoin
+      (service silent 
+        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+        (sequence
+          (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+          (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?productLabel)
+          (triple ?localProduct <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>)))
+      (union
+        (union
+          (union
+            (union
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                    (sequence
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                      (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                      (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                      (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                      (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                    (sequence
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                      (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                      (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                      (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                      (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+            (leftjoin
+              (leftjoin
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                  (sequence
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                    (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                    (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                    (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                    (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+          (leftjoin
+            (leftjoin
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                (sequence
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                  (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                  (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                  (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                  (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))))
+        (leftjoin
+          (leftjoin
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+              (sequence
+                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?reviewProduct)
+                (triple ?reviewProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965>)
+                (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?revName)
+                (triple ?review <http://purl.org/dc/elements/1.1/title> ?revTitle)))
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                      (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))))
+          (union
+            (union
+              (union
+                (union
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/>
+                    (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/>
+                  (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/>
+                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/>
+              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))))))
+
+Task #5 does not seem to be done.
+Time: 4.795 sec
+overallQueryProcessingTime : 4766
+planningTime : 3822
+compilationTime : 12
+executionTime : 932
+queryPlanningStats : {
+  overallQueryPlanningTime : 3822
+  sourcePlanningTime : 3807
+  logicalOptimizationTime : 8
+  physicalOptimizationTime : 7
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@50491394
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@50491394
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@5f78be2e
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 39
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@7c1c5936
+          xthInputConsumed : [ {true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {5,5,5,5,5} ]
+          numberOfOutputMappingsProduced : 25
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7aead3af
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 5
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3ac8cf9b
+          numberOfInvocations : 1
+          overallExecTime : 557
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/)
+          requestExecTime : 0
+          responseProcTime : 557
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4ad3d266
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 5
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3533df16
+          numberOfInvocations : 1
+          overallExecTime : 563
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 0
+          responseProcTime : 563
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@15d0849
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 5
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4038cd3a
+          numberOfInvocations : 1
+          overallExecTime : 553
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 0
+          responseProcTime : 553
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@14ac77b9
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 5
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3f4cd155
+          numberOfInvocations : 1
+          overallExecTime : 534
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/)
+          requestExecTime : 0
+          responseProcTime : 534
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@563a89b5
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 5
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@506dcf55
+          numberOfInvocations : 1
+          overallExecTime : 535
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/)
+          requestExecTime : 0
+          responseProcTime : 535
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@270b6b5e
+          xthInputConsumed : [ {true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1,1,1,1} ]
+          numberOfOutputMappingsProduced : 5
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7e94d093
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 419
+          numberOfLeftInputMappingsProcessed : 20912
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 4.0
+          minimumProcTimePerRightInputBlock : 4
+          maximumProcTimePerRightInputBlock : 4
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7c6189d5
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 420
+          numberOfLeftInputMappingsProcessed : 20991
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 3
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4248e66b
+          numberOfInvocations : 1
+          overallExecTime : 510
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 0
+          responseProcTime : 510
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@3e6534e7
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 419
+          numberOfLeftInputMappingsProcessed : 20912
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 24
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 6.0
+          minimumProcTimePerRightInputBlock : 6
+          maximumProcTimePerRightInputBlock : 6
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@66ad7bf0
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 420
+          numberOfLeftInputMappingsProcessed : 20991
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@167279d1
+          numberOfInvocations : 1
+          overallExecTime : 518
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/)
+          requestExecTime : 0
+          responseProcTime : 518
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@138caeca
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 419
+          numberOfLeftInputMappingsProcessed : 20912
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 24
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4d96250
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 420
+          numberOfLeftInputMappingsProcessed : 20991
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 3
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@9a6fbc0
+          numberOfInvocations : 1
+          overallExecTime : 510
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/)
+          requestExecTime : 0
+          responseProcTime : 510
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@c1fa7d4
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 419
+          numberOfLeftInputMappingsProcessed : 20912
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 10
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7a93b263
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 420
+          numberOfLeftInputMappingsProcessed : 20991
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 3
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@35178483
+          numberOfInvocations : 1
+          overallExecTime : 512
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 0
+          responseProcTime : 512
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@bd1111a
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 419
+          numberOfLeftInputMappingsProcessed : 20912
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7a8136b3
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 420
+          numberOfLeftInputMappingsProcessed : 20991
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1de6932a
+          numberOfInvocations : 1
+          overallExecTime : 550
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145965> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/)
+          requestExecTime : 0
+          responseProcTime : 550
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@14dc3f89
+          xthInputConsumed : [ {true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {93,62,112,79,77} ]
+          numberOfMappingsFromXthInputProcessed : [ {4618,3071,5564,3907,3831} ]
+          numberOfOutputMappingsProduced : 20991
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1706a5c9
+          numberOfInvocations : 1
+          overallExecTime : 655
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/)
+          requestExecTime : 1
+          responseProcTime : 654
+          solMapsRetrieved : 3831
+          numberOfOutputMappingsProduced : 3831
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@64412d34
+          numberOfInvocations : 1
+          overallExecTime : 656
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/)
+          requestExecTime : 1
+          responseProcTime : 655
+          solMapsRetrieved : 3907
+          numberOfOutputMappingsProduced : 3907
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4d178d55
+          numberOfInvocations : 1
+          overallExecTime : 842
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 2
+          responseProcTime : 840
+          solMapsRetrieved : 5564
+          numberOfOutputMappingsProduced : 5564
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@38c2c309
+          numberOfInvocations : 1
+          overallExecTime : 524
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/)
+          requestExecTime : 1
+          responseProcTime : 523
+          solMapsRetrieved : 3071
+          numberOfOutputMappingsProduced : 3071
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1a480135
+          numberOfInvocations : 1
+          overallExecTime : 761
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 1
+          responseProcTime : 760
+          solMapsRetrieved : 4618
+          numberOfOutputMappingsProduced : 4618
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@778db7c5
+          xthInputConsumed : [ {true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {93,62,113,78,76} ]
+          numberOfMappingsFromXthInputProcessed : [ {4606,3068,5613,3851,3774} ]
+          numberOfOutputMappingsProduced : 20912
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@681e144
+          numberOfInvocations : 1
+          overallExecTime : 624
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite89.fr/)
+          requestExecTime : 0
+          responseProcTime : 624
+          solMapsRetrieved : 3774
+          numberOfOutputMappingsProduced : 3774
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2875b016
+          numberOfInvocations : 1
+          overallExecTime : 640
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite88.fr/)
+          requestExecTime : 1
+          responseProcTime : 639
+          solMapsRetrieved : 3851
+          numberOfOutputMappingsProduced : 3851
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@72ee5d84
+          numberOfInvocations : 1
+          overallExecTime : 896
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 1
+          responseProcTime : 895
+          solMapsRetrieved : 5613
+          numberOfOutputMappingsProduced : 5613
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@68c7ef83
+          numberOfInvocations : 1
+          overallExecTime : 538
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite43.fr/)
+          requestExecTime : 0
+          responseProcTime : 538
+          solMapsRetrieved : 3068
+          numberOfOutputMappingsProduced : 3068
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6145b81e
+          numberOfInvocations : 1
+          overallExecTime : 658
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 1
+          responseProcTime : 657
+          solMapsRetrieved : 4606
+          numberOfOutputMappingsProduced : 4606
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "productLabel" , "offer" , "price" , "vendor" , "vendorTitle" , "review" , "revTitle" , "reviewer" , "revName" , "rating1" , "rating2" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite88.fr/Review7942" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "applauds refrigerator's repute's seventh bolt Vesalius's boutonni  re pizzicato's pouches Dacca adjournment Southey" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite88.fr/Person149" } ,
+        "revName": { "type": "literal" , "value": "ALISHA JAVIER" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review4230" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "stoat" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person214" } ,
+        "revName": { "type": "literal" , "value": "MAI" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite89.fr/Review5911" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ja" , "value": "slues prostrate leveler's empowerment Melendez's rustier decors collating" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite89.fr/Person155" } ,
+        "revName": { "type": "literal" , "value": "KRYSTAL" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite2.fr/Review9926" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "paralyses loaned Lewis" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite2.fr/Person169" } ,
+        "revName": { "type": "literal" , "value": "MICHELLE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite43.fr/Review2339" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "tugs sourpusses ignition's lira's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite43.fr/Person229" } ,
+        "revName": { "type": "literal" , "value": "CHAD" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite88.fr/Review7942" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "applauds refrigerator's repute's seventh bolt Vesalius's boutonni  re pizzicato's pouches Dacca adjournment Southey" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite88.fr/Person149" } ,
+        "revName": { "type": "literal" , "value": "ALISHA JAVIER" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review4230" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "stoat" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person214" } ,
+        "revName": { "type": "literal" , "value": "MAI" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite89.fr/Review5911" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ja" , "value": "slues prostrate leveler's empowerment Melendez's rustier decors collating" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite89.fr/Person155" } ,
+        "revName": { "type": "literal" , "value": "KRYSTAL" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite2.fr/Review9926" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "paralyses loaned Lewis" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite2.fr/Person169" } ,
+        "revName": { "type": "literal" , "value": "MICHELLE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite43.fr/Review2339" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "tugs sourpusses ignition's lira's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite43.fr/Person229" } ,
+        "revName": { "type": "literal" , "value": "CHAD" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite88.fr/Review7942" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "applauds refrigerator's repute's seventh bolt Vesalius's boutonni  re pizzicato's pouches Dacca adjournment Southey" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite88.fr/Person149" } ,
+        "revName": { "type": "literal" , "value": "ALISHA JAVIER" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review4230" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "stoat" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person214" } ,
+        "revName": { "type": "literal" , "value": "MAI" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite89.fr/Review5911" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ja" , "value": "slues prostrate leveler's empowerment Melendez's rustier decors collating" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite89.fr/Person155" } ,
+        "revName": { "type": "literal" , "value": "KRYSTAL" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite2.fr/Review9926" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "paralyses loaned Lewis" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite2.fr/Person169" } ,
+        "revName": { "type": "literal" , "value": "MICHELLE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite43.fr/Review2339" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "tugs sourpusses ignition's lira's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite43.fr/Person229" } ,
+        "revName": { "type": "literal" , "value": "CHAD" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite88.fr/Review7942" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "applauds refrigerator's repute's seventh bolt Vesalius's boutonni  re pizzicato's pouches Dacca adjournment Southey" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite88.fr/Person149" } ,
+        "revName": { "type": "literal" , "value": "ALISHA JAVIER" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review4230" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "stoat" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person214" } ,
+        "revName": { "type": "literal" , "value": "MAI" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite89.fr/Review5911" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ja" , "value": "slues prostrate leveler's empowerment Melendez's rustier decors collating" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite89.fr/Person155" } ,
+        "revName": { "type": "literal" , "value": "KRYSTAL" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite2.fr/Review9926" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "paralyses loaned Lewis" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite2.fr/Person169" } ,
+        "revName": { "type": "literal" , "value": "MICHELLE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite43.fr/Review2339" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "tugs sourpusses ignition's lira's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite43.fr/Person229" } ,
+        "revName": { "type": "literal" , "value": "CHAD" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite88.fr/Review7942" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "applauds refrigerator's repute's seventh bolt Vesalius's boutonni  re pizzicato's pouches Dacca adjournment Southey" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite88.fr/Person149" } ,
+        "revName": { "type": "literal" , "value": "ALISHA JAVIER" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review4230" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "stoat" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person214" } ,
+        "revName": { "type": "literal" , "value": "MAI" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite89.fr/Review5911" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ja" , "value": "slues prostrate leveler's empowerment Melendez's rustier decors collating" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite89.fr/Person155" } ,
+        "revName": { "type": "literal" , "value": "KRYSTAL" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite2.fr/Review9926" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "paralyses loaned Lewis" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite2.fr/Person169" } ,
+        "revName": { "type": "literal" , "value": "MICHELLE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "bleaches" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite43.fr/Review2339" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "tugs sourpusses ignition's lira's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite43.fr/Person229" } ,
+        "revName": { "type": "literal" , "value": "CHAD" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      }
+    ]
+  }
+}

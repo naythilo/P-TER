@@ -1,0 +1,61 @@
+{ "head": {
+    "vars": [ "product" , "label" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "product": { "type": "uri" , "value": "http://www.ratingsite1.fr/Product36532" } ,
+        "label": { "type": "literal" , "value": "caulks" }
+      }
+    ]
+  }
+}
+Time: 0.209 sec
+overallQueryProcessingTime : 124
+planningTime : 9
+compilationTime : 4
+executionTime : 111
+queryPlanningStats : {
+  overallQueryPlanningTime : 8
+  sourcePlanningTime : 4
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 4
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@73fdcfe9
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@73fdcfe9
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@c98a4e05
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@f6c03cb
+          numberOfInvocations : 1
+          overallExecTime : 108
+          requestAsString : { ?product  <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     ?localProductType .
+  ?localProductType
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType543> .
+  ?product  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 .
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature19363> .
+  ?product  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature2 .
+  ?localProductFeature2
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature13947> .
+  ?product  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?value1
+  FILTER ( ?value1 > 770 )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite1.fr/)
+          requestExecTime : 1
+          responseProcTime : 107
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

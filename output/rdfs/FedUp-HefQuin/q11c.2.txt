@@ -1,0 +1,100 @@
+[main] INFO Summary - Took 79 ms to open the summary.
+[main] INFO Summary - Took 462 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?property ?isValueOf ?product ?hasValue)
+  (service silent 
+    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/>
+    (sequence
+      (triple <http://www.vendor3.fr/Offer1038> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product> ?product)
+      (triple <http://www.vendor3.fr/Offer1038> ?property ?hasValue))))
+
+Time: 0.873 sec
+overallQueryProcessingTime : 856
+planningTime : 832
+compilationTime : 4
+executionTime : 20
+queryPlanningStats : {
+  overallQueryPlanningTime : 832
+  sourcePlanningTime : 828
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 4
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@b29cb8df
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@b29cb8df
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@8eb3933
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3162743f
+          numberOfInvocations : 1
+          overallExecTime : 17
+          requestAsString : { <http://www.vendor3.fr/Offer1038>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?product . 
+  <http://www.vendor3.fr/Offer1038>
+            ?property  ?hasValue
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor3.fr/)
+          requestExecTime : 0
+          responseProcTime : 17
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "property" , "hasValue" , "isValueOf" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "hasValue": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "11" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage" } ,
+        "hasValue": { "type": "literal" , "value": "stationer's Graffias Casey's knelt maritime" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "4675.31" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor3.fr/Product88460" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/publishDate" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-02-18T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2007-12-22T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-08-04T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor3.fr/Vendor0" }
+      }
+    ]
+  }
+}

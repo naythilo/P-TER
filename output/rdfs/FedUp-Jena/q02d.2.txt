@@ -1,0 +1,89 @@
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?label ?comment ?producer ?ProductFeatureLabel ?propertyTextual1 ?propertyTextual2 ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?propertyTextual5 ?propertyNumeric4  WHERE {
+    # const bsbm:Product179830
+    ?localProduct owl:sameAs bsbm:Product179830 .
+    ?localProduct rdfs:label ?label .
+    ?localProduct rdfs:comment ?comment .
+    ?localProduct bsbm:producer ?p .
+    ?p rdfs:label ?producer .
+    #?localProduct dc:publisher ?p . 
+    ?localProduct bsbm:productFeature ?localProductFeature1 .
+    ?localProductFeature1 owl:sameAs ?ProductFeature1 .
+    ?localProductFeature1 rdfs:label ?ProductFeatureLabel .
+    ?localProduct bsbm:productPropertyTextual1 ?propertyTextual1 .
+    ?localProduct bsbm:productPropertyTextual2 ?propertyTextual2 .
+    ?localProduct bsbm:productPropertyTextual3 ?propertyTextual3 .
+    ?localProduct bsbm:productPropertyNumeric1 ?propertyNumeric1 .
+    ?localProduct bsbm:productPropertyNumeric2 ?propertyNumeric2 .
+    OPTIONAL { ?localProduct bsbm:productPropertyTextual4 ?propertyTextual4 }
+    OPTIONAL { ?localProduct bsbm:productPropertyTextual5 ?propertyTextual5 }
+    OPTIONAL { ?localProduct bsbm:productPropertyNumeric4 ?propertyNumeric4 }
+}
+[main] INFO Summary - Took 304 ms to open the summary.
+[main] INFO Summary - Took 443 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the Jena SERVICE query…
+[main] INFO FedUP - Building the FedX SERVICE query…
+SELECT  ?label ?comment ?producer ?ProductFeatureLabel ?propertyTextual1 ?propertyTextual2 ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?propertyTextual5 ?propertyNumeric4
+WHERE
+  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite5.fr/>
+      { ?localProductFeature1
+                  <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+        ?localProduct
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+        ?localProduct
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+        ?localProductFeature1
+                  <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+        ?localProduct
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+        ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+        ?localProduct
+                  <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+        ?localProduct
+                  <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+        ?localProduct
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+        ?localProduct
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+        ?localProduct
+                  <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product179830> . 
+        ?localProduct
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+        ?localProduct
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+        OPTIONAL
+          { ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+          }
+        OPTIONAL
+          { ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+          }
+        OPTIONAL
+          { ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+          }
+      }
+  }
+
+Took 872 to perform the source assignment.
+[main] INFO FedUP - Running the query using Jena…
+Took 1589 ms to retrieve 9 mappings.
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "billionth's" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "nick" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "rawer" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "Galvani's" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "appetite" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "evangelized" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "hatchet" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "parade" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )
+( ?producer = "turpitude's" ) ( ?propertyTextual1 = "cognition's Perez Karachi's inconvenience thundered" ) ( ?ProductFeatureLabel = "Waldemar" ) ( ?propertyTextual2 = "gnus regurgitation's simpers Venusian magnifiers corseting castles Ca's" ) ( ?propertyTextual5 = "postmaster's choppered manipulating output's hooray's reproduction's rattletrap rue's" ) ( ?comment = "lugging fork intake daydreams intergalactic Aral slothfulness's fondant's puffballs Bellamy Valenzuela magma's bellying Lupe fortitude's Bonita's mete's congenitally codeine voles circumflex's Caroline's glob's plowed Duracell's mesas sax liquidizes attend coupes cobweb drubs gristle stockroom fishtailed Frye" ) ( ?propertyTextual3 = "Frederic" ) ( ?propertyNumeric1 = 1468 ) ( ?propertyNumeric2 = 574 ) ( ?propertyTextual4 = "spoiled Yorkie Kieth fecundity roominess apprised Eliseo's" ) ( ?label = "commercial" )

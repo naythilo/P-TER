@@ -1,0 +1,55 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rev: <http://purl.org/stuff/rev#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX bsbm-export: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/export/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT * WHERE { 
+    # const <http://www.vendor1.fr/Offer1062>
+    <http://www.vendor1.fr/Offer1062> bsbm:product ?productURI .
+    ?productURI owl:sameAs ?ProductXYZ . 
+    ?productURI rdfs:label ?productlabel .
+    <http://www.vendor1.fr/Offer1062> bsbm:vendor ?vendorURI .
+    ?vendorURI rdfs:label ?vendorname .
+    ?vendorURI foaf:homepage ?vendorhomepage .
+    <http://www.vendor1.fr/Offer1062> bsbm:offerWebpage ?offerURL .
+    <http://www.vendor1.fr/Offer1062> bsbm:price ?price .
+    <http://www.vendor1.fr/Offer1062> bsbm:deliveryDays ?deliveryDays .
+    <http://www.vendor1.fr/Offer1062> bsbm:validTo ?validTo 
+}
+[main] INFO Summary - Took 360 ms to open the summary.
+[main] INFO Summary - Took 472 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the Jena SERVICE query…
+[main] INFO FedUP - Building the FedX SERVICE query…
+SELECT  ?vendorhomepage ?price ?validTo ?productURI ?ProductXYZ ?vendorname ?offerURL ?deliveryDays ?productlabel ?vendorURI
+WHERE
+  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor1.fr/>
+      { ?vendorURI  <http://xmlns.com/foaf/0.1/homepage>  ?vendorhomepage . 
+        <http://www.vendor1.fr/Offer1062>
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage>  ?offerURL . 
+        <http://www.vendor1.fr/Offer1062>
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendorURI . 
+        ?vendorURI  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorname . 
+        ?productURI  <http://www.w3.org/2002/07/owl#sameAs>  ?ProductXYZ . 
+        ?productURI  <http://www.w3.org/2000/01/rdf-schema#label>  ?productlabel . 
+        <http://www.vendor1.fr/Offer1062>
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?validTo . 
+        <http://www.vendor1.fr/Offer1062>
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?productURI . 
+        <http://www.vendor1.fr/Offer1062>
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+        <http://www.vendor1.fr/Offer1062>
+                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays>  ?deliveryDays
+      }
+  }
+
+Took 2493 to perform the source assignment.
+[main] INFO FedUP - Running the query using Jena…
+Took 23 ms to retrieve 1 mappings.
+( ?vendorhomepage = "abrogated humanization's pictured mystique fealty" ) ( ?validTo = "2008-03-28T00:00:00"^^xsd:dateTime ) ( ?price = "1749.25"^^xsd:double ) ( ?vendorname = "Euphrates's" ) ( ?productURI = <http://www.vendor1.fr/Product145311> ) ( ?ProductXYZ = <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product145311> ) ( ?offerURL = "vet happenings Cocteau nominated misdeal's Epson whim arthropod" ) ( ?deliveryDays = 16 ) ( ?productlabel = "usages" ) ( ?vendorURI = <http://www.vendor1.fr/Vendor0> )

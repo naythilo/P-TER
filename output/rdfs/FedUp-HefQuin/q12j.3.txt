@@ -1,0 +1,96 @@
+[main] INFO Summary - Took 91 ms to open the summary.
+[main] INFO Summary - Took 406 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?vendorhomepage ?price ?validTo ?productURI ?ProductXYZ ?vendorname ?offerURL ?deliveryDays ?productlabel ?vendorURI)
+  (service silent 
+    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor0.fr/>
+    (sequence
+      (triple ?vendorURI <http://xmlns.com/foaf/0.1/homepage> ?vendorhomepage)
+      (triple <http://www.vendor0.fr/Offer867> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage> ?offerURL)
+      (triple <http://www.vendor0.fr/Offer867> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor> ?vendorURI)
+      (triple ?vendorURI <http://www.w3.org/2000/01/rdf-schema#label> ?vendorname)
+      (triple ?productURI <http://www.w3.org/2002/07/owl#sameAs> ?ProductXYZ)
+      (triple ?productURI <http://www.w3.org/2000/01/rdf-schema#label> ?productlabel)
+      (triple <http://www.vendor0.fr/Offer867> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo> ?validTo)
+      (triple <http://www.vendor0.fr/Offer867> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product> ?productURI)
+      (triple <http://www.vendor0.fr/Offer867> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price> ?price)
+      (triple <http://www.vendor0.fr/Offer867> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays> ?deliveryDays))))
+
+Time: 2.697 sec
+overallQueryProcessingTime : 2676
+planningTime : 2378
+compilationTime : 4
+executionTime : 294
+queryPlanningStats : {
+  overallQueryPlanningTime : 2378
+  sourcePlanningTime : 2374
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 4
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@1263d
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@1263d
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@ba76a7d1
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7965a51c
+          numberOfInvocations : 1
+          overallExecTime : 291
+          requestAsString : { ?vendorURI  <http://xmlns.com/foaf/0.1/homepage>  ?vendorhomepage . 
+  <http://www.vendor0.fr/Offer867>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage>  ?offerURL . 
+  <http://www.vendor0.fr/Offer867>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendorURI . 
+  ?vendorURI  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorname . 
+  ?productURI  <http://www.w3.org/2002/07/owl#sameAs>  ?ProductXYZ . 
+  ?productURI  <http://www.w3.org/2000/01/rdf-schema#label>  ?productlabel . 
+  <http://www.vendor0.fr/Offer867>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?validTo . 
+  <http://www.vendor0.fr/Offer867>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?productURI . 
+  <http://www.vendor0.fr/Offer867>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  <http://www.vendor0.fr/Offer867>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays>  ?deliveryDays
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor0.fr/)
+          requestExecTime : 0
+          responseProcTime : 291
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "productURI" , "ProductXYZ" , "productlabel" , "vendorURI" , "vendorname" , "vendorhomepage" , "offerURL" , "price" , "deliveryDays" , "validTo" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "productURI": { "type": "uri" , "value": "http://www.vendor0.fr/Product86482" } ,
+        "ProductXYZ": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product86482" } ,
+        "productlabel": { "type": "literal" , "value": "falsetto" } ,
+        "vendorURI": { "type": "uri" , "value": "http://www.vendor0.fr/Vendor0" } ,
+        "vendorname": { "type": "literal" , "value": "obelisk's" } ,
+        "vendorhomepage": { "type": "literal" , "value": "Shannon's soak Canada syrup's Gielgud's impeccability ambidextrous" } ,
+        "offerURL": { "type": "literal" , "value": "hogan enforced" } ,
+        "price": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "4614.71" } ,
+        "deliveryDays": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "21" } ,
+        "validTo": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-06-29T00:00:00" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,2162 @@
+[main] INFO Summary - Took 74 ms to open the summary.
+[main] INFO Summary - Took 360 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?producer ?localProduct ?p ?propertyTextual1 ?ProductFeatureLabel ?propertyTextual2 ?localProductFeature1 ?propertyTextual5 ?propertyNumeric4 ?comment ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?ProductFeature1 ?label)
+  (union
+    (union
+      (union
+        (union
+          (union
+            (leftjoin
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                    (sequence
+                      (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                      (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                      (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                      (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212>)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))
+            (leftjoin
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                    (sequence
+                      (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                      (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                      (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                      (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212>)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+          (leftjoin
+            (leftjoin
+              (leftjoin
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                  (sequence
+                    (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                    (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                    (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                    (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                    (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                    (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212>)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+                (union
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+            (union
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+        (leftjoin
+          (leftjoin
+            (leftjoin
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                (sequence
+                  (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                  (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                  (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                  (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                  (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                  (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212>)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+            (union
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+          (union
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+      (leftjoin
+        (leftjoin
+          (leftjoin
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+              (sequence
+                (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212>)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+            (union
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+          (union
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+        (union
+          (union
+            (union
+              (union
+                (union
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+    (leftjoin
+      (leftjoin
+        (leftjoin
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+            (sequence
+              (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+              (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+              (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+              (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212>)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+          (union
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+        (union
+          (union
+            (union
+              (union
+                (union
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+      (union
+        (union
+          (union
+            (union
+              (union
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/>
+          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))))
+
+Time: 8.285 sec
+overallQueryProcessingTime : 8235
+planningTime : 2630
+compilationTime : 8
+executionTime : 5597
+queryPlanningStats : {
+  overallQueryPlanningTime : 2629
+  sourcePlanningTime : 2618
+  logicalOptimizationTime : 4
+  physicalOptimizationTime : 7
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@fb077485
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@fb077485
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@fb077485
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 46
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@301aa982
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {9,9,9,9,9,9} ]
+          numberOfOutputMappingsProduced : 54
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@5fc930f0
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 406
+          numberOfLeftInputMappingsProcessed : 20265
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 4
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@3701e6e4
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 463
+          numberOfLeftInputMappingsProcessed : 23143
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@c6634d
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 409
+          numberOfLeftInputMappingsProcessed : 20401
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 9
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@65f58c6e
+          numberOfInvocations : 1
+          overallExecTime : 5471
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/)
+          requestExecTime : 0
+          responseProcTime : 5471
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@6401d0a0
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 406
+          numberOfLeftInputMappingsProcessed : 20265
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 6
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4ce14f05
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 463
+          numberOfLeftInputMappingsProcessed : 23143
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 16
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@71dfcf21
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 409
+          numberOfLeftInputMappingsProcessed : 20401
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@b965857
+          numberOfInvocations : 1
+          overallExecTime : 5203
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/)
+          requestExecTime : 0
+          responseProcTime : 5203
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@61f80d55
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 406
+          numberOfLeftInputMappingsProcessed : 20265
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 2
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@27a7ef08
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 463
+          numberOfLeftInputMappingsProcessed : 23143
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 6
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@280e8a1a
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 409
+          numberOfLeftInputMappingsProcessed : 20401
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@11e33bac
+          numberOfInvocations : 1
+          overallExecTime : 5466
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/)
+          requestExecTime : 0
+          responseProcTime : 5466
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@30501e60
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 406
+          numberOfLeftInputMappingsProcessed : 20265
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@289778cd
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 463
+          numberOfLeftInputMappingsProcessed : 23143
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 51
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7495699f
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 409
+          numberOfLeftInputMappingsProcessed : 20401
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7c2312fa
+          numberOfInvocations : 1
+          overallExecTime : 5268
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/)
+          requestExecTime : 0
+          responseProcTime : 5268
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4cb0a000
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 406
+          numberOfLeftInputMappingsProcessed : 20265
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 9
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@5ff2e84b
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 463
+          numberOfLeftInputMappingsProcessed : 23143
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 15
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@74abbb
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 409
+          numberOfLeftInputMappingsProcessed : 20401
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@64a4dd8d
+          numberOfInvocations : 1
+          overallExecTime : 5509
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/)
+          requestExecTime : 0
+          responseProcTime : 5509
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@2dddc1b9
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 406
+          numberOfLeftInputMappingsProcessed : 20265
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 8
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@65a5d4f9
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 463
+          numberOfLeftInputMappingsProcessed : 23143
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 6
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@40298285
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 409
+          numberOfLeftInputMappingsProcessed : 20401
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@22367b8
+          numberOfInvocations : 1
+          overallExecTime : 5448
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product116212> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 0
+          responseProcTime : 5448
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@41b0ae4c
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {103,90,86,98,20,13} ]
+          numberOfMappingsFromXthInputProcessed : [ {5130,4481,4295,4878,990,627} ]
+          numberOfOutputMappingsProduced : 20401
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@af9a89f
+          numberOfInvocations : 1
+          overallExecTime : 746
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/)
+          requestExecTime : 0
+          responseProcTime : 746
+          solMapsRetrieved : 627
+          numberOfOutputMappingsProduced : 627
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6482eef
+          numberOfInvocations : 1
+          overallExecTime : 778
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/)
+          requestExecTime : 0
+          responseProcTime : 778
+          solMapsRetrieved : 990
+          numberOfOutputMappingsProduced : 990
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1fcf9739
+          numberOfInvocations : 1
+          overallExecTime : 918
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/)
+          requestExecTime : 2
+          responseProcTime : 916
+          solMapsRetrieved : 4878
+          numberOfOutputMappingsProduced : 4878
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5b498842
+          numberOfInvocations : 1
+          overallExecTime : 920
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/)
+          requestExecTime : 1
+          responseProcTime : 919
+          solMapsRetrieved : 4295
+          numberOfOutputMappingsProduced : 4295
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1cb37ee4
+          numberOfInvocations : 1
+          overallExecTime : 908
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 1
+          responseProcTime : 907
+          solMapsRetrieved : 4481
+          numberOfOutputMappingsProduced : 4481
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5bcb04cb
+          numberOfInvocations : 1
+          overallExecTime : 984
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/)
+          requestExecTime : 1
+          responseProcTime : 983
+          solMapsRetrieved : 5130
+          numberOfOutputMappingsProduced : 5130
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@385e36d4
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {117,101,98,111,23,15} ]
+          numberOfMappingsFromXthInputProcessed : [ {5813,5039,4899,5538,1131,723} ]
+          numberOfOutputMappingsProduced : 23143
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2fc2a205
+          numberOfInvocations : 1
+          overallExecTime : 310
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/)
+          requestExecTime : 0
+          responseProcTime : 310
+          solMapsRetrieved : 723
+          numberOfOutputMappingsProduced : 723
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2881ad47
+          numberOfInvocations : 1
+          overallExecTime : 363
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/)
+          requestExecTime : 1
+          responseProcTime : 362
+          solMapsRetrieved : 1131
+          numberOfOutputMappingsProduced : 1131
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2bef09c0
+          numberOfInvocations : 1
+          overallExecTime : 899
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/)
+          requestExecTime : 1
+          responseProcTime : 898
+          solMapsRetrieved : 5538
+          numberOfOutputMappingsProduced : 5538
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@62ce72ff
+          numberOfInvocations : 1
+          overallExecTime : 706
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/)
+          requestExecTime : 2
+          responseProcTime : 704
+          solMapsRetrieved : 4899
+          numberOfOutputMappingsProduced : 4899
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@58a63629
+          numberOfInvocations : 1
+          overallExecTime : 970
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 1
+          responseProcTime : 969
+          solMapsRetrieved : 5039
+          numberOfOutputMappingsProduced : 5039
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7de843ef
+          numberOfInvocations : 1
+          overallExecTime : 924
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/)
+          requestExecTime : 2
+          responseProcTime : 922
+          solMapsRetrieved : 5813
+          numberOfOutputMappingsProduced : 5813
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@2e1af49b
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {102,88,87,98,20,13} ]
+          numberOfMappingsFromXthInputProcessed : [ {5056,4392,4332,4885,961,639} ]
+          numberOfOutputMappingsProduced : 20265
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3fd2322d
+          numberOfInvocations : 1
+          overallExecTime : 206
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor53.fr/)
+          requestExecTime : 0
+          responseProcTime : 206
+          solMapsRetrieved : 639
+          numberOfOutputMappingsProduced : 639
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@56ac5c80
+          numberOfInvocations : 1
+          overallExecTime : 221
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/)
+          requestExecTime : 1
+          responseProcTime : 220
+          solMapsRetrieved : 961
+          numberOfOutputMappingsProduced : 961
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@69e49a81
+          numberOfInvocations : 1
+          overallExecTime : 489
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/)
+          requestExecTime : 1
+          responseProcTime : 488
+          solMapsRetrieved : 4885
+          numberOfOutputMappingsProduced : 4885
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1023150a
+          numberOfInvocations : 1
+          overallExecTime : 666
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/)
+          requestExecTime : 15
+          responseProcTime : 651
+          solMapsRetrieved : 4332
+          numberOfOutputMappingsProduced : 4332
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3ece1e79
+          numberOfInvocations : 1
+          overallExecTime : 513
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/)
+          requestExecTime : 1
+          responseProcTime : 512
+          solMapsRetrieved : 4392
+          numberOfOutputMappingsProduced : 4392
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@ab20d7c
+          numberOfInvocations : 1
+          overallExecTime : 633
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite13.fr/)
+          requestExecTime : 1
+          responseProcTime : 632
+          solMapsRetrieved : 5056
+          numberOfOutputMappingsProduced : 5056
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "label" , "comment" , "producer" , "ProductFeatureLabel" , "propertyTextual1" , "propertyTextual2" , "propertyTextual3" , "propertyNumeric1" , "propertyNumeric2" , "propertyTextual4" , "propertyTextual5" , "propertyNumeric4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "hastes" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Pavlova" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "terrapin" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hartford" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "last" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slacking" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "marketplace's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "crisply" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "bless" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "last" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "terrapin" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "hastes" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Pavlova" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hartford" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slacking" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "marketplace's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "crisply" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "bless" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "last" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "terrapin" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "hastes" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Pavlova" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hartford" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slacking" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "marketplace's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "crisply" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "bless" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "last" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "terrapin" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "hastes" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Pavlova" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hartford" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slacking" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "marketplace's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "crisply" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "bless" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "last" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "terrapin" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "hastes" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Pavlova" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hartford" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slacking" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "marketplace's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "crisply" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "bless" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "last" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Hartford" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "marketplace's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "crisply" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "hastes" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slacking" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "terrapin" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Pavlova" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "canker" } ,
+        "comment": { "type": "literal" , "value": "graphically aggravates unlikely Hotpoint's tendency paleontologists she'll spritz's wishful Alice's cinchona's dissenter crop scalloped Prensa Stael's groundwork's immortal mocker's forearms crooked rod tyrants rinses Tammy's weirdest dorsal reggae's baccalaureate heavenwards ruminate splice's pleases expected umpteenth clerestory Nottingham fitter's Weierstrass Miller's floats UPS's haring grid's obtrusiveness consummations nonconformists Toscanini's interface wholesales commentator's" } ,
+        "producer": { "type": "literal" , "value": "felting" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "bless" } ,
+        "propertyTextual1": { "type": "literal" , "value": "unbarred tomb binge's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "lichen scholarships Shorthorn's revive quietus's" } ,
+        "propertyTextual3": { "type": "literal" , "value": "flavorful proportionate Navajoes paramedical's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "347" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1006" } ,
+        "propertyTextual4": { "type": "literal" , "value": "castanet's" } ,
+        "propertyTextual5": { "type": "literal" , "value": "untwist" }
+      }
+    ]
+  }
+}

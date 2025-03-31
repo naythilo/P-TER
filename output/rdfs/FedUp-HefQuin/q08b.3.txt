@@ -1,0 +1,102 @@
+[main] INFO Summary - Took 90 ms to open the summary.
+[main] INFO Summary - Took 333 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?localProductXYZ ?text ?reviewDate ?rating1 ?rating2 ?rating3 ?rating4 ?review ?title ?reviewer ?reviewerName)
+  (filter (langMatches (lang ?text) "en")
+    (service silent 
+      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+      (leftjoin
+        (leftjoin
+          (leftjoin
+            (leftjoin
+              (sequence
+                (triple ?review <http://purl.org/stuff/rev#reviewer> ?reviewer)
+                (triple ?reviewer <http://xmlns.com/foaf/0.1/name> ?reviewerName)
+                (triple ?review <http://purl.org/stuff/rev#text> ?text)
+                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate> ?reviewDate)
+                (triple ?localProductXYZ <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product74034>)
+                (triple ?review <http://purl.org/dc/elements/1.1/title> ?title)
+                (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor> ?localProductXYZ))
+              (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1> ?rating1))
+            (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))
+          (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3> ?rating3))
+        (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4> ?rating4)))))
+
+Time: 0.894 sec
+overallQueryProcessingTime : 854
+planningTime : 824
+compilationTime : 4
+executionTime : 26
+queryPlanningStats : {
+  overallQueryPlanningTime : 824
+  sourcePlanningTime : 819
+  logicalOptimizationTime : 2
+  physicalOptimizationTime : 3
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithUnaryRootImpl@2f575d24
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@667c9938
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@dc0b18d4
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@327c7bea
+          numberOfInvocations : 1
+          overallExecTime : 23
+          requestAsString : { ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName . 
+  ?review  <http://purl.org/stuff/rev#text>  ?text . 
+  ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate . 
+  ?localProductXYZ
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product74034> . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?title . 
+  ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ
+  OPTIONAL
+    { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+  OPTIONAL
+    { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+  OPTIONAL
+    { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3 }
+  OPTIONAL
+    { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4 }
+  FILTER langMatches(lang(?text), "en")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/)
+          requestExecTime : 0
+          responseProcTime : 23
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "title" , "text" , "reviewDate" , "reviewer" , "reviewerName" , "rating1" , "rating2" , "rating3" , "rating4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "title": { "type": "literal" , "xml:lang": "en" , "value": "rebuking Goldsmith Sweden melodiousness chlorophyll eastern Michele" } ,
+        "text": { "type": "literal" , "xml:lang": "en" , "value": "Mindanao's reapportioning crackling plowed chiller Holley's tremor Penney amputation bronzing Zachariah horse's Messerschmidt's wrests comprehensive Bologna's prefabrication vintage chat solitaires codded Spencer's desktop heartstrings's crumple's Jacobs spatter Randy's wreaths amnesia partnership buckeye newspaperman potato's outdoors vase's glinting mainland Laurel diminished isomorphic calliope lite decrescendos vaster traction Hesiod's pastry kingfishers derisory inedible laced artlessly mantra's Libras boot dietary's vacations drouth desensitize software's resume's contraption harpooning headhunter's Bastille Soto paradox's clematis blockbuster's Hiram's striven assortment orioles tropospheres abridgment carcinogen's AstroTurf's jaguars squishiest Heidelberg sandbars fifth's chafes enamoring bangle's bellow glitters adverbs convicted inhering private's Nootka's supported trope compiling liaison's Lakisha Bearnaise teetotalers Colt Krasnoyarsk's friendliness's bottling reestablished dustless Prut Flint Malone piano" } ,
+        "reviewDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2007-08-07T00:00:00" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite9.fr/Person213" } ,
+        "reviewerName": { "type": "literal" , "value": "CRAIG FRANKLIN" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" } ,
+        "rating3": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      }
+    ]
+  }
+}

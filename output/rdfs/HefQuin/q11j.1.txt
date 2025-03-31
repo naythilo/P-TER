@@ -1,0 +1,88 @@
+{ "head": {
+    "vars": [ "property" , "hasValue" , "isValueOf" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "4894.88" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-04-10T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/publishDate" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-03-09T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "hasValue": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-01-13T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage" } ,
+        "hasValue": { "type": "literal" , "value": "reoccupy arraigned autoworker's neurology's jaywalker's safari riser sateen" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor0.fr/Vendor0" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor0.fr/Product102887" }
+      }
+    ]
+  }
+}
+Time: 0.198 sec
+overallQueryProcessingTime : 117
+planningTime : 6
+compilationTime : 2
+executionTime : 109
+queryPlanningStats : {
+  overallQueryPlanningTime : 5
+  sourcePlanningTime : 3
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 2
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@620c4ee8
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@620c4ee8
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@d87bcf04
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6bb75258
+          numberOfInvocations : 1
+          overallExecTime : 105
+          requestAsString : { <http://www.vendor0.fr/Offer524>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?product
+    { <http://www.vendor0.fr/Offer524>
+                ?property  ?hasValue
+    }
+  UNION
+    { ?isValueOf  ?property  <http://www.vendor0.fr/Offer524> }
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor0.fr/)
+          requestExecTime : 0
+          responseProcTime : 105
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+    ]
+  }
+}

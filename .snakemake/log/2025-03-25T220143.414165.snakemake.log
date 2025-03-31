@@ -1,0 +1,154 @@
+host: codespaces-c89ec1
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+run_jena_query        3
+total                 4
+
+Select jobs to execute...
+Execute 3 jobs...
+
+[Tue Mar 25 22:01:43 2025]
+localrule run_jena_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q05a.sparql
+    output: output/rdfs/Jena/q05a.3.csv, output/rdfs/Jena/q05a.3.json
+    jobid: 3
+    reason: Missing output files: output/rdfs/Jena/q05a.3.csv
+    wildcards: workload=rdfs, query=q05a, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Tue Mar 25 22:01:43 2025]
+localrule run_jena_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q05a.sparql
+    output: output/rdfs/Jena/q05a.1.csv, output/rdfs/Jena/q05a.1.json
+    jobid: 1
+    reason: Missing output files: output/rdfs/Jena/q05a.1.csv
+    wildcards: workload=rdfs, query=q05a, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+
+[Tue Mar 25 22:01:43 2025]
+localrule run_jena_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q05a.sparql
+    output: output/rdfs/Jena/q05a.2.csv, output/rdfs/Jena/q05a.2.json
+    jobid: 2
+    reason: Missing output files: output/rdfs/Jena/q05a.2.csv
+    wildcards: workload=rdfs, query=q05a, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /workspaces/P-TER && /usr/local/python/3.12.1/bin/python3 -m snakemake --snakefile '/workspaces/P-TER/Snakefile' --target-jobs 'run_jena_query:workload=rdfs,query=q05a,run=3' --allowed-rules run_jena_query --cores 4 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --keep-storage-local-copies --max-inventory-time 0 --nocolor --notemp --no-hooks --nolock --ignore-incomplete --rerun-triggers params mtime code software-env input --conda-frontend 'conda' --shared-fs-usage sources persistence input-output software-deployment storage-local-copies source-cache --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --latency-wait 5 --scheduler 'greedy' --local-storage-prefix .snakemake/storage --scheduler-solver-path '/usr/local/python/3.12.1/bin' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules --mode 'subprocess' --local-groupid 'local'' returned non-zero exit status 1.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /workspaces/P-TER && /usr/local/python/3.12.1/bin/python3 -m snakemake --snakefile '/workspaces/P-TER/Snakefile' --target-jobs 'run_jena_query:workload=rdfs,query=q05a,run=2' --allowed-rules run_jena_query --cores 4 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --keep-storage-local-copies --max-inventory-time 0 --nocolor --notemp --no-hooks --nolock --ignore-incomplete --rerun-triggers params mtime code software-env input --conda-frontend 'conda' --shared-fs-usage sources persistence input-output software-deployment storage-local-copies source-cache --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --latency-wait 5 --scheduler 'greedy' --local-storage-prefix .snakemake/storage --scheduler-solver-path '/usr/local/python/3.12.1/bin' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules --mode 'subprocess' --local-groupid 'local'' returned non-zero exit status 1.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+[Tue Mar 25 22:02:07 2025]
+[Tue Mar 25 22:02:07 2025]
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /workspaces/P-TER && /usr/local/python/3.12.1/bin/python3 -m snakemake --snakefile '/workspaces/P-TER/Snakefile' --target-jobs 'run_jena_query:workload=rdfs,query=q05a,run=1' --allowed-rules run_jena_query --cores 4 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --keep-storage-local-copies --max-inventory-time 0 --nocolor --notemp --no-hooks --nolock --ignore-incomplete --rerun-triggers params mtime code software-env input --conda-frontend 'conda' --shared-fs-usage sources persistence input-output software-deployment storage-local-copies source-cache --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --latency-wait 5 --scheduler 'greedy' --local-storage-prefix .snakemake/storage --scheduler-solver-path '/usr/local/python/3.12.1/bin' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules --mode 'subprocess' --local-groupid 'local'' returned non-zero exit status 1.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/local/python/3.12.1/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+Error in rule run_jena_query:
+    jobid: 3
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q05a.sparql
+    output: output/rdfs/Jena/q05a.3.csv, output/rdfs/Jena/q05a.3.json
+
+Error in rule run_jena_query:
+    jobid: 2
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q05a.sparql
+    output: output/rdfs/Jena/q05a.2.csv, output/rdfs/Jena/q05a.2.json
+
+[Tue Mar 25 22:02:07 2025]
+Error in rule run_jena_query:
+    jobid: 1
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, queries/q05a.sparql
+    output: output/rdfs/Jena/q05a.1.csv, output/rdfs/Jena/q05a.1.json
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-03-25T220143.414165.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

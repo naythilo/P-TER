@@ -1,0 +1,75 @@
+host: codespaces-c89ec1
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+run_Fedup_HefQuin_query        3
+total                          4
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 26 13:37:39 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12f.sparql
+    output: output/rdfs/FedUp-HefQuin/q12f.1.csv, output/rdfs/FedUp-HefQuin/q12f.1.json, output/rdfs/FedUp-HefQuin/q12f.1.txt
+    jobid: 1
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12f.1.csv
+    wildcards: workload=rdfs, query=q12f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 26 13:37:42 2025]
+Finished job 1.
+1 of 4 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 26 13:37:42 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12f.sparql
+    output: output/rdfs/FedUp-HefQuin/q12f.3.csv, output/rdfs/FedUp-HefQuin/q12f.3.json, output/rdfs/FedUp-HefQuin/q12f.3.txt
+    jobid: 3
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12f.3.csv
+    wildcards: workload=rdfs, query=q12f, run=3
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 26 13:37:47 2025]
+Finished job 3.
+2 of 4 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 26 13:37:47 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12f.sparql
+    output: output/rdfs/FedUp-HefQuin/q12f.2.csv, output/rdfs/FedUp-HefQuin/q12f.2.json, output/rdfs/FedUp-HefQuin/q12f.2.txt
+    jobid: 2
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12f.2.csv
+    wildcards: workload=rdfs, query=q12f, run=2
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 26 13:37:52 2025]
+Finished job 2.
+3 of 4 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 26 13:37:52 2025]
+localrule all:
+    input: config/largerdfbench/graphs.txt, config/rdfs/endpoints.txt, output/rdfs/FedUp-HefQuin/q12f.1.csv, output/rdfs/FedUp-HefQuin/q12f.2.csv, output/rdfs/FedUp-HefQuin/q12f.3.csv
+    output: output/data.csv
+    jobid: 0
+    reason: Missing output files: output/data.csv; Input files updated by another job: output/rdfs/FedUp-HefQuin/q12f.1.csv, output/rdfs/FedUp-HefQuin/q12f.2.csv, output/rdfs/FedUp-HefQuin/q12f.3.csv
+    resources: tmpdir=/tmp
+
+[Wed Mar 26 13:37:54 2025]
+Finished job 0.
+4 of 4 steps (100%) done
+Complete log: .snakemake/log/2025-03-26T133739.511373.snakemake.log

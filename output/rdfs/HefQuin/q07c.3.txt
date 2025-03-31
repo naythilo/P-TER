@@ -1,0 +1,1390 @@
+{ "head": {
+    "vars": [ "productLabel" , "offer" , "price" , "vendor" , "vendorTitle" , "review" , "revTitle" , "reviewer" , "revName" , "rating1" , "rating2" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite65.fr/Review11284" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "zh" , "value": "tale upshots maydays filtered munchies's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite65.fr/Person170" } ,
+        "revName": { "type": "literal" , "value": "SALLIE ZACHERY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite7.fr/Review1354" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "glance escalations regents Oldenburg florae" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite7.fr/Person263" } ,
+        "revName": { "type": "literal" , "value": "CATALINA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review3632" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "es" , "value": "breaching legmen mat  riel's lake's trifocals's Cathy's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person19" } ,
+        "revName": { "type": "literal" , "value": "RONDA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite17.fr/Review5979" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "kr" , "value": "unearned hobs" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite17.fr/Person208" } ,
+        "revName": { "type": "literal" , "value": "PAUL ANTONIO" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite18.fr/Review1760" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "Thespis's archbishop bedpans collectivizing prowess" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite18.fr/Person202" } ,
+        "revName": { "type": "literal" , "value": "ANTHONY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "frivolity" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite74.fr/Review9046" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "deathbed" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite74.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "VALERIE" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      }
+    ]
+  }
+}
+Time: 0.533 sec
+overallQueryProcessingTime : 447
+planningTime : 24
+compilationTime : 8
+executionTime : 415
+queryPlanningStats : {
+  overallQueryPlanningTime : 24
+  sourcePlanningTime : 8
+  logicalOptimizationTime : 4
+  physicalOptimizationTime : 12
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@8b2731e5
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@8184ff84
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@8184ff84
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 64
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@3e2943ab
+          xthInputConsumed : [ {true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1} ]
+          numberOfOutputMappingsProduced : 54
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@70dd7e15
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 126
+          averageProcTimePerInputBlock : 126.0
+          minimumProcTimePerInputBlock : 126
+          maximumProcTimePerInputBlock : 126
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@4a9f80d3
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 84
+          averageProcTimePerInputBlock : 84.0
+          minimumProcTimePerInputBlock : 84
+          maximumProcTimePerInputBlock : 84
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@35beb15e
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 233
+          averageProcTimePerInputBlock : 233.0
+          minimumProcTimePerInputBlock : 233
+          maximumProcTimePerInputBlock : 233
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@41fe9859
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 127
+          averageProcTimePerInputBlock : 127.0
+          minimumProcTimePerInputBlock : 127
+          maximumProcTimePerInputBlock : 127
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@5ac86ba5
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 142
+          averageProcTimePerInputBlock : 142.0
+          minimumProcTimePerInputBlock : 142
+          maximumProcTimePerInputBlock : 142
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@6c67e137
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 220
+          averageProcTimePerInputBlock : 220.0
+          minimumProcTimePerInputBlock : 220
+          maximumProcTimePerInputBlock : 220
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@2c9399a4
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 98
+          averageProcTimePerInputBlock : 98.0
+          minimumProcTimePerInputBlock : 98
+          maximumProcTimePerInputBlock : 98
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@191ae03f
+          numberOfInvocations : 1
+          overallExecTime : 163
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>
+  OPTIONAL
+    { ?localProduct
+                <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+                a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+                <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>}
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/)
+          requestExecTime : 0
+          responseProcTime : 163
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@9635fa
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 233
+          averageProcTimePerInputBlock : 233.0
+          minimumProcTimePerInputBlock : 233
+          maximumProcTimePerInputBlock : 233
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@53ab0286
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 60
+          averageProcTimePerInputBlock : 60.0
+          minimumProcTimePerInputBlock : 60
+          maximumProcTimePerInputBlock : 60
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@63c5efee
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 99
+          averageProcTimePerInputBlock : 99.0
+          minimumProcTimePerInputBlock : 99
+          maximumProcTimePerInputBlock : 99
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@2d10e0b1
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 214
+          averageProcTimePerInputBlock : 214.0
+          minimumProcTimePerInputBlock : 214
+          maximumProcTimePerInputBlock : 214
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@1c98290c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 233
+          averageProcTimePerInputBlock : 233.0
+          minimumProcTimePerInputBlock : 233
+          maximumProcTimePerInputBlock : 233
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@172ca72b
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 171
+          averageProcTimePerInputBlock : 171.0
+          minimumProcTimePerInputBlock : 171
+          maximumProcTimePerInputBlock : 171
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@5bda80bf
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 198
+          averageProcTimePerInputBlock : 198.0
+          minimumProcTimePerInputBlock : 198
+          maximumProcTimePerInputBlock : 198
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@71e5f61d
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 219
+          averageProcTimePerInputBlock : 219.0
+          minimumProcTimePerInputBlock : 219
+          maximumProcTimePerInputBlock : 219
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@2ce86164
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 225
+          averageProcTimePerInputBlock : 225.0
+          minimumProcTimePerInputBlock : 225
+          maximumProcTimePerInputBlock : 225
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5e8f9e2d
+          numberOfInvocations : 1
+          overallExecTime : 167
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>
+  OPTIONAL
+    { ?localProduct
+                <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+                a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+                <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>}
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/)
+          requestExecTime : 0
+          responseProcTime : 167
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@51df223b
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 220
+          averageProcTimePerInputBlock : 220.0
+          minimumProcTimePerInputBlock : 220
+          maximumProcTimePerInputBlock : 220
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@fd46303
+          numberOfInvocations : 1
+          overallExecTime : 170
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>
+  OPTIONAL
+    { ?localProduct
+                <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+                a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+                <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>}
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite65.fr/)
+          requestExecTime : 0
+          responseProcTime : 170
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@60d8c0dc
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 195
+          averageProcTimePerInputBlock : 195.0
+          minimumProcTimePerInputBlock : 195
+          maximumProcTimePerInputBlock : 195
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@4204541c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 76
+          averageProcTimePerInputBlock : 76.0
+          minimumProcTimePerInputBlock : 76
+          maximumProcTimePerInputBlock : 76
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6a62689d
+          numberOfInvocations : 1
+          overallExecTime : 173
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite65.fr/)
+          requestExecTime : 0
+          responseProcTime : 173
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@4602c2a9
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 108
+          averageProcTimePerInputBlock : 108.0
+          minimumProcTimePerInputBlock : 108
+          maximumProcTimePerInputBlock : 108
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@60fa3495
+          numberOfInvocations : 1
+          overallExecTime : 168
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>
+  OPTIONAL
+    { ?localProduct
+                <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+                a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+                <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>}
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/)
+          requestExecTime : 0
+          responseProcTime : 168
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@3e2822
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 132
+          averageProcTimePerInputBlock : 132.0
+          minimumProcTimePerInputBlock : 132
+          maximumProcTimePerInputBlock : 132
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@79e18e38
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 159
+          averageProcTimePerInputBlock : 159.0
+          minimumProcTimePerInputBlock : 159
+          maximumProcTimePerInputBlock : 159
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@29a60c27
+          numberOfInvocations : 1
+          overallExecTime : 157
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/)
+          requestExecTime : 15
+          responseProcTime : 142
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@1849db1a
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 238
+          averageProcTimePerInputBlock : 238.0
+          minimumProcTimePerInputBlock : 238
+          maximumProcTimePerInputBlock : 238
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@69c79f09
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 127
+          averageProcTimePerInputBlock : 127.0
+          minimumProcTimePerInputBlock : 127
+          maximumProcTimePerInputBlock : 127
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@1ca25c47
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 235
+          averageProcTimePerInputBlock : 235.0
+          minimumProcTimePerInputBlock : 235
+          maximumProcTimePerInputBlock : 235
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@5fcacc0
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 170
+          averageProcTimePerInputBlock : 170.0
+          minimumProcTimePerInputBlock : 170
+          maximumProcTimePerInputBlock : 170
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@533b266e
+          numberOfInvocations : 1
+          overallExecTime : 159
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor58.fr/)
+          requestExecTime : 17
+          responseProcTime : 142
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@6d1d4d7
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 95
+          averageProcTimePerInputBlock : 95.0
+          minimumProcTimePerInputBlock : 95
+          maximumProcTimePerInputBlock : 95
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@89ff02e
+          numberOfInvocations : 1
+          overallExecTime : 159
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>
+  OPTIONAL
+    { ?localProduct
+                <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+                a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+                <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>}
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite34.fr/)
+          requestExecTime : 8
+          responseProcTime : 151
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@6865c751
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 161
+          averageProcTimePerInputBlock : 161.0
+          minimumProcTimePerInputBlock : 161
+          maximumProcTimePerInputBlock : 161
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@62679465
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 54
+          averageProcTimePerInputBlock : 54.0
+          minimumProcTimePerInputBlock : 54
+          maximumProcTimePerInputBlock : 54
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6a988392
+          numberOfInvocations : 1
+          overallExecTime : 159
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite34.fr/)
+          requestExecTime : 15
+          responseProcTime : 144
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@1d71006f
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 152
+          averageProcTimePerInputBlock : 152.0
+          minimumProcTimePerInputBlock : 152
+          maximumProcTimePerInputBlock : 152
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@5b6813df
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 171
+          averageProcTimePerInputBlock : 171.0
+          minimumProcTimePerInputBlock : 171
+          maximumProcTimePerInputBlock : 171
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@5f2606b
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 188
+          averageProcTimePerInputBlock : 188.0
+          minimumProcTimePerInputBlock : 188
+          maximumProcTimePerInputBlock : 188
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@2b58f754
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 94
+          averageProcTimePerInputBlock : 94.0
+          minimumProcTimePerInputBlock : 94
+          maximumProcTimePerInputBlock : 94
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3ebff828
+          numberOfInvocations : 1
+          overallExecTime : 160
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor19.fr/)
+          requestExecTime : 15
+          responseProcTime : 145
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@2552f2cb
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 234
+          averageProcTimePerInputBlock : 234.0
+          minimumProcTimePerInputBlock : 234
+          maximumProcTimePerInputBlock : 234
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@33352f32
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 109
+          averageProcTimePerInputBlock : 109.0
+          minimumProcTimePerInputBlock : 109
+          maximumProcTimePerInputBlock : 109
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@5f3b9c57
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 160
+          averageProcTimePerInputBlock : 160.0
+          minimumProcTimePerInputBlock : 160
+          maximumProcTimePerInputBlock : 160
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1e044120
+          numberOfInvocations : 1
+          overallExecTime : 161
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/)
+          requestExecTime : 15
+          responseProcTime : 146
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2cf23c81
+          numberOfInvocations : 1
+          overallExecTime : 163
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>
+  OPTIONAL
+    { ?localProduct
+                <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel ;
+                a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
+                <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338>}
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/)
+          requestExecTime : 18
+          responseProcTime : 145
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@3624da92
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 232
+          averageProcTimePerInputBlock : 232.0
+          minimumProcTimePerInputBlock : 232
+          maximumProcTimePerInputBlock : 232
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@35fe2125
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 200
+          averageProcTimePerInputBlock : 200.0
+          minimumProcTimePerInputBlock : 200
+          maximumProcTimePerInputBlock : 200
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@94f6bfb
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 89
+          averageProcTimePerInputBlock : 89.0
+          minimumProcTimePerInputBlock : 89
+          maximumProcTimePerInputBlock : 89
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@34645867
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 194
+          averageProcTimePerInputBlock : 194.0
+          minimumProcTimePerInputBlock : 194
+          maximumProcTimePerInputBlock : 194
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2484f433
+          numberOfInvocations : 1
+          overallExecTime : 165
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor11.fr/)
+          requestExecTime : 18
+          responseProcTime : 147
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@60b71e8f
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 142
+          averageProcTimePerInputBlock : 142.0
+          minimumProcTimePerInputBlock : 142
+          maximumProcTimePerInputBlock : 142
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@1255b1d1
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 168
+          averageProcTimePerInputBlock : 168.0
+          minimumProcTimePerInputBlock : 168
+          maximumProcTimePerInputBlock : 168
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@464649c
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 156
+          averageProcTimePerInputBlock : 156.0
+          minimumProcTimePerInputBlock : 156
+          maximumProcTimePerInputBlock : 156
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@7c22d4f
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 216
+          averageProcTimePerInputBlock : 216.0
+          minimumProcTimePerInputBlock : 216
+          maximumProcTimePerInputBlock : 216
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5f59185e
+          numberOfInvocations : 1
+          overallExecTime : 163
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite18.fr/)
+          requestExecTime : 17
+          responseProcTime : 146
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@60bdf15d
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 153
+          averageProcTimePerInputBlock : 153.0
+          minimumProcTimePerInputBlock : 153
+          maximumProcTimePerInputBlock : 153
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@47da3952
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 194
+          averageProcTimePerInputBlock : 194.0
+          minimumProcTimePerInputBlock : 194
+          maximumProcTimePerInputBlock : 194
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@51e4ccb3
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 237
+          averageProcTimePerInputBlock : 237.0
+          minimumProcTimePerInputBlock : 237
+          maximumProcTimePerInputBlock : 237
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpParallelMultiwayLeftJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpParallelMultiwayLeftJoin@46e8a539
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 209
+          averageProcTimePerInputBlock : 209.0
+          minimumProcTimePerInputBlock : 209
+          maximumProcTimePerInputBlock : 209
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@495083a0
+          numberOfInvocations : 1
+          overallExecTime : 165
+          requestAsString : (bgp ?localProduct
+          <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel .?localProduct
+          a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> .?localProduct
+          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79338> . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/)
+          requestExecTime : 16
+          responseProcTime : 149
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

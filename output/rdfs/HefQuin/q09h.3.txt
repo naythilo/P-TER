@@ -1,0 +1,49 @@
+{ "head": {
+    "vars": [ "x" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "x": { "type": "uri" , "value": "http://www.ratingsite0.fr/Person169" }
+      }
+    ]
+  }
+}
+Time: 0.199 sec
+overallQueryProcessingTime : 122
+planningTime : 4
+compilationTime : 3
+executionTime : 115
+queryPlanningStats : {
+  overallQueryPlanningTime : 4
+  sourcePlanningTime : 2
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 2
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@88bca6f2
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@88bca6f2
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@32cb271e
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@24d4d7c9
+          numberOfInvocations : 1
+          overallExecTime : 111
+          requestAsString : (bgp <http://www.ratingsite0.fr/Review7593>
+          <http://purl.org/stuff/rev#reviewer>  ?x . )
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite0.fr/)
+          requestExecTime : 0
+          responseProcTime : 111
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

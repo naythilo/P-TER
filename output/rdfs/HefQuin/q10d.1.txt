@@ -1,0 +1,59 @@
+{ "head": {
+    "vars": [ "offer" , "price" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "offer": { "type": "uri" , "value": "http://www.vendor9.fr/Offer797" } ,
+        "price": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "3174.65" }
+      }
+    ]
+  }
+}
+Time: 0.203 sec
+overallQueryProcessingTime : 117
+planningTime : 6
+compilationTime : 3
+executionTime : 108
+queryPlanningStats : {
+  overallQueryPlanningTime : 6
+  sourcePlanningTime : 4
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 2
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@c03f9146
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@c03f9146
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@7a4810aa
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1cd201a8
+          numberOfInvocations : 1
+          overallExecTime : 105
+          requestAsString : { ?offer    <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?localProductXYZ .
+  ?localProductXYZ
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product111914> .
+  ?offer    <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor .
+  ?vendor   <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#US> .
+  ?offer    <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays>  ?deliveryDays ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price ;
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date
+  FILTER ( ?deliveryDays <= 3 )
+  FILTER ( ?date > "2008-05-04T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor9.fr/)
+          requestExecTime : 1
+          responseProcTime : 104
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

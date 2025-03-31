@@ -1,0 +1,669 @@
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?label ?comment ?producer ?ProductFeatureLabel ?propertyTextual1 ?propertyTextual2 ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?propertyTextual5 ?propertyNumeric4  WHERE {
+    # const bsbm:Product79796
+    ?localProduct owl:sameAs bsbm:Product79796 .
+    ?localProduct rdfs:label ?label .
+    ?localProduct rdfs:comment ?comment .
+    ?localProduct bsbm:producer ?p .
+    ?p rdfs:label ?producer .
+    #?localProduct dc:publisher ?p . 
+    ?localProduct bsbm:productFeature ?localProductFeature1 .
+    ?localProductFeature1 owl:sameAs ?ProductFeature1 .
+    ?localProductFeature1 rdfs:label ?ProductFeatureLabel .
+    ?localProduct bsbm:productPropertyTextual1 ?propertyTextual1 .
+    ?localProduct bsbm:productPropertyTextual2 ?propertyTextual2 .
+    ?localProduct bsbm:productPropertyTextual3 ?propertyTextual3 .
+    ?localProduct bsbm:productPropertyNumeric1 ?propertyNumeric1 .
+    ?localProduct bsbm:productPropertyNumeric2 ?propertyNumeric2 .
+    OPTIONAL { ?localProduct bsbm:productPropertyTextual4 ?propertyTextual4 }
+    OPTIONAL { ?localProduct bsbm:productPropertyTextual5 ?propertyTextual5 }
+    OPTIONAL { ?localProduct bsbm:productPropertyNumeric4 ?propertyNumeric4 }
+}
+[main] INFO Summary - Took 324 ms to open the summary.
+[main] INFO Summary - Took 508 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the Jena SERVICE query…
+[main] INFO FedUP - Building the FedX SERVICE query…
+SELECT  ?label ?comment ?producer ?ProductFeatureLabel ?propertyTextual1 ?propertyTextual2 ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?propertyTextual5 ?propertyNumeric4
+WHERE
+  {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                      { ?localProductFeature1
+                                  <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+                        ?localProductFeature1
+                                  <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+                        ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+                        ?localProduct
+                                  <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+                        ?localProduct
+                                  <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+                        ?localProduct
+                                  <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79796> . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+                      }
+                    OPTIONAL
+                      {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                          }
+                      }
+                    OPTIONAL
+                      {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                          }
+                      }
+                    OPTIONAL
+                      {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                          }
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                      { ?localProductFeature1
+                                  <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+                        ?localProductFeature1
+                                  <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+                        ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+                        ?localProduct
+                                  <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+                        ?localProduct
+                                  <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+                        ?localProduct
+                                  <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79796> . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+                        ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+                      }
+                    OPTIONAL
+                      {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                          }
+                      }
+                    OPTIONAL
+                      {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                          }
+                      }
+                    OPTIONAL
+                      {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                          { ?localProduct
+                                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                          }
+                      }
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                  { ?localProductFeature1
+                              <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+                    ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+                    ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+                    ?localProductFeature1
+                              <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+                    ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+                    ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+                    ?localProduct
+                              <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+                    ?localProduct
+                              <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+                    ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+                    ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+                    ?localProduct
+                              <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79796> . 
+                    ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+                    ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+                  }
+                OPTIONAL
+                  {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                      }
+                  }
+                OPTIONAL
+                  {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                      }
+                  }
+                OPTIONAL
+                  {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                      { ?localProduct
+                                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                      }
+                  }
+              }
+          }
+        UNION
+          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+              { ?localProductFeature1
+                          <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+                ?localProduct
+                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+                ?localProduct
+                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+                ?localProductFeature1
+                          <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+                ?localProduct
+                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+                ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+                ?localProduct
+                          <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+                ?localProduct
+                          <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+                ?localProduct
+                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+                ?localProduct
+                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+                ?localProduct
+                          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79796> . 
+                ?localProduct
+                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+                ?localProduct
+                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+              }
+            OPTIONAL
+              {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                      { ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                  }
+              }
+            OPTIONAL
+              {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                      { ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                  }
+              }
+            OPTIONAL
+              {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                                  { ?localProduct
+                                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                      { ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                  }
+              }
+          }
+      }
+    UNION
+      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+          { ?localProductFeature1
+                      <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+            ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+            ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+            ?localProductFeature1
+                      <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+            ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+            ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+            ?localProduct
+                      <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+            ?localProduct
+                      <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+            ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+            ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+            ?localProduct
+                      <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product79796> . 
+            ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+            ?localProduct
+                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+          }
+        OPTIONAL
+          {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                      { ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                  { ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4}
+              }
+          }
+        OPTIONAL
+          {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                      { ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                  { ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5}
+              }
+          }
+        OPTIONAL
+          {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite55.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite84.fr/>
+                              { ?localProduct
+                                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+                          { ?localProduct
+                                      <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor73.fr/>
+                      { ?localProduct
+                                  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite74.fr/>
+                  { ?localProduct
+                              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4}
+              }
+          }
+      }
+  }
+
+Took 1563 to perform the source assignment.
+[main] INFO FedUP - Running the query using FedX…
+[main] INFO FedUP - Initializing FedX executor…
+Took 4396 ms to retrieve 45 mappings.
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "maced" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Karin's" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "rhino" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "cannonballs" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Amati" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "inflection" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "numerators" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "index" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "strontium" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "maced" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Karin's" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "numerators" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "index" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "rhino" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Amati" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "cannonballs" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "strontium" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "inflection" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "numerators" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "rhino" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "cannonballs" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "inflection" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "index" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "maced" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Amati" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Karin's" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "strontium" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "maced" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "index" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Karin's" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "numerators" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "rhino" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Amati" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "cannonballs" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "strontium" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "inflection" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "maced" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "numerators" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "index" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "rhino" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Amati" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "cannonballs" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "Karin's" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "strontium" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )
+( ?producer = "periphrasis's" ) ( ?propertyTextual1 = "bubbly's Kiowa disclaims Dallas's Terrell assert j" ) ( ?ProductFeatureLabel = "inflection" ) ( ?propertyTextual2 = "Helga pigpens ignorance Polynesian sprinklers halls" ) ( ?propertyTextual5 = "fig's nonetheless secretive discourteously" ) ( ?propertyNumeric1 = 1239 ) ( ?comment = "mountaintop's anytime unmentionables priors powerful smoulder's ineligible grommets Malians lewdest paleontologist deices felting reincarnation stumpiest sluice clipping pesetas documentaries hairdresser Meyer Northeast's preference supporter's aforethought relent Forrest's Mauryan's Carranza's sixpences inhaler's Burgess Estes's accumulation's felon's restrains Crookes Aeneas voyeur's shrilled lifespan nix allusion preciser Mulroney regret's bookends Mort's gambler's nonsmoking methinks cabin fricassee" ) ( ?propertyTextual3 = "superlatives jeweling cupsful ground's borderland's" ) ( ?propertyNumeric2 = 859 ) ( ?propertyTextual4 = "hydroplane appendage projectionist excuses services promenade's she'll" ) ( ?label = "format's" )

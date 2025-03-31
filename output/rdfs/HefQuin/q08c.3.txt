@@ -1,0 +1,74 @@
+{ "head": {
+    "vars": [ "title" , "text" , "reviewDate" , "reviewer" , "reviewerName" , "rating1" , "rating2" , "rating3" , "rating4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "title": { "type": "literal" , "xml:lang": "en" , "value": "threefold honoraria reconstitute" } ,
+        "text": { "type": "literal" , "xml:lang": "en" , "value": "joblessness's native's brotherhood correspondent's stead's dolly trophy's oxidation's Heston hummingbird's unambiguous book perking peseta's toiletry sandwich flycatcher Otto's wiper's cockroach's Felecia's metacarpus abhors Xe Capek Leopold Hoovers scarcity muskiness's" } ,
+        "reviewDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2007-04-30T00:00:00" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite1.fr/Person76" } ,
+        "reviewerName": { "type": "literal" , "value": "SAMANTHA LELA" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" } ,
+        "rating3": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" } ,
+        "rating4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      }
+    ]
+  }
+}
+Time: 0.222 sec
+overallQueryProcessingTime : 130
+planningTime : 9
+compilationTime : 4
+executionTime : 117
+queryPlanningStats : {
+  overallQueryPlanningTime : 9
+  sourcePlanningTime : 5
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 4
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@4cc80ed
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@4cc80ed
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@bebb0101
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@10650953
+          numberOfInvocations : 1
+          overallExecTime : 113
+          requestAsString : { { ?review   <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ .
+    ?localProductXYZ
+              <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product58958> .
+    ?review   <http://purl.org/dc/elements/1.1/title>  ?title ;
+              <http://purl.org/stuff/rev#text>  ?text ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate ;
+              <http://purl.org/stuff/rev#reviewer>  ?reviewer .
+    ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4 }
+  }
+  FILTER langMatches(lang(?text), "en")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite1.fr/)
+          requestExecTime : 0
+          responseProcTime : 113
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

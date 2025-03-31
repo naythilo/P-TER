@@ -1,0 +1,25 @@
+PREFIX rev: <http://purl.org/stuff/rev#>
+
+SELECT ?x WHERE { 
+    # const <http://www.ratingsite8.fr/Review1928>
+    <http://www.ratingsite8.fr/Review1928> rev:reviewer ?x 
+}
+[main] INFO Summary - Took 260 ms to open the summary.
+[main] INFO Summary - Took 360 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the Jena SERVICE query…
+[main] INFO FedUP - Building the FedX SERVICE query…
+SELECT  ?x
+WHERE
+  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/>
+      { <http://www.ratingsite8.fr/Review1928>
+                  <http://purl.org/stuff/rev#reviewer>  ?x}
+  }
+
+Took 709 to perform the source assignment.
+[main] INFO FedUP - Running the query using Jena…
+Took 15 ms to retrieve 1 mappings.
+( ?x = <http://www.ratingsite8.fr/Person0> )

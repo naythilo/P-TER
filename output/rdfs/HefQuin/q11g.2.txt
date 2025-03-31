@@ -1,0 +1,88 @@
+{ "head": {
+    "vars": [ "property" , "hasValue" , "isValueOf" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "5824.55" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-07-28T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "20" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/publishDate" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-04-04T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "hasValue": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom" } ,
+        "hasValue": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2008-02-29T00:00:00" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage" } ,
+        "hasValue": { "type": "literal" , "value": "demagogs Lelia consist throwback's agrarian's" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor8.fr/Vendor0" }
+      } ,
+      { 
+        "property": { "type": "uri" , "value": "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product" } ,
+        "hasValue": { "type": "uri" , "value": "http://www.vendor8.fr/Product109205" }
+      }
+    ]
+  }
+}
+Time: 0.221 sec
+overallQueryProcessingTime : 135
+planningTime : 8
+compilationTime : 4
+executionTime : 123
+queryPlanningStats : {
+  overallQueryPlanningTime : 8
+  sourcePlanningTime : 5
+  logicalOptimizationTime : 0
+  physicalOptimizationTime : 3
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@842cbd9a
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNullaryRootImpl@842cbd9a
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$1@3e5b3c76
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 1
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6bb75258
+          numberOfInvocations : 1
+          overallExecTime : 120
+          requestAsString : { <http://www.vendor8.fr/Offer992>
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?product
+    { <http://www.vendor8.fr/Offer992>
+                ?property  ?hasValue
+    }
+  UNION
+    { ?isValueOf  ?property  <http://www.vendor8.fr/Offer992> }
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor8.fr/)
+          requestExecTime : 1
+          responseProcTime : 119
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+    ]
+  }
+}

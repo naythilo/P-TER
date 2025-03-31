@@ -1,0 +1,239 @@
+{ "head": {
+    "vars": [ "localProduct" , "label" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite21.fr/Product145636" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite46.fr/Product145636" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite57.fr/Product145636" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite85.fr/Product145636" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite14.fr/Product109121" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite65.fr/Product145636" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite99.fr/Product109121" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.vendor7.fr/Product109121" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite25.fr/Product109121" } ,
+        "label": { "type": "literal" , "value": "protestants" }
+      }
+    ]
+  }
+}
+Time: 0.313 sec
+overallQueryProcessingTime : 232
+planningTime : 9
+compilationTime : 4
+executionTime : 219
+queryPlanningStats : {
+  overallQueryPlanningTime : 9
+  sourcePlanningTime : 4
+  logicalOptimizationTime : 2
+  physicalOptimizationTime : 3
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@be58d6ca
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@be58d6ca
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@42f5726
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 10
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@6d0b5baf
+          xthInputConsumed : [ {true,true,true,true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1} ]
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@631e06ab
+          numberOfInvocations : 1
+          overallExecTime : 210
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite25.fr/)
+          requestExecTime : 0
+          responseProcTime : 210
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2e029d61
+          numberOfInvocations : 1
+          overallExecTime : 210
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor7.fr/)
+          requestExecTime : 0
+          responseProcTime : 210
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@482d776b
+          numberOfInvocations : 1
+          overallExecTime : 210
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite99.fr/)
+          requestExecTime : 0
+          responseProcTime : 210
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4052274f
+          numberOfInvocations : 1
+          overallExecTime : 210
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite65.fr/)
+          requestExecTime : 0
+          responseProcTime : 210
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@132ddbab
+          numberOfInvocations : 1
+          overallExecTime : 210
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/)
+          requestExecTime : 0
+          responseProcTime : 210
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@297ea53a
+          numberOfInvocations : 1
+          overallExecTime : 211
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite85.fr/)
+          requestExecTime : 0
+          responseProcTime : 211
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@acb0951
+          numberOfInvocations : 1
+          overallExecTime : 211
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/)
+          requestExecTime : 0
+          responseProcTime : 211
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5bf22f18
+          numberOfInvocations : 1
+          overallExecTime : 211
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite46.fr/)
+          requestExecTime : 0
+          responseProcTime : 211
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@267f474e
+          numberOfInvocations : 1
+          overallExecTime : 211
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "protestants")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite21.fr/)
+          requestExecTime : 0
+          responseProcTime : 211
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

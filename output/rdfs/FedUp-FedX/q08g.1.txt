@@ -1,0 +1,818 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rev: <http://purl.org/stuff/rev#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?title ?text ?reviewDate ?reviewer ?reviewerName ?rating1 ?rating2 ?rating3 ?rating4  WHERE { 
+    # const bsbm:Product70858
+    ?review bsbm:reviewFor ?localProductXYZ .
+    ?localProductXYZ owl:sameAs bsbm:Product70858 .
+    ?review dc:title ?title .
+    ?review rev:text ?text .
+    FILTER(langMatches( lang(?text), "en" ))
+    ?review bsbm:reviewDate ?reviewDate .
+    ?review rev:reviewer ?reviewer .
+    ?reviewer foaf:name ?reviewerName .
+    OPTIONAL { ?review bsbm:rating1 ?rating1 . }
+    OPTIONAL { ?review bsbm:rating2 ?rating2 . }
+    OPTIONAL { ?review bsbm:rating3 ?rating3 . }
+    OPTIONAL { ?review bsbm:rating4 ?rating4 . }
+}
+ORDER BY ?title ?text ?reviewDate ?reviewer ?reviewerName ?rating1 ?rating2 ?rating3 ?rating4
+LIMIT 20
+
+[main] INFO Summary - Took 279 ms to open the summary.
+[main] INFO Summary - Took 404 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the Jena SERVICE query…
+[main] INFO FedUP - Building the FedX SERVICE query…
+SELECT  ?title ?text ?reviewDate ?reviewer ?reviewerName ?rating1 ?rating2 ?rating3 ?rating4
+WHERE
+  {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                          { ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+                            ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName . 
+                            ?review  <http://purl.org/stuff/rev#text>  ?text . 
+                            ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate . 
+                            ?localProductXYZ
+                                      <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product70858> . 
+                            ?review  <http://purl.org/dc/elements/1.1/title>  ?title . 
+                            ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                              }
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                              }
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                              }
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                              }
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                          { ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+                            ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName . 
+                            ?review  <http://purl.org/stuff/rev#text>  ?text . 
+                            ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate . 
+                            ?localProductXYZ
+                                      <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product70858> . 
+                            ?review  <http://purl.org/dc/elements/1.1/title>  ?title . 
+                            ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                              }
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                              }
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                              }
+                          }
+                        OPTIONAL
+                          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                              }
+                                            UNION
+                                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                              }
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                              }
+                          }
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                      { ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+                        ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName . 
+                        ?review  <http://purl.org/stuff/rev#text>  ?text . 
+                        ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate . 
+                        ?localProductXYZ
+                                  <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product70858> . 
+                        ?review  <http://purl.org/dc/elements/1.1/title>  ?title . 
+                        ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ
+                      }
+                    OPTIONAL
+                      {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                          }
+                      }
+                    OPTIONAL
+                      {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                          }
+                      }
+                    OPTIONAL
+                      {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                          }
+                      }
+                    OPTIONAL
+                      {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                          }
+                                        UNION
+                                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                          }
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                          }
+                      }
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                  { ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+                    ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName . 
+                    ?review  <http://purl.org/stuff/rev#text>  ?text . 
+                    ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate . 
+                    ?localProductXYZ
+                              <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product70858> . 
+                    ?review  <http://purl.org/dc/elements/1.1/title>  ?title . 
+                    ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ
+                  }
+                OPTIONAL
+                  {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                      }
+                  }
+                OPTIONAL
+                  {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                      }
+                  }
+                OPTIONAL
+                  {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                      }
+                  }
+                OPTIONAL
+                  {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                      }
+                                    UNION
+                                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                      }
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                      }
+                  }
+              }
+          }
+        UNION
+          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+              { ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+                ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName . 
+                ?review  <http://purl.org/stuff/rev#text>  ?text . 
+                ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate . 
+                ?localProductXYZ
+                          <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product70858> . 
+                ?review  <http://purl.org/dc/elements/1.1/title>  ?title . 
+                ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ
+              }
+            OPTIONAL
+              {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                  }
+              }
+            OPTIONAL
+              {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                  }
+              }
+            OPTIONAL
+              {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                  }
+              }
+            OPTIONAL
+              {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                  }
+                                UNION
+                                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                                  }
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                  }
+              }
+          }
+      }
+    UNION
+      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+          { ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+            ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName . 
+            ?review  <http://purl.org/stuff/rev#text>  ?text . 
+            ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate . 
+            ?localProductXYZ
+                      <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product70858> . 
+            ?review  <http://purl.org/dc/elements/1.1/title>  ?title . 
+            ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ
+          }
+        OPTIONAL
+          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1}
+              }
+          }
+        OPTIONAL
+          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2}
+              }
+          }
+        OPTIONAL
+          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3}
+              }
+          }
+        OPTIONAL
+          {   {   {   {   {   { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite2.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                              }
+                            UNION
+                              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite39.fr/>
+                                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                              }
+                          }
+                        UNION
+                          { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite44.fr/>
+                              { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                          }
+                      }
+                    UNION
+                      { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite77.fr/>
+                          { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                      }
+                  }
+                UNION
+                  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite90.fr/>
+                      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+                  }
+              }
+            UNION
+              { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4}
+              }
+          }
+      }
+    FILTER langMatches(lang(?text), "en")
+  }
+ORDER BY ?title ?text ?reviewDate ?reviewer ?reviewerName ?rating1 ?rating2 ?rating3 ?rating4
+LIMIT   20
+
+Took 1895 to perform the source assignment.
+[main] INFO FedUP - Running the query using FedX…
+[main] INFO FedUP - Initializing FedX executor…
+Took 624 ms to retrieve 4 mappings.
+( ?text = "bedpan's snipers hiccough's distortions disappears arbitrariness's wearable friskiness's" ) ( ?rating1 = 6 ) ( ?reviewDate = "2007-04-22T00:00:00"^^xsd:dateTime ) ( ?rating2 = 8 ) ( ?rating3 = 4 ) ( ?rating4 = 5 ) ( ?reviewer = <http://www.ratingsite39.fr/Person99> ) ( ?title = "cinematography's benefitted" ) ( ?reviewerName = "OLGA BUFORD" )
+( ?text = "newlywed babying uncontrollable statement's randomizes moisturizes Taylor Angelo's withers's stinginess's hides trailblazer schooner poising crossbeam binnacle's innards revellers washout's policy's unkinder flambeing ocular's click's cowpuncher's conservator rummage's Kirk scabbard travelogs roughness's grassed Swissair prostates deformity magazine Grail igloo's marry proprietor LibreOffice's sequestration's offset's linesman's inbred physician hyperbolae resuscitator's gremlin admissibility's handcrafted fibber cooperation's spluttered recalling palpitating advisory involving foraged participants Wonder's unfriendliness stirrup Cerf despotic benefactress moralistic featherweight's foyer uncoordinated accuracy's bleaker finals splice imaginary overworks jousting Henri's frankest ramify brooder nutshell's sweepers cervical apolitical nonpayment willow's ejaculated thighbone Portsmouth's riverbeds reproofs Justice oinked scrimp forge loudmouths Renaissances logjam rating's Karen gallons Belize auctions Capella's battlement thistles carmine Akron Halon Donne vacancy processional's undefined bloodthirstier unspeakable catastrophically beetle Ester supplest Grammy's hypochondriacs cuticles slackly supremacy Valkyries yeomen Wolsey's collaborate lithography unchallenged Kubrick rebuttals mulched communicated robust jugged bareness Jenifer's keyboarders classicism seeps illiterate pretentious fetish's roses deployed equivocation potboiler's Mohamed Anglia" ) ( ?rating1 = 9 ) ( ?reviewDate = "2007-11-21T00:00:00"^^xsd:dateTime ) ( ?rating2 = 9 ) ( ?rating3 = 5 ) ( ?rating4 = 5 ) ( ?reviewer = <http://www.ratingsite90.fr/Person423> ) ( ?title = "intensifies compendium's thunderclap's impossibly" ) ( ?reviewerName = "BONITA" )
+( ?text = "riding's flappers rashest keen's supplied Methuselah's retaking sandlot salmon's wallop centennial ordinariness's Clovis's cuff quadrangular mallows eradication's ape's viper's implosions supernaturals altitudes gangly quartet attic benignly Bangui hep mutton's botching regimental boondoggles pommeling hygrometer hones cheap constrict clinging Marguerite Punch wagered Katy's scrutiny patienter Paraclete's bistro circularized belligerent forward burp revolutionize" ) ( ?reviewDate = "2007-06-16T00:00:00"^^xsd:dateTime ) ( ?rating2 = 6 ) ( ?rating4 = 5 ) ( ?reviewer = <http://www.ratingsite44.fr/Person65> ) ( ?title = "wiretaps rundowns dodders" ) ( ?reviewerName = "GLADYS" )
+( ?text = "Doberman belayed angularities cogitation's farmer's decimated" ) ( ?rating1 = 2 ) ( ?reviewDate = "2007-05-14T00:00:00"^^xsd:dateTime ) ( ?rating2 = 2 ) ( ?rating3 = 4 ) ( ?reviewer = <http://www.ratingsite2.fr/Person123> ) ( ?title = "Mariano's fur's advice's" ) ( ?reviewerName = "DELIA" )

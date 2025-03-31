@@ -1,0 +1,125 @@
+[main] INFO Summary - Took 77 ms to open the summary.
+[main] INFO Summary - Took 376 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?localProductXYZ ?price ?offer ?deliveryDays ?date ?vendor)
+  (filter (exprlist (<= ?deliveryDays 3) (> ?date "2008-04-10T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>))
+    (union
+      (service silent 
+        <http://localhost:8890/sparql?default-graph-uri=http://www.vendor98.fr/>
+        (sequence
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price> ?price)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo> ?date)
+          (triple ?vendor <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country> <http://downlode.org/rdf/iso-3166/countries#US>)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays> ?deliveryDays)
+          (triple ?localProductXYZ <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product57982>)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor> ?vendor)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product> ?localProductXYZ)))
+      (service silent 
+        <http://localhost:8890/sparql?default-graph-uri=http://www.vendor6.fr/>
+        (sequence
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price> ?price)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo> ?date)
+          (triple ?vendor <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country> <http://downlode.org/rdf/iso-3166/countries#US>)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays> ?deliveryDays)
+          (triple ?localProductXYZ <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product57982>)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor> ?vendor)
+          (triple ?offer <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product> ?localProductXYZ))))))
+
+Time: 1.216 sec
+overallQueryProcessingTime : 1185
+planningTime : 1134
+compilationTime : 4
+executionTime : 47
+queryPlanningStats : {
+  overallQueryPlanningTime : 1133
+  sourcePlanningTime : 1125
+  logicalOptimizationTime : 4
+  physicalOptimizationTime : 4
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithUnaryRootImpl@7b29b39
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@8bafef32
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@8bafef32
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 3
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@7f8633ae
+          xthInputConsumed : [ {true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {0,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {0,1} ]
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@68c87fc3
+          numberOfInvocations : 1
+          overallExecTime : 41
+          requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#US> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays>  ?deliveryDays . 
+  ?localProductXYZ
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product57982> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?localProductXYZ
+  FILTER ( ?deliveryDays <= 3 )
+  FILTER ( ?date > "2008-04-10T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor6.fr/)
+          requestExecTime : 0
+          responseProcTime : 41
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@58496dc
+          numberOfInvocations : 1
+          overallExecTime : 37
+          requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#US> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays>  ?deliveryDays . 
+  ?localProductXYZ
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product57982> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?localProductXYZ
+  FILTER ( ?deliveryDays <= 3 )
+  FILTER ( ?date > "2008-04-10T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor98.fr/)
+          requestExecTime : 0
+          responseProcTime : 37
+          solMapsRetrieved : 0
+          numberOfOutputMappingsProduced : 0
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "offer" , "price" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "offer": { "type": "uri" , "value": "http://www.vendor6.fr/Offer1900" } ,
+        "price": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#double" , "value": "2597.4" }
+      }
+    ]
+  }
+}

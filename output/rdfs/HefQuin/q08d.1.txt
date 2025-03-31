@@ -1,0 +1,124 @@
+{ "head": {
+    "vars": [ "title" , "text" , "reviewDate" , "reviewer" , "reviewerName" , "rating1" , "rating2" , "rating3" , "rating4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "title": { "type": "literal" , "xml:lang": "en" , "value": "creativity's arbitrates cartooned teazels queenly Wehrmacht corporal's villainy's" } ,
+        "text": { "type": "literal" , "xml:lang": "en" , "value": "lynchpin's relentlessly Eliseo's Hobart egotistical briquets Cathy's tsarina betted complementing devilling Freudian tracts rick's Goldie's Gauls heartbeat's Comintern bowlder seesaws precipitous seabirds retrieving biting consolation Garcia's declassifies soles lasagnes expressway's officiousness's wagoner applejack's duration's preterite minutia overbears record blasphemers marigold's Kristine's moat date's peters Mexico establish fishhook's millipede's fount's pollutants Pisistratus's subtotaled immutability's maggot Quechua intellectualism opt acreage's egotistical undercharging miserably referendums tipper's idiot Wiley's neighborliness's Toyoda's incrusting Marjorie McMahon smuggest suing purred anonymous lifeguards industrialization motorbiking principled Winchell's rumpus's flimsier Alhambra demarcated paddled manicured affectations belle's cardinal's Huang's covey's bagels pippin's salami's skated truthfully" } ,
+        "reviewDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2007-05-24T00:00:00" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite24.fr/Person370" } ,
+        "reviewerName": { "type": "literal" , "value": "KENT" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" } ,
+        "rating3": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" } ,
+        "rating4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "title": { "type": "literal" , "xml:lang": "kr" , "value": "Nazareth's Elias's" } ,
+        "text": { "type": "literal" , "xml:lang": "en" , "value": "inconsolable shrove Livingston intuition slenderize masturbated rustic's afterlives" } ,
+        "reviewDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2007-12-10T00:00:00" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite5.fr/Person367" } ,
+        "reviewerName": { "type": "literal" , "value": "STEVE" } ,
+        "rating4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      }
+    ]
+  }
+}
+Time: 0.255 sec
+overallQueryProcessingTime : 152
+planningTime : 9
+compilationTime : 3
+executionTime : 140
+queryPlanningStats : {
+  overallQueryPlanningTime : 9
+  sourcePlanningTime : 4
+  logicalOptimizationTime : 1
+  physicalOptimizationTime : 4
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@de4eb1b0
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@de4eb1b0
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@de4eb1b0
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 3
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@7c351808
+          xthInputConsumed : [ {true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1} ]
+          numberOfOutputMappingsProduced : 2
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@180e6ac4
+          numberOfInvocations : 1
+          overallExecTime : 131
+          requestAsString : { { ?review   <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ .
+    ?localProductXYZ
+              <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product147300> .
+    ?review   <http://purl.org/dc/elements/1.1/title>  ?title ;
+              <http://purl.org/stuff/rev#text>  ?text ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate ;
+              <http://purl.org/stuff/rev#reviewer>  ?reviewer .
+    ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4 }
+  }
+  FILTER langMatches(lang(?text), "en")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite5.fr/)
+          requestExecTime : 0
+          responseProcTime : 131
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@68759011
+          numberOfInvocations : 1
+          overallExecTime : 131
+          requestAsString : { { ?review   <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?localProductXYZ .
+    ?localProductXYZ
+              <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product147300> .
+    ?review   <http://purl.org/dc/elements/1.1/title>  ?title ;
+              <http://purl.org/stuff/rev#text>  ?text ;
+              <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>  ?reviewDate ;
+              <http://purl.org/stuff/rev#reviewer>  ?reviewer .
+    ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?reviewerName
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>  ?rating3 }
+    OPTIONAL
+      { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>  ?rating4 }
+  }
+  FILTER langMatches(lang(?text), "en")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite24.fr/)
+          requestExecTime : 0
+          responseProcTime : 131
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

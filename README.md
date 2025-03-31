@@ -73,3 +73,9 @@ si le snakemake ne run aucune query, supprimez le fichier output
   -Aller dans /workspaces/HeFQUIN-FRAW
   -./bin/hefquin --federationDescription fedshop200.ttl --confDescr DefaultEngineWithFedupConfForFedshop200.ttl --file path/to/query.sparql --time --results=JSON --printQueryProcStats
 
+
+
+
+curl -X POST "http://localhost:8890/sparql" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     --data-urlencode "query@/workspaces/P-TER/queries/q12fex.sparql"

@@ -7,8 +7,8 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT DISTINCT * WHERE { 
-    VALUES ( ?bgp1 ) { ( <http://localhost:8890/sparql?default-graph-uri=http://www.vendor0.fr/> ) }
-    SERVICE ?bgp1 {
+
+    SERVICE <http://localhost:8890/sparql?default-graph-uri=http://www.vendor0.fr/> {
         # const <http://www.vendor0.fr/Offer1179>
         <http://www.vendor0.fr/Offer1179> bsbm:product ?productURI .
         ?productURI owl:sameAs ?ProductXYZ . 

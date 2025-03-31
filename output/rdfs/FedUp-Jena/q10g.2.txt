@@ -1,0 +1,51 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?offer ?price WHERE {
+    # const bsbm:Product26425
+    ?offer bsbm:product ?localProductXYZ .
+    ?localProductXYZ owl:sameAs bsbm:Product26425 .
+    ?offer bsbm:vendor ?vendor .
+    #?offer dc:publisher ?vendor .
+    ?vendor bsbm:country <http://downlode.org/rdf/iso-3166/countries#US> .
+    ?offer bsbm:deliveryDays ?deliveryDays .
+    FILTER(?deliveryDays <= 3)
+    ?offer bsbm:price ?price .
+    ?offer bsbm:validTo ?date .
+    # const "2008-06-05T00:00:00"^^xsd:dateTime < ?date
+    FILTER (?date > "2008-06-05T00:00:00"^^xsd:dateTime )
+}
+ORDER BY ?offer ?price
+LIMIT 10
+[main] INFO Summary - Took 266 ms to open the summary.
+[main] INFO Summary - Took 362 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the Jena SERVICE query…
+[main] INFO FedUP - Building the FedX SERVICE query…
+SELECT DISTINCT  ?offer ?price
+WHERE
+  { SERVICE SILENT <http://localhost:8890/sparql?default-graph-uri=http://www.vendor0.fr/>
+      { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+        ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+        ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#US> . 
+        ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays>  ?deliveryDays . 
+        ?localProductXYZ
+                  <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product26425> . 
+        ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+        ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?localProductXYZ
+      }
+    FILTER ( ?deliveryDays <= 3 )
+    FILTER ( ?date > "2008-06-05T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+  }
+ORDER BY ?offer ?price
+LIMIT   10
+
+Took 1046 to perform the source assignment.
+[main] INFO FedUP - Running the query using Jena…
+Took 24 ms to retrieve 1 mappings.
+( ?price = "4245.49"^^xsd:double ) ( ?offer = <http://www.vendor0.fr/Offer2457> )

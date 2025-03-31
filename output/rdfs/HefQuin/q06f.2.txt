@@ -1,0 +1,195 @@
+{ "head": {
+    "vars": [ "localProduct" , "label" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite81.fr/Product108924" } ,
+        "label": { "type": "literal" , "value": "imaginable" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite99.fr/Product108924" } ,
+        "label": { "type": "literal" , "value": "imaginable" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite5.fr/Product108924" } ,
+        "label": { "type": "literal" , "value": "imaginable" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.vendor88.fr/Product167858" } ,
+        "label": { "type": "literal" , "value": "imaginable" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite14.fr/Product108924" } ,
+        "label": { "type": "literal" , "value": "imaginable" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite68.fr/Product108924" } ,
+        "label": { "type": "literal" , "value": "imaginable" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite78.fr/Product108924" } ,
+        "label": { "type": "literal" , "value": "imaginable" }
+      }
+    ]
+  }
+}
+Time: 0.410 sec
+overallQueryProcessingTime : 269
+planningTime : 15
+compilationTime : 4
+executionTime : 250
+queryPlanningStats : {
+  overallQueryPlanningTime : 15
+  sourcePlanningTime : 8
+  logicalOptimizationTime : 3
+  physicalOptimizationTime : 4
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@d7647cac
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@d7647cac
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@6d13fd40
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 8
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@7a48e6e2
+          xthInputConsumed : [ {true,true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1,1,1,1,1,1} ]
+          numberOfOutputMappingsProduced : 7
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@b40bb6e
+          numberOfInvocations : 1
+          overallExecTime : 239
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "imaginable")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite78.fr/)
+          requestExecTime : 0
+          responseProcTime : 239
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@346a361
+          numberOfInvocations : 1
+          overallExecTime : 209
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "imaginable")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor88.fr/)
+          requestExecTime : 1
+          responseProcTime : 208
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@107ed6fc
+          numberOfInvocations : 1
+          overallExecTime : 229
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "imaginable")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite68.fr/)
+          requestExecTime : 1
+          responseProcTime : 228
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1643d68f
+          numberOfInvocations : 1
+          overallExecTime : 210
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "imaginable")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite5.fr/)
+          requestExecTime : 0
+          responseProcTime : 210
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@186978a6
+          numberOfInvocations : 1
+          overallExecTime : 243
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "imaginable")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite14.fr/)
+          requestExecTime : 0
+          responseProcTime : 243
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2e029d61
+          numberOfInvocations : 1
+          overallExecTime : 221
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "imaginable")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite99.fr/)
+          requestExecTime : 0
+          responseProcTime : 221
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@482d776b
+          numberOfInvocations : 1
+          overallExecTime : 226
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "imaginable")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite81.fr/)
+          requestExecTime : 0
+          responseProcTime : 226
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

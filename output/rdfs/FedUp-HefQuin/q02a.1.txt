@@ -1,0 +1,2216 @@
+[main] INFO Summary - Took 92 ms to open the summary.
+[main] INFO Summary - Took 516 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?producer ?localProduct ?p ?propertyTextual1 ?ProductFeatureLabel ?propertyTextual2 ?localProductFeature1 ?propertyTextual5 ?propertyNumeric4 ?comment ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?ProductFeature1 ?label)
+  (union
+    (union
+      (union
+        (union
+          (union
+            (leftjoin
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                    (sequence
+                      (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                      (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                      (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                      (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328>)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))
+            (leftjoin
+              (leftjoin
+                (leftjoin
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                    (sequence
+                      (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                      (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                      (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                      (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                      (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328>)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+                  (union
+                    (union
+                      (union
+                        (union
+                          (union
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                            (service silent 
+                              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+                (union
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+          (leftjoin
+            (leftjoin
+              (leftjoin
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                  (sequence
+                    (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                    (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                    (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                    (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                    (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                    (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328>)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+                (union
+                  (union
+                    (union
+                      (union
+                        (union
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                          (service silent 
+                            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+            (union
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+        (leftjoin
+          (leftjoin
+            (leftjoin
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                (sequence
+                  (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                  (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                  (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                  (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                  (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                  (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328>)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                        (service silent 
+                          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+            (union
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+          (union
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+      (leftjoin
+        (leftjoin
+          (leftjoin
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+              (sequence
+                (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328>)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+            (union
+              (union
+                (union
+                  (union
+                    (union
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                      (service silent 
+                        <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                        (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+          (union
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+        (union
+          (union
+            (union
+              (union
+                (union
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+    (leftjoin
+      (leftjoin
+        (leftjoin
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+            (sequence
+              (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+              (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+              (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+              (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328>)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+          (union
+            (union
+              (union
+                (union
+                  (union
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                    (service silent 
+                      <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                      (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+        (union
+          (union
+            (union
+              (union
+                (union
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+                  (service silent 
+                    <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                    (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+      (union
+        (union
+          (union
+            (union
+              (union
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/>
+          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))))
+
+Time: 7.893 sec
+overallQueryProcessingTime : 7821
+planningTime : 2223
+compilationTime : 8
+executionTime : 5590
+queryPlanningStats : {
+  overallQueryPlanningTime : 2222
+  sourcePlanningTime : 2211
+  logicalOptimizationTime : 4
+  physicalOptimizationTime : 7
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@fb077485
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@fb077485
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@fb077485
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 46
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@301aa982
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {9,9,9,9,9,9} ]
+          numberOfOutputMappingsProduced : 54
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@5fc930f0
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 471
+          numberOfLeftInputMappingsProcessed : 23548
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 16
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@3701e6e4
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 541
+          numberOfLeftInputMappingsProcessed : 27021
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 107
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@c6634d
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 473
+          numberOfLeftInputMappingsProcessed : 23643
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 104
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@65f58c6e
+          numberOfInvocations : 1
+          overallExecTime : 5514
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/)
+          requestExecTime : 0
+          responseProcTime : 5514
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@6401d0a0
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 471
+          numberOfLeftInputMappingsProcessed : 23548
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 54
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4ce14f05
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 541
+          numberOfLeftInputMappingsProcessed : 27021
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@71dfcf21
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 473
+          numberOfLeftInputMappingsProcessed : 23643
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@b965857
+          numberOfInvocations : 1
+          overallExecTime : 5435
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/)
+          requestExecTime : 0
+          responseProcTime : 5435
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@61f80d55
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 471
+          numberOfLeftInputMappingsProcessed : 23548
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 53
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@27a7ef08
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 541
+          numberOfLeftInputMappingsProcessed : 27021
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 5
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@280e8a1a
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 473
+          numberOfLeftInputMappingsProcessed : 23643
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 108
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@11e33bac
+          numberOfInvocations : 1
+          overallExecTime : 5510
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/)
+          requestExecTime : 0
+          responseProcTime : 5510
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@30501e60
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 471
+          numberOfLeftInputMappingsProcessed : 23548
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 53
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@289778cd
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 541
+          numberOfLeftInputMappingsProcessed : 27021
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 100
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7495699f
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 473
+          numberOfLeftInputMappingsProcessed : 23643
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7c2312fa
+          numberOfInvocations : 1
+          overallExecTime : 5428
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/)
+          requestExecTime : 0
+          responseProcTime : 5428
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4cb0a000
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 471
+          numberOfLeftInputMappingsProcessed : 23548
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 53
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@5ff2e84b
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 541
+          numberOfLeftInputMappingsProcessed : 27021
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 101
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@74abbb
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 473
+          numberOfLeftInputMappingsProcessed : 23643
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@64a4dd8d
+          numberOfInvocations : 1
+          overallExecTime : 5428
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/)
+          requestExecTime : 0
+          responseProcTime : 5428
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@2dddc1b9
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 471
+          numberOfLeftInputMappingsProcessed : 23548
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 53
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@65a5d4f9
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 541
+          numberOfLeftInputMappingsProcessed : 27021
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 2
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@40298285
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 473
+          numberOfLeftInputMappingsProcessed : 23643
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@22367b8
+          numberOfInvocations : 1
+          overallExecTime : 5313
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product89328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/)
+          requestExecTime : 0
+          responseProcTime : 5313
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@41b0ae4c
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {82,113,68,54,60,98} ]
+          numberOfMappingsFromXthInputProcessed : [ {4078,5619,3399,2671,2999,4877} ]
+          numberOfOutputMappingsProduced : 23643
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@af9a89f
+          numberOfInvocations : 1
+          overallExecTime : 1134
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/)
+          requestExecTime : 1
+          responseProcTime : 1133
+          solMapsRetrieved : 4877
+          numberOfOutputMappingsProduced : 4877
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6482eef
+          numberOfInvocations : 1
+          overallExecTime : 1283
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/)
+          requestExecTime : 0
+          responseProcTime : 1283
+          solMapsRetrieved : 2999
+          numberOfOutputMappingsProduced : 2999
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1fcf9739
+          numberOfInvocations : 1
+          overallExecTime : 936
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/)
+          requestExecTime : 1
+          responseProcTime : 935
+          solMapsRetrieved : 2671
+          numberOfOutputMappingsProduced : 2671
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5b498842
+          numberOfInvocations : 1
+          overallExecTime : 1019
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/)
+          requestExecTime : 1
+          responseProcTime : 1018
+          solMapsRetrieved : 3399
+          numberOfOutputMappingsProduced : 3399
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1cb37ee4
+          numberOfInvocations : 1
+          overallExecTime : 1130
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/)
+          requestExecTime : 1
+          responseProcTime : 1129
+          solMapsRetrieved : 5619
+          numberOfOutputMappingsProduced : 5619
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5bcb04cb
+          numberOfInvocations : 1
+          overallExecTime : 1039
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/)
+          requestExecTime : 1
+          responseProcTime : 1038
+          solMapsRetrieved : 4078
+          numberOfOutputMappingsProduced : 4078
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@385e36d4
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {94,130,77,61,69,112} ]
+          numberOfMappingsFromXthInputProcessed : [ {4658,6476,3848,3042,3402,5595} ]
+          numberOfOutputMappingsProduced : 27021
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2fc2a205
+          numberOfInvocations : 1
+          overallExecTime : 1069
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/)
+          requestExecTime : 1
+          responseProcTime : 1068
+          solMapsRetrieved : 5595
+          numberOfOutputMappingsProduced : 5595
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2881ad47
+          numberOfInvocations : 1
+          overallExecTime : 900
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/)
+          requestExecTime : 1
+          responseProcTime : 899
+          solMapsRetrieved : 3402
+          numberOfOutputMappingsProduced : 3402
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2bef09c0
+          numberOfInvocations : 1
+          overallExecTime : 480
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/)
+          requestExecTime : 1
+          responseProcTime : 479
+          solMapsRetrieved : 3042
+          numberOfOutputMappingsProduced : 3042
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@62ce72ff
+          numberOfInvocations : 1
+          overallExecTime : 526
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/)
+          requestExecTime : 1
+          responseProcTime : 525
+          solMapsRetrieved : 3848
+          numberOfOutputMappingsProduced : 3848
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@58a63629
+          numberOfInvocations : 1
+          overallExecTime : 1113
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/)
+          requestExecTime : 2
+          responseProcTime : 1111
+          solMapsRetrieved : 6476
+          numberOfOutputMappingsProduced : 6476
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7de843ef
+          numberOfInvocations : 1
+          overallExecTime : 555
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/)
+          requestExecTime : 1
+          responseProcTime : 554
+          solMapsRetrieved : 4658
+          numberOfOutputMappingsProduced : 4658
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@2e1af49b
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {82,114,67,54,59,98} ]
+          numberOfMappingsFromXthInputProcessed : [ {4061,5697,3350,2651,2929,4860} ]
+          numberOfOutputMappingsProduced : 23548
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3fd2322d
+          numberOfInvocations : 1
+          overallExecTime : 801
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite50.fr/)
+          requestExecTime : 1
+          responseProcTime : 800
+          solMapsRetrieved : 4860
+          numberOfOutputMappingsProduced : 4860
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@56ac5c80
+          numberOfInvocations : 1
+          overallExecTime : 503
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite9.fr/)
+          requestExecTime : 1
+          responseProcTime : 502
+          solMapsRetrieved : 2929
+          numberOfOutputMappingsProduced : 2929
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@69e49a81
+          numberOfInvocations : 1
+          overallExecTime : 425
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite17.fr/)
+          requestExecTime : 2
+          responseProcTime : 423
+          solMapsRetrieved : 2651
+          numberOfOutputMappingsProduced : 2651
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1023150a
+          numberOfInvocations : 1
+          overallExecTime : 474
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite19.fr/)
+          requestExecTime : 1
+          responseProcTime : 473
+          solMapsRetrieved : 3350
+          numberOfOutputMappingsProduced : 3350
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3ece1e79
+          numberOfInvocations : 1
+          overallExecTime : 706
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite57.fr/)
+          requestExecTime : 1
+          responseProcTime : 705
+          solMapsRetrieved : 5697
+          numberOfOutputMappingsProduced : 5697
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@ab20d7c
+          numberOfInvocations : 1
+          overallExecTime : 597
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/)
+          requestExecTime : 1
+          responseProcTime : 596
+          solMapsRetrieved : 4061
+          numberOfOutputMappingsProduced : 4061
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "label" , "comment" , "producer" , "ProductFeatureLabel" , "propertyTextual1" , "propertyTextual2" , "propertyTextual3" , "propertyNumeric1" , "propertyNumeric2" , "propertyTextual4" , "propertyTextual5" , "propertyNumeric4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "alfresco" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "obituary" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "sin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chandra" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "culverts" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "safety's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quakers" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "relay" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chelsea's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "alfresco" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "obituary" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "safety's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quakers" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "relay" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chelsea's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "sin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chandra" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "culverts" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "alfresco" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "obituary" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "safety's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quakers" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "relay" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chelsea's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "sin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chandra" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "culverts" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "alfresco" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "relay" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chelsea's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "sin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quakers" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "obituary" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chandra" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "safety's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "culverts" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "obituary" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chelsea's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "sin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chandra" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "alfresco" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "safety's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quakers" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "relay" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "culverts" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chelsea's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Chandra" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "culverts" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quakers" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "relay" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "alfresco" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "sin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "obituary" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "sears" } ,
+        "comment": { "type": "literal" , "value": "deletes interlace breathtakingly clews fiat blotter sos frenetic disable Puritan spearmint repay progressively miner Bandung sulks Zoroaster melodic Lyra pedant's netting's cab sea Nehemiah lithographing dormouse's Salyut tourmaline hollowness renovated draping bucksaw Bryant optimistically lather furor's triflers Ortega mistier colonized unsubstantiated grapples resuscitator's pauperism Orphic's rustproof brittlest cockney Mauriac Forrest's penultimate fifties Bukhara alcove justifications metacarpus's luckily eavesdropped bandstand's scrunches stitches moonscapes Keaton's tantrums Ahmed's datatype Giselle's maximum goldbricks permed methadon Perseid's aha effectuated hedonist's Beerbohm's tailwind's reupholsters Bianca payment's hydrofoil's drouthes Samson's belches mainsails echelon steels tampon's sexiest" } ,
+        "producer": { "type": "literal" , "value": "schoolbook's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "safety's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "heaviness Bulgari competently Nathaniel's" } ,
+        "propertyTextual2": { "type": "literal" , "value": "totems" } ,
+        "propertyTextual3": { "type": "literal" , "value": "quasar inhibited m  l  e's hotness hardwood's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1065" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1077" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Sanhedrin's peppermints disingenuous thralldom" } ,
+        "propertyTextual5": { "type": "literal" , "value": "spatter's beryllium allay chignons spacial" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1281" }
+      }
+    ]
+  }
+}

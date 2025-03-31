@@ -1,0 +1,43 @@
+host: codespaces-c89ec1
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+run_Fedup_HefQuin_query        1
+total                          2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 26 14:32:32 2025]
+localrule run_Fedup_HefQuin_query:
+    input: /workspaces/P-TER/virtuoso-opensource-7.2.7, /workspaces/P-TER/virtuoso-opensource-7.2.7/var/lib/virtuoso/db/fedup.ini, /workspaces/P-TER/fedup-queries/q12f.sparql
+    output: output/rdfs/FedUp-HefQuin/q12f.1.csv, output/rdfs/FedUp-HefQuin/q12f.1.json, output/rdfs/FedUp-HefQuin/q12f.1.txt
+    jobid: 1
+    reason: Missing output files: output/rdfs/FedUp-HefQuin/q12f.1.csv
+    wildcards: workload=rdfs, query=q12f, run=1
+    priority: 50
+    resources: tmpdir=/tmp
+
+[Wed Mar 26 14:32:38 2025]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Mar 26 14:32:38 2025]
+localrule all:
+    input: config/largerdfbench/graphs.txt, config/rdfs/endpoints.txt, output/rdfs/FedUp-HefQuin/q12f.1.csv
+    output: output/data.csv
+    jobid: 0
+    reason: Input files updated by another job: output/rdfs/FedUp-HefQuin/q12f.1.csv; Set of input files has changed since last execution
+    resources: tmpdir=/tmp
+
+[Wed Mar 26 14:32:39 2025]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2025-03-26T143232.212966.snakemake.log

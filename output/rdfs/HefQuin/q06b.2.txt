@@ -1,0 +1,354 @@
+{ "head": {
+    "vars": [ "localProduct" , "label" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite11.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite22.fr/Product138480" } ,
+        "label": { "type": "literal" , "value": "Cathay" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite70.fr/Product138480" } ,
+        "label": { "type": "literal" , "value": "Cathay" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite37.fr/Product138480" } ,
+        "label": { "type": "literal" , "value": "Cathay" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite68.fr/Product138480" } ,
+        "label": { "type": "literal" , "value": "Cathay" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.vendor62.fr/Product138480" } ,
+        "label": { "type": "literal" , "value": "Cathay" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite27.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite36.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite5.fr/Product1782" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite21.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite53.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite15.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite10.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite52.fr/Product102668" } ,
+        "label": { "type": "literal" , "value": "Cathay's" }
+      } ,
+      { 
+        "localProduct": { "type": "uri" , "value": "http://www.ratingsite52.fr/Product138480" } ,
+        "label": { "type": "literal" , "value": "Cathay" }
+      }
+    ]
+  }
+}
+Task #1 does not seem to be done.
+Time: 0.436 sec
+overallQueryProcessingTime : 330
+planningTime : 17
+compilationTime : 6
+executionTime : 307
+queryPlanningStats : {
+  overallQueryPlanningTime : 17
+  sourcePlanningTime : 9
+  logicalOptimizationTime : 3
+  physicalOptimizationTime : 5
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@90c265dc
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@90c265dc
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@90c265dc
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 15
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@267f474e
+          xthInputConsumed : [ {true,true,true,true,true,true,true,true,true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1,1,1,1,1,1,1,1,1,1,1,1,2} ]
+          numberOfOutputMappingsProduced : 15
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7a7471ce
+          numberOfInvocations : 1
+          overallExecTime : 289
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite52.fr/)
+          requestExecTime : 0
+          responseProcTime : 289
+          solMapsRetrieved : 2
+          numberOfOutputMappingsProduced : 2
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@63648ee9
+          numberOfInvocations : 1
+          overallExecTime : 272
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite10.fr/)
+          requestExecTime : 0
+          responseProcTime : 272
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@68d6972f
+          numberOfInvocations : 1
+          overallExecTime : 262
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite15.fr/)
+          requestExecTime : 0
+          responseProcTime : 262
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@45be7cd5
+          numberOfInvocations : 1
+          overallExecTime : 272
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite53.fr/)
+          requestExecTime : 0
+          responseProcTime : 272
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7651218e
+          numberOfInvocations : 1
+          overallExecTime : 225
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite36.fr/)
+          requestExecTime : 0
+          responseProcTime : 225
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3185fa6b
+          numberOfInvocations : 1
+          overallExecTime : 225
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite27.fr/)
+          requestExecTime : 0
+          responseProcTime : 225
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6d366c9b
+          numberOfInvocations : 1
+          overallExecTime : 233
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite21.fr/)
+          requestExecTime : 0
+          responseProcTime : 233
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5b58ed3c
+          numberOfInvocations : 1
+          overallExecTime : 230
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor62.fr/)
+          requestExecTime : 0
+          responseProcTime : 230
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@24faea88
+          numberOfInvocations : 1
+          overallExecTime : 230
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite68.fr/)
+          requestExecTime : 0
+          responseProcTime : 230
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3a320ade
+          numberOfInvocations : 1
+          overallExecTime : 233
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite5.fr/)
+          requestExecTime : 0
+          responseProcTime : 233
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@64beebb7
+          numberOfInvocations : 1
+          overallExecTime : 229
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite37.fr/)
+          requestExecTime : 0
+          responseProcTime : 229
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7813cb11
+          numberOfInvocations : 1
+          overallExecTime : 231
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
+          requestExecTime : 0
+          responseProcTime : 231
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@bcec031
+          numberOfInvocations : 1
+          overallExecTime : 227
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite22.fr/)
+          requestExecTime : 1
+          responseProcTime : 226
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@21005f6c
+          numberOfInvocations : 1
+          overallExecTime : 231
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label ;
+            a                     <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  FILTER regex(lcase(str(?label)), "cathay")
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite11.fr/)
+          requestExecTime : 0
+          responseProcTime : 231
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+    ]
+  }
+}

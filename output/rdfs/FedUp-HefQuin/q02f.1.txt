@@ -1,0 +1,1040 @@
+[main] INFO Summary - Took 73 ms to open the summary.
+[main] INFO Summary - Took 296 ms to get graphs.
+[main] INFO FedUP - Start making ASK queries on 200 endpoints…
+[main] INFO FedUP - Start executing the source selection query…
+[main] INFO FedUP - Building the FedQPL query…
+[main] INFO FedUP - Optimizing the resulting FedQPL plan…
+[main] INFO FedUP - Building the SPARQL SERVICE query…
+[main] INFO FedUP - Built the following query:
+(project (?producer ?localProduct ?p ?propertyTextual1 ?ProductFeatureLabel ?propertyTextual2 ?localProductFeature1 ?propertyTextual5 ?propertyNumeric4 ?comment ?propertyTextual3 ?propertyNumeric1 ?propertyNumeric2 ?propertyTextual4 ?ProductFeature1 ?label)
+  (union
+    (union
+      (leftjoin
+        (leftjoin
+          (leftjoin
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+              (sequence
+                (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product148328>)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+            (union
+              (union
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+          (union
+            (union
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+        (union
+          (union
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))
+      (leftjoin
+        (leftjoin
+          (leftjoin
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+              (sequence
+                (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+                (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+                (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+                (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+                (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product148328>)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+            (union
+              (union
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+                (service silent 
+                  <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+                  (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+          (union
+            (union
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+        (union
+          (union
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))))
+    (leftjoin
+      (leftjoin
+        (leftjoin
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+            (sequence
+              (triple ?localProductFeature1 <http://www.w3.org/2000/01/rdf-schema#label> ?ProductFeatureLabel)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1> ?propertyTextual1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature> ?localProductFeature1)
+              (triple ?localProductFeature1 <http://www.w3.org/2002/07/owl#sameAs> ?ProductFeature1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer> ?p)
+              (triple ?p <http://www.w3.org/2000/01/rdf-schema#label> ?producer)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#label> ?label)
+              (triple ?localProduct <http://www.w3.org/2000/01/rdf-schema#comment> ?comment)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2> ?propertyTextual2)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3> ?propertyTextual3)
+              (triple ?localProduct <http://www.w3.org/2002/07/owl#sameAs> <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product148328>)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1> ?propertyNumeric1)
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2> ?propertyNumeric2)))
+          (union
+            (union
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))
+              (service silent 
+                <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+                (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4)))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4> ?propertyTextual4))))
+        (union
+          (union
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))
+            (service silent 
+              <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+              (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5)))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5> ?propertyTextual5))))
+      (union
+        (union
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))
+          (service silent 
+            <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/>
+            (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4)))
+        (service silent 
+          <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
+          (triple ?localProduct <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4> ?propertyNumeric4))))))
+
+Time: 3.524 sec
+overallQueryProcessingTime : 3491
+planningTime : 1246
+compilationTime : 12
+executionTime : 2233
+queryPlanningStats : {
+  overallQueryPlanningTime : 1245
+  sourcePlanningTime : 1226
+  logicalOptimizationTime : 4
+  physicalOptimizationTime : 15
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@5ee34153
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@5ee34153
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@9df9f173
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 25
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@48284d0e
+          xthInputConsumed : [ {true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {9,9,9} ]
+          numberOfOutputMappingsProduced : 27
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@557286ad
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 189
+          numberOfLeftInputMappingsProcessed : 9405
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@b10a26d
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 216
+          numberOfLeftInputMappingsProcessed : 10792
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@74075134
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 189
+          numberOfLeftInputMappingsProcessed : 9427
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 40
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7e4d2287
+          numberOfInvocations : 1
+          overallExecTime : 717
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product148328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/)
+          requestExecTime : 0
+          responseProcTime : 717
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4682eba5
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 189
+          numberOfLeftInputMappingsProcessed : 9405
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@6d9fb2d1
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 216
+          numberOfLeftInputMappingsProcessed : 10792
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@61fafb74
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 189
+          numberOfLeftInputMappingsProcessed : 9427
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 43
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@540a903b
+          numberOfInvocations : 1
+          overallExecTime : 675
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product148328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
+          requestExecTime : 0
+          responseProcTime : 675
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@58496dc
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 189
+          numberOfLeftInputMappingsProcessed : 9405
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 2
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@151db587
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 216
+          numberOfLeftInputMappingsProcessed : 10792
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@238acd0b
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 189
+          numberOfLeftInputMappingsProcessed : 9427
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 44
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 9
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@23811a09
+          numberOfInvocations : 1
+          overallExecTime : 2191
+          requestAsString : { ?localProductFeature1
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?ProductFeatureLabel . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>  ?propertyTextual1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>  ?localProductFeature1 . 
+  ?localProductFeature1
+            <http://www.w3.org/2002/07/owl#sameAs>  ?ProductFeature1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>  ?p . 
+  ?p  <http://www.w3.org/2000/01/rdf-schema#label>  ?producer . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?label . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#comment>  ?comment . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>  ?propertyTextual2 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>  ?propertyTextual3 . 
+  ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product148328> . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>  ?propertyNumeric1 . 
+  ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>  ?propertyNumeric2
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
+          requestExecTime : 0
+          responseProcTime : 2191
+          solMapsRetrieved : 9
+          numberOfOutputMappingsProduced : 9
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@2125ad3
+          xthInputConsumed : [ {true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {50,84,56} ]
+          numberOfMappingsFromXthInputProcessed : [ {2479,4158,2790} ]
+          numberOfOutputMappingsProduced : 9427
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7a5b769b
+          numberOfInvocations : 1
+          overallExecTime : 688
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
+          requestExecTime : 1
+          responseProcTime : 687
+          solMapsRetrieved : 2790
+          numberOfOutputMappingsProduced : 2790
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@f4c0e4e
+          numberOfInvocations : 1
+          overallExecTime : 801
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
+          requestExecTime : 2
+          responseProcTime : 799
+          solMapsRetrieved : 4158
+          numberOfOutputMappingsProduced : 4158
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@24361cfc
+          numberOfInvocations : 1
+          overallExecTime : 674
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>  ?propertyTextual4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/)
+          requestExecTime : 2
+          responseProcTime : 672
+          solMapsRetrieved : 2479
+          numberOfOutputMappingsProduced : 2479
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@34e20e6b
+          xthInputConsumed : [ {true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {57,97,63} ]
+          numberOfMappingsFromXthInputProcessed : [ {2834,4817,3141} ]
+          numberOfOutputMappingsProduced : 10792
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@15ac59c2
+          numberOfInvocations : 1
+          overallExecTime : 764
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
+          requestExecTime : 1
+          responseProcTime : 763
+          solMapsRetrieved : 3141
+          numberOfOutputMappingsProduced : 3141
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7a7d1b47
+          numberOfInvocations : 1
+          overallExecTime : 892
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
+          requestExecTime : 2
+          responseProcTime : 890
+          solMapsRetrieved : 4817
+          numberOfOutputMappingsProduced : 4817
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6eb82908
+          numberOfInvocations : 1
+          overallExecTime : 759
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>  ?propertyTextual5
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/)
+          requestExecTime : 2
+          responseProcTime : 757
+          solMapsRetrieved : 2834
+          numberOfOutputMappingsProduced : 2834
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@4a8df3e2
+          xthInputConsumed : [ {true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {50,84,56} ]
+          numberOfMappingsFromXthInputProcessed : [ {2478,4157,2770} ]
+          numberOfOutputMappingsProduced : 9405
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3d98d138
+          numberOfInvocations : 1
+          overallExecTime : 759
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
+          requestExecTime : 1
+          responseProcTime : 758
+          solMapsRetrieved : 2770
+          numberOfOutputMappingsProduced : 2770
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2f2d52ef
+          numberOfInvocations : 1
+          overallExecTime : 812
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
+          requestExecTime : 1
+          responseProcTime : 811
+          solMapsRetrieved : 4157
+          numberOfOutputMappingsProduced : 4157
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@f2ce6b
+          numberOfInvocations : 1
+          overallExecTime : 688
+          requestAsString : { ?localProduct
+            <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>  ?propertyNumeric4
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite7.fr/)
+          requestExecTime : 2
+          responseProcTime : 686
+          solMapsRetrieved : 2478
+          numberOfOutputMappingsProduced : 2478
+        }
+      }
+    ]
+  }
+}
+{ "head": {
+    "vars": [ "label" , "comment" , "producer" , "ProductFeatureLabel" , "propertyTextual1" , "propertyTextual2" , "propertyTextual3" , "propertyNumeric1" , "propertyNumeric2" , "propertyTextual4" , "propertyTextual5" , "propertyNumeric4" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Swissair" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slaying's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "pariah's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "fryer's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "rhombus's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "meanwhile's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "upper" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quran" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "chin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Swissair" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "fryer's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "rhombus's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "meanwhile's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "pariah's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quran" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "chin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "upper" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slaying's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "rhombus's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "meanwhile's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "slaying's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "fryer's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Quran" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "chin's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "Swissair" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "upper" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      } ,
+      { 
+        "label": { "type": "literal" , "value": "cavity" } ,
+        "comment": { "type": "literal" , "value": "d  butante's fixatives parenting wrapt afforest notoriety sound Menelik abjure whiners meteorology Balanchine's insides queasiest desecrates bullish tote Patna disconcerts Colbert's Huntley's pralines trivial fandom deprecate habitat Muppet's cupcake winter's Wisconsinite's Churchill's Presley's compacts editorial's Pauling's homemade Horus's woodsman moldiness's brainwashed ninths brainchild videodisc appliance's Boeotia Carlyle goldfishes underpass's Suriname's isometrics offending beautifying whirligig's loyally denude Debian rootless graduating downstairs restriction's" } ,
+        "producer": { "type": "literal" , "value": "drainage's" } ,
+        "ProductFeatureLabel": { "type": "literal" , "value": "pariah's" } ,
+        "propertyTextual1": { "type": "literal" , "value": "Netflix decadence mouthful jeers withholding's cedilla rompers" } ,
+        "propertyTextual2": { "type": "literal" , "value": "grower" } ,
+        "propertyTextual3": { "type": "literal" , "value": "swiveled sulfurous extractor outfielder's plays genome's" } ,
+        "propertyNumeric1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1042" } ,
+        "propertyNumeric2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "965" } ,
+        "propertyTextual4": { "type": "literal" , "value": "Colbert capability spire's thereof singers" } ,
+        "propertyTextual5": { "type": "literal" , "value": "trounces physique's" } ,
+        "propertyNumeric4": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "893" }
+      }
+    ]
+  }
+}
