@@ -34,8 +34,8 @@ WORKLOADS = ["rdfs"]
 #APPROACHES = ["Jena","FedX","HefQuin"]
 #APPROACHES = ["FedUp-FedX","FedUp-HefQuin","FedUp-Jena"]
 APPROACHES = ["Jena","FedX","HefQuin","FedUp-FedX","FedUp-HefQuin","FedUp-Jena"]
-#APPROACHES = ["HefQuin"]
-QUERIESs = ["q12f"]
+#APPROACHES = ["FedUp-HefQuin"]
+#QUERIES = ["q07a"]
 
 QUERIES= [
     "q01a", "q01b", "q01c", "q01d", "q01e", "q01f", "q01g", "q01h", "q01i", "q01j",

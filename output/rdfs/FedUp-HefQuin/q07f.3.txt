@@ -1,5 +1,5 @@
-[main] INFO Summary - Took 77 ms to open the summary.
-[main] INFO Summary - Took 325 ms to get graphs.
+[main] INFO Summary - Took 79 ms to open the summary.
+[main] INFO Summary - Took 312 ms to get graphs.
 [main] INFO FedUP - Start making ASK queries on 200 endpoints…
 [main] INFO FedUP - Start executing the source selection query…
 [main] INFO FedUP - Building the FedQPL query…
@@ -2532,71 +2532,1625 @@
               <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite78.fr/>
               (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))))))
 
-Attention: The query result may be incomplete because the following exception was caught when executing the query plan
-
-1 java.lang.Exception: Exception occurred when outputting the result of a SELECT query using the Jena machinery.
-StackTrace:
-java.lang.Exception: Exception occurred when outputting the result of a SELECT query using the Jena machinery.
-	at se.liu.ida.hefquin.engine.HeFQUINEngineImpl.executeSelectQuery(HeFQUINEngineImpl.java:114)
-	at se.liu.ida.hefquin.engine.HeFQUINEngineImpl.executeQuery(HeFQUINEngineImpl.java:77)
-	at se.liu.ida.hefquin.cli.RunQueryWithoutSrcSel.exec(RunQueryWithoutSrcSel.java:143)
-	at org.apache.jena.cmd.CmdMain.mainMethod(CmdMain.java:87)
-	at org.apache.jena.cmd.CmdMain.mainRun(CmdMain.java:56)
-	at org.apache.jena.cmd.CmdMain.mainRun(CmdMain.java:43)
-	at se.liu.ida.hefquin.cli.RunQueryWithoutSrcSel.main(RunQueryWithoutSrcSel.java:59)
-Caused by: java.lang.IllegalArgumentException: OpLeftJoin with filter condition is not supported
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForLeftJoin(ServiceClauseBasedSourcePlannerImpl.java:107)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:64)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:55)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForLeftJoin(ServiceClauseBasedSourcePlannerImpl.java:110)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:64)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:55)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForUnion(ServiceClauseBasedSourcePlannerImpl.java:122)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:70)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:55)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForUnion(ServiceClauseBasedSourcePlannerImpl.java:122)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:70)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:55)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForUnion(ServiceClauseBasedSourcePlannerImpl.java:122)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:70)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:55)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForUnion(ServiceClauseBasedSourcePlannerImpl.java:122)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:70)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:55)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForUnion(ServiceClauseBasedSourcePlannerImpl.java:122)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:70)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:55)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlanForUnion(ServiceClauseBasedSourcePlannerImpl.java:122)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.ServiceClauseBasedSourcePlannerImpl.createPlan(ServiceClauseBasedSourcePlannerImpl.java:70)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createPlan(FedupBasedSourcePlannerImpl.java:53)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.FedupBasedSourcePlannerImpl.createSourceAssignment(FedupBasedSourcePlannerImpl.java:45)
-	at se.liu.ida.hefquin.engine.queryproc.impl.srcsel.SourcePlannerBase.createSourceAssignment(SourcePlannerBase.java:41)
-	at se.liu.ida.hefquin.engine.queryproc.impl.planning.QueryPlannerImpl.createPlan(QueryPlannerImpl.java:59)
-	at se.liu.ida.hefquin.engine.queryproc.impl.QueryProcessorImpl.processQuery(QueryProcessorImpl.java:61)
-	at se.liu.ida.hefquin.jenaintegration.sparql.engine.main.OpExecutorHeFQUIN$MainQueryIterator.nextStage(OpExecutorHeFQUIN.java:172)
-	at org.apache.jena.sparql.engine.iterator.QueryIterRepeatApply.makeNextStage(QueryIterRepeatApply.java:100)
-	at org.apache.jena.sparql.engine.iterator.QueryIterRepeatApply.hasNextBinding(QueryIterRepeatApply.java:60)
-	at org.apache.jena.sparql.engine.iterator.QueryIteratorBase.hasNext(QueryIteratorBase.java:116)
-	at org.apache.jena.sparql.engine.iterator.QueryIterConvert.hasNextBinding(QueryIterConvert.java:58)
-	at org.apache.jena.sparql.engine.iterator.QueryIteratorBase.hasNext(QueryIteratorBase.java:116)
-	at org.apache.jena.sparql.engine.iterator.QueryIteratorWrapper.hasNextBinding(QueryIteratorWrapper.java:38)
-	at org.apache.jena.sparql.engine.iterator.QueryIteratorBase.hasNext(QueryIteratorBase.java:116)
-	at org.apache.jena.sparql.engine.iterator.QueryIteratorWrapper.hasNextBinding(QueryIteratorWrapper.java:38)
-	at org.apache.jena.sparql.engine.iterator.QueryIteratorBase.hasNext(QueryIteratorBase.java:116)
-	at org.apache.jena.sparql.exec.RowSetStream.hasNext(RowSetStream.java:47)
-	at org.apache.jena.riot.rowset.rw.RowSetWriterJSON$ResultSetWriterTableJSON.writeRows(RowSetWriterJSON.java:142)
-	at org.apache.jena.riot.rowset.rw.RowSetWriterJSON$ResultSetWriterTableJSON.write(RowSetWriterJSON.java:129)
-	at org.apache.jena.riot.rowset.rw.RowSetWriterJSON.write(RowSetWriterJSON.java:88)
-	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:186)
-	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:156)
-	at org.apache.jena.sparql.resultset.ResultsWriter.write(ResultsWriter.java:149)
-	at org.apache.jena.sparql.util.QueryExecUtils.outputResultSet(QueryExecUtils.java:158)
-	at se.liu.ida.hefquin.engine.HeFQUINEngineImpl.executeSelectQuery(HeFQUINEngineImpl.java:111)
-	... 6 more
-
-Time: 5.429 sec
+Time: 6.287 sec
+overallQueryProcessingTime : 6244
+planningTime : 5378
+compilationTime : 18
+executionTime : 848
+queryPlanningStats : {
+  overallQueryPlanningTime : 5377
+  sourcePlanningTime : 5352
+  logicalOptimizationTime : 13
+  physicalOptimizationTime : 12
+  sourcePlanningStats : { }
+  resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@7b86b162
+  resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@7b86b162
+  resultingPhysicalPlan : se.liu.ida.hefquin.engine.queryplan.utils.PhysicalPlanFactory$5@2eb80ae
+  queryOptimizationStats : { }
+}
+executionStats : {
+  planStats : {
+    numberOfTasks : 54
+    statsOfTasks : [
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@32f0c7f8
+          xthInputConsumed : [ {true,true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {6,6,6,6,6,6,6} ]
+          numberOfOutputMappingsProduced : 42
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@504e1599
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 6
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@71f96dfb
+          numberOfInvocations : 1
+          overallExecTime : 557
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+  OPTIONAL
+    { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+      ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+      ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+      ?offerProduct
+                <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+      ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+      ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+      ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+      FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+    }
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+          requestExecTime : 0
+          responseProcTime : 557
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@5d1b9c3d
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 6
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@69e05f61
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 39
+          averageProcTimePerInputBlock : 39.0
+          minimumProcTimePerInputBlock : 39
+          maximumProcTimePerInputBlock : 39
+          queryAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+          numberOfOutputMappingsProduced : 1
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@25432de1
+            numberOfInvocations : 1
+            overallExecTime : 39
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 39
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@25432de1
+            numberOfInvocations : 1
+            overallExecTime : 39
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 39
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@49a26d19
+          numberOfInvocations : 1
+          overallExecTime : 546
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite34.fr/)
+          requestExecTime : 37
+          responseProcTime : 509
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@730e5763
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 6
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@7275c74b
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 24
+          averageProcTimePerInputBlock : 24.0
+          minimumProcTimePerInputBlock : 24
+          maximumProcTimePerInputBlock : 24
+          queryAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+          numberOfOutputMappingsProduced : 1
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@551227e3
+            numberOfInvocations : 1
+            overallExecTime : 24
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 24
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@551227e3
+            numberOfInvocations : 1
+            overallExecTime : 24
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 24
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@19058533
+          numberOfInvocations : 1
+          overallExecTime : 562
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite87.fr/)
+          requestExecTime : 0
+          responseProcTime : 562
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@4315e9af
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 6
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@42210be1
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 16
+          averageProcTimePerInputBlock : 16.0
+          minimumProcTimePerInputBlock : 16
+          maximumProcTimePerInputBlock : 16
+          queryAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+          numberOfOutputMappingsProduced : 1
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6fd6f672
+            numberOfInvocations : 1
+            overallExecTime : 16
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 16
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6fd6f672
+            numberOfInvocations : 1
+            overallExecTime : 16
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 16
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1eb2d371
+          numberOfInvocations : 1
+          overallExecTime : 573
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite78.fr/)
+          requestExecTime : 0
+          responseProcTime : 573
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@2babf189
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 6
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@479f2dc2
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 84
+          averageProcTimePerInputBlock : 84.0
+          minimumProcTimePerInputBlock : 84
+          maximumProcTimePerInputBlock : 84
+          queryAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+          numberOfOutputMappingsProduced : 1
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7483136e
+            numberOfInvocations : 1
+            overallExecTime : 79
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 79
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7483136e
+            numberOfInvocations : 1
+            overallExecTime : 79
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 79
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@dab48d3
+          numberOfInvocations : 1
+          overallExecTime : 497
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 0
+          responseProcTime : 497
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@58a2b4c
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 6
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 0
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@7159a5cd
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 49
+          averageProcTimePerInputBlock : 49.0
+          minimumProcTimePerInputBlock : 49
+          maximumProcTimePerInputBlock : 49
+          queryAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+          numberOfOutputMappingsProduced : 1
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@29132da2
+            numberOfInvocations : 1
+            overallExecTime : 49
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 49
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@29132da2
+            numberOfInvocations : 1
+            overallExecTime : 49
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 49
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4f966719
+          numberOfInvocations : 1
+          overallExecTime : 550
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite98.fr/)
+          requestExecTime : 37
+          responseProcTime : 513
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@18ac53e8
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 1
+          numberOfLeftInputMappingsProcessed : 6
+          averageProcTimePerLeftInputBlock : 1.0
+          minimumProcTimePerLeftInputBlock : 1
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawBindJoinSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawBindJoinSPARQL@4ca8dbfa
+          executionConcluded : true
+          numberOfInputBlocksProcessed : 1
+          numberOfInputMappingsProcessed : 1
+          totalProcTimeForAllInputBlocks : 99
+          averageProcTimePerInputBlock : 99.0
+          minimumProcTimePerInputBlock : 99
+          maximumProcTimePerInputBlock : 99
+          queryAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+          numberOfOutputMappingsProduced : 1
+          requestBlockSizeWasReduced : false
+          requestBlockSize : 30
+          numberOfRequestOpsUsed : 1
+          statsOfFirstReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2737dcf4
+            numberOfInvocations : 1
+            overallExecTime : 98
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 98
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+          statsOfLastReqOp : {
+            classNameOfOperator : ExecOpRequestSPARQL
+            shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2737dcf4
+            numberOfInvocations : 1
+            overallExecTime : 98
+            requestAsString : { ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>  ?price . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>  ?vendor . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>  ?offerProduct . 
+  ?offerProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?offer  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>  ?date . 
+  ?vendor  <http://www.w3.org/2000/01/rdf-schema#label>  ?vendorTitle . 
+  ?vendor  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>  <http://downlode.org/rdf/iso-3166/countries#FR>
+  FILTER ( ?date > "2008-04-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> )
+}
+            fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.vendor47.fr/)
+            requestExecTime : 0
+            responseProcTime : 98
+            solMapsRetrieved : 0
+            numberOfOutputMappingsProduced : 0
+          }
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7063686f
+          numberOfInvocations : 1
+          overallExecTime : 490
+          requestAsString : { ?localProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?localProduct
+            <http://www.w3.org/2000/01/rdf-schema#label>  ?productLabel . 
+  ?localProduct
+            a  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product>
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/)
+          requestExecTime : 0
+          responseProcTime : 490
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@c3177d5
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {1,1,1,1,1,1} ]
+          numberOfMappingsFromXthInputProcessed : [ {1,1,1,1,1,1} ]
+          numberOfOutputMappingsProduced : 6
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@76f856a8
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 440
+          numberOfLeftInputMappingsProcessed : 21984
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 3
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@7c853486
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 442
+          numberOfLeftInputMappingsProcessed : 22069
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 5
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@174e1b69
+          numberOfInvocations : 1
+          overallExecTime : 489
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite87.fr/)
+          requestExecTime : 0
+          responseProcTime : 489
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@1046498a
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 440
+          numberOfLeftInputMappingsProcessed : 21984
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 8
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@243f003c
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 442
+          numberOfLeftInputMappingsProcessed : 22069
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 7
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@71cb3139
+          numberOfInvocations : 1
+          overallExecTime : 488
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite98.fr/)
+          requestExecTime : 1
+          responseProcTime : 487
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@1639f93a
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 440
+          numberOfLeftInputMappingsProcessed : 21984
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 3
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@3491e86e
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 442
+          numberOfLeftInputMappingsProcessed : 22069
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@68f32020
+          numberOfInvocations : 1
+          overallExecTime : 475
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite34.fr/)
+          requestExecTime : 0
+          responseProcTime : 475
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@409986fe
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 440
+          numberOfLeftInputMappingsProcessed : 21984
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@19b047fe
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 442
+          numberOfLeftInputMappingsProcessed : 22069
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 37
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@22590e3e
+          numberOfInvocations : 1
+          overallExecTime : 458
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 0
+          responseProcTime : 458
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@53dad875
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 440
+          numberOfLeftInputMappingsProcessed : 21984
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@5f780a86
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 442
+          numberOfLeftInputMappingsProcessed : 22069
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 5.0
+          minimumProcTimePerRightInputBlock : 5
+          maximumProcTimePerRightInputBlock : 5
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@446c3920
+          numberOfInvocations : 1
+          overallExecTime : 443
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/)
+          requestExecTime : 0
+          responseProcTime : 443
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@2eaef76d
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 440
+          numberOfLeftInputMappingsProcessed : 21984
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 1
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpHashRJoin
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpHashRJoin@2b329bbd
+          leftInputConsumed : true
+          rightInputConsumed : true
+          numberOfLeftInputBlocksProcessed : 442
+          numberOfLeftInputMappingsProcessed : 22069
+          averageProcTimePerLeftInputBlock : 0.0
+          minimumProcTimePerLeftInputBlock : 0
+          maximumProcTimePerLeftInputBlock : 8
+          numberOfRightInputBlocksProcessed : 1
+          numberOfRightInputMappingsProcessed : 1
+          averageProcTimePerRightInputBlock : 1.0
+          minimumProcTimePerRightInputBlock : 1
+          maximumProcTimePerRightInputBlock : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@34819867
+          numberOfInvocations : 1
+          overallExecTime : 448
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
+  ?reviewProduct
+            <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product72080> . 
+  ?review  <http://purl.org/stuff/rev#reviewer>  ?reviewer . 
+  ?reviewer  <http://xmlns.com/foaf/0.1/name>  ?revName . 
+  ?review  <http://purl.org/dc/elements/1.1/title>  ?revTitle
+}
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite78.fr/)
+          requestExecTime : 0
+          responseProcTime : 448
+          solMapsRetrieved : 1
+          numberOfOutputMappingsProduced : 1
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@118102ee
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {112,75,43,86,25,104} ]
+          numberOfMappingsFromXthInputProcessed : [ {5564,3720,2124,4255,1220,5186} ]
+          numberOfOutputMappingsProduced : 22069
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@48cd9a2c
+          numberOfInvocations : 1
+          overallExecTime : 702
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite78.fr/)
+          requestExecTime : 1
+          responseProcTime : 701
+          solMapsRetrieved : 5186
+          numberOfOutputMappingsProduced : 5186
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@771d1ffb
+          numberOfInvocations : 1
+          overallExecTime : 639
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/)
+          requestExecTime : 0
+          responseProcTime : 639
+          solMapsRetrieved : 1220
+          numberOfOutputMappingsProduced : 1220
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4f67e3df
+          numberOfInvocations : 1
+          overallExecTime : 674
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite87.fr/)
+          requestExecTime : 1
+          responseProcTime : 673
+          solMapsRetrieved : 4255
+          numberOfOutputMappingsProduced : 4255
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@56681eaf
+          numberOfInvocations : 1
+          overallExecTime : 386
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite98.fr/)
+          requestExecTime : 2
+          responseProcTime : 384
+          solMapsRetrieved : 2124
+          numberOfOutputMappingsProduced : 2124
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@72d0f2b4
+          numberOfInvocations : 1
+          overallExecTime : 531
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite34.fr/)
+          requestExecTime : 1
+          responseProcTime : 530
+          solMapsRetrieved : 3720
+          numberOfOutputMappingsProduced : 3720
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@6d2dc9d2
+          numberOfInvocations : 1
+          overallExecTime : 728
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 12
+          responseProcTime : 716
+          solMapsRetrieved : 5564
+          numberOfOutputMappingsProduced : 5564
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpFrawMultiwayUnion
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpFrawMultiwayUnion@1da4b6b3
+          xthInputConsumed : [ {true,true,true,true,true,true} ]
+          numberOfBlocksFromXthInputProcessed : [ {113,74,42,86,25,103} ]
+          numberOfMappingsFromXthInputProcessed : [ {5613,3651,2099,4263,1224,5134} ]
+          numberOfOutputMappingsProduced : 21984
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@b2f4ece
+          numberOfInvocations : 1
+          overallExecTime : 546
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite78.fr/)
+          requestExecTime : 8
+          responseProcTime : 538
+          solMapsRetrieved : 5134
+          numberOfOutputMappingsProduced : 5134
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7e1f584d
+          numberOfInvocations : 1
+          overallExecTime : 400
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite8.fr/)
+          requestExecTime : 1
+          responseProcTime : 399
+          solMapsRetrieved : 1224
+          numberOfOutputMappingsProduced : 1224
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7dff6d05
+          numberOfInvocations : 1
+          overallExecTime : 539
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite87.fr/)
+          requestExecTime : 1
+          responseProcTime : 538
+          solMapsRetrieved : 4263
+          numberOfOutputMappingsProduced : 4263
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@45d64d27
+          numberOfInvocations : 1
+          overallExecTime : 415
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite98.fr/)
+          requestExecTime : 0
+          responseProcTime : 415
+          solMapsRetrieved : 2099
+          numberOfOutputMappingsProduced : 2099
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@34fe326d
+          numberOfInvocations : 1
+          overallExecTime : 512
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite34.fr/)
+          requestExecTime : 1
+          responseProcTime : 511
+          solMapsRetrieved : 3651
+          numberOfOutputMappingsProduced : 3651
+        }
+      }
+      {
+        operatorStats : {
+          classNameOfOperator : ExecOpRequestSPARQL
+          shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@30a7c98f
+          numberOfInvocations : 1
+          overallExecTime : 659
+          requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
+          fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite76.fr/)
+          requestExecTime : 10
+          responseProcTime : 649
+          solMapsRetrieved : 5613
+          numberOfOutputMappingsProduced : 5613
+        }
+      }
+    ]
+  }
+}
 { "head": {
     "vars": [ "productLabel" , "offer" , "price" , "vendor" , "vendorTitle" , "review" , "revTitle" , "reviewer" , "revName" , "rating1" , "rating2" ]
   } ,
   "results": {
     "bindings": [
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite78.fr/Review8633" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "foothold tone Kurd's seasonal" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite78.fr/Person194" } ,
+        "revName": { "type": "literal" , "value": "TY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite8.fr/Review1565" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "obscene snowplowed Ofelia reconsiders wrongdoers chutney's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite8.fr/Person335" } ,
+        "revName": { "type": "literal" , "value": "WINSTON" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review9699" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "modifiers tire scraps Moscow honeysuckles poseur stunt's critic" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "DARIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review5855" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ru" , "value": "Peterson Ting's agronomist tangerines" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person192" } ,
+        "revName": { "type": "literal" , "value": "JOANN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite98.fr/Review2561" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "hateful Adhara's really offensive haunt's byplay" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite98.fr/Person225" } ,
+        "revName": { "type": "literal" , "value": "ELVIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite87.fr/Review6650" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "floppies figment's goldbricked delicatessen" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite87.fr/Person304" } ,
+        "revName": { "type": "literal" , "value": "RAFAEL" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite78.fr/Review8633" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "foothold tone Kurd's seasonal" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite78.fr/Person194" } ,
+        "revName": { "type": "literal" , "value": "TY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite8.fr/Review1565" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "obscene snowplowed Ofelia reconsiders wrongdoers chutney's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite8.fr/Person335" } ,
+        "revName": { "type": "literal" , "value": "WINSTON" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review9699" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "modifiers tire scraps Moscow honeysuckles poseur stunt's critic" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "DARIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review5855" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ru" , "value": "Peterson Ting's agronomist tangerines" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person192" } ,
+        "revName": { "type": "literal" , "value": "JOANN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite98.fr/Review2561" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "hateful Adhara's really offensive haunt's byplay" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite98.fr/Person225" } ,
+        "revName": { "type": "literal" , "value": "ELVIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite87.fr/Review6650" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "floppies figment's goldbricked delicatessen" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite87.fr/Person304" } ,
+        "revName": { "type": "literal" , "value": "RAFAEL" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite78.fr/Review8633" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "foothold tone Kurd's seasonal" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite78.fr/Person194" } ,
+        "revName": { "type": "literal" , "value": "TY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite8.fr/Review1565" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "obscene snowplowed Ofelia reconsiders wrongdoers chutney's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite8.fr/Person335" } ,
+        "revName": { "type": "literal" , "value": "WINSTON" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review9699" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "modifiers tire scraps Moscow honeysuckles poseur stunt's critic" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "DARIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review5855" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ru" , "value": "Peterson Ting's agronomist tangerines" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person192" } ,
+        "revName": { "type": "literal" , "value": "JOANN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite98.fr/Review2561" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "hateful Adhara's really offensive haunt's byplay" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite98.fr/Person225" } ,
+        "revName": { "type": "literal" , "value": "ELVIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite87.fr/Review6650" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "floppies figment's goldbricked delicatessen" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite87.fr/Person304" } ,
+        "revName": { "type": "literal" , "value": "RAFAEL" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite78.fr/Review8633" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "foothold tone Kurd's seasonal" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite78.fr/Person194" } ,
+        "revName": { "type": "literal" , "value": "TY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite8.fr/Review1565" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "obscene snowplowed Ofelia reconsiders wrongdoers chutney's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite8.fr/Person335" } ,
+        "revName": { "type": "literal" , "value": "WINSTON" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review9699" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "modifiers tire scraps Moscow honeysuckles poseur stunt's critic" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "DARIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review5855" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ru" , "value": "Peterson Ting's agronomist tangerines" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person192" } ,
+        "revName": { "type": "literal" , "value": "JOANN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite98.fr/Review2561" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "hateful Adhara's really offensive haunt's byplay" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite98.fr/Person225" } ,
+        "revName": { "type": "literal" , "value": "ELVIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite87.fr/Review6650" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "floppies figment's goldbricked delicatessen" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite87.fr/Person304" } ,
+        "revName": { "type": "literal" , "value": "RAFAEL" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite78.fr/Review8633" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "foothold tone Kurd's seasonal" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite78.fr/Person194" } ,
+        "revName": { "type": "literal" , "value": "TY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite8.fr/Review1565" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "obscene snowplowed Ofelia reconsiders wrongdoers chutney's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite8.fr/Person335" } ,
+        "revName": { "type": "literal" , "value": "WINSTON" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review9699" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "modifiers tire scraps Moscow honeysuckles poseur stunt's critic" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "DARIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review5855" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ru" , "value": "Peterson Ting's agronomist tangerines" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person192" } ,
+        "revName": { "type": "literal" , "value": "JOANN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite98.fr/Review2561" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "hateful Adhara's really offensive haunt's byplay" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite98.fr/Person225" } ,
+        "revName": { "type": "literal" , "value": "ELVIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite87.fr/Review6650" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "floppies figment's goldbricked delicatessen" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite87.fr/Person304" } ,
+        "revName": { "type": "literal" , "value": "RAFAEL" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite78.fr/Review8633" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "foothold tone Kurd's seasonal" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite78.fr/Person194" } ,
+        "revName": { "type": "literal" , "value": "TY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite8.fr/Review1565" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "obscene snowplowed Ofelia reconsiders wrongdoers chutney's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite8.fr/Person335" } ,
+        "revName": { "type": "literal" , "value": "WINSTON" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review9699" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "modifiers tire scraps Moscow honeysuckles poseur stunt's critic" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "DARIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review5855" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ru" , "value": "Peterson Ting's agronomist tangerines" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person192" } ,
+        "revName": { "type": "literal" , "value": "JOANN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite98.fr/Review2561" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "hateful Adhara's really offensive haunt's byplay" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite98.fr/Person225" } ,
+        "revName": { "type": "literal" , "value": "ELVIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite87.fr/Review6650" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "floppies figment's goldbricked delicatessen" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite87.fr/Person304" } ,
+        "revName": { "type": "literal" , "value": "RAFAEL" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite78.fr/Review8633" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "foothold tone Kurd's seasonal" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite78.fr/Person194" } ,
+        "revName": { "type": "literal" , "value": "TY" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite8.fr/Review1565" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "obscene snowplowed Ofelia reconsiders wrongdoers chutney's" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite8.fr/Person335" } ,
+        "revName": { "type": "literal" , "value": "WINSTON" } ,
+        "rating1": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite76.fr/Review9699" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "modifiers tire scraps Moscow honeysuckles poseur stunt's critic" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite76.fr/Person164" } ,
+        "revName": { "type": "literal" , "value": "DARIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite34.fr/Review5855" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "ru" , "value": "Peterson Ting's agronomist tangerines" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite34.fr/Person192" } ,
+        "revName": { "type": "literal" , "value": "JOANN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite98.fr/Review2561" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "hateful Adhara's really offensive haunt's byplay" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite98.fr/Person225" } ,
+        "revName": { "type": "literal" , "value": "ELVIN" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "7" }
+      } ,
+      { 
+        "productLabel": { "type": "literal" , "value": "larked" } ,
+        "review": { "type": "uri" , "value": "http://www.ratingsite87.fr/Review6650" } ,
+        "revTitle": { "type": "literal" , "xml:lang": "en" , "value": "floppies figment's goldbricked delicatessen" } ,
+        "reviewer": { "type": "uri" , "value": "http://www.ratingsite87.fr/Person304" } ,
+        "revName": { "type": "literal" , "value": "RAFAEL" } ,
+        "rating2": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      }
+    ]
+  }
+}

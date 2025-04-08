@@ -17,7 +17,6 @@ token = token github généré
 Si erreur jdk < 17
 -> sdk default java 21.0.5-ms  
 
-
 ### FedX
 
 aller dans /workspaces/P-TER/src/main/java/org/example/Virtuoso.java

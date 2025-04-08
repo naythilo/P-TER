@@ -1,5 +1,5 @@
-[main] INFO Summary - Took 79 ms to open the summary.
-[main] INFO Summary - Took 319 ms to get graphs.
+[main] INFO Summary - Took 73 ms to open the summary.
+[main] INFO Summary - Took 296 ms to get graphs.
 [main] INFO FedUP - Start making ASK queries on 200 endpoints…
 [main] INFO FedUP - Start executing the source selection query…
 [main] INFO FedUP - Building the FedQPL query…
@@ -325,17 +325,16 @@
               <http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/>
               (triple ?review <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2> ?rating2))))))))
 
-Task #0 does not seem to be done.
-Time: 3.033 sec
-overallQueryProcessingTime : 3004
-planningTime : 2550
-compilationTime : 10
-executionTime : 444
+Time: 3.070 sec
+overallQueryProcessingTime : 3052
+planningTime : 2607
+compilationTime : 11
+executionTime : 434
 queryPlanningStats : {
-  overallQueryPlanningTime : 2550
-  sourcePlanningTime : 2539
-  logicalOptimizationTime : 3
-  physicalOptimizationTime : 8
+  overallQueryPlanningTime : 2606
+  sourcePlanningTime : 2595
+  logicalOptimizationTime : 4
+  physicalOptimizationTime : 7
   sourcePlanningStats : { }
   resultingSourceAssignment : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@95b3aa84
   resultingLogicalPlan : se.liu.ida.hefquin.engine.queryplan.logical.impl.LogicalPlanWithNaryRootImpl@95b3aa84
@@ -379,7 +378,7 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@21618fa7
           numberOfInvocations : 1
-          overallExecTime : 37
+          overallExecTime : 22
           requestAsString : { ?localProduct
             <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product156848> . 
   ?localProduct
@@ -389,7 +388,7 @@ executionStats : {
 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
           requestExecTime : 0
-          responseProcTime : 37
+          responseProcTime : 22
           solMapsRetrieved : 1
           numberOfOutputMappingsProduced : 1
         }
@@ -455,7 +454,7 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@4dbad37
           numberOfInvocations : 1
-          overallExecTime : 34
+          overallExecTime : 21
           requestAsString : { ?localProduct
             <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product156848> . 
   ?localProduct
@@ -465,7 +464,7 @@ executionStats : {
 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
           requestExecTime : 0
-          responseProcTime : 34
+          responseProcTime : 21
           solMapsRetrieved : 1
           numberOfOutputMappingsProduced : 1
         }
@@ -521,7 +520,7 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@58f07f02
           numberOfInvocations : 1
-          overallExecTime : 39
+          overallExecTime : 16
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
   ?reviewProduct
             <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product156848> . 
@@ -531,7 +530,7 @@ executionStats : {
 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
           requestExecTime : 0
-          responseProcTime : 39
+          responseProcTime : 16
           solMapsRetrieved : 1
           numberOfOutputMappingsProduced : 1
         }
@@ -577,7 +576,7 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1ffcf674
           numberOfInvocations : 1
-          overallExecTime : 40
+          overallExecTime : 39
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
   ?reviewProduct
             <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product156848> . 
@@ -587,7 +586,7 @@ executionStats : {
 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite5.fr/)
           requestExecTime : 0
-          responseProcTime : 40
+          responseProcTime : 39
           solMapsRetrieved : 1
           numberOfOutputMappingsProduced : 1
         }
@@ -605,9 +604,9 @@ executionStats : {
           maximumProcTimePerLeftInputBlock : 1
           numberOfRightInputBlocksProcessed : 1
           numberOfRightInputMappingsProcessed : 1
-          averageProcTimePerRightInputBlock : 1.0
-          minimumProcTimePerRightInputBlock : 1
-          maximumProcTimePerRightInputBlock : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
         }
       }
       {
@@ -623,9 +622,9 @@ executionStats : {
           maximumProcTimePerLeftInputBlock : 1
           numberOfRightInputBlocksProcessed : 1
           numberOfRightInputMappingsProcessed : 1
-          averageProcTimePerRightInputBlock : 1.0
-          minimumProcTimePerRightInputBlock : 1
-          maximumProcTimePerRightInputBlock : 1
+          averageProcTimePerRightInputBlock : 0.0
+          minimumProcTimePerRightInputBlock : 0
+          maximumProcTimePerRightInputBlock : 0
         }
       }
       {
@@ -633,7 +632,7 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7a55f148
           numberOfInvocations : 1
-          overallExecTime : 40
+          overallExecTime : 43
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>  ?reviewProduct . 
   ?reviewProduct
             <http://www.w3.org/2002/07/owl#sameAs>  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product156848> . 
@@ -643,7 +642,7 @@ executionStats : {
 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
           requestExecTime : 0
-          responseProcTime : 40
+          responseProcTime : 43
           solMapsRetrieved : 1
           numberOfOutputMappingsProduced : 1
         }
@@ -663,11 +662,11 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@3ae2ed38
           numberOfInvocations : 1
-          overallExecTime : 340
+          overallExecTime : 288
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
-          requestExecTime : 3
-          responseProcTime : 337
+          requestExecTime : 1
+          responseProcTime : 287
           solMapsRetrieved : 2782
           numberOfOutputMappingsProduced : 2782
         }
@@ -677,11 +676,11 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@7f572c37
           numberOfInvocations : 1
-          overallExecTime : 259
+          overallExecTime : 306
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite5.fr/)
           requestExecTime : 1
-          responseProcTime : 258
+          responseProcTime : 305
           solMapsRetrieved : 1534
           numberOfOutputMappingsProduced : 1534
         }
@@ -691,11 +690,11 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@2add4d24
           numberOfInvocations : 1
-          overallExecTime : 400
+          overallExecTime : 395
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>  ?rating1 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
-          requestExecTime : 1
-          responseProcTime : 399
+          requestExecTime : 2
+          responseProcTime : 393
           solMapsRetrieved : 4336
           numberOfOutputMappingsProduced : 4336
         }
@@ -715,11 +714,11 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@12b5454f
           numberOfInvocations : 1
-          overallExecTime : 356
+          overallExecTime : 381
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite70.fr/)
           requestExecTime : 1
-          responseProcTime : 355
+          responseProcTime : 380
           solMapsRetrieved : 2783
           numberOfOutputMappingsProduced : 2783
         }
@@ -729,11 +728,11 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@5445f5ba
           numberOfInvocations : 1
-          overallExecTime : 280
+          overallExecTime : 324
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite5.fr/)
           requestExecTime : 1
-          responseProcTime : 279
+          responseProcTime : 323
           solMapsRetrieved : 1542
           numberOfOutputMappingsProduced : 1542
         }
@@ -743,11 +742,11 @@ executionStats : {
           classNameOfOperator : ExecOpRequestSPARQL
           shortStringOfOperator : se.liu.ida.hefquin.engine.queryplan.executable.impl.ops.ExecOpRequestSPARQL@1431267b
           numberOfInvocations : 1
-          overallExecTime : 387
+          overallExecTime : 374
           requestAsString : { ?review  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>  ?rating2 }
           fedMemberAsString : SPARQL endpoint (SPARQL endpoint at http://localhost:8890/sparql?default-graph-uri=http://www.ratingsite67.fr/)
-          requestExecTime : 1
-          responseProcTime : 386
+          requestExecTime : 5
+          responseProcTime : 369
           solMapsRetrieved : 4302
           numberOfOutputMappingsProduced : 4302
         }
