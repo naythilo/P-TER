@@ -26,7 +26,7 @@ La remplacer dans le Snakefile a la ligne : 239
 
 ### Jena + virtuoso
 
-Dans rule all tout décommenter
+Dans le snakefile, rule all tout décommenter
 Mettre la valeur DO_INSTALL a True et les autres a False
 dans le terminal, dans le fichier a la racine écrire "snakemake"
 
@@ -35,6 +35,7 @@ Il y aura des erreurs, il faudra installer des dépendances avec pip install
   notamment :
   - pip install click (ou cli)
   - pip install SPARQLWrapper
+
 
 
 ## Executer le snakemake
